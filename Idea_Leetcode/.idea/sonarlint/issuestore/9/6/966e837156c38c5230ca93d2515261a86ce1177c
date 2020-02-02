@@ -1,0 +1,6 @@
+
+asquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Ã€Ã£üÿÿÿÿ8òá¾ñ-
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸£Ô¡8½üÀ½ñ-
+\squid:UselessImportCheck",Remove this unused import 'java.util.Stack'.(ŞÈ†üúÿÿÿÿ8òá¾ñ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(±Ä¹è8ñÏ…¾ñ-
