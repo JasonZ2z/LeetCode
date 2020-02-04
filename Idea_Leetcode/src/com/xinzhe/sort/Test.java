@@ -6,38 +6,27 @@ package com.xinzhe.sort;
  * @date 2020-01-22 13:52
  */
 
-import java.sql.Time;
 import java.util.Arrays;
-import java.util.Timer;
-import java.util.concurrent.TimeUnit;
 
-/**
- * TODO description
- *
- * @author xzheng
- * @since 1.0
- */
 public class Test {
+
+    private static int[] arr ={1,1,1,2,3,4,5,0,7,8,92,3,4,7,5,9,66,0,74,46};
     public static void main(String[] args) {
         System.out.println("-----Bubble Sort-----:");
-        int[] arr1 ={1,1,1,2,3,4,5,0,7,8,92,3,4,7,5,9,66,0,74,46};
-        bubbleSort(arr1);
-        System.out.println(Arrays.toString(arr1));
+        bubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
 
         System.out.println("-----Select Sort-----:");
-        int[] arr2 ={1,1,1,2,3,4,5,0,7,8,92,3,4,7,5,9,66,0,74,46};
-        selectSort(arr2);
-        System.out.println(Arrays.toString(arr2));
+        selectSort(arr);
+        System.out.println(Arrays.toString(arr));
 
         System.out.println("-----Insert Sort-----:");
-        int[] arr3 ={1,1,1,2,3,4,5,0,7,8,92,3,4,7,5,9,66,0,74,46};
-        insertSort(arr3);
-        System.out.println(Arrays.toString(arr3));
+        insertSort(arr);
+        System.out.println(Arrays.toString(arr));
 
         System.out.println("-----Fast Sort-----:");
-        int[] arr4 ={1,1,1,2,3,4,5,0,7,8,92,3,4,7,5,9,66,0,74,46};
-        fastSort(arr4, 0, arr4.length-1);
-        System.out.println(Arrays.toString(arr3));
+        fastSort(arr, 0, arr.length-1);
+        System.out.println(Arrays.toString(arr));
 
 
     }

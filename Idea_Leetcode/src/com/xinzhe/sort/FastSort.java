@@ -51,5 +51,4 @@ public class FastSort {
         arr[left] =  anchor;
         return left;
     }
-
 }
