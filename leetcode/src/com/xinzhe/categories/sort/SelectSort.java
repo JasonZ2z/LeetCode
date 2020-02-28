@@ -1,16 +1,8 @@
-/* Copyright © 2020 EIS Group and/or one of its affiliates. All rights reserved. Unpublished work under U.S. copyright laws.
-CONFIDENTIAL AND TRADE SECRET INFORMATION. No portion of this work may be copied, distributed, modified, or incorporated into any other media without EIS Group prior written consent.*/
 package com.xinzhe.categories.sort;
-/**
- * @author xzheng
- * @date 2020-01-21 13:52
- */
 
 import java.util.Arrays;
 
 /**
- * TODO description
- *
  * @author xzheng
  * @since 1.0
  */

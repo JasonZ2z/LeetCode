@@ -3,8 +3,6 @@ package com.xinzhe.categories.sort;
 import java.util.Arrays;
 
 /**
- * TODO description
- *
  * @author xzheng
  * @since 1.0
  */
