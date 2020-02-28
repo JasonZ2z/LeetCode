@@ -14,10 +14,7 @@ import java.util.*;
  * Level : Medium
  */
 public class Leetcode988 {
-//    public static void main(String[] args) {
-//        List<String> list = new ArrayList<>();
-//        String s = list.stream().min(String::compareTo).get();
-//    }
+
     private List<String> list = new ArrayList<>();
     public String smallestFromLeaf(TreeNode root) {
         helper(root, "");
@@ -34,8 +31,5 @@ public class Leetcode988 {
             helper(root.left, sb.toString());
             helper(root.right,sb.toString());
         }
-
     }
-
-
 }

@@ -1,4 +1,4 @@
-package com.xinzhe.categories.Calendar;
+package com.xinzhe.categories.calendar;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

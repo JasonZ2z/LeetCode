@@ -1,4 +1,4 @@
-package com.xinzhe.categories.bitCo;
+package com.xinzhe.categories.bitoperation;
 
 import java.util.ArrayList;
 import java.util.List;

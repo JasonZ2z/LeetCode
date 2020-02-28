@@ -20,6 +20,7 @@ public class Leetcode560 {
         System.out.println(subarraySum1(nums, 1));
         System.out.println(subarraySum2(nums, 1));
     }
+    // 暴力破解
     public static int subarraySum(int[] nums, int k) {
         if(nums == null || nums.length == 0) return 0;
         int count = 0;
@@ -36,7 +37,7 @@ public class Leetcode560 {
     }
 
     /**
-     * 思路：
+     * 前缀和：
      *     sum[i]表示num[0:i]的子数组和，那么num[i:j]的和等于sum[j] - sum[i]
      *     两层循环遍历sum数组检查 sum[j] - sum[i] == k
      */
