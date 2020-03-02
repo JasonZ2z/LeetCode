@@ -1,4 +1,4 @@
-package com.xinzhe.categories.linkedList;
+package com.xinzhe.categories.linkedlist;
 
 
 public class ListNode {

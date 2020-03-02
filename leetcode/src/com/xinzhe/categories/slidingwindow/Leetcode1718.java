@@ -1,7 +1,7 @@
 package com.xinzhe.categories.slidingwindow;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -19,20 +19,35 @@ import java.util.stream.Collectors;
  */
 public class Leetcode1718 {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,5,7,8);
-        List<Integer> list2 = Arrays.asList(7,8,5);
-        int[] small = {7,8,5};
-        Arrays.stream(small).boxed().collect(Collectors.toList()).forEach(System.out::print);
-        System.out.println(list.containsAll(list2));
+        int[] big = {1,1,5,9};
+        int[] small = {1,5,9};
+        System.out.println(Arrays.toString(shortestSeq(big, small)));
     }
-    public int[] shortestSeq(int[] big, int[] small) {
-        List<Integer> list = Arrays.stream(small).boxed().collect(Collectors.toList());
-        for (int i = 0; i < big.length - small.length; i++) {
-            if(list.contains(big[i])){
 
+    public static int[] shortestSeq(int[] big, int[] small) {
+        if(big.length < small.length) return new int[0];
+        List<Integer> smallList = Arrays.stream(small).boxed().collect(Collectors.toList());
+        Map<Integer, Integer> map = new HashMap<>();
+        int left = 0, right = 0;
+        int min = Integer.MAX_VALUE;
+        int match = 0;
+        while(right < big.length){
+            if(smallList.contains(big[right])){
+                match++;
             }
-        }
-        return null;
+            right++;
+            while(match == smallList.size()){
 
+                if(smallList.contains(big[left])){
+                    match--;
+                }
+                left++;
+            }
+
+        }
+        Integer integer = map.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey()).map(Map.Entry::getKey)
+                .collect(Collectors.toList()).get(0);
+        return new int[]{map.get(integer),  map.get(integer) + integer};
     }
 }

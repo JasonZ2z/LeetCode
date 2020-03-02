@@ -1,6 +1,6 @@
 package com.xinzhe.top100.medium;
 
-import com.xinzhe.categories.linkedList.ListNode;
+import com.xinzhe.categories.linkedlist.ListNode;
 
 import java.util.Stack;
 
