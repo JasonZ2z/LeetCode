@@ -18,7 +18,7 @@ public class Leetcode209 {
         System.out.println(minSubArrayLen2(7, nums));
     }
     //滑动窗口
-    public static int minSubArrayLen2(int s, int[] nums) {
+    private static int minSubArrayLen2(int s, int[] nums) {
         if(nums == null || nums.length == 0) return 0;
         int left = 0, right = 0, sum = 0, result = Integer.MAX_VALUE;
         while (right < nums.length){
@@ -32,7 +32,7 @@ public class Leetcode209 {
     }
 
     //暴力
-    public static int minSubArrayLen(int s, int[] nums) {
+    private static int minSubArrayLen(int s, int[] nums) {
         if(nums == null || nums.length == 0) return 0;
         if(Arrays.stream(nums).sum() < s) return 0;
         int result = Integer.MAX_VALUE;

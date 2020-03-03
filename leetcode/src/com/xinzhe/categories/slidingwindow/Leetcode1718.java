@@ -1,7 +1,9 @@
 package com.xinzhe.categories.slidingwindow;
 
-import java.util.*;
-import java.util.stream.Collector;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -19,35 +21,48 @@ import java.util.stream.Collectors;
  */
 public class Leetcode1718 {
     public static void main(String[] args) {
-        int[] big = {1,1,5,9};
-        int[] small = {1,5,9};
-        System.out.println(Arrays.toString(shortestSeq(big, small)));
+        int[] big = {1,2,3,1,2,3,1};
+        int[] small = {2,3};
+        Map<Integer, Long> map = Arrays.stream(big).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        map.forEach((x,y) -> System.out.println(x +" " + y));
+
     }
 
     public static int[] shortestSeq(int[] big, int[] small) {
         if(big.length < small.length) return new int[0];
-        List<Integer> smallList = Arrays.stream(small).boxed().collect(Collectors.toList());
-        Map<Integer, Integer> map = new HashMap<>();
-        int left = 0, right = 0;
+        Map<Integer, Long> smallMap = Arrays.stream(small).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<Integer, Long> bigMap = new HashMap<>(small.length);
+        int left = 0, right = 0, match = 0;
         int min = Integer.MAX_VALUE;
-        int match = 0;
+        int l = -1, r = -1;
         while(right < big.length){
-            if(smallList.contains(big[right])){
-                match++;
-            }
-            right++;
-            while(match == smallList.size()){
-
-                if(smallList.contains(big[left])){
-                    match--;
+            int rightValue = big[right++];
+            if(smallMap.containsKey(rightValue)){
+                bigMap.put(rightValue, bigMap.getOrDefault(rightValue, 0L) +1);
+                if(smallMap.get(rightValue).equals(bigMap.get(rightValue))){
+                    match++;
                 }
-                left++;
-            }
 
+            }
+            while(match == smallMap.size()){
+                if(right - left < min){
+                    l =  left;
+                    r = right;
+                    min = right - left;
+                }
+                int leftValue = big[left++];
+                if(smallMap.containsKey(leftValue)){
+                    bigMap.put(leftValue, bigMap.get(leftValue)-1);
+                    if(bigMap.get(leftValue) < smallMap.get(leftValue)) {
+                        match--;
+                    }
+                }
+            }
         }
-        Integer integer = map.entrySet().stream()
-                .sorted(Map.Entry.comparingByKey()).map(Map.Entry::getKey)
-                .collect(Collectors.toList()).get(0);
-        return new int[]{map.get(integer),  map.get(integer) + integer};
+        if(r-1 < l ) {
+            return new int[0];
+        } else {
+            return new int[]{l,r-1};
+        }
     }
 }
