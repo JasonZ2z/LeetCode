@@ -17,8 +17,9 @@ import java.util.List;
 // todo
 public class Leetcode093 {
     public static void main(String[] args) {
-        String s = "00101100";
+        String s = "25525511135";
         System.out.println(restoreIpAddresses(s).toString());
+        System.out.println(restoreIpAddresses2(s).toString());
     }
     //暴力
     public static List<String> restoreIpAddresses(String s) {
@@ -50,18 +51,44 @@ public class Leetcode093 {
         return list;
     }
 
-    //
-//    private List<String> result = new ArrayList<>();
-//    public static List<String> restoreIpAddresses2(String s){
-//        if(s == null || s.length() < 4 || s.length() > 12) return new ArrayList<>();
-//        dfs(s, 0, s.length(), 0);
-//    }
-//
-//    private static void dfs(String s, int left, int right, int part, ) {
-//        if(left == right) {
-//            if(part == 4){
-//
-//            }
-//        }
-//    }
+    //回溯
+    private static List<String> result = new ArrayList<>();
+    public  static List<String> restoreIpAddresses2(String s){
+        if(s == null || s.length() < 4 || s.length() > 12) return new ArrayList<>();
+        dfs(s, 0, new ArrayList<>());
+        return result;
+    }
+
+    private static void dfs(String s, int start, ArrayList<String> track) {
+        if(track.size() == 4) {
+            int len = track.stream().mapToInt(String::length).sum();
+            if(len == s.length()){
+                result.add(String.join(".", new ArrayList<>(track)));
+                return;
+            }
+        }
+        if(track.size() > 4 ) return;
+
+        for (int i = start; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if(c == '0'){
+                track.add(String.valueOf(c));
+                dfs(s, i+1, track);
+                track.remove(track.size()-1);
+            }else {
+                for (int j = 1; j <= 3; j++) {
+                    if(i+j > s.length()) return;
+                    String tmp = s.substring(i, i+j);
+                    if(Integer.parseInt(tmp) <= 255){
+                        track.add(tmp);
+                        dfs(s, i+j, track);
+                        track.remove(track.size()-1);
+                    }
+                }
+            }
+
+        }
+    }
+
+
 }
