@@ -1,5 +1,3 @@
-/* Copyright © 2020 EIS Group and/or one of its affiliates. All rights reserved. Unpublished work under U.S. copyright laws.
-CONFIDENTIAL AND TRADE SECRET INFORMATION. No portion of this work may be copied, distributed, modified, or incorporated into any other media without EIS Group prior written consent.*/
 package com.xinzhe.categories.backtrack;
 
 import java.util.ArrayList;
@@ -20,9 +18,6 @@ public class Leetcode784 {
 
     static List<String> result = new ArrayList<>();
     public static List<String> letterCasePermutation(String S) {
-//        for (char c : S.toCharArray()) {
-//            if(Character.isLetter())
-//        }
         traceback(S.toCharArray(), 0);
         return result;
     }

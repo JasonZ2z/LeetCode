@@ -1,5 +1,3 @@
-/* Copyright © 2020 EIS Group and/or one of its affiliates. All rights reserved. Unpublished work under U.S. copyright laws.
-CONFIDENTIAL AND TRADE SECRET INFORMATION. No portion of this work may be copied, distributed, modified, or incorporated into any other media without EIS Group prior written consent.*/
 package com.xinzhe.order.day04;
 
 import java.util.Arrays;
@@ -23,12 +21,6 @@ public class Leetcode1103 {
         System.out.println(Arrays.toString(distributeCandies(10,3)));
     }
     public static int[] distributeCandies(int candies, int n) {
-//        int sum = (1 + n) * n /2;
-//        int i = 0;
-//        int all = candies;
-//        while(all > sum){
-//            all -= sum + (i++)*n*n;
-//        }
         int[] result = new int[n];
         int tmp = 0;
         int k = 0;
@@ -46,21 +38,6 @@ public class Leetcode1103 {
             }
             k++;
         }
-//        int j = 0;
-//        for (; j < n; j++) {
-//            for (int k = 0; k <= i; k++) {
-//                result[j] += j+1 + k*n;
-//            }
-//            tmp += result[j];
-//            if(tmp > candies){
-//                break;
-//            }
-//        }
-//        for (int l = j; l < n; l++) {
-//            for (int m = 0; m <= i - 1; m++) {
-//                result[j] += j+1 + m*n;
-//            }
-//        }
        return result;
 
     }
