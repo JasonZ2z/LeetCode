@@ -13,7 +13,7 @@ import java.util.Set;
  * link : https://leetcode-cn.com/problems/subsets-ii/
  * Level : Medium
  */
-public class SubsetsⅡ {
+public class Leetcode090 {
 
     public static void main(String[] args) {
         int[] nums = {0};
@@ -24,7 +24,7 @@ public class SubsetsⅡ {
         traceback(nums, 0, new ArrayList<>());
         return new ArrayList<>(result);
     }
-
+ 
     private static void traceback(int[] nums, int start, ArrayList<Integer> track) {
         ArrayList<Integer> list = new ArrayList<>(track);
         list.sort(Integer::compareTo);
