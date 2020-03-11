@@ -1,4 +1,4 @@
-package com.xinzhe.categories.dp;
+package com.xinzhe.categories.dp.subsequence;
 
 /**
  * @Author Xin
