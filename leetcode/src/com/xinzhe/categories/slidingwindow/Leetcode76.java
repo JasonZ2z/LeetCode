@@ -17,8 +17,8 @@ import java.util.Map;
  */
 public class Leetcode76 {
     public static void main(String[] args) {
-        String s = "a";
-        String t = "b";
+        String s = "aaaaaaaaaaaabbbbbcdd";
+        String t = "abcdd";
         System.out.println(minWindow(s,t));
     }
     public static String minWindow(String s, String t) {
