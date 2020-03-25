@@ -1,5 +1,6 @@
 package com.xinzhe.categories.dp.exist;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -14,28 +15,28 @@ import java.util.List;
  * Level : Medium
  */
 public class Leetcode139 {
-    List<String> wordDict;
-    String s;
-    public boolean wordBreak(String s, List<String> wordDict) {
-        return dfs(0);
+    public static void main(String[] args) {
+        String s= "c";
+        List<String> list = Arrays.asList("c,", "d");
+        System.out.println(wordBreak(s, list));
     }
 
-    private boolean dfs(int start) {
-        if(start == s.length()) return true;
+    private static boolean wordBreak(String s, List<String> wordDict) {
+        if(s == null || s.length() == 0 || wordDict.size() == 0) return false;
+        if(wordDict.size() == 1) return s.equals(wordDict.get(0));
 
-        for (int i = start+1; i <= s.length(); i++) {
-            if(exist(start, i) && dfs(i)){
-                return true;
+        int n = s.length();
+        boolean[] dp = new boolean[n+1];
+        dp[0] = true;
+        for (int i = 1; i <= n; ++i) {
+            for(int j = i-1; j >= 0; --j) {
+                String tmp = s.substring(j, i);
+                if (wordDict.contains(tmp) && dp[j]) {
+                    dp[i] = true;
+                    break;
+                }
             }
         }
-        return false;
-    }
-
-    public boolean exist(int start, int end){
-        if(start < end && end <= s.length()){
-            String tmp = s.substring(start, end);
-            return  wordDict.contains(tmp);
-        }
-        return false;
+        return dp[n];
     }
 }

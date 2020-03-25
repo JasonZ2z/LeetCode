@@ -25,4 +25,14 @@ public class Leetcode122 {
         }
         return dp[n-1][0];
     }
+
+    public int maxProfit2(int[] prices){
+        int res = 0;
+        for (int i = 0; i < prices.length; ++i) {
+            if(prices[i+1] - prices[i] > 0) {
+                res += prices[i+1] - prices[i];
+            }
+        }
+        return res;
+    }
 }

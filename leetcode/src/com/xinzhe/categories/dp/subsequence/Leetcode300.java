@@ -10,29 +10,28 @@ import java.util.Arrays;
  * link : https://leetcode-cn.com/problems/partition-array-into-three-parts-with-equal-sum/
  * Level : Medium
  */
-//todo need to review
 public class Leetcode300 {
     public static void main(String[] args) {
         int[] arr = {4,10,4,3,8,9};
         System.out.println(lengthOfLIS(arr));
     }
     //以 nums[i] 为结尾的最长递增子序列
-    public static int lengthOfLIS(int[] nums) {
+    private static int lengthOfLIS(int[] nums) {
         if(nums.length == 0) return 0;
         if(nums.length == 1) return 1;
         int n = nums.length;
 
         int[] dp = new int[n];
         Arrays.fill(dp, 1);
-        int max = 0;
-        for (int i = 1; i < n; i++) {
-            for (int j = i-1; j >= 0 ; j--) {
+        int res = 0;
+        for(int i = 1; i<n; ++i){
+            for(int j =i-1; j>=0; --j){
                 if(nums[i] > nums[j]){
-                    dp[i] = Math.max(dp[i], dp[j]+1);
-                    max = Math.max(max, dp[i]);
+                    dp[i] = Math.max(dp[j] +1 ,dp[i]);
                 }
             }
+            res = Math.max(dp[i], res);
         }
-        return max;
+        return res;
     }
 }
