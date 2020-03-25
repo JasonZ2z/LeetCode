@@ -14,6 +14,21 @@ public class Leetcode279 {
     public static void main(String[] args) {
         System.out.println(numSquares(13));
     }
+
+    //i-j*j
+    public int numSquares2(int n) {
+
+        int[] dp = new int[n+1];
+        dp[0] = 0;
+        for(int i = 1; i<=n; ++i){
+            dp[i] = Integer.MAX_VALUE;
+            for(int j = 1; j*j <= i; ++j){
+                dp[i] = Math.min(dp[i - j*j] +1, dp[i]);
+            }
+        }
+        return dp[n];
+    }
+
     public static int numSquares(int n) {
         if(helper(n)) return 1;
         int[] dp = new int[n+1];

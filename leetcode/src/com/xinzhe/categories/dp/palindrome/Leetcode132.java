@@ -1,4 +1,4 @@
-package com.xinzhe.categories.backtrack;
+package com.xinzhe.categories.dp.palindrome;
 
 
 import java.util.ArrayList;
@@ -17,8 +17,62 @@ public class Leetcode132 {
 
     public static void main(String[] args) {
         String s = "apjesgpsxoeiokmqmfgvjslcjukbqxpsobyhjpbgdfruqdkeiszrlmtwgfxyfostpqczidfljwfbbrflkgdvtytbgqalguewnhvvmcgxboycffopmtmhtfizxkmeftcucxpobxmelmjtuzigsxnncxpaibgpuijwhankxbplpyejxmrrjgeoevqozwdtgospohznkoyzocjlracchjqnggbfeebmuvbicbvmpuleywrpzwsihivnrwtxcukwplgtobhgxukwrdlszfaiqxwjvrgxnsveedxseeyeykarqnjrtlaliyudpacctzizcftjlunlgnfwcqqxcqikocqffsjyurzwysfjmswvhbrmshjuzsgpwyubtfbnwajuvrfhlccvfwhxfqthkcwhatktymgxostjlztwdxritygbrbibdgkezvzajizxasjnrcjwzdfvdnwwqeyumkamhzoqhnqjfzwzbixclcxqrtniznemxeahfozp";
-        System.out.println(minCut(s));
+        //String s = "aab";
+        System.out.println(minCut2(s));
+        System.out.println(minCut3(s));
+
     }
+    public static int minCut2(String s) {
+        if(s == null || s.length() == 0) return 0;
+        int n = s.length();
+        char[] arr = s.toCharArray();
+        boolean[][] helper = new boolean[n][n];
+        int p,q;
+        for (int i = 0; i < n; i++) {
+            p = i; q = i;
+            while (p >=0 && q < n && arr[p] == arr[q]){
+                helper[p][q] = true;
+                --p;
+                ++q;
+            }
+            p = i; q= i+1;
+            while (p >=0 && q < n && arr[p] == arr[q]){
+                helper[p][q] = true;
+                --p;
+                ++q;
+            }
+        }
+        int[] dp = new int[n+1];
+        dp[0] =0;
+        for (int i = 1; i <= n; ++i) {
+            dp[i] = Integer.MAX_VALUE;
+            for(int j = 0; j < i; ++j) {
+                if(helper[j][i-1]){
+                    dp[i] = Math.min(dp[i], dp[j] +1);
+                }
+            }
+        }
+        return dp[n]-1;
+    }
+
+    public static int minCut3(String s) {
+        if(s == null || s.length() == 0) return 0;
+        int n = s.length();
+
+        int[] dp = new int[n+1];
+        dp[0] =0;
+        for (int i = 1; i <= n; ++i) {
+            dp[i] = Integer.MAX_VALUE;
+            for(int j = 0; j < i; ++j) {
+                if(isPalindrome(s, j, i-1)){
+                    dp[i] = Math.min(dp[i], dp[j] +1);
+                }
+            }
+        }
+        return dp[n]-1;
+    }
+
+
     //dfs 超时
     static int min = Integer.MAX_VALUE;
     public static int minCut(String s) {
@@ -30,7 +84,7 @@ public class Leetcode132 {
         }
     }
     public static boolean isPalindrome(String s, int start, int end){
-        while (start < end){
+        while (start <= end){
             if(s.charAt(start++) != s.charAt(end--)){
                 return false;
             }
