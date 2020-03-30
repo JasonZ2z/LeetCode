@@ -1,6 +1,6 @@
 package com.xinzhe.order.day01;
 
-import com.xinzhe.categories.tree.TreeNode;
+import com.xinzhe.categories.structure.tree.TreeNode;
 
 import java.util.Stack;
 
