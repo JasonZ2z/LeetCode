@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dfs;
+package com.xinzhe.categories.solutions.dfs.medium;
 
 import java.util.Stack;
 

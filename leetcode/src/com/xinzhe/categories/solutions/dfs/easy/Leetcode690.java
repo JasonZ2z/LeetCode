@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dfs;
+package com.xinzhe.categories.solutions.dfs.easy;
 
 import java.util.LinkedList;
 import java.util.List;

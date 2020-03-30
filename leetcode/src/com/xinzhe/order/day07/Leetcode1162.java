@@ -1,6 +1,5 @@
 package com.xinzhe.order.day07;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
