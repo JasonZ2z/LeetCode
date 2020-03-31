@@ -2,10 +2,6 @@ package com.xinzhe.categories.structure.sort;
 
 import java.util.Arrays;
 
-/**
- * @author xzheng
- * @date 2020-01-16 14:44
- */
 public class MergeSort {
     public static void main(String[] args) {
         int[] arr = {2,1,4,5,6,88,99,44,23446546,21342};

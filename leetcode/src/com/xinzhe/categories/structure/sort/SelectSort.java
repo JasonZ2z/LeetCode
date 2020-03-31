@@ -2,10 +2,6 @@ package com.xinzhe.categories.structure.sort;
 
 import java.util.Arrays;
 
-/**
- * @author xzheng
- * @since 1.0
- */
 public class SelectSort {
     public static void main(String[] args) {
         int[] arr ={1,2,3,4,7,5,9,66,0,74,46};

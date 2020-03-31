@@ -1,8 +1,5 @@
 package com.xinzhe.categories.structure.sort;
-/**
- * @author xzheng
- * @date 2020-01-20 17:42
- */
+
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr ={1,2,3,4,7,5,9,66,0,74,46};

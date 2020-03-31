@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.bfs;
+package com.xinzhe.categories.solutions.bfs.medium;
 
 import java.util.LinkedList;
 import java.util.Queue;

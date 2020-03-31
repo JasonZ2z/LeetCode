@@ -1,8 +1,7 @@
-package com.xinzhe.categories.solutions.bfs;
+package com.xinzhe.categories.solutions.bfs.easy;
 
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**

@@ -21,7 +21,6 @@ public class PancakeSort {
     }
     //Origin:   2 4 1 5 3
     //Sorted:   1 2 3 4 5
-
     //1:        5 1 4 2 3 -> 3 2 4 1 5      [4, 5]
     //2:        4 2 3 1 5 -> 1 3 2 4 5      [3, 4]
     //3:        3 1 2 4 5 -> 2 1 3 4 5      [2, 3]
@@ -59,8 +58,6 @@ public class PancakeSort {
     //          3 1 2 4 -> 2 1 3 4
     // 2:       1 2 3 4
     //3 4 2 3 2
-
-
     private static void flip (int[] arr, int k){
         for (int i = 0; i < k / 2; i++) {
             int tmp = arr[i];
