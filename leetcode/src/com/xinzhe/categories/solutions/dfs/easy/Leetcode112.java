@@ -14,14 +14,13 @@ import com.xinzhe.categories.structure.tree.TreeNode;
 
 public class Leetcode112 {
     public boolean hasPathSum(TreeNode root, int sum) {
-        return helper(root) != -1;
+        return helper(root, sum);
     }
 
-    private int helper(TreeNode root) {
-        if(root == null) return 0;
-        int left = helper(root.left);
-        int right = helper(root.right);
-        if(left == -1 || right == -1 || Math.abs(left - right) > 1) return -1;
-        return Math.max(left, right) +1;
+    public boolean helper(TreeNode root, int sum){
+        if(root == null) return false;
+        sum -= root.val;
+        if(root.left == null && root.right == null && sum == 0) return true;
+        return helper(root.left, sum) || helper(root.right, sum);
     }
 }

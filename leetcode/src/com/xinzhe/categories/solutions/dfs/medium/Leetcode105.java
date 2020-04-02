@@ -2,9 +2,8 @@ package com.xinzhe.categories.solutions.dfs.medium;
 
 import com.xinzhe.categories.structure.tree.TreeNode;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author Xin
@@ -17,28 +16,27 @@ import java.util.stream.Collectors;
  * Level : Medium
  */
 
+//todo need to review
 public class Leetcode105 {
-    private static List<Integer> pre;
-    private static List<Integer> in;
-    private static int n;
-    public static TreeNode buildTree(int[] preorder, int[] inorder) {
-        n = preorder.length;
-        if(n == 0) return null;
-        pre = Arrays.stream(preorder).boxed().collect(Collectors.toList());
-        in = Arrays.stream(inorder).boxed().collect(Collectors.toList());
+    private int[] preorder;
+    private Map<Integer, Integer> map;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        this.preorder = preorder;
+        int n = preorder.length;
+        map = new HashMap<>(n);
+        for (int i = 0; i < n; ++i) {
+            map.put(inorder[i], i);
+        }
         return helper(0, n-1, 0, n-1);
     }
 
-    public static TreeNode helper(int start, int end, int left, int right){
-        if(start > end || left > right ) return null;
-        System.out.println(start + " " + end);
-        int value = pre.get(start);
-
+    private TreeNode helper(int preLeft, int preRight, int inLeft, int inRight) {
+        if(preLeft >preRight || inLeft > inRight) return null;
+        int value = preorder[preLeft];
         TreeNode node = new TreeNode(value);
-        int index = in.indexOf(value) - left;
-
-        node.left = helper(start+1, start+index, left, left+index-1);
-        node.right = helper(start+index+1, end, left+index+1, right);
+        int index = map.get(value) - inLeft;
+        node.left = helper(preLeft+1, preLeft+ index, inLeft, inLeft+ index-1);
+        node.right = helper(index + preLeft + 1, preRight, index+inLeft + 1, inRight);
         return node;
     }
 }

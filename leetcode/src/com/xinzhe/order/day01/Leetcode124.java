@@ -1,5 +1,8 @@
 package com.xinzhe.order.day01;
 
+import com.xinzhe.categories.structure.tree.TreeNode;
+
+
 /**
  * @Author Xin
  * @create 2020/2/27 15:03
@@ -10,6 +13,18 @@ package com.xinzhe.order.day01;
  * Level : hard
  */
 public class Leetcode124 {
-    // Todo
+    int max = Integer.MIN_VALUE;
+    public int maxPathSum(TreeNode root) {
+        helper(root);
+        return max;
+    }
+
+    public int helper(TreeNode root){
+        if(root == null) return 0;
+        int left = Math.max(helper(root.left), 0);
+        int right = Math.max(helper(root.right), 0);
+        max = Math.max(max, root.val + left + right);
+        return root.val + Math.max(left, right);
+    }
 
 }
