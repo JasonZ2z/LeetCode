@@ -69,6 +69,35 @@ public class Leetcode695 {
                 }
             }
         return max_area;
+    }
+    int[][] d = {{1,0,-1,0},
+                 {0,1,0,-1}};
+    public int maxAreaOfIsland3(int[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
 
+        int res = 0;
+
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if(grid[i][j] == 1){
+                    res = Math.max(dfs2(i,j, grid), res);
+                }
+            }
+        }
+
+        return res;
+    }
+
+    private int dfs2(int i, int j, int[][] grid) {
+        int count = 1;
+        grid[i][j] = 0;
+        for (int k = 0; k < 4; ++k) {
+            int x = i + d[0][k];
+            int y = j + d[1][k];
+            if(x < 0 || x>= grid.length || y < 0 || y >= grid[0].length || grid[x][y] != 1) continue;
+            count += dfs2(x,y,grid);
+        }
+        return count;
     }
 }

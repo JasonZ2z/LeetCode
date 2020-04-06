@@ -14,41 +14,34 @@ import java.util.Stack;
 public class Leetcode200 {
     public static void main(String[] args) {
     }
+    int[][] directions = {{1,0,-1,0},
+            {0,1,0,-1}};
     public int numIslands(char[][] grid) {
         int m = grid.length;
         if(m==0) return 0;
         int n = grid[0].length;
-        int[][] directions = {{1,0,-1,0},
-                              {0,1,0,-1}};
-        Stack<int[]> stack = new Stack<>();
+
+        int count = 0;
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
-                if (grid[i][j] == 1) {
-                   stack.add(new int[]{i,j});
+                if (grid[i][j] == '1') {
+                    count++;
+                    dfs(i,j, grid);
                 }
-
-            }
-        }
-        boolean[][] used = new boolean[m][n];
-        int count = 2;
-        while (!stack.isEmpty()){
-            int[] cur = stack.pop();
-            int x = cur[0];
-            int y = cur[1];
-            if(used[x][y]){
-                continue;
-            } else {
-                used[x][y] = true;
-            }
-            for (int k = 0; k < 4; ++k) {
-                int newX = x + directions[0][k];
-                int newY = y + directions[1][k];
-                if (newX >= m  || newX < 0 || newY >= n  || newY < 0 || grid[newX][newY] != 1) {
-                    continue;
-                }
-                stack.add(new int[]{newX, newY});
             }
         }
         return count;
+    }
+
+    private void dfs(int x, int y, char[][] grid) {
+        grid[x][y] = '0';
+        for (int k = 0; k < 4; ++k) {
+            int newX = x + directions[0][k];
+            int newY = y + directions[1][k];
+            if (newX >= grid.length || newX < 0 || newY >= grid[0].length || newY < 0 || grid[newX][newY] != '1') {
+                continue;
+            }
+            dfs(newX, newY, grid);
+        }
     }
 }
