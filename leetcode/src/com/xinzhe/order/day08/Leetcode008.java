@@ -3,7 +3,7 @@ package com.xinzhe.order.day08;
 import java.math.BigInteger;
 
 /**
- * @Author Xin
+ * @author Xin
  * @create 2020/4/3 14:53
  * Title : 8. 字符串转换整数 (atoi)
  * Description : 请你来实现一个 atoi 函数，使其能将字符串转换成整数。
