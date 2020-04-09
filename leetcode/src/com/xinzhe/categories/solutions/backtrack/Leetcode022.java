@@ -12,7 +12,7 @@ import java.util.List;
  * Level : Medium
  */
 
-public class Generate_Parentheses {
+public class Leetcode022 {
     public static void main(String[] args) {
         generateParenthesis(3).forEach(System.out::println);
     }

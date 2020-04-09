@@ -12,11 +12,14 @@ import java.util.Arrays;
  */
 public class Leetcode300 {
     public static void main(String[] args) {
-        int[] arr = {4,10,4,3,8,9};
+        int[] arr = {3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12};
         System.out.println(lengthOfLIS(arr));
+        System.out.println(lengthOfLIS2(arr));
     }
     //以 nums[i] 为结尾的最长递增子序列
-    private static int lengthOfLIS(int[] nums) {
+    //时间复杂度：O(N^2)
+    //空间复杂度：O(N)
+    public static int lengthOfLIS(int[] nums) {
         if(nums.length == 0) return 0;
         if(nums.length == 1) return 1;
         int n = nums.length;
@@ -33,5 +36,48 @@ public class Leetcode300 {
             res = Math.max(dp[i], res);
         }
         return res;
+    }
+
+    //二分查找
+    //时间复杂度：O(NlogN)，遍历数组使用了 O(N)，二分查找法使用了O(logN)。
+    //空间复杂度：O(N)
+    public static int lengthOfLIS2(int[] nums){
+        int n = nums.length;
+        if(n < 2) return n;
+        //tail[i] 表示为长度i+1的所有上升子序列的结尾的最小值，不是长度，是可能的结尾的最小值
+        int[] tail = new int[n];
+        tail[0] = nums[0];
+        int end = 0;
+        for (int i = 1; i < n; ++i) {
+            if(nums[i] > tail[end]){
+                tail[++end] = nums[i];
+            } else {
+                int left = 0;
+                int right = end;
+                while (left < right){
+                    int mid = left + ((right - left) >> 1);
+                    if(tail[mid] < nums[i]){
+                        left = mid + 1;
+                    } else {
+                        right = mid;
+                    }
+                }
+                tail[left] = nums[i];
+            }
+            printArray(nums[i] , tail);
+        }
+        return ++end;
+    }
+    private static void printArray(int num, int[] tail) {
+        System.out.print("当前数字：" + num);
+        System.out.print("\t当前 tail 数组：");
+        int len = tail.length;
+        for (int value : tail) {
+            if (value == 0) {
+                break;
+            }
+            System.out.print(value + ", ");
+        }
+        System.out.println();
     }
 }

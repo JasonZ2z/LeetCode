@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dichotomies;
+package com.xinzhe.categories.solutions.dichotomies.interval;
 
 /**
  * @Author Xin
@@ -8,6 +8,7 @@ package com.xinzhe.categories.solutions.dichotomies;
  * link : https://leetcode-cn.com/problems/find-the-duplicate-number
  * Level : Medium
  */
+//todo need to review
 public class Leetcode287 {
     public int findDuplicate(int[] nums) {
         int n = nums.length;
@@ -17,14 +18,14 @@ public class Leetcode287 {
             int mid = left + ((right - left) >> 1);
             int count = 0;
             for (int num : nums) {
-                if (num <= mid) {
+                if (num <= mid) { //小于等mid
                     count++;
                 }
             }
-            if(count > mid){
-                right = mid;
+            if(count > mid){ //严格大于mid
+                right = mid; //[left, mid]
             } else {
-                left = mid +1;
+                left = mid +1;//[mid + 1, right]
             }
         }
         return left;

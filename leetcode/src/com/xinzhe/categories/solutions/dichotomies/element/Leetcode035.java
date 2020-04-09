@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dichotomies;
+package com.xinzhe.categories.solutions.dichotomies.element;
 
 /**
  * @author Xin

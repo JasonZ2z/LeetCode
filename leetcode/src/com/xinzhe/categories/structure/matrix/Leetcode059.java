@@ -10,6 +10,9 @@ package com.xinzhe.categories.structure.matrix;
  */
 
 public class Leetcode059 {
+    public static void main(String[] args) {
+        System.out.println(1^1^ 2);
+    }
     public int[][] generateMatrix(int n) {
         int[][] res = new int[n][n];
         int x1 = 0;
