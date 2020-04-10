@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dichotomies.element;
+package com.xinzhe.categories.solutions.binarysearch.element;
 
 import java.util.Arrays;
 

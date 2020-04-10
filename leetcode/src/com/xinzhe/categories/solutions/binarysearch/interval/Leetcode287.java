@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dichotomies.interval;
+package com.xinzhe.categories.solutions.binarysearch.interval;
 
 /**
  * @Author Xin

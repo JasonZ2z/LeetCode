@@ -9,7 +9,7 @@ package com.xinzhe.categories.structure.arrays.hard;
  * Level : Hard
  */
 
-//todo undo
+//todo need to review
 public class Leetcode041 {
     public static void main(String[] args) {
         int[] nums = {2147483647};
@@ -17,20 +17,28 @@ public class Leetcode041 {
     }
     public static int firstMissingPositive(int[] nums) {
         int n = nums.length;
-        int max = 0;
-        for (int num : nums) {
-            max = Math.max(max, num);
-        }
-        if(max <= 0) return 1;
-        boolean[] tmp = new boolean[max];
-        for (int num : nums) {
-            if (num > 0) {
-                tmp[num-1] = true;
+        boolean flag = false;
+        for (int value : nums) {
+            if (value == 1) {
+                flag = true;
+                break;
             }
         }
-        for (int i = 0; i < max; ++i) {
-            if(!tmp[i]) return ++i;
+        //不含1
+        if(!flag) return 1;
+        //含1
+        for (int i = 0; i < n; ++i) {
+            while (nums[i] > 0 && nums[i] <= n && nums[i] != i+1 && nums[nums[i] -1] != nums[i]){
+                int tmp = nums[nums[i] -1];
+                nums[nums[i] -1] = nums[i] ;
+                nums[i] = tmp;
+            }
         }
-        return max+1;
+        for (int i = 0; i < n; ++i) {
+            if(nums[i] != i+1){
+                return i+1;
+            }
+        }
+        return n+1;
     }
 }
