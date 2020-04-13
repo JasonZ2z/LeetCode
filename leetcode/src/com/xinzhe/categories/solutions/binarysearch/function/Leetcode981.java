@@ -1,5 +1,11 @@
 package com.xinzhe.categories.solutions.binarysearch.function;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author Xin
  * @create 2020/4/10 21:37
@@ -14,21 +20,87 @@ package com.xinzhe.categories.solutions.binarysearch.function;
  * link : https://leetcode-cn.com/problems/time-based-key-value-store
  * Level : Medium
  */
-//todo
-public class Leetcode981 {
-}
-class TimeMap {
 
+public class Leetcode981 {
+    public static void main(String[] args) {
+        TimeMap t = new TimeMap();
+//        t.set("foo", "bar", 1);
+//        t.set("foo1", "bar1", 1);
+//        System.out.println(t.get("foo", 1));
+//        System.out.println(t.get("foo", 3));
+//        t.set("foo2", "bar2", 4);
+//        t.set("foo2", "bar3", 5);
+//        t.set("foo2", "bar4", 6);
+//        System.out.println(t.get("foo", 4));
+//        System.out.println(t.get("foo2", 4));
+//        System.out.println(t.get("foo2", 5));
+//        System.out.println(t.get("foo2", 6));
+
+        t.set("love", "hight", 10);
+        t.set("love", "low", 20);
+        System.out.println(t.get("love", 5));
+        System.out.println(t.get("love", 10));
+        System.out.println(t.get("love", 15));
+        System.out.println(t.get("love", 20));
+        System.out.println(t.get("love", 25));
+
+    }
+}
+
+class TimeMap {
+    Map<String, List<Value>> map;
     /** Initialize your data structure here. */
     public TimeMap() {
-
+        map = new HashMap<>();
     }
 
     public void set(String key, String value, int timestamp) {
-
+        if(map.containsKey(key)){
+            map.get(key).add(new Value(value, timestamp));
+        } else {
+            List<Value> list= new ArrayList<>();
+            list.add(new Value(value, timestamp));
+            map.put(key, list);
+        }
     }
 
+
     public String get(String key, int timestamp) {
-        return "";
+        if(!map.containsKey(key)) return "";
+        List<Value> keys = map.get(key);
+        int left = 0, right = keys.size() -1;
+        if(timestamp < keys.get(left).time) return "";
+        if(timestamp > keys.get(right).time) timestamp = keys.get(right).time;
+        while(left < right){
+            int mid = left + ((right -left + 1) >> 1);
+            if(keys.get(mid).time > timestamp){
+                right = mid - 1;
+            } else {
+                left = mid;
+            }
+        }
+        return keys.get(left).value;
+    }
+
+    public String get2(String key, int timestamp) {
+        List<Value> list = map.get(key);
+        String res = "";
+        int i = Collections.binarySearch(list, new Value("", timestamp));
+        if(i<0) i= -i-2;
+        if(i>=0) res = list.get(i).value;
+        return res;
+    }
+}
+class Value implements Comparable<Value>{
+    String value;
+    int time;
+    public Value(String value, int time){
+        this.value = value;
+        this.time = time;
+    }
+
+    @Override
+    public int compareTo(Value o) {
+        return this.time - o.time;
     }
 }
