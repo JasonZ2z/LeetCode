@@ -43,4 +43,29 @@ public class Leetcode034 {
         if(i == n || j == 0) return new int[]{-1,-1};
         return new int[]{i+1, j-1};
     }
+
+    public int[] searchRange2(int[] nums, int target) {
+        int n = nums.length;
+        if(n == 0) return new int[]{-1,-1};
+        if(n == 1) {
+            if(nums[0] == target) return new int[]{0,0};
+            else return new int[]{-1,-1};
+        }
+        int left = 0, right = n-1;
+        while(left < right){
+            int mid = left + ((right - left)/2);
+            if(nums[mid] == target){
+                int  p = mid-1, q = mid+1;
+                while(p>=0 && nums[p]==target) p--;
+                while(q<n && nums[q]==target) q++;
+                return new int[]{p+1, q-1};
+            } else if(nums[mid] < target){
+                left = mid + 1;
+            } else{
+                right = mid;
+            }
+        }
+        if(left < n && nums[left] == target) return new int[]{left, left};
+        return new int[]{-1,-1};
+    }
 }

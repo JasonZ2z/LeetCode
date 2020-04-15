@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.binarysearch.element;
+package com.xinzhe.categories.solutions.binarysearch.math;
 
 /**
  * @Author Xin

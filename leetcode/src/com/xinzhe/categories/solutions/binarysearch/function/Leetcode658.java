@@ -2,6 +2,7 @@ package com.xinzhe.categories.solutions.binarysearch.function;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -83,6 +84,72 @@ public class Leetcode658 {
             }
         }
         res.sort(Integer::compareTo);
+        return res;
+
+    }
+
+    public List<Integer> findClosestElements2(int[] nums, int k, int target) {
+        int n = nums.length;
+        List<Integer> res = new ArrayList<>();
+        Arrays.sort(nums);
+        if(target <= nums[0]){
+            for(int i =0; i<k; ++i){
+                res.add(nums[i]);
+            }
+            return res;
+        }
+        if(target >= nums[n-1]){
+            for(int i = n-k; i<n; ++i){
+                res.add(nums[i]);
+            }
+            return res;
+        }
+        // 1,2,4,5,6,7
+        int left = 0, right = n-1;
+        while (left < right){
+            int mid = left + ((right - left) >> 1);
+            if(nums[mid] < target){
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        if(nums[left] == target){
+            res.add(target);
+            k -= 1;
+            int p = left -1, q = left + 1;
+            while(k > 0){
+                if(p >= 0 && q < n){
+                    if(target - nums[p] <= nums[q] - target){
+                        res.add(nums[p--]);
+                    } else {
+                        res.add(nums[q++]);
+                    }
+                } else if(p >= 0){
+                    res.add(nums[p--]);
+                } else {
+                    res.add(nums[q++]);
+                }
+                k--;
+            }
+        } else {
+            int p = left -1, q = left;
+            while(k > 0){
+                if(p >= 0 && q < n){
+                    if(target - nums[p] <= nums[q] - target){
+                        res.add(nums[p--]);
+                    } else {
+                        res.add(nums[q++]);
+                    }
+                } else if(p >= 0){
+                    res.add(nums[p--]);
+                } else {
+                    res.add(nums[q++]);
+                }
+                k--;
+            }
+        }
+        Collections.sort(res);
         return res;
 
     }
