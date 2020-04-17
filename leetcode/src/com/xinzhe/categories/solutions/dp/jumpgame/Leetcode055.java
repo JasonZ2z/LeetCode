@@ -20,7 +20,7 @@ public class Leetcode055 {
 
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < i; j++) {
-                dp[i] = nums[j] + j >= nums[j] && dp[j];
+                dp[i] = nums[j] + j >= i && dp[j];
                 if(dp[i])break;
             }
             dp[i] = false;
