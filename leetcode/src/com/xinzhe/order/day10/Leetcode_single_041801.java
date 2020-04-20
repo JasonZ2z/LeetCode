@@ -1,0 +1,25 @@
+package com.xinzhe.order.day10;
+
+/**
+ * @Author Xin
+ * @create 2020/4/18 14:55
+ * Title :
+ * Description :
+ * link :
+ * Level :
+ */
+public class Leetcode_single_041801 {
+    public static void main(String[] args) {
+
+    }
+    public int minCount(int[] coins) {
+        int n = coins.length;
+        if(n == 0) return 0;
+        int count = 0;
+        for (int coin : coins) {
+            count += (coin + 1) >> 1;
+        }
+        return count;
+    }
+
+}
