@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.backtrack;
+package com.xinzhe.categories.solutions.backtrack.easy;
 
 import java.util.ArrayList;
 import java.util.List;
