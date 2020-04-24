@@ -9,7 +9,7 @@ package com.xinzhe.order.day09;
  * Level : Medium
  */
 
-public class Leetcode_interview_0107 {
+public class Interview_107 {
     //转圈
     public void rotate(int[][] matrix) {
         int n = matrix.length;

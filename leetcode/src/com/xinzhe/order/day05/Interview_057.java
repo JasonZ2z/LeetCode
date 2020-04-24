@@ -13,7 +13,7 @@ import java.util.List;
  * Level : Easy
  */
 
-public class Leetcode_interview_057 {
+public class Interview_057 {
     public static void main(String[] args) {
         int[][] a = findContinuousSequence(15);
         for (int[] ints : a) {

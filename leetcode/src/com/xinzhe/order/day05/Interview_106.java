@@ -9,7 +9,7 @@ package com.xinzhe.order.day05;
  * link : https://leetcode-cn.com/problems/compress-string-lcci
  * Level : Easy
  */
-public class Leetcode_interview_0106 {
+public class Interview_106 {
     public static void main(String[] args) {
         System.out.println(compressString("aabbvvv"));
     }
