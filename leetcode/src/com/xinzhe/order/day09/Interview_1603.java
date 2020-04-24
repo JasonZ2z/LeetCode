@@ -11,7 +11,7 @@ import java.util.Arrays;
  * link : https://leetcode-cn.com/problems/intersection-lcci
  * Level : Hard
  */
-public class Leetcode_interview_1603 {
+public class Interview_1603 {
     public double[] intersection(int[] start1, int[] end1, int[] start2, int[] end2) {
         int x1 = start1[0], y1 = start1[1];
         int x2 = end1[0], y2 = end1[1];

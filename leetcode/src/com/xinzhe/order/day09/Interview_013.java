@@ -11,7 +11,7 @@ package com.xinzhe.order.day09;
  * Level : Medium
  */
 
-public class Leetcode_interview_0013 {
+public class Interview_013 {
 
     private int[][] direction = {{1, 0, -1, 0},{0, 1, 0, -1}};
     private int count = 0;

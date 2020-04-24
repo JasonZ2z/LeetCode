@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
  * Level : Easy
  */
 
-public class Leetcode_interview_062 {
+public class Interview_062 {
     public static void main(String[] args) {
         System.out.println(lastRemaining(10,17));
     }
