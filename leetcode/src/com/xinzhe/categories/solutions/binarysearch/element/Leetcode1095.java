@@ -3,7 +3,7 @@ package com.xinzhe.categories.solutions.binarysearch.element;
 /**
  * @author Xin
  * @date 2020/4/8 14:56
- * Title : 34. 在排序数组中查找元素的第一个和最后一个位置
+ * Title : 1095. 山脉数组中查找目标值
  * Description : 给你一个 山脉数组 mountainArr，请你返回能够使得 mountainArr.get(index) 等于 target 最小 的下标 index 值。如果不存在这样的下标 index，就请返回 -1。
  *          何为山脉数组？如果数组 A 是一个山脉数组的话，那它满足如下条件：
  *          首先，A.length >= 3

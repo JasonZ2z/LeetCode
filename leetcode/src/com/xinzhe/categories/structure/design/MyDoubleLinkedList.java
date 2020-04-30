@@ -1,8 +1,7 @@
 package com.xinzhe.categories.structure.design;
-
 /**
  * @author Xin
- * @create 2020/4/23
+ * @create 2020/4/26
  * Title : 707. 设计链表
  * Description : 设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val 和 next。val 是当前节点的值，next 是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性 prev 以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。
  *      在链表类中实现这些功能：
@@ -14,29 +13,47 @@ package com.xinzhe.categories.structure.design;
  * link : https://leetcode-cn.com/problems/design-linked-list
  * Level : Medium
  */
-//todo need to review
-    //单链表实现
-public class MyLinkedList {
-    int size = 0;
+
+//双链表实现
+    //关键点在于：构造 head/tail dummy node
+    // addAtIndex: 前插，问题在于index==size 转换为尾插！
+public class MyDoubleLinkedList {
+    int size;
     Node head;
-    /** Initialize your data structure here. */
-    public MyLinkedList() {
+    Node tail;
+    public MyDoubleLinkedList() {
         head = new Node();
+        tail = new Node();
+        head.next = tail;
+        tail.pre = head;
+
     }
 
     /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
     public int get(int index) {
-        if(index >= size || index < 0) return -1;
-        Node cur = head.next;
-        for (int i = 0; i < index; ++i) {
-            cur = cur.next;
+        if(index < 0 || index >= size) return -1;
+        return getIndex(index).val;
+    }
+
+    public Node getIndex(int index) {
+        Node pre;
+        if(index <= size -index) {
+            pre = head.next;
+            for (int i = 0; i < index; ++i) {
+                pre = pre.next;
+            }
+        }else {
+            pre = index == size ? tail : tail.pre;
+            for (int i = 0; i < size - index -1 ; ++i) {
+                pre = pre.pre;
+            }
         }
-        return cur.val;
+        return pre;
     }
 
     /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
     public void addAtHead(int val) {
-        addAtIndex(0, val);
+        addAtIndex(0,val);
     }
 
     /** Append a node of value val to the last element of the linked list. */
@@ -48,37 +65,69 @@ public class MyLinkedList {
     public void addAtIndex(int index, int val) {
         if(index > size) return;
         if(index < 0) index = 0;
-        Node pre = head;
-        for (int i = 0; i < index; ++i) {
-            pre = pre.next;
-        }
-        pre.next = new Node(val, pre.next);
+        Node cur = getIndex(index);
+        Node target = new Node(val);
+        Node pre = cur.pre;
+        target.pre = pre;
+        target.next = cur;
+        cur.pre = target;
+        pre.next = target;
         size++;
     }
 
     /** Delete the index-th node in the linked list, if the index is valid. */
     public void deleteAtIndex(int index) {
         if(index < 0 || index >= size) return;
-        Node pre = head;
-        for (int i = 0; i < index; ++i) {
-            pre = pre.next;
-        }
-        pre.next = pre.next.next;
+        Node cur = getIndex(index);
+        Node pre = cur.pre;
+        Node next = cur.next;
+        pre.next = next;
+        next.pre = pre;
+        cur.next = null;
+        cur.pre = null;
         size--;
+
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb=new StringBuilder("head <-> ");
+        Node tempNode= head.next;
+        for (int i=0;i<size;i++,tempNode=tempNode.next){
+            sb.append(tempNode.val).append(" <-> ");
+        }
+        sb.append("tail");
+        return sb.toString();
     }
 
     static class Node{
         int val;
         Node next;
-
+        Node pre;
         public Node() {
-            this.next = null;
-            this.val = 0;
         }
-
-        public Node(int val, Node next) {
+        public Node(int val) {
             this.val = val;
-            this.next = next;
         }
+    }
+
+    public static void main(String[] args) {
+        MyDoubleLinkedList list = new MyDoubleLinkedList();
+        System.out.println("new   " + list.toString());
+        list.addAtHead(1);
+        System.out.println("addAtHead 1   " + list.toString());
+        list.addAtHead(2);
+        System.out.println("addAtHead 2   " + list.toString());
+        System.out.println(list.get(0));
+        System.out.println(list.get(1));
+        System.out.println(list.get(2));
+        list.addAtTail(3);
+        System.out.println("addAtTail 3   " + list.toString());
+        list.addAtIndex(1,2);
+        System.out.println("addAtIndex 1,2   " + list.toString());
+        System.out.println("get 1   "+list.get(1));
+        list.deleteAtIndex(1);
+        System.out.println("deleteAtIndex 1   " + list.toString());
+        System.out.println("get 1   " + list.get(1));
     }
 }

@@ -26,6 +26,7 @@ if (check(mid)) {
 ```
 
 ### Related Problems
+- 入门 Leetcode704. 二分查找
 
 #### 查找符合条件的元素
 1. Leetcode033. 搜索旋转排序数组
@@ -37,7 +38,7 @@ if (check(mid)) {
 7. Leetcode300. 最长上升子序列
 8. Leetcode275. H指数 II
 9. Leetcode1095. 山脉数组中查找目标值
-10. Leetcode704. 二分查找
+
 11. Leetcode004. 寻找两个有序数组的中位数  ***hard***
 
 #### 在一个有上下界的区间里搜索一个整数
