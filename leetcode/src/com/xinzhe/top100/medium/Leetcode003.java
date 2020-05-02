@@ -14,10 +14,10 @@ import java.util.Set;
  */
 public class Leetcode003 {
     public static void main(String[] args) {
-        String s = "bbbcdaabc";
-        System.out.println(lengthOfLongestSubstring(s));
+        String s = "abcbda";
+        //System.out.println(lengthOfLongestSubstring(s));
         System.out.println(lengthOfLongestSubstring2(s));
-        System.out.println(lengthOfLongestSubstring3(s));
+        //System.out.println(lengthOfLongestSubstring3(s));
     }
     public static int lengthOfLongestSubstring(String s) {
         if(s == null || s.length() == 0) return 0;
