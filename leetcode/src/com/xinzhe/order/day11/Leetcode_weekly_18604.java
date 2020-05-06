@@ -20,32 +20,33 @@ public class Leetcode_weekly_18604 {
     public static void main(String[] args) {
         Leetcode_weekly_18604 lc = new Leetcode_weekly_18604();
        // int[] nums = {10,2,-10,5,20};
-        int[] nums = {-1,-2,-3};
-        System.out.println(lc.constrainedSubsetSum1(nums, 1));
-        System.out.println(lc.constrainedSubsetSum(nums, 1));
+        int[] nums = {10,-2,-10,-5,20};
+        System.out.println(lc.constrainedSubsetSum1(nums, 2));
+        System.out.println(lc.constrainedSubsetSum(nums, 2));
     }
     public int constrainedSubsetSum1(int[] nums, int k) {
         int n = nums.length;
-        int sum = Arrays.stream(nums).boxed().mapToInt(Integer::intValue).sum();
-        //if(k == 1) return Math.max(sum, 0);
         int[] dp = new int[n];
-        Arrays.fill(dp,-1);
-        for (int i = 0; i < n; ++i) {
+        boolean flag = false;
+        int max = Integer.MIN_VALUE;
+        Arrays.fill(dp, Integer.MIN_VALUE);
+        dp[0] =nums[0];
+        for (int i = 1; i < n; ++i) {
+            if(nums[i] > 0) flag = true;
+            max = Math.max(nums[i], max);
             for(int j = k; j > 0; --j) {
                 if(i-j >= 0) {
-                    int tmp = dp[i-j] == -1 ? 0 : dp[i-j];
+                    int tmp = dp[i-j];
                     for (int l = i-j+1; l <= i ; ++l) {
-                        if(nums[l] > 0) {
-                            tmp += nums[l];
-                        }
+                        tmp += nums[l];
                     }
                     dp[i] = Math.max(dp[i] , tmp);
                 }
             }
         }
         System.out.println(Arrays.toString(dp));
-        System.out.println(Arrays.toString(dp));
-        return dp[n-1];
+        if(!flag) return max;
+        return Math.max(dp[n-1], max);
     }
 
     public int constrainedSubsetSum(int[] nums, int k) {
