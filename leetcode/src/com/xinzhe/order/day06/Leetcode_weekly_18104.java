@@ -14,6 +14,18 @@ package com.xinzhe.order.day06;
 //todo
 public class Leetcode_weekly_18104 {
     public String longestPrefix(String s) {
-        return "";
+        int n = s.length();
+        int i = 0, j = n-1;
+        StringBuilder sb = new StringBuilder();
+        while(i <= j) {
+            if(s.charAt(i) == s.charAt(j)) {
+                sb.append(s.charAt(i));
+                i++;
+                j--;
+            }else {
+                break;
+            }
+        }
+        return sb.toString();
     }
 }
