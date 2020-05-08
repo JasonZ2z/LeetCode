@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.strings;
+package com.xinzhe.categories.structure.strings.kmp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
