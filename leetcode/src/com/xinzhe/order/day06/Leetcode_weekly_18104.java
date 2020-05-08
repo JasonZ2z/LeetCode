@@ -11,21 +11,33 @@ package com.xinzhe.order.day06;
  * Level : Hard
  * Comment : 181周赛04
  */
-//todo
+//todo need to review
 public class Leetcode_weekly_18104 {
-    public String longestPrefix(String s) {
+    public static void main(String[] args) {
+        String s = "aabaa";
+        System.out.println(longestPrefix(s));
+    }
+    public static String longestPrefix(String s) {
         int n = s.length();
-        int i = 0, j = n-1;
-        StringBuilder sb = new StringBuilder();
-        while(i <= j) {
-            if(s.charAt(i) == s.charAt(j)) {
-                sb.append(s.charAt(i));
-                i++;
-                j--;
-            }else {
-                break;
+        int[] next = getNext(s);
+
+        int len = next[n];
+        return s.substring(0,len);
+    }
+
+    private static int[] getNext(String s) {
+        int n = s.length();
+        int[] next = new int[n+1];
+        next[0] = -1;
+        int i=0, j=-1;
+        while (i < n) {
+            if(j==-1 || s.charAt(i) == s.charAt(j)) {
+                next[++i] = ++j;
+                //System.out.println(Arrays.toString(next));
+            } else {
+                j = next[j];
             }
         }
-        return sb.toString();
+        return next;
     }
 }
