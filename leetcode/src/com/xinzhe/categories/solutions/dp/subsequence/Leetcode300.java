@@ -35,6 +35,7 @@ public class Leetcode300 {
             }
             res = Math.max(dp[i], res);
         }
+        System.out.println(Arrays.toString(dp));
         return res;
     }
 

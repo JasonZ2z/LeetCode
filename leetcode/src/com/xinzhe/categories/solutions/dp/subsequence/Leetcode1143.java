@@ -1,9 +1,11 @@
 package com.xinzhe.categories.solutions.dp.subsequence;
 
+import java.util.Arrays;
+
 /**
  * @Author Xin
  * @create 2020/3/10 18:32
- * Title : 1143. 最长公共子序列
+ * Title : right. 最长公共子序列
  * Description : 给定两个字符串 text1 和 text2，返回这两个字符串的最长公共子序列。
  *              一个字符串的 子序列 是指这样一个新的字符串：它是由原字符串在不改变字符的相对顺序的情况下删除某些字符（也可以不删除任何字符）后组成的新字符串。
  *              例如，"ace" 是 "abcde" 的子序列，但 "aec" 不是 "abcde" 的子序列。两个字符串的「公共子序列」是这两个字符串所共同拥有的子序列。

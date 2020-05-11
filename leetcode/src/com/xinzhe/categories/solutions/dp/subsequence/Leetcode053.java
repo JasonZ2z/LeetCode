@@ -12,6 +12,7 @@ package com.xinzhe.categories.solutions.dp.subsequence;
  * Level : Easy
  */
 public class Leetcode053 {
+    //dp
     public int maxSubArray(int[] nums) {
         if(nums.length < 1) return 0;
         if(nums.length == 1) return nums[0];
@@ -25,5 +26,45 @@ public class Leetcode053 {
         }
 
         return res;
+    }
+
+    //分治 线段树
+    class Array{
+        int lsum;
+        int rsum;
+        int msum;
+        int isum;
+
+        public Array(int lsum, int rsum, int msum, int isum) {
+            this.lsum = lsum;
+            this.rsum = rsum;
+            this.msum = msum;
+            this.isum = isum;
+        }
+    }
+
+    public Array build(int[] arr, int l, int r){
+        if(l == r) {
+            return new Array(arr[l],arr[l],arr[l],arr[l]);
+        } else {
+            int mid = l + (r - l)/2;
+            Array left = build(arr, l, mid);
+            Array right = build(arr, mid + 1, r);
+            return merge(left, right);
+        }
+    }
+
+    private Array merge(Array left, Array right) {
+        int isum = left.isum + right.isum;
+        int lsum = Math.max(left.lsum, left.isum+right.lsum);
+        int rsum = Math.max(right.rsum, right.isum+left.rsum);
+        int msum = Math.max(Math.max(left.msum, right.msum), left.rsum+right.lsum);
+        return new Array(lsum, rsum, msum, isum);
+    }
+
+    public int maxSubArray2(int[] nums){
+        if(nums.length==0) return 0;
+        Array arr = build(nums, 0, nums.length - 1);
+        return arr.msum;
     }
 }

@@ -5,37 +5,72 @@ import java.util.*;
 /**
  * @Author Xin
  * @create 2020/5/10
- * Title :
- * Description :
- * link :
- * Level :
+ * Title : 1443. 收集树上所有苹果的最少时间
+ * Description : 给你一棵有 n 个节点的无向树，节点编号为 0 到 n-1 ，它们中有一些节点有苹果。通过树上的一条边，需要花费 1 秒钟。
+ *              你从 节点 0 出发，请你返回最少需要多少秒，可以收集到所有苹果，并回到节点 0 。
+ *              无向树的边由 edges 给出，其中 edges[i] = [fromi, toi] ，表示有一条边连接 from 和 toi 。
+ *              除此以外，还有一个布尔数组 hasApple ，其中 hasApple[i] = true 代表节点 i 有一个苹果，否则，节点 i 没有苹果。
+ * link : https://leetcode-cn.com/problems/minimum-time-to-collect-all-apples-in-a-tree
+ * Level : Medium
+ * tag : dfs, graph
  */
+//todo need to review
 public class Leetcode_weekly_18803 {
+    Map<Integer, List<Integer>> map = new HashMap<>();
     public int minTime(int n, int[][] edges, List<Boolean> hasApple) {
-        ArrayList<Integer>[] graph = new ArrayList[n];
-        for (int i = 0; i < n; i++) {
-            graph[i] = new ArrayList<>();
+        for (int i = 0; i < n; ++i) {
+            map.put(i, new ArrayList<>());
         }
         for (int[] edge : edges) {
-            graph[edge[0]].add(edge[1]);
-            graph[edge[1]].add(edge[0]);
+            map.get(edge[0]).add(edge[1]);
         }
-        return Math.max(0, minTime(0, graph, hasApple, new boolean[n]) - 2);
+        dfs(hasApple, 0);
+        return count(hasApple, 0);
     }
 
-    private int minTime(int n, ArrayList<Integer>[] graph, List<Boolean> hasApple, boolean[] visited) {
-        if (!visited[n]) {
-            visited[n] = true;
-            int sum = 0;
-            for (int i : graph[n]) {
-                sum += minTime(i, graph, hasApple, visited);
-            }
-            if (sum > 0) {
-                return sum + 2;
-            } else {
-                return hasApple.get(n) ? 2 : 0;
+    private int count(List<Boolean> hasApple, int i) {
+        int res = 0;
+        for (int next : map.get(i)) {
+            if(hasApple.get(next)) {
+                res += 2 + count(hasApple, next);
             }
         }
-        return 0;
+        return res;
+    }
+
+    private boolean dfs(List<Boolean> hasApple, int i) {
+        boolean ans = hasApple.get(i);
+        for (int next : map.get(i)) {
+            if(dfs(hasApple, next)) {
+                ans = true;
+            }
+        }
+        hasApple.set(i, ans);
+        return ans;
+    }
+
+    //从下至上遍历
+    public int minTime2(int n, int[][] edges, List<Boolean> hasApple) {
+        HashMap<Integer, HashSet<Integer>> graph = new HashMap<>();
+        for(int[] i : edges) {
+            graph.putIfAbsent(i[0], new HashSet<>());
+            graph.get(i[0]).add(i[1]);
+        }
+        int[] num = new int[n];
+        int[] step = new  int[n];
+        for(int i = n - 1; i >= 0; i--) {
+            if(hasApple.get(i)) num[i] = 1;
+            if(graph.containsKey(i)) {
+                for(int j : graph.get(i)) {
+                    if(num[j] != 0) {
+                        num[i] += num[j];
+                        step[i] += step[j] + 2;
+                    }
+                }
+            }
+        }
+        System.out.println(Arrays.toString(num));
+        System.out.println(Arrays.toString(step));
+        return step[0];
     }
 }
