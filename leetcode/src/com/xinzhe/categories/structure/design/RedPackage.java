@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.linkedlist;
+package com.xinzhe.categories.structure.design;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

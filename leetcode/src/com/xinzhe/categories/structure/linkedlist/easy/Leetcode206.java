@@ -1,4 +1,6 @@
-package com.xinzhe.categories.structure.linkedlist;
+package com.xinzhe.categories.structure.linkedlist.easy;
+
+import com.xinzhe.categories.structure.linkedlist.ListNode;
 
 /**
  * @Author Xin

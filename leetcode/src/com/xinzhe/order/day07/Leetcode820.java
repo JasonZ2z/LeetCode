@@ -1,6 +1,6 @@
 package com.xinzhe.order.day07;
 
-import com.xinzhe.categories.structure.design.Trie;
+import com.xinzhe.categories.structure.design.medium.Trie;
 
 import java.util.Arrays;
 import java.util.HashSet;

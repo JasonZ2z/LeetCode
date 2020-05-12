@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.design;
+package com.xinzhe.categories.structure.design.medium;
 
 import java.util.ArrayList;
 import java.util.HashMap;
