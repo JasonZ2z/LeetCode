@@ -16,7 +16,7 @@ package com.xinzhe.order.day09;
  * link : https://leetcode-cn.com/problems/html-entity-parser
  * Level : Medium
  */
-public class Leetcode18403 {
+public class Leetcode_weekly_18403 {
     public static void main(String[] args) {
         String s = "and I quote: &quot;...&quot;";
         //String s = "&amp; is an HTML entity but &ambassador; is not.";

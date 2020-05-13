@@ -14,7 +14,7 @@ package com.xinzhe.order.day08;
  * Level : Medium
  * Comment : 183周赛03
  */
-public class Leetcode18303 {
+public class Leetcode_weekly_18303 {
     static String sa = "a";
     static String sb = "b";
     static String sc = "c";

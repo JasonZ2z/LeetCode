@@ -13,8 +13,9 @@ import java.util.LinkedList;
  *          void inc(int k, int val)：栈底的 k 个元素的值都增加 val 。如果栈中元素总数小于 k ，则栈中的所有元素都增加 val 。
  * link : https://leetcode-cn.com/problems/design-a-stack-with-increment-operation
  * Level : Medium
+ * Comment 180周賽02
  */
-public class Leetcode5357 {
+public class Leetcode_weekly_18002 {
     public static void main(String[] args) {
         CustomStack customStack = new CustomStack(3);
         customStack.push(1);

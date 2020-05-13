@@ -12,7 +12,7 @@ package com.xinzhe.order.day08;
  * Comment : 23双周赛03
  */
 
-public class Leetcode2303 {
+public class Leetcode_biweekly_2303 {
     public boolean checkOverlap(int radius, int x_center, int y_center, int x1, int y1, int x2, int y2) {
         for (int i = x1; i <=x2 ; ++i) {
             for (int j = y1; j <= y2 ; ++j) {

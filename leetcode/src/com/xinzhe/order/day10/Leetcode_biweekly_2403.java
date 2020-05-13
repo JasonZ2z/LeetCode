@@ -1,6 +1,7 @@
 package com.xinzhe.order.day10;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @Author Xin
@@ -16,7 +17,7 @@ import java.util.*;
  * Level : Medium
  * Comment : 24双周赛03
  */
-public class Leetcode_dweekly_2403 {
+public class Leetcode_biweekly_2403 {
     public static void main(String[] args) {
         System.out.println(getHappyString2(4,10));
     }

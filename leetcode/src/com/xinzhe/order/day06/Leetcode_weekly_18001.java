@@ -15,8 +15,9 @@ import java.util.List;
  * 在同一列的所有元素中最大
  * link : https://leetcode-cn.com/problems/lucky-numbers-in-a-matrix
  * Level : Easy
+ * Comment 180周赛01
  */
-public class Leetcode5356 {
+public class Leetcode_weekly_18001 {
     public List<Integer> luckyNumbers (int[][] matrix) {
         List<Integer> list = new ArrayList<>();
         int m = matrix.length;

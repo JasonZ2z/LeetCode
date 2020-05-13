@@ -12,7 +12,7 @@ import java.util.List;
  * link :
  * Level :
  */
-public class Leetcode_dweekly_2501 {
+public class Leetcode_biweekly_2501 {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> res = new ArrayList<>();
         int max = Arrays.stream(candies).boxed().max(Integer::compareTo).get();

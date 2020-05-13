@@ -14,7 +14,7 @@ import java.util.Arrays;
  * Level : Hard
  * Comment : 23双周赛04
  */
-public class Leetcode2304 {
+public class Leetcode_biweekly_2304 {
     public static void main(String[] args) {
         int[] a = {-1,-8,0,5,-9};
         System.out.println(maxSatisfaction(a));

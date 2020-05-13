@@ -14,7 +14,7 @@ import java.util.List;
  * link : https://leetcode-cn.com/problems/string-matching-in-an-array
  * Level : Easy
  */
-public class Leetcode18401 {
+public class Leetcode_weekly_18401 {
     public static void main(String[] args) {
         String[] wrods = {"blue","green","bu"};
         System.out.println(stringMatching(wrods));

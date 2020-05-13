@@ -13,7 +13,7 @@ import java.util.Arrays;
  * link : https://leetcode-cn.com/problems/queries-on-a-permutation-with-key
  * Level : Medium
  */
-public class Leetcode18402 {
+public class Leetcode_weekly_18402 {
 
     public static void main(String[] args) {
         int[] arr = {7,5,5,8,3};

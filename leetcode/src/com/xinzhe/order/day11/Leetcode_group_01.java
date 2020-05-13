@@ -12,12 +12,12 @@ import java.util.Map;
  * Level : Easy
  * Comment 2020-spring-group-01
  */
-public class Leetcode_Group_03 {
+public class Leetcode_group_01 {
     public int expectNumber(int[] scores) {
         int n = scores.length;
         Map<Integer, Integer> map = new HashMap<>();
         for (int score : scores) {
-            map.put(score, map.getOrDefault(score,0) + 1);
+            map.put(score, map.getOrDefault(score, 0) + 1);
         }
         return map.size();
     }

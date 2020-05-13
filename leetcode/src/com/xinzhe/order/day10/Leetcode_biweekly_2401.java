@@ -11,7 +11,7 @@ package com.xinzhe.order.day10;
  * Level : Easy
  * Comment : 24双周赛01
  */
-public class Leetcode_dweekly_2401 {
+public class Leetcode_biweekly_2401 {
     public static void main(String[] args) {
         int[] a = {1,-2,-3};
         System.out.println(minStartValue(a));

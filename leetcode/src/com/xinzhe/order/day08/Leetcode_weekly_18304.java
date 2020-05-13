@@ -15,7 +15,7 @@ import java.util.List;
  * Level : Easy
  * Comment : 183周赛01
  */
-public class Leetcode18304 {
+public class Leetcode_weekly_18304 {
     public static void main(String[] args) {
         int[] a = {4,4,7,6,7};
         System.out.println(minSubsequence(a));

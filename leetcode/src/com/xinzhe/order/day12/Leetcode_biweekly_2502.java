@@ -1,7 +1,5 @@
 package com.xinzhe.order.day12;
 
-import java.util.Arrays;
-
 /**
  * @Author Xin
  * @create 2020/5/2
@@ -10,7 +8,7 @@ import java.util.Arrays;
  * link :
  * Level :
  */
-public class Leetcode_dweekly_2502 {
+public class Leetcode_biweekly_2502 {
     public static void main(String[] args) {
        // System.out.println(maxDiff(555));
         System.out.println(maxDiff(1101057));

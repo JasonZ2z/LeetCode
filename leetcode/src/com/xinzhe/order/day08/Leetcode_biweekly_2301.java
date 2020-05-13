@@ -13,7 +13,7 @@ import java.util.Map;
  * Level : Easy
  * Comment : 23双周赛01
  */
-public class Leetcode2301 {
+public class Leetcode_biweekly_2301 {
     public static void main(String[] args) {
         System.out.println(countLargestGroup(24));
     }

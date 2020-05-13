@@ -15,9 +15,9 @@ import java.util.List;
  */
 
 //todo undo
-public class Leetcode_Group_02 {
+public class Leetcode_group_04 {
     public static void main(String[] args) {
-        Leetcode_Group_02 lt = new Leetcode_Group_02();
+        Leetcode_group_04 lt = new Leetcode_group_04();
         int[] arr = {2,3,3,2,3,3};
         System.out.println(lt.splitArray(arr));
     }

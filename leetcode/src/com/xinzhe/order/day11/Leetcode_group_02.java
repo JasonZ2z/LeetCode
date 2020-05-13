@@ -11,11 +11,11 @@ package com.xinzhe.order.day11;
  * 我们定义 m 天中做题时间最多的一天耗时为 T（小杨完成的题目不计入做题总时间）。请你帮小张求出最小的 T是多少。
  * link : https://leetcode-cn.com/problems/xiao-zhang-shua-ti-ji-hua
  * Level : Medium
- * Comment 2020-spring-group-01
+ * Comment 2020-spring-group-02
  */
-public class Leetcode_Group_01 {
+public class Leetcode_group_02 {
     public static void main(String[] args) {
-        Leetcode_Group_01 lt = new Leetcode_Group_01();
+        Leetcode_group_02 lt = new Leetcode_group_02();
         int[] time = {1,2,3,3};
         System.out.println(lt.minTime(time, 2));
     }

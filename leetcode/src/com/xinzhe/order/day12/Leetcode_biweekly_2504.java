@@ -12,7 +12,7 @@ import java.util.List;
  * Level :
  */
 //todo
-public class Leetcode_dweekly_2504 {
+public class Leetcode_biweekly_2504 {
 
     public int numberWays2(List<List<Integer>> hats) {
         List<Integer>[] adj = new List[41];

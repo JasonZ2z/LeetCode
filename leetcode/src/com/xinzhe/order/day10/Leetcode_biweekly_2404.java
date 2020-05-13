@@ -12,7 +12,7 @@ package com.xinzhe.order.day10;
  * Level : Hard
  * Comment : 24双周赛04
  */
-public class Leetcode_dweekly_2404 {
+public class Leetcode_biweekly_2404 {
     public static void main(String[] args) {
 
     }

@@ -13,7 +13,7 @@ package com.xinzhe.order.day08;
  * Comment : 183周赛04
  */
 //todo undo
-public class Leetcode18301 {
+public class Leetcode_weekly_18301 {
     public String stoneGameIII(int[] stoneValue) {
         return "";
     }

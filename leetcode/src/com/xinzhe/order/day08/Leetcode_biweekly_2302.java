@@ -13,7 +13,7 @@ import java.util.Map;
  * Level : Medium
  * Comment : 23双周赛02
  */
-public class Leetcode2302 {
+public class Leetcode_biweekly_2302 {
     public static void main(String[] args) {
         String s ="cxayrgpe";
 

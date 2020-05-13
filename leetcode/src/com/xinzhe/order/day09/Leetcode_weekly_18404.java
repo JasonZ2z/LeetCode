@@ -9,7 +9,7 @@ package com.xinzhe.order.day09;
  * link : https://leetcode-cn.com/problems/number-of-ways-to-paint-n-x-3-grid
  * Level : Hard
  */
-public class Leetcode18404 {
+public class Leetcode_weekly_18404 {
     public static void main(String[] args) {
         System.out.println(numOfWays2(500));
     }

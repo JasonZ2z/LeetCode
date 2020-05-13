@@ -12,7 +12,7 @@ package com.xinzhe.order.day08;
  * Level : Medium
  * Comment : 183周赛02
  */
-public class Leetcode18302 {
+public class Leetcode_weekly_18302 {
     public static void main(String[] args) {
         String s = "10";
         System.out.println(numSteps(s));

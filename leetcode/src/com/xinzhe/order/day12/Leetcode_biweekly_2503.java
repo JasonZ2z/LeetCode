@@ -10,7 +10,7 @@ import java.util.Arrays;
  * link :
  * Level :
  */
-public class Leetcode_dweekly_2503 {
+public class Leetcode_biweekly_2503 {
     public static void main(String[] args) {
         String s1 = "bxfowqvnrhuzwqohquamvszkvunb";
         String s2 = "xjegbjccjjxfnsiearbsgsofywtq";

@@ -17,7 +17,7 @@ import java.util.List;
  * Level : Medium
  * Comment : 24双周赛02
  */
-public class Leetcode_dweekly_2402 {
+public class Leetcode_biweekly_2402 {
     public static void main(String[] args) {
         System.out.println(findMinFibonacciNumbers(10));
     }
