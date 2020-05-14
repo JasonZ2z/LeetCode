@@ -16,7 +16,7 @@ import java.util.PriorityQueue;
  * Comment 180周赛04
  */
 public class Leetcode_weekly_18004 {
-    static final int mod = (int) (1e9 + 7);
+    static final int MOD = (int) (1e9 + 7);
 
     public int maxPerformance(int n, int[] speed, int[] efficiency, int k) {
         int[][] items = new int[n][2];
@@ -36,7 +36,7 @@ public class Leetcode_weekly_18004 {
             res = Math.max(res, sum * items[i][1]);
             queue.add(items[i][0]);
         }
-        return (int) (res % mod);
+        return (int) (res % MOD);
     }
 
     public static void main(String[] args) {

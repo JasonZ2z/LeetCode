@@ -26,7 +26,7 @@ public class Leetcode_weekly_18704 {
 
     }
 
-    public static void reverse(int temp[][]) {
+    public static void reverse(int[][] temp) {
         for (int i = 0; i < temp.length; i++) {
             for (int j = i; j < temp[i].length; j++) {
                 int k = temp[i][j];
