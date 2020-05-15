@@ -1,4 +1,4 @@
-package com.xinzhe.order.day10;
+package com.xinzhe.categories.solutions.hash;
 
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
