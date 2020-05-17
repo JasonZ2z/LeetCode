@@ -1,4 +1,4 @@
-package com.xinzhe.contest.weekly178;
+package com.xinzhe.contest.weekly.weekly178;
 
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 import com.xinzhe.categories.structure.tree.TreeNode;
