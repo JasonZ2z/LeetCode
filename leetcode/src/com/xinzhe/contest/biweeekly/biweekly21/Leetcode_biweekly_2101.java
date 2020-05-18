@@ -16,7 +16,7 @@ package com.xinzhe.contest.biweeekly.biweekly21;
  *      请你返回将 s 中字符重新排序后的 结果字符串 。
  * link : https://leetcode-cn.com/problems/increasing-decreasing-string
  * Level : Easy
- * Comment 180周赛01
+ * Comment 21双周赛01
  */
 
 public class Leetcode_biweekly_2101 {

@@ -13,7 +13,7 @@ import com.xinzhe.categories.structure.tree.TreeNode;
  *          重复第二步和第三步，直到你在树中无法继续移动。
  *          交错路径的长度定义为：访问过的节点数目 - 1（单个节点的路径长度为 0 ）。请你返回给定树中最长 交错路径 的长度。
  * Level : Medium
- * Comment 180周赛03
+ * Comment 21双周赛03
  */
 
 public class Leetcode_biweekly_2103 {
