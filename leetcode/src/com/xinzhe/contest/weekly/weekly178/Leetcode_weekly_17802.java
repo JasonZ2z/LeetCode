@@ -20,9 +20,9 @@ import java.util.stream.Collectors;
  * Comment 178周赛02
  */
 
-public class Leecode_weekly_17802 {
+public class Leetcode_weekly_17802 {
     public static void main(String[] args) {
-        Leecode_weekly_17802 lc = new Leecode_weekly_17802();
+        Leetcode_weekly_17802 lc = new Leetcode_weekly_17802();
         String[] v = {"BCA", "CAB", "CBA", "ABC", "ACB", "BAC"};
         System.out.println(lc.rankTeams(v));
         System.out.println(lc.rankTeams2(v));

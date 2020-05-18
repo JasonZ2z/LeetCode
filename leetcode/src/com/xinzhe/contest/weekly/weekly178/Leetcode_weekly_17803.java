@@ -17,7 +17,7 @@ import com.xinzhe.categories.structure.tree.TreeNode;
 
 //todo need to review
 //same as 剑指offer第26题
-public class Leecode_weekly_17803 {
+public class Leetcode_weekly_17803 {
 
     public boolean isSubPath(ListNode head, TreeNode root) {
         if (root == null) return false;

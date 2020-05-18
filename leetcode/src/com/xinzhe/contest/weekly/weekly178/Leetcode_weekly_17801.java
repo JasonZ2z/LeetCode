@@ -12,7 +12,7 @@ package com.xinzhe.contest.weekly.weekly178;
  * Comment 178周赛01
  */
 
-public class Leecode_weekly_17801 {
+public class Leetcode_weekly_17801 {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];

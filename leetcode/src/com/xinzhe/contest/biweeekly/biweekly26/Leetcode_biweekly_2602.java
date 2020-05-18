@@ -1,4 +1,4 @@
-package com.xinzhe.contest.biweeekly.biweeekly26;
+package com.xinzhe.contest.biweeekly.biweekly26;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 /**
  * @Author Xin
  * @create 2020/5/16
- * Title :
- * Description :
- * link :
- * Level :
+ * Title : 1447. 最简分数
+ * Description : 给你一个整数 n ，请你返回所有 0 到 1 之间（不包括 0 和 1）满足分母小于等于  n 的 最简 分数 。分数可以以 任意 顺序返回。
+ * link : https://leetcode-cn.com/problems/simplified-fractions/
+ * Level : Medium
  */
 public class Leetcode_biweekly_2602 {
     public int GCD(int m, int n) {

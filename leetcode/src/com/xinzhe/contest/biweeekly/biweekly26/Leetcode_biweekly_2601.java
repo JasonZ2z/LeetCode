@@ -1,12 +1,12 @@
-package com.xinzhe.contest.biweeekly.biweeekly26;
+package com.xinzhe.contest.biweeekly.biweekly26;
 
 /**
  * @Author Xin
  * @create 2020/5/16
- * Title :
- * Description :
- * link :
- * Level :
+ * Title : 1446. 连续字符
+ * Description : 给你一个字符串 s ，字符串的「能量」定义为：只包含一种字符的最长非空子字符串的长度。请你返回字符串的能量。
+ * link : https://leetcode-cn.com/problems/consecutive-characters/
+ * Level : Easy
  */
 public class Leetcode_biweekly_2601 {
     public int maxPower(String s) {

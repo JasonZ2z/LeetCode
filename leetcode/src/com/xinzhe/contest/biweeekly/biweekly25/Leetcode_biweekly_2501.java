@@ -1,4 +1,4 @@
-package com.xinzhe.order.day12;
+package com.xinzhe.contest.biweeekly.biweekly25;
 
 import java.util.ArrayList;
 import java.util.Arrays;

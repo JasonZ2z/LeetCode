@@ -22,9 +22,9 @@ import java.util.Queue;
  * Comment 178周赛04
  */
 //todo need to review
-public class Leecode_weekly_17804 {
+public class Leetcode_weekly_17804 {
     public static void main(String[] args) {
-        Leecode_weekly_17804 lc = new Leecode_weekly_17804();
+        Leetcode_weekly_17804 lc = new Leetcode_weekly_17804();
         int[][] grid = {{1, 1, 3}, {3, 2, 2}, {1, 1, 4}};
         System.out.println(lc.minCost(grid));
         System.out.println(lc.minCost2(grid));
