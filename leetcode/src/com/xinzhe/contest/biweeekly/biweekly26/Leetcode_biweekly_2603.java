@@ -12,7 +12,7 @@ import com.xinzhe.categories.structure.tree.TreeNode;
  */
 
 public class Leetcode_biweekly_2603 {
-    int count = 0;
+    private int count = 0;
 
     public int goodNodes(TreeNode root) {
         helper(root, Integer.MIN_VALUE);

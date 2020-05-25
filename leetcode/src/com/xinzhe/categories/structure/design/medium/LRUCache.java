@@ -1,5 +1,6 @@
 package com.xinzhe.categories.structure.design.medium;
 
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

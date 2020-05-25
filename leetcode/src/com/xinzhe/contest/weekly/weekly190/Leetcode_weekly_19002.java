@@ -6,9 +6,9 @@ import java.util.List;
 /**
  * @Author Xin
  * @create 2020/5/24
- * Title :
- * Description :
- * link :
+ * Title : 1456. 定长子串中元音的最大数目
+ * Description : 给你字符串 s 和整数 k 。请返回字符串 s 中长度为 k 的单个子字符串中可能包含的最大元音字母数。 英文中的 元音字母 为（a, e, i, o, u）。
+ * link : https://leetcode-cn.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length
  * Level : Medium
  * Comment 190周赛02
  */
