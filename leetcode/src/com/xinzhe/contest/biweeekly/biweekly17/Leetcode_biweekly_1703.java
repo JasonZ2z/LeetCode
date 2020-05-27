@@ -31,7 +31,7 @@ public class Leetcode_biweekly_1703 {
         sumEvenGrandparent(new Data(root.father, root.node, root.node.right));
     }
 
-    class Data {
+    static class Data {
         TreeNode grand;
         TreeNode father;
         TreeNode node;
