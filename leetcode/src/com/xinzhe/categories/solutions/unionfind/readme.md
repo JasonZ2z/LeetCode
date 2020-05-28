@@ -59,4 +59,5 @@ class UF {
 ```
 
 ### Related Problems
-1. Leetcode399. 除法求值
+    1. Leetcode399. 除法求值
+    2. Leetcode1319. 连通网络的操作次数
