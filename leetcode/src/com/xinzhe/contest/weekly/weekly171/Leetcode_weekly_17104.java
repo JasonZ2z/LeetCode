@@ -68,6 +68,4 @@ public class Leetcode_weekly_17104 {
         int[] b = map.get(c2);
         return Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]);
     }
-
-
 }
