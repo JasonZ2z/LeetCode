@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.slidingwindow;
+package com.xinzhe.categories.solutions.slidingwindow.medium;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,19 +17,20 @@ public class Leetcode003 {
         String s = "abcabcbbadc";
         System.out.println(lengthOfLongestSubstring(s));
     }
+
     public static int lengthOfLongestSubstring(String s) {
-        if(s == null || s.length() == 0) return 0;
-        int left = 0, right =0, max = 0;
+        if (s == null || s.length() == 0) return 0;
+        int left = 0, right = 0, max = 0;
         Map<Character, Integer> map = new HashMap<>(s.length());
-        while(right < s.length()){
+        while (right < s.length()) {
             char rightChar = s.charAt(right++);
             map.put(rightChar, map.getOrDefault(rightChar, 0) + 1);
-            while (map.get(rightChar) > 1){
+            while (map.get(rightChar) > 1) {
                 char leftChar = s.charAt(left);
-                map.put(leftChar, map.get(leftChar)-1);
+                map.put(leftChar, map.get(leftChar) - 1);
                 left++;
             }
-            max = Math.max(max, right-left);
+            max = Math.max(max, right - left);
         }
         return max;
     }
