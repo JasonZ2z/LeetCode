@@ -3,10 +3,10 @@ package com.xinzhe.interview.easy;
 /**
  * @Author Xin
  * @create 2020/6/10
- * Title : 001.06. Compress String LCCI
+ * Title : 01.06. Compress String LCCI
  * Description : Implement a method to perform basic string compression using the counts of repeated characters.
- * For example, the string aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than the original string, your method should return the original string.
- * You can assume the string has only uppercase and lowercase letters (a - z).
+ *              For example, the string aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than the original string, your method should return the original string.
+ *              You can assume the string has only uppercase and lowercase letters (a - z).
  * link : https://leetcode-cn.com/problems/compress-string-lcci
  */
 public class Interview_0106 {
