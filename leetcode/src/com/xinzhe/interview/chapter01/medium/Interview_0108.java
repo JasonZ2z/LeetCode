@@ -1,4 +1,4 @@
-package com.xinzhe.interview.medium;
+package com.xinzhe.interview.chapter01.medium;
 
 
 import java.util.HashSet;

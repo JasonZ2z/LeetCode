@@ -1,4 +1,4 @@
-package com.xinzhe.interview.easy;
+package com.xinzhe.interview.chapter01.easy;
 
 /**
  * @Author Xin
