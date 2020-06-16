@@ -1,4 +1,4 @@
-package com.xinzhe.contest.group.spring2020;
+package com.xinzhe.contest.spring2020;
 
 import java.util.ArrayList;
 import java.util.List;

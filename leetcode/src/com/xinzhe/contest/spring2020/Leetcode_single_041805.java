@@ -1,4 +1,4 @@
-package com.xinzhe.contest.solo.spring2020;
+package com.xinzhe.contest.spring2020;
 
 /**
  * @Author Xin
