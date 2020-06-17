@@ -1,6 +1,9 @@
 package com.xinzhe.contest.weekly.season04.weekly162;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @Author Xin
@@ -21,8 +24,42 @@ import java.util.List;
 
 public class Leetcode_weekly_16202 {
     public List<List<Integer>> reconstructMatrix(int upper, int lower, int[] colsum) {
-        //todo
-        return null;
+        int n = colsum.length;
+        List<List<Integer>> res = new ArrayList<>(2);
+        int[] up = new int[n];
+        int[] down = new int[n];
+        for (int value : colsum) {
+            if (value == 2) {
+                upper--;
+                lower--;
+            }
+        }
+        if(upper < 0 || lower < 0) return res;
+        for (int i = 0; i < n; i++) {
+            if(colsum[i] == 0) {
+                up[i] = 0;
+                down[i] = 0;
+            }else if(colsum[i] == 2) {
+                up[i] = 1;
+                down[i] = 1;
+            } else {
+                if(lower > 0) {
+                    down[i] = 1;
+                    up[i] = 0;
+                    lower--;
+                } else if(upper > 0){
+                    up[i] = 1;
+                    down[i] = 0;
+                    upper--;
+                } else {
+                    return res;
+                }
+            }
+        }
+        if(upper > 0 || lower > 0) return res;
+        res.add(Arrays.stream(up).boxed().collect(Collectors.toList()));
+        res.add(Arrays.stream(down).boxed().collect(Collectors.toList()));
+        return res;
     }
 
 }
