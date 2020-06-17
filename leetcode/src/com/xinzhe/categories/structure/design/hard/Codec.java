@@ -41,6 +41,8 @@ public class Codec {
         traversal(root.right);
     }
 
+
+    //dfs
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         if(root == null) return "";
@@ -86,5 +88,8 @@ public class Codec {
         node.right = helper(res);
         return node;
     }
+
+    //bfs
+
 
 }
