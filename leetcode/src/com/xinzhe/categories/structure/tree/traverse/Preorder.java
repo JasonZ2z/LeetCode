@@ -15,7 +15,7 @@ import java.util.Stack;
  * 前序遍历：根左右
  */
 public class Preorder {
-    private List<Integer> list = new ArrayList<>();
+    private static List<Integer> list = new ArrayList<>();
     /**
      *  递归
      */
@@ -50,7 +50,7 @@ public class Preorder {
         return list;
     }
 
-    public List<Integer> preOrderTraversal2(TreeNode root) {
+    public static List<Integer> preOrderTraversal2(TreeNode root) {
         if(root == null) return list;
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
@@ -65,5 +65,9 @@ public class Preorder {
             }
         }
         return list;
+    }
+
+    public static void printTree(TreeNode node) {
+        System.out.println(preOrderTraversal2(node).toString());
     }
 }

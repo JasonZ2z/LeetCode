@@ -11,7 +11,7 @@ import java.util.Stack;
  * @create 2020/2/18 16:47
  */
 public class PostOrder {
-    private List<Integer> list = new ArrayList<>();
+    private static List<Integer> list = new ArrayList<>();
     public List<Integer> postOrder(TreeNode root){
         postOrderRecur(root);
         return list;
@@ -25,7 +25,7 @@ public class PostOrder {
     }
     //左右中
     //中右左
-    public List<Integer> postOrderTraversal(TreeNode root){
+    public static List<Integer> postOrderTraversal(TreeNode root){
         if(root == null) return list;
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
@@ -40,5 +40,9 @@ public class PostOrder {
             }
         }
         return list;
+    }
+
+    public static void printTree(TreeNode node) {
+        System.out.println(postOrderTraversal(node).toString());
     }
 }

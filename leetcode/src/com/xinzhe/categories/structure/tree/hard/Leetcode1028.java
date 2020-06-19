@@ -1,9 +1,12 @@
 package com.xinzhe.categories.structure.tree.hard;
 
 import com.xinzhe.categories.structure.tree.TreeNode;
+import com.xinzhe.categories.structure.tree.traverse.LevelOrder;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @Author Xin
@@ -18,56 +21,69 @@ import java.util.List;
  */
 
 public class Leetcode1028 {
-    List<Integer> list = new ArrayList<>();
-    public TreeNode recoverFromPreorder(String s) {
-        return helper(s, 1);
+    public static void main(String[] args) {
+        String s = "1-2--3--4-5--6--7";
+        //String s = "1-401--349---90--88";
+        Leetcode1028 lc = new Leetcode1028();
+        LevelOrder.printTree(lc.recoverFromPreorder(s));
     }
 
-    private TreeNode helper(String s, int i) {
-        if(s == null || s.length() == 0) return null;
+
+    public TreeNode recoverFromPreorder(String s) {
+        List<Data> list = new ArrayList<>();
         char[] arr = s.toCharArray();
-        TreeNode node = new TreeNode(arr[0] - '0');
-        String tmp = "-".repeat(i);
-        int start = s.indexOf(tmp);
-        int count = 0, end = 0;
-        for(int j = s.length()-1; j >= 0; --j) {
-            if(arr[j] == '-') {
-                count++;
-            } else {
-                if(count == i) {
-                    end = j + i+ 1;
-                    break;
+        int start = 0;
+        int count = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i] == '-' ) {
+                if(arr[i-1] != '-') {
+                    list.add(new Data(new TreeNode(Integer.parseInt(s.substring(start,i))), count));
+                    count = 1;
+                } else {
+                    count++;
                 }
-                count = 0;
+            }else if(arr[i-1] == '-') {
+                start = i;
             }
         }
-        if(start < 0) return node;
-        if(start == end) {
-            //String substring = s.substring(start + i);
-            node.left = start + i <= s.length() ? helper(s.substring(start + i), i+1) : null;
-        } else if(end <= 0){
-            return node;
+        list.add(new Data(new TreeNode(Integer.parseInt(s.substring(start))), count));
+        ArrayDeque<Data> stack = new ArrayDeque<>();
+
+        for (Data data : list) {
+            while (!stack.isEmpty() && stack.peek().level >= data.level) {
+                Data cur = stack.pop();
+                Data pre = stack.pop();
+                TreeNode node = buildTree(pre, cur);
+                stack.push(new Data(node, pre.level));
+            }
+            stack.push(data);
+        }
+        while (stack.size() > 1) {
+            Data cur = stack.pop();
+            Data pre = stack.pop();
+            TreeNode node = buildTree(pre, cur);
+            stack.push(new Data(node, pre.level));
+        }
+        return Objects.requireNonNull(stack.poll()).node;
+    }
+
+    private TreeNode buildTree(Data pre, Data cur) {
+        TreeNode node = pre.node;
+        if(node.left == null) {
+            node.left = cur.node;
         } else {
-//            String substring = s.substring(start + i, end-i);
-//            String substring1 = s.substring(end);
-            node.left = start + i <= end -i && end - i <= s.length()? helper(s.substring(start + i, end-i), i+1) : null;
-            node.right = end + i <= s.length() ? helper(s.substring(end), i+1) : null;
+            node.right = cur.node;
         }
         return node;
     }
 
-    public static void main(String[] args) {
-        Leetcode1028 codec = new Leetcode1028();
-        String s = "1-2--3--4-5--6--7";
-        TreeNode root = codec.recoverFromPreorder(s);
-        codec.traversal(root);
-        System.out.println(codec.list.toString());
-    }
+    static class Data {
+        TreeNode node;
+        int level;
 
-    public void traversal(TreeNode root){
-        if(root == null) return;
-        list.add(root.val);
-        traversal(root.left);
-        traversal(root.right);
+        public Data(TreeNode node, int level) {
+            this.node = node;
+            this.level = level;
+        }
     }
 }

@@ -11,7 +11,11 @@ import java.util.List;
  * @create 2020/2/19 9:34
  */
 public class LevelOrder {
-    private List<List<Integer>> result = new ArrayList<>();
+    // print tree node in level order
+    public static void printTree(TreeNode node) {
+        System.out.println(levelOrder(node).toString());
+    }
+    private static List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> levelOrderRecur(TreeNode root){
         order(root, 0);
         return result;
@@ -26,7 +30,7 @@ public class LevelOrder {
         order(root.right,level+1);
     }
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public static List<List<Integer>> levelOrder(TreeNode root) {
         if(root == null){
             return result;
         }

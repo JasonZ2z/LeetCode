@@ -14,8 +14,8 @@ import java.util.Stack;
 /**
  * 中序遍历：跟左右
  */
-public class Inorder {
-    private List<Integer> list = new ArrayList<>();
+public class InOrder {
+    private static List<Integer> list = new ArrayList<>();
 
     /**
      * 递归方式
@@ -34,7 +34,7 @@ public class Inorder {
     /**
      * 非递归
      */
-    public List<Integer> inOrderTraversal(TreeNode root){
+    public static List<Integer> inOrderTraversal(TreeNode root){
         if(root == null) return list;
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
@@ -50,5 +50,9 @@ public class Inorder {
         }
         return list;
 
+    }
+
+    public static void printTree(TreeNode node) {
+        System.out.println(inOrderTraversal(node).toString());
     }
 }
