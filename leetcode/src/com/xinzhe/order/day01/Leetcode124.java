@@ -12,6 +12,7 @@ import com.xinzhe.categories.structure.tree.TreeNode;
  * link : https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/
  * Level : hard
  */
+//todo need to review
 public class Leetcode124 {
     int max = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
