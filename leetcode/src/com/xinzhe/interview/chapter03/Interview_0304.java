@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter03.easy;
+package com.xinzhe.interview.chapter03;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -9,6 +9,7 @@ import java.util.LinkedList;
  * Title : 03.04. Implement Queue using Stacks LCCI
  * Description : Implement a MyQueue class which implements a queue using two stacks.
  * link : https://leetcode-cn.com/problems/implement-queue-using-stacks-lcci/
+ * Level : Easy
  */
 public class Interview_0304 {
     Deque<Integer> orig;

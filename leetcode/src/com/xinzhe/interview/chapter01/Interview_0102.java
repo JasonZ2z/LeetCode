@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter01.easy;
+package com.xinzhe.interview.chapter01;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +9,7 @@ import java.util.Map;
  * Title : 01.02. Check Permutation LCCI
  * Description : Given two strings,write a method to decide if one is a permutation of the other.
  * link : https://leetcode-cn.com/problems/check-permutation-lcci
+ * Level : Easy
  */
 public class Interview_0102 {
 

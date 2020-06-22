@@ -1,5 +1,4 @@
-package com.xinzhe.interview.chapter01.medium;
-
+package com.xinzhe.interview.chapter01;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +9,7 @@ import java.util.Set;
  * Title : 01.08. Zero Matrix LCCI
  * Description : Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
  * link : https://leetcode-cn.com/problems/zero-matrix-lcci
+ * Level : Easy
  */
 public class Interview_0108 {
     public void setZeroes(int[][] matrix) {

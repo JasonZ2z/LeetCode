@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter01.easy;
+package com.xinzhe.interview.chapter01;
 
 /**
  * @Author Xin
@@ -8,6 +8,7 @@ package com.xinzhe.interview.chapter01.easy;
  *              For example, the string aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than the original string, your method should return the original string.
  *              You can assume the string has only uppercase and lowercase letters (a - z).
  * link : https://leetcode-cn.com/problems/compress-string-lcci
+ * Level : Easy
  */
 public class Interview_0106 {
     public String compressString(String s) {

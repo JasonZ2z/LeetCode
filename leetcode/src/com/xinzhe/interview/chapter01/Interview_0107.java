@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter01.medium;
+package com.xinzhe.interview.chapter01;
 
 
 /**
@@ -8,6 +8,7 @@ package com.xinzhe.interview.chapter01.medium;
  * Description : Given an image represented by an N x N matrix, where each pixel in the image is 4 bytes,
  *              write a method to rotate the image by 90 degrees. Can you do this in place?
  * link : https://leetcode-cn.com/problems/rotate-matrix-lcci
+ * Level : Easy
  */
 public class Interview_0107 {
 

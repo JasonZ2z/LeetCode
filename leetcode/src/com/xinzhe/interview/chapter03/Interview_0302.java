@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter03.easy;
+package com.xinzhe.interview.chapter03;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -10,6 +10,7 @@ import java.util.LinkedList;
  * Description : How would you design a stack which, in addition to push and pop, has a function min which returns the minimum element?
  * Push, pop and min should all operate in 0(1) time.
  * link : https://leetcode-cn.com/problems/min-stack-lcci
+ * Level : Easy
  */
 public class Interview_0302 {
     Deque<Integer> orig;

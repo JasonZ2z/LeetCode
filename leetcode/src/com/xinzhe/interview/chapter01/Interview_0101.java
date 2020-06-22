@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter01.easy;
+package com.xinzhe.interview.chapter01;
 
 import java.util.BitSet;
 
@@ -8,6 +8,7 @@ import java.util.BitSet;
  * Title : 01.01. Is Unique LCCI
  * Description : Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
  * link : https://leetcode-cn.com/problems/is-unique-lcci/
+ * Level : Easy
  */
 public class Interview_0101 {
     /**
