@@ -1,13 +1,19 @@
 package com.xinzhe.contest.weekly.season04.weekly194;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @Author Xin
  * @create 2020/6/21
- * Title :
- * Description :
- * link :
+ * Title : 1487. 保证文件名唯一
+ * Description : 给你一个长度为 n 的字符串数组 names 。你将会在文件系统中创建 n 个文件夹：在第 i 分钟，新建名为 names[i] 的文件夹。
+ *              由于两个文件 不能 共享相同的文件名，因此如果新建文件夹使用的文件名已经被占用，系统会以 (k) 的形式为新文件夹的文件名添加后缀，其中 k 是能保证文件名唯一的 最小正整数 。
+ *              返回长度为 n 的字符串数组，其中 ans[i] 是创建第 i 个文件夹时系统分配给该文件夹的实际名称。
+ * link : https://leetcode-cn.com/problems/making-file-names-unique
  * Level : Medium
  * Comment 194周赛02
  */

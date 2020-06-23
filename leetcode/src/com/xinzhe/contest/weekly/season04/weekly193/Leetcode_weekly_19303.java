@@ -5,9 +5,10 @@ import java.util.Arrays;
 /**
  * @Author Xin
  * @create 2020/6/14
- * Title :
- * Description :
- * link :
+ * Title : 1482. 制作 m 束花所需的最少天数
+ * Description : 给你一个整数数组 bloomDay，以及两个整数 m 和 k 。现需要制作 m 束花。制作花束时，需要使用花园中 相邻的 k 朵花 。
+ *              花园中有 n 朵花，第 i 朵花会在 bloomDay[i] 时盛开，恰好 可以用于 一束 花中.请你返回从花园中摘 m 束花需要等待的最少的天数。如果不能摘到 m 束花则返回 -1 。
+ * link : https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets
  * Level : Medium
  * Comment 193周赛03
  */

@@ -3,9 +3,9 @@ package com.xinzhe.contest.weekly.season04.weekly193;
 /**
  * @Author Xin
  * @create 2020/6/14
- * Title :
- * Description :
- * link :
+ * Title : 1480. 一维数组的动态和
+ * Description : 给你一个数组 nums 。数组「动态和」的计算公式为：runningSum[i] = sum(nums[0]…nums[i]) 。请返回 nums 的动态和。
+ * link : https://leetcode-cn.com/problems/running-sum-of-1d-array
  * Level : Easy
  * Comment 193周赛01
  */
@@ -20,5 +20,4 @@ public class Leetcode_weekly_19301 {
         }
         return pre;
     }
-
 }
