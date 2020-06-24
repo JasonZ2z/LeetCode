@@ -48,6 +48,4 @@ public class Leetcode210 {
         }
         return idx == numCourses ? res : new int[0];
     }
-
-
 }
