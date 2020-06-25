@@ -27,5 +27,4 @@ public class Leetcode124 {
         max = Math.max(max, root.val + left + right);
         return root.val + Math.max(left, right);
     }
-
 }

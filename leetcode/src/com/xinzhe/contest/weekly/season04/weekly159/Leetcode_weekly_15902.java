@@ -31,5 +31,4 @@ public class Leetcode_weekly_15902 {
         Collections.addAll(set,folder);
         return new ArrayList<>(set);
     }
-
 }

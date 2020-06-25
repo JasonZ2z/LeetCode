@@ -1,5 +1,6 @@
 package com.xinzhe.contest.weekly.season04.weekly160;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,14 +14,37 @@ import java.util.List;
  */
 
 public class Leetcode_weekly_16003 {
-
+    //todo need to review
     public static void main(String[] args) {
         Leetcode_weekly_16003 lc = new Leetcode_weekly_16003();
+        List<String> arr = Arrays.asList("bcd","cdxyz", "cdefgxyzw", "e");
+        System.out.println(lc.maxLength(arr));
     }
 
     public int maxLength(List<String> arr) {
-        int n = arr.size();
-        //todo undo
-        return 0;
+        if (arr == null || arr.size() == 0)
+            return 0;
+        return dfs(arr, 0, 0);
+    }
+
+    private int dfs(List<String> arr, int start, int mask) {
+        if(start == arr.size()) return 0;
+        int ans = 0;
+        for (int i = start; i < arr.size(); i++) {
+            int bit = getBit(arr.get(i));
+            if(bit == 0 || (mask & bit) != 0) continue;
+            ans = Math.max(ans, dfs(arr, i+1, mask|bit) + arr.get(i).length());
+        }
+        return ans;
+    }
+
+    private int getBit(String s) {
+        int mask = 0;
+        for (char c : s.toCharArray()) {
+            int bit = 1 << (c - 'a');
+            if((bit & mask) != 0) return 0;
+            mask |= bit;
+        }
+        return mask;
     }
 }
