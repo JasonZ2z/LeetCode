@@ -16,10 +16,10 @@ import java.util.Set;
 public class Leetcode_biweekly_2904 {
     public static void main(String[] args) {
         int[][] a = {{1,6},{2,7},{8,7},{2,5},{3,4}};
-        System.out.println(minNumberOfSemesters(8,a, 3));
+        System.out.println(minNumberOfSemesters2(8,a, 3));
     }
 
-    public static int minNumberOfSemesters(int n, int[][] dependencies, int k) {
+    public static int minNumberOfSemesters2(int n, int[][] dependencies, int k) {
         Set<Integer>[] graph = new HashSet[n+1];
         int[] inDegree = new int[n+1];
         int[] outDegree = new int[n+1];
@@ -94,38 +94,38 @@ public class Leetcode_biweekly_2904 {
     }
 
 
-    public int minNumberOfSemesters2(int n, int[][] dependencies, int k) {
+    public int minNumberOfSemesters(int n, int[][] dependencies, int k) {
         ArrayList<Integer>[] graph = new ArrayList[n];
         for (int i = 0; i < n; i++) {
             graph[i] = new ArrayList<>();
         }
-        int[] count = new int[n];
+        int[] degree = new int[n];
         for (int[] dependency : dependencies) {
             graph[dependency[0] - 1].add(dependency[1] - 1);
-            count[dependency[1] - 1]++;
+            degree[dependency[1] - 1]++;
         }
-        PriorityQueue<Integer> deque = new PriorityQueue<>((a, b) -> count[b] - count[a]);
+        PriorityQueue<Integer> deque = new PriorityQueue<>((a, b) -> degree[b] - degree[a]);
         for (int i = 0; i < n; i++) {
-            if (count[i] == 0) {
+            if (degree[i] == 0) {
                 deque.add(i);
             }
         }
-        int c = 0;
+        int ans = 0;
         while (!deque.isEmpty()) {
             ArrayList<Integer> next = new ArrayList<>();
             for (int i = 0; !deque.isEmpty() && i < k; i++) {
                 int j = deque.remove();
                 for (int l : graph[j]) {
-                    count[l]--;
-                    if (count[l] == 0) {
+                    degree[l]--;
+                    if (degree[l] == 0) {
                         next.add(l);
                     }
                 }
             }
             deque.addAll(next);
-            c++;
+            ans++;
         }
-        return c;
+        return ans;
     }
 
 }
