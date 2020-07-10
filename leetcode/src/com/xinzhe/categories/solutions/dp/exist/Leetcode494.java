@@ -18,15 +18,15 @@ public class Leetcode494 {
     public int findTargetSumWays(int[] nums, int sum) {
         int m = nums.length;
         if(m == 0) return 0;
-        int cur_sum = Arrays.stream(nums).sum();
-        if(cur_sum < Math.abs(sum)) return 0;
-        int n = cur_sum * 2 + 1;
+        int curSum = Arrays.stream(nums).sum();
+        if(curSum < Math.abs(sum)) return 0;
+        int n = curSum * 2 + 1;
 
         //dp[i][j] = dp[i-1][j-nums[i]] + dp[i-1][j+nums[i]]
         // n = sum * 2 + 1;
         int[][] dp = new int[m+1][n];
 
-        dp[0][cur_sum]=1;
+        dp[0][curSum]=1;
         for (int i = 1; i <= m; ++i) {
             for (int j = 0; j < n; ++j) {
                 if(j + nums[i-1] < n){
@@ -37,6 +37,6 @@ public class Leetcode494 {
                 }
             }
         }
-        return dp[m][cur_sum + sum];
+        return dp[m][curSum + sum];
     }
 }

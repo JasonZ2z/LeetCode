@@ -27,7 +27,7 @@ public class Leetcode377 {
         int[] c = {4,2,1};
         System.out.println(combinationSum4(c, 32));
     }
-    //常规回溯超时，需用递归
+    //常规回溯超时
     static int count = 0;
     public static int combinationSum4(int[] nums, int target) {
         traceback(nums, target, new ArrayList<>());
@@ -46,5 +46,20 @@ public class Leetcode377 {
             traceback(nums, target, track);
             track.remove(track.size() - 1);
         }
+    }
+
+    //+记忆化
+    public static int combinationSum42(int[] nums, int target) {
+        int n = nums.length;
+        int[] dp = new int[target+1];
+        dp[0] = 1;
+        for (int i = 1; i <= target; ++i) {
+            for (int num : nums) {
+                if (num <= i) {
+                    dp[i] += dp[i - num];
+                }
+            }
+        }
+        return dp[target];
     }
 }
