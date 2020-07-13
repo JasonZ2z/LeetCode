@@ -4,14 +4,20 @@ import java.time.YearMonth;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class TestLocalDate {
 
     public static void main(String[] args) {
         TestLocalDate test = new TestLocalDate();
-        System.out.println(test.getMonthsBetween("201906", new Date()));
-        System.out.println(test.getMonthsBetween("201905", "201910"));
+//        System.out.println(test.getMonthsBetween("201906", new Date()));
+//        System.out.println(test.getMonthsBetween("201905", "201910"));
+        int[] arr = {1,2};
+        List<Integer> list = Arrays.asList(1,2,3);
+        System.out.println(arr);
+        System.out.println(list);
         //System.out.println(test.endorsementDateValidation("20200101", "20200331"));
     }
 

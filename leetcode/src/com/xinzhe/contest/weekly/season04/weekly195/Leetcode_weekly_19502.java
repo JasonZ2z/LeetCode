@@ -25,6 +25,7 @@ public class Leetcode_weekly_19502 {
         for (int value : arr) {
             sum += value;
             int tmp = value % k;
+
             map.put(tmp, map.getOrDefault(tmp, 0) + 1);
         }
         if(sum % k != 0) return false;
