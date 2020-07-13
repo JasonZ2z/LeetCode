@@ -6,20 +6,17 @@ import java.time.YearMonth;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class TestLocalDate {
 
     public static void main(String[] args) {
-        LocalDate startDate = LocalDate.of(2017, Month.JUNE, 19);
-        System.out.println("开始时间  : " + startDate);
-
-        LocalDate endDate = LocalDate.of(2017, Month.JUNE, 16);
-        System.out.println("结束时间 : " + endDate);
-
-        long daysDiff = ChronoUnit.DAYS.between(startDate, endDate);
-        System.out.println("两天之间的差在天数   : " + daysDiff);
-
+        TestLocalDate test = new TestLocalDate();
+        System.out.println(test.getMonthsBetween("201906", new Date()));
+        System.out.println(test.getMonthsBetween("201905", "201910"));
+        //System.out.println(test.endorsementDateValidation("20200101", "20200331"));
     }
 
     public int getMonthsBetween(String firstYearMonth, Date secondYearMonth) {
