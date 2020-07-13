@@ -3,9 +3,9 @@ package com.xinzhe.contest.weekly.season04.weekly196;
 /**
  * @Author Xin
  * @create 2020/7/5
- * Title :
- * Description :
- * link :
+ * Title : 1504. 统计全 1 子矩形
+ * Description : 给你一个只包含 0 和 1 的 rows * columns 矩阵 mat ，请你返回有多少个 子矩形 的元素全部都是 1 。
+ * link : https://leetcode-cn.com/problems/count-submatrices-with-all-ones/
  * Level : Medium
  * Comment 196周赛03
  */
@@ -15,52 +15,25 @@ public class Leetcode_weekly_19603 {
         int[][] mat = {{1,1,1,1,0,1,0},{1,1,1,0,0,0,1},{0,1,1,1,1,0,0},{1,1,0,1,1,0,1},{1,0,0,0,0,0,1},{1,1,0,1,1,1,1},{1,1,0,0,1,1,1}};
         System.out.println(lc.numSubmat(mat));
     }
-    //todo undo
+    //todo need to review
     public int numSubmat(int[][] mat) {
         int m = mat.length;
         int n = mat[0].length;
 
-        int[][] dpx = new int[m][n];
-        int[][] dpy = new int[m][n];
-        int[][] dpz = new int[m][n];
-        int c = 0;
+        int[][] dp = new int[m+1][n];
+        int count = 0;
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
                 if(mat[i][j] == 1) {
-                    c++;
-                    if(i == 0 || j == 0) {
-                        if(j == 0) {
-                            dpx[i][j] = 1;
-                            dpy[i][j] = (i > 0 ? dpy[i-1][j] : 0) + 1;
-                            dpz[i][j] = 0;
-                        }
-                        if (i == 0){
-                            dpx[i][j] = (j > 0 ? dpx[i][j - 1] : 0) + 1;
-                            dpy[i][j] = 1;
-                            dpz[i][j] = 0;
-                        }
-                    } else {
-                        dpx[i][j] = dpx[i][j - 1] + 1;
-                        dpy[i][j] = dpy[i - 1][j] + 1;
-                        if(mat[i-1][j] == 1 && mat[i][j-1] == 1 && mat[i-1][j-1] == 1) {
-                            if(dpz[i-1][j] == 0 && dpz[i][j-1] == 0 ) {
-                                dpz[i][j] =  1;
-                            } else if(dpz[i-1][j] == 0 || dpz[i][j-1] == 0) {
-                                dpz[i][j] = Math.max(dpz[i-1][j], dpz[i][j-1]) + 1;
-                            } else {
-                                dpz[i][j] = Math.min(dpz[i-1][j], dpz[i][j-1]) * 2;
-                            }
-                        }
+                    dp[i+1][j] = dp[i][j] + 1;
+                    int cur = dp[i+1][j];
+                    for(int k = j; k >= 0 && cur > 0; --k) {
+                        cur = Math.min(cur, dp[i+1][k]);
+                        count += cur;
                     }
                 }
             }
         }
-        int count = 0;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                count += dpx[i][j] + dpy[i][j] + dpz[i][j];
-            }
-        }
-        return count -c ;
+        return count;
     }
 }

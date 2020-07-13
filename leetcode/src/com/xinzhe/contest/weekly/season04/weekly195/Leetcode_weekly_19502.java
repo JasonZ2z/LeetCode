@@ -6,9 +6,10 @@ import java.util.Map;
 /**
  * @Author Xin
  * @create 2020/6/28
- * Title :
- * Description :
- * link :
+ * Title : 1497. 检查数组对是否可以被 k 整除
+ * Description : 给你一个整数数组 arr 和一个整数 k ，其中数组长度是偶数，值为 n 。
+ *              现在需要把数组恰好分成 n / 2 对，以使每对数字的和都能够被 k 整除。如果存在这样的分法，请返回 True ；否则，返回 False 。
+ * link : https://leetcode-cn.com/problems/check-if-array-pairs-are-divisible-by-k
  * Level : Medium
  * Comment 195周赛02
  */
