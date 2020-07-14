@@ -1,6 +1,7 @@
 package com.xinzhe.contest.weekly.season04.weekly172;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * @Author Xin
@@ -17,18 +18,38 @@ import java.util.Arrays;
 
 public class Leetcode_weekly_17204 {
     public int minTaps(int n, int[] ranges) {
-
-        int[][] dp = new int[n + 1][2];
-
-        for (int i = 0; i < n + 1; ++i) {
-            dp[i][0] = ranges[i];
-            dp[i][1] = i;
+        int m = ranges.length;
+        Range[] list = new Range[m];
+        //boolean[] cover = new boolean[n+1];
+        for (int i = 0; i < m; ++i) {
+            list[i] = new Range(Math.max(i - ranges[i], 0), i+ranges[i]);
         }
+        Arrays.sort(list, Comparator.comparingInt(a -> a.right));
+        int[] dp = new int[n+1];
+        dp[0] = 0;
+        for (int i = 1; i <= n; ++i) {
+            dp[i] = Integer.MAX_VALUE;
+            for (int j = 0; j < m; ++j) {
+                if(list[j].right < i || list[j].left > i-1) {
+                    continue;
+                }
+                if(dp[list[j].left] != Integer.MAX_VALUE) {
+                    dp[i] = Math.min(dp[i], dp[list[j].left] + 1);
+                }
+            }
+        }
+        return dp[n] == Integer.MAX_VALUE ? -1 : dp[n];
 
-        Arrays.sort(dp, (a, b) -> b[0] - a[0]);
-        //todo
-        return 0;
+    }
 
+    class Range {
+        int left;
+        int right;
+
+        public Range(int left, int right) {
+            this.left = left;
+            this.right = right;
+        }
     }
 
 }
