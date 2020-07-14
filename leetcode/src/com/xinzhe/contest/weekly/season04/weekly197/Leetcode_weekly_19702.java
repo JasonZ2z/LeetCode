@@ -3,9 +3,9 @@ package com.xinzhe.contest.weekly.season04.weekly197;
 /**
  * @Author Xin
  * @create 2020/7/12
- * Title :
- * Description :
- * link :
+ * Title : 1513. 仅含 1 的子串数
+ * Description : 给你一个二进制字符串 s（仅由 '0' 和 '1' 组成的字符串）。 返回所有字符都为 1 的子字符串的数目。 由于答案可能很大，请你将它对 10^9 + 7 取模后返回。
+ * link : https://leetcode-cn.com/problems/number-of-substrings-with-only-1s
  * Level : Medium
  */
 public class Leetcode_weekly_19702 {
