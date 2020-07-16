@@ -20,7 +20,6 @@ public class Leetcode_weekly_17204 {
     public int minTaps(int n, int[] ranges) {
         int m = ranges.length;
         Range[] list = new Range[m];
-        //boolean[] cover = new boolean[n+1];
         for (int i = 0; i < m; ++i) {
             list[i] = new Range(Math.max(i - ranges[i], 0), i+ranges[i]);
         }
@@ -39,7 +38,6 @@ public class Leetcode_weekly_17204 {
             }
         }
         return dp[n] == Integer.MAX_VALUE ? -1 : dp[n];
-
     }
 
     class Range {
