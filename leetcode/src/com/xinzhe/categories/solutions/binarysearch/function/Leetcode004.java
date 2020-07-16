@@ -5,16 +5,44 @@ package com.xinzhe.categories.solutions.binarysearch.function;
  * @create 2020/4/6 21:41
  * Title : 4. 寻找两个有序数组的中位数
  * Description : 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
- *      请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
- *      你可以假设 nums1 和 nums2 不会同时为空
+ *      请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。你可以假设 nums1 和 nums2 不会同时为空
  * link : https://leetcode-cn.com/problems/median-of-two-sorted-arrays
  * Level : Hard
  */
-//todo undo
+//todo need to review
 public class Leetcode004 {
-    //1,2,8,9
-    //3,4,5,6,7
+    // O(n) : log(m+n)
+    public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+        int k = m + n;
+        if((k & 1) == 1) {
+            return find(nums1, 0, nums2, 0, k / 2 + 1);
+        } else {
+            int left = find(nums1, 0, nums2, 0, k / 2);
+            int right = find(nums1, 0, nums2, 0, k / 2 + 1);
+            return (left + right) / 2.0;
+        }
+    }
 
+    private int find(int[] nums1, int i, int[] nums2, int j, int k) {
+        if(nums1.length - i > nums2.length - j) return find(nums2 ,j, nums1, i, k);
+        if(k == 1) {
+            if(i == nums1.length - 1) return nums2[j];
+            else return Math.min(nums1[i], nums2[j]);
+        }
+        if(i == nums1.length -1) return nums2[j + k - 1];
+        int si = Math.min(i + k/2, nums1.length-1);
+        int sj = j + k - k/2;
+        if(nums1[si - 1] > nums2[sj - 1]) {
+            return find(nums1, i, nums2, sj, k - (sj - j));
+        } else {
+            return find(nums1, si, nums2, j, k - (si - i));
+        }
+    }
+
+
+    // O(n) : log(min(m,n))
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n1 = nums1.length;
         int n2 = nums2.length;

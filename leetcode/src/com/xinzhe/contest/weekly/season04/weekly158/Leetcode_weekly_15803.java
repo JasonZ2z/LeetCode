@@ -40,7 +40,6 @@ public class Leetcode_weekly_15803 {
                         }
                     }
                 }
-
             }
         }
         int sum = 0;
