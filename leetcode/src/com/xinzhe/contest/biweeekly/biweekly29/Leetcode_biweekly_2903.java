@@ -6,9 +6,9 @@ import java.util.List;
 /**
  * @Author Xin
  * @create 2020/6/27
- * Title :
- * Description :
- * link :
+ * Title : 1493. 删掉一个元素以后全为 1 的最长子数组
+ * Description : 给你一个二进制数组 nums ，你需要从中删掉一个元素。请你在删掉元素的结果数组中，返回最长的且只包含 1 的非空子数组的长度。如果不存在这样的子数组，请返回 0 。
+ * link : https://leetcode-cn.com/problems/longest-subarray-of-1s-after-deleting-one-element
  * Level : Medium
  */
 public class Leetcode_biweekly_2903 {
@@ -41,7 +41,7 @@ public class Leetcode_biweekly_2903 {
         }
         if(count > 0) list.add(count);
 
-        Integer max = list.stream().max(Integer::compareTo).get();
+        int max = list.stream().max(Integer::compareTo).get();
         int count0 = 0;
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
