@@ -12,8 +12,9 @@ public class Leetcode008 {
     public static void main(String[] args) {
         //System.out.println(strToInt("43"));
         //System.out.println(strToInt(" 43"));
-        System.out.println(strToInt(" -43"));
-        System.out.println(strToInt(" -4300 0"));
+        //System.out.println(strToInt(" -43"));
+        System.out.println(myAtoi("18446744073709551617"));
+        //System.out.println(strToInt(" -4300 0"));
     }
     public static int strToInt(String str) {
         if(str == null || str.length() == 0) return 0;
@@ -64,6 +65,45 @@ public class Leetcode008 {
             return flag > 0 ? Integer.MAX_VALUE: Integer.MIN_VALUE;
         }
         return flag * ((int)res);
+
+    }
+
+    public static int myAtoi(String str) {
+        int n = str.length();
+        char[] arr = str.toCharArray();
+        int start = -1;
+        int flag = 1;
+        for(int i=0; i<n; i++) {
+            if(arr[i] >= '0' && arr[i] <= '9') {
+                start = i;
+                break;
+            } else if(arr[i] == '-' || arr[i] == '+') {
+                if(i < n-1 && (arr[i+1] >= '0' && arr[i+1] <= '9')) {
+                    if(arr[i] == '-') {
+                        flag = -1;
+                    }
+                    start = i+1;
+                    break;
+                }
+            }
+        }
+        if(start == -1) return 0;
+        int end = n;
+        for(int i=start; i<n; i++) {
+            if(arr[i] < '0' || arr[i] > '9') {
+                end = i;
+                break;
+            }
+        }
+        long res = 0;
+        for(int i=start; i<end; i++) {
+            res = res * 10 + Integer.parseInt(String.valueOf(arr[i]));
+        }
+        if((int)res == res){
+            return flag * (int)res;
+        } else {
+            return flag == 1 ? Integer.MAX_VALUE: Integer.MIN_VALUE;
+        }
 
     }
 }
