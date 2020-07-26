@@ -67,7 +67,7 @@ public class Leetcode012 {
             }
             if (num / Roman.X.getValue() > 0) {
                 int x = num / Roman.X.getValue();
-                sb.append("x".repeat(Math.max(0, x)));
+                sb.append("X".repeat(Math.max(0, x)));
                 num -= x * Roman.X.getValue();
 
             }
