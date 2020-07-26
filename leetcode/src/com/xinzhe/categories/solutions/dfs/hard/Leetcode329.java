@@ -1,5 +1,8 @@
 package com.xinzhe.categories.solutions.dfs.hard;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * @Author Xin
  * @create 2020/7/26
@@ -36,5 +39,55 @@ public class Leetcode329 {
         }
         longest = Math.max(longest, visited[i][j]);
         return visited[i][j];
+    }
+
+
+    public int longestIncreasingPath2(int[][] matrix) {
+        if (matrix==null||matrix.length==0){
+            return 0;
+        }
+        int[][] count = new int[matrix.length][matrix[0].length];
+        int[][] direction = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+        //统计每个点的入度用count数组保存，因为是递增，所以如果在上下左右，每发现一个比当前点小的数，当前点入度+1
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                for (int[] d : direction) {
+                    if (longestIncreasingPathVerify(matrix, i, j, d[0], d[1])) {
+                        count[i][j]++;
+                    }
+                }
+            }
+        }
+        Deque<int[]> deque = new LinkedList<>();
+        //count数组中所有入度为0的点加入队列
+        for (int i = 0; i < count.length; i++) {
+            for (int j = 0; j < count[i].length; j++) {
+                if (count[i][j] == 0) {
+                    deque.add(new int[]{i, j});
+                }
+            }
+        }
+        int ans = 0;
+        while (!deque.isEmpty()) {
+            ans++;
+            //这个跟课程表I那个题不一样，需要一层一层的出列，而不是一个一个的出，因为课程表那个不关心队列长度
+            for (int size = deque.size(); size > 0; size--) {
+                int[] poll = deque.poll();
+                for (int[] d : direction) {
+                    if (longestIncreasingPathVerify(matrix, poll[0], poll[1], d[0], d[1])) {
+                        if (--count[poll[0] + d[0]][poll[1] + d[1]] == 0) {
+                            deque.add(new int[]{poll[0] + d[0], poll[1] + d[1]});
+                        }
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+
+    private boolean longestIncreasingPathVerify(int[][] matrix, int i, int j, int x, int y) {
+        int newX = i + x;
+        int newY = j + y;
+        return newX >= 0 && newY >= 0 && newX < matrix.length && newY < matrix[i].length && matrix[newX][newY] > matrix[i][j];
     }
 }
