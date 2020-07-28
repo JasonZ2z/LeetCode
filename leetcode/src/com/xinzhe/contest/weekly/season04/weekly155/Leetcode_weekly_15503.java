@@ -22,48 +22,42 @@ public class Leetcode_weekly_15503 {
     public static void main(String[] args) {
         Leetcode_weekly_15503 lc = new Leetcode_weekly_15503();
     }
+
+    private int[] dp;
     public String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {
         int n = s.length();
-        UF uf = new UF(n);
-        for(List<Integer> pair : pairs) {
-            int p = pair.get(0), q = pair.get(1);
-            uf.union(p,q);
+        this.dp = new int[n];
+        for (int i = 0; i < n; ++i) {
+            dp[i]=i;
+        }
+        for (List<Integer> pair : pairs) {
+            union(pair.get(0), pair.get(1));
         }
         Map<Integer, PriorityQueue<Character>> map = new HashMap<>(n);
-        for(int i =0; i<n; i++) {
-            map.computeIfAbsent(uf.find(i), o -> new PriorityQueue<>()).add(s.charAt(i));
+        for (int i = 0; i < n; ++i) {
+            map.computeIfAbsent(find(i), v -> new PriorityQueue<>()).add(s.charAt(i));
         }
+
         StringBuilder sb = new StringBuilder();
-        for(int i =0; i<n; i++) {
-            sb.append(map.get(uf.find(i)).poll());
+        for (int i = 0; i < n; ++i) {
+            sb.append(map.get(find(i)).poll());
         }
         return sb.toString();
 
     }
 
-    class UF{
-        int[] father;
-        public UF(int n) {
-            father = new int[n];
-            for(int i =0; i<n; i++) {
-                father[i] = i;
-            }
+    public int find(int x){
+        while(dp[x] != x) {
+            x = dp[dp[x]];
         }
-
-        public int find(int p) {
-            while(father[p] != p) {
-                p = father[father[p]];
-            }
-            return p;
-        }
-
-        public void union(int p, int q) {
-            int fp = find(p);
-            int fq = find(q);
-            if(fp == fq) return;
-            if(fp <  fq) father[fq] = fp;
-            else father[fp] = fq;
-        }
+        return x;
     }
 
+    public void union(int p, int q) {
+        int fp = find(p);
+        int fq = find(q);
+        if(fp == fq) return;
+        if(fp <  fq) dp[fq] = fp;
+        else dp[fp] = fq;
+    }
 }
