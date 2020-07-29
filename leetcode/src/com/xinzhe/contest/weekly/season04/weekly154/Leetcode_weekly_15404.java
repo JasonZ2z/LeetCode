@@ -15,6 +15,6 @@ public class Leetcode_weekly_15404 {
     public static void main(String[] args) {
         Leetcode_weekly_15404 lc = new Leetcode_weekly_15404();
     }
-    //todo
+    //todo too hard to solve
 
 }
