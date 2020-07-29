@@ -8,7 +8,7 @@ import com.xinzhe.categories.structure.linkedlist.ListNode;
  * Title : 206. 反转链表
  * Description : 反转一个单链表。
  * link : https://leetcode-cn.com/problems/reverse-linked-list/
- * level ： easy
+ * level : Easy
  */
 public class Leetcode206 {
     //递归
@@ -17,6 +17,22 @@ public class Leetcode206 {
         ListNode newHead = reverseList(head.next);
         head.next.next = head;
         head.next = null;
+        return newHead;
+    }
+    // 非递归
+    // null  1 -> 2 -> 3 -> 4
+    // null<-1    2 -> 3 -> 4
+    // 1 <- 2    3 -> 4
+    public ListNode reverseList2(ListNode head) {
+        if(head == null || head.next == null) return head;
+        ListNode cur = head;
+        ListNode newHead = null;
+        while (cur != null) {
+            ListNode after = cur.next;
+            cur.next = newHead;
+            newHead = cur;
+            cur = after;
+        }
         return newHead;
     }
 }

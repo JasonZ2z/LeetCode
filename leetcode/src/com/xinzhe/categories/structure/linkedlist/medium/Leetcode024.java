@@ -44,4 +44,19 @@ public class Leetcode024 {
         }
         return dummy.next;
     }
+
+    public ListNode swapPairs2(ListNode head) {
+        if(head == null || head.next == null) return head;
+        ListNode node = swapPairs2(head.next.next);
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+
+        ListNode next = head.next;
+        dummy.next = next;
+        next.next = head;
+        head.next = node;
+
+        return dummy.next;
+
+    }
 }
