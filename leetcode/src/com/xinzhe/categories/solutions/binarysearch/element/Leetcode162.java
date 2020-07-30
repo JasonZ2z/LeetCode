@@ -37,4 +37,18 @@ public class Leetcode162 {
         }
         return left;
     }
+
+    public int findPeakElement2(int[] nums) {
+        int n = nums.length;
+        int l = 0, r = n -1;
+        while(l < r) {
+            int mid = l + ((r-l) >> 1);
+            if(nums[mid] < nums[mid + 1]) {
+                l = mid + 1;
+            }else {
+                r = mid;
+            }
+        }
+        return r;
+    }
 }

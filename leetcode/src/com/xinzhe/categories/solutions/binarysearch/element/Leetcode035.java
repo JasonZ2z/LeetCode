@@ -28,8 +28,6 @@ public class Leetcode035 {
                 right = mid;
             }
         }
-        System.out.println(left + " " + right) ;
-        if(nums[left] == target) return left;
-        return left+1;
+        return left;
     }
 }

@@ -47,4 +47,34 @@ public class Leetcode033 {
         return -1;
     }
 
+
+    public int search2(int[] nums, int target) {
+        int n = nums.length;
+        if(n == 0) return -1;
+        int l = 0, r = n-1;
+        while(l < r) {
+            int mid = r + l >> 1;
+            if(nums[mid] > nums[r]) {
+                l = mid + 1;
+            } else {
+                r = mid;
+            }
+        }
+        int left, right;
+        if(target > nums[n-1]){
+            left = 0; right = l-1;
+        } else {
+            left = l; right = n -1;
+        }
+        while(left < right) {
+            int mid = left + right >>1;
+            if(nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return nums[left] == target ? left : -1;
+    }
+
 }
