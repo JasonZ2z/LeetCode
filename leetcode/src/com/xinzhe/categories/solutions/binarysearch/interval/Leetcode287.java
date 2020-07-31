@@ -50,4 +50,33 @@ public class Leetcode287 {
         }
         return slow;
     }
+
+
+    public int findDuplicate3(int[] nums) {
+        int n = nums.length;
+        int l = 1, r = n-1;
+
+        while(l < r) {
+            int s1 = 0;
+            int s2 = 0;
+            int mid = l + r >> 1;
+
+            for(int x : nums) {
+                if(x >= l &&x <= mid) {
+                    s1++;
+                }
+            }
+            for(int x : nums) {
+                if(x > mid &&x <= r) {
+                    s2++;
+                }
+            }
+            if(s1 > s2) {
+                r = mid;
+            } else {
+                l = mid + 1;
+            }
+        }
+        return l;
+    }
 }

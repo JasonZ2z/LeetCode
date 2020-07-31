@@ -51,7 +51,7 @@ public class Leetcode074 {
         int left = 0, right = m*n-1;
         while (left < right){
             int mid = left + ((right - left) >> 1);
-            if (matrix[mid / n][mid % n] > target){
+            if (matrix[mid / n][mid % n] < target){
                 left = mid +1;
             } else {
                 right = mid;
