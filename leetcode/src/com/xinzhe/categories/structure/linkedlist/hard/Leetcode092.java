@@ -2,6 +2,14 @@ package com.xinzhe.categories.structure.linkedlist.hard;
 
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
+/**
+ * @Author Xin
+ * @create 2020/7/29
+ * Title : 92. 反转链表 II
+ * Description : 反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
+ * link : https://leetcode-cn.com/problems/reverse-linked-list-ii/
+ * Level : Hard
+ */
 public class Leetcode092 {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
