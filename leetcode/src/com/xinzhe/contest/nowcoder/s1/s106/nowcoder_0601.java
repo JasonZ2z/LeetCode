@@ -1,4 +1,4 @@
-package com.xinzhe.contest.nowcoder.s106;
+package com.xinzhe.contest.nowcoder.s1.s106;
 
 import java.util.Arrays;
 import java.util.HashSet;

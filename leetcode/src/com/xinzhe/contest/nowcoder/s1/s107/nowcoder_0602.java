@@ -1,7 +1,6 @@
-package com.xinzhe.contest.nowcoder.s107;
+package com.xinzhe.contest.nowcoder.s1.s107;
 
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * @Author Xin
@@ -14,22 +13,22 @@ import java.util.Set;
 public class nowcoder_0602 {
 
     public static void main(String[] args) {
-        nowcoder_0602 nc = new nowcoder_0602();
+
         int[] f = {1};
         Point[] eg = new Point[0];
-        System.out.println(nc.solve(1, eg, f));
+        System.out.println(solve(1, eg, f));
     }
-    Set<Integer>[] map;
-    int res = 0;
-    int[] f;
-    public int solve (int n, Point[] Edge, int[] f) {
+    static HashSet[] map;
+    static int res = 0;
+    static int[] f;
+    public static int solve (int n, Point[] edge, int[] fi) {
         // write code here
-        this.map = new HashSet[n+1];
-        this.f = f;
+        map = new HashSet[n+1];
+        f = fi;
         for (int i = 1; i <= n; ++i) {
             map[i] = new HashSet<>();
         }
-        for (Point point : Edge) {
+        for (Point point : edge) {
             map[point.x].add(point.y);
             map[point.y].add(point.x);
         }
@@ -38,8 +37,8 @@ public class nowcoder_0602 {
 
     }
 
-    private void dfs(int i, int father, int steps) {
-        Set<Integer> set = map[i];
+    private static void dfs(int i, int father, int steps) {
+        HashSet<Integer> set = map[i];
         if(set.size() == 1 && set.contains(father) && steps <= 2){
             res++;
             return;

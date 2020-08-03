@@ -1,4 +1,4 @@
-package com.xinzhe.contest.nowcoder.s107;
+package com.xinzhe.contest.nowcoder.s1.s107;
 
 import java.util.Arrays;
 
