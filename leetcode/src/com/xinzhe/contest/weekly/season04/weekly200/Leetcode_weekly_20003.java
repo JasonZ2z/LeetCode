@@ -3,11 +3,13 @@ package com.xinzhe.contest.weekly.season04.weekly200;
 /**
  * @Author Xin
  * @create 2020/8/2
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1536. 排布二进制网格的最少交换次数
+ * Description : 给你一个 n x n 的二进制网格 grid，每一次操作中，你可以选择网格的 相邻两行 进行交换。一个符合要求的网格需要满足主对角线以上的格子全部都是 0 。
+ *              请你返回使网格满足要求的最少操作次数，如果无法使网格符合要求，请你返回 -1 。 主对角线指的是从 (1, 1) 到 (n, n) 的这些格子。
+ * link : https://leetcode-cn.com/problems/minimum-swaps-to-arrange-a-binary-grid
+ * Level : Medium
  */
+//todo need to review
 public class Leetcode_weekly_20003 {
     public static void main(String[] args) {
         Leetcode_weekly_20003 lc = new Leetcode_weekly_20003();
@@ -16,78 +18,34 @@ public class Leetcode_weekly_20003 {
     }
 
     public int minSwaps(int[][] grid) {
-        int res = 0;
         int n = grid.length;
         int[] arr = new int[n];
+        // record first zero index of each row
         for (int i = 0; i < n; ++i) {
-            int count = 0;
-            for (int j = 0; j < n; ++j) {
-                if(grid[j][i] == 1) {
-                    count++;
+            for(int j = n-1; j >= 0; --j) {
+                if(grid[i][j] == 1) {
+                    arr[i] = j;
+                    break;
                 }
             }
-            if(count > n-i) {
-                return -1;
-            }
-            arr[i] = count;
         }
-//        System.out.println(Arrays.toString(arr));
-        for (int i = 0; i < n - 1; i++) {
-            boolean flag = true;
-            for (int j = i; j < n - 1; j++) {
-                if(getZeros(grid, j) <= getZeros(grid, j+1)){
-                    int[] tmp = grid[j];
-                    grid[j] = grid[j+1];
-                    grid[j+1] = tmp;
-                    flag = false;
-                    res++;
-                }
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            if(arr[i] <= i) continue;
+            int j = i+1;
+            for (; j < n ; j++) {
+               if(arr[j] <= i){
+                   break;
+               }
             }
-            if(flag){
-                break;
+            if(j == n) return -1;
+            for(int k = j; k > i; --k) {
+                int tmp = arr[k-1];
+                arr[k-1] = arr[k];
+                arr[k] = tmp;
+                res++;
             }
         }
-
-//        for (int i = 0; i < n - 1; i++) {
-//            for (int j = i; j < n; j++) {
-//                if(getZeros(grid, j) <= getZeros(grid, j+1)){
-//                    swap(grid, j);
-//                    res++;
-//                }
-//            }
-//        }
         return res;
-
-    }
-
-    private void swap(int[][] grid, int j) {
-        if(j+ 1 < grid.length){
-            int[] tmp = grid[j];
-            grid[j] = grid[j+1];
-            grid[j+1] = tmp;
-        }
-
-    }
-
-    private int getZeros(int[][] g, int i) {
-        int n = g.length;
-        int count = 0;
-        for (int j = 0; j < n; ++j) {
-            if(j > i && g[i][j] == 0) {
-                count++;
-            }
-        }
-        return count;
-    }
-    private boolean check(int[][] g) {
-        int n = g.length;
-        for (int i = 0; i < n-1; ++i) {
-            for (int j = i+1; j < n; ++j) {
-                if(g[i][j] != 0) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 }
