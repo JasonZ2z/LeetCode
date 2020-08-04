@@ -10,6 +10,11 @@ package com.xinzhe.categories.solutions.dp.palindrome;
  */
 
 public class Leetcode125 {
+    public static void main(String[] args) {
+        String s = "A man, a plan, a canal: Panama";
+        Leetcode125 lc = new Leetcode125();
+        System.out.println(lc.isPalindrome(s));
+    }
     public boolean isPalindrome(String s) {
         if(s == null || s.length() == 0) return true;
         char[] arr = s.toLowerCase().toCharArray();
@@ -17,7 +22,7 @@ public class Leetcode125 {
         while (l < r) {
             while (l < r && !Character.isLetterOrDigit(arr[l])) l++;
             while (l < r && !Character.isLetterOrDigit(arr[r])) r--;
-            if(l < r && arr[l] == arr[r]) {
+            if(l <= r && arr[l] == arr[r]) {
                 l++;
                 r--;
             } else {

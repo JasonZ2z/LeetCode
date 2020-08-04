@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter01;
+package com.xinzhe.sword.chapter01;
 
 import java.util.HashMap;
 import java.util.Map;

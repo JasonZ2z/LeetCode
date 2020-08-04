@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter03;
+package com.xinzhe.sword.chapter03;
 
 import java.util.Deque;
 import java.util.LinkedList;

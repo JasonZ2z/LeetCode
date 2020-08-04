@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter08;
+package com.xinzhe.sword.chapter08;
 
 import java.util.ArrayList;
 import java.util.List;

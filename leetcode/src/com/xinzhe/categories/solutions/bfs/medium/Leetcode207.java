@@ -14,6 +14,7 @@ import java.util.Queue;
  *          给定课程总量以及它们的先决条件，请你判断是否可能完成所有课程的学习？
  * Level : Medium
  */
+//todo need to review
 public class Leetcode207 {
     public boolean canFinish(int n, int[][] prerequisites) {
         int[] indegress = new int[n];

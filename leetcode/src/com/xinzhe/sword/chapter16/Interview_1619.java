@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter16;
+package com.xinzhe.sword.chapter16;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

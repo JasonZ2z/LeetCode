@@ -1,4 +1,4 @@
-package com.xinzhe.interview.chapter02;
+package com.xinzhe.sword.chapter02;
 
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
