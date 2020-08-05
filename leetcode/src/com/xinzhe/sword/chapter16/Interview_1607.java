@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.bitoperation;
+package com.xinzhe.sword.chapter16;
 
 /**
  * @Author Xin

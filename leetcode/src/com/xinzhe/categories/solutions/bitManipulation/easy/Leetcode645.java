@@ -1,6 +1,4 @@
-package com.xinzhe.categories.solutions.bitoperation;
-
-import java.util.Arrays;
+package com.xinzhe.categories.solutions.bitManipulation.easy;
 
 /**
  * @Author Xin
