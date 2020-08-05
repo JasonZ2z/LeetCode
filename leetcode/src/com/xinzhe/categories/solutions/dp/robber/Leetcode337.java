@@ -15,7 +15,24 @@ import java.util.List;
  * link : https://leetcode-cn.com/problems/house-robber-iii
  * Level : Medium
  */
+//todo need to review
 public class Leetcode337 {
+
+    public int rob3(TreeNode root) {
+        int[] res = helper(root);
+        return Math.max(res[0], res[1]);
+    }
+
+    public int[] helper(TreeNode root) {
+        if(root == null) return new int[2];
+        int[] left = helper(root.left);
+        int[] right = helper(root.right);
+        int[] res = new int[2];
+
+        res[0] = Math.max(left[1], left[0]) + Math.max(right[1], right[0]);
+        res[1] = root.val + left[0] + right[0];
+        return res;
+    }
 
     //root + 4 * grandson vs 2 * child
     public int rob(TreeNode root) {
