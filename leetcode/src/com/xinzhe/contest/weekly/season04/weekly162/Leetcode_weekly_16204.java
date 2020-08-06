@@ -16,7 +16,7 @@ package com.xinzhe.contest.weekly.season04.weekly162;
  * Level : Hard
  * Comment 162周赛04
  */
-
+//todo need to review
 public class Leetcode_weekly_16204 {
     int res = 0;
     String[] words;
@@ -49,5 +49,47 @@ public class Leetcode_weekly_16204 {
         res = Math.max(res, sum + tmpSum);
         dfs(index+1, sum + tmpSum, arr);
         dfs(index + 1, sum, tmp);
+    }
+
+    int getBit(int x, int y) {
+        return (x >> y) & 1;
+    }
+
+    boolean ok(String word, int[] cnt) {
+        for (int i = 0; i < word.length(); i++) {
+            if(cnt[word.charAt(i) - 'a']-- <= 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public int maxScoreWords2(String[] words, char[] letters, int[] score) {
+        int[] cnt = new int[26];
+        for (char c : letters) cnt[c - 'a']++;
+        int n = words.length;
+        int[] scores = new int[n];
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < words[i].length(); ++j) {
+                scores[i] += score[words[i].charAt(j) - 'a'];
+            }
+        }
+        int[] clone;
+        int maxScore = 0, bound = (int)Math.pow(2,n);
+        for (int i = 0; i <= bound; ++i) {
+            clone = cnt.clone();
+            int total = 0;
+            for (int j = 0; j < n; ++j) {
+                if(getBit(i,j) == 1) {
+                    if(ok(words[j], clone)) {
+                        total += scores[j];
+                    } else {
+                        break;
+                    }
+                }
+            }
+            maxScore = Math.max(maxScore, total);
+        }
+        return maxScore;
     }
 }

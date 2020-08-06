@@ -22,7 +22,34 @@ public class Leetcode_weekly_17002 {
             }
         }
         return res;
+    }
 
+    public int[] xorQueries2(int[] arr, int[][] queries) {
+        int n = arr.length;
+        int[] prefix = new int[n];
+        prefix[0] = arr[0];
+        for(int i=1; i<n; i++) {
+            prefix[i] = arr[i] ^ prefix[i-1];
+        }
+        int m = queries.length;
+        int[] res = new int[m];
+        for(int i=0; i<m; i++) {
+            int[] q = queries[i];
+            if(q[0] == 0) res[i] = prefix[q[1]];
+            else res[i] = prefix[q[0]-1] ^ prefix[q[1]];
+        }
+        return res;
+    }
+
+    public int[] xorQueries3(int[] A, int[][] queries) {
+        int[] res = new int[queries.length], q;
+        for (int i = 1; i < A.length; ++i)
+            A[i] ^= A[i - 1];
+        for (int i = 0; i < queries.length; ++i) {
+            q = queries[i];
+            res[i] = q[0] > 0 ? A[q[0] - 1] ^ A[q[1]] : A[q[1]];
+        }
+        return res;
     }
 
 }

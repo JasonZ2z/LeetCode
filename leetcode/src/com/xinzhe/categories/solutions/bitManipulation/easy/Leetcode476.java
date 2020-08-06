@@ -11,7 +11,7 @@ package com.xinzhe.categories.solutions.bitManipulation.easy;
 
 public class Leetcode476 {
     public static void main(String[] args) {
-        System.out.println(findComplement(2));
+        System.out.println(findComplement2(5));
     }
     public static int findComplement(int num) {
         int res = 0;
@@ -24,5 +24,18 @@ public class Leetcode476 {
             num >>= 1;
         }
         return res;
+    }
+
+    public static int findComplement2(int num) {
+        String s = Integer.toBinaryString(num);
+        StringBuilder sb = new StringBuilder();
+        for(int start = 0; start < s.length(); start++) {
+            if(s.charAt(start) == '1') {
+                sb.append('0');
+            } else {
+                sb.append('1');
+            }
+        }
+        return Integer.parseInt(sb.toString(), 2);
     }
 }

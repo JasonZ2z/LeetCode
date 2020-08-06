@@ -62,4 +62,40 @@ public class Leetcode_weekly_19003 {
         track.remove(track.size() - 1);
     }
 
+    //solution 2
+    public int pseudoPalindromicPaths2 (TreeNode root) {
+        return dfs(root, new int[10]);
+    }
+
+    private int dfs(TreeNode root, int[] arr) {
+        if(root == null) return 0;
+        arr[root.val]++;
+        int res = dfs(root.left, arr) + dfs(root.right, arr);
+        if(root.left == null && root.right == null && helper(arr)) res ++;
+        arr[root.val] -= 1;
+        return res;
+    }
+
+    private boolean helper(int[] arr) {
+        int count = 0;
+        for(int a : arr) {
+            if(a % 2 == 1) {
+                count++;
+            }
+        }
+        return count < 2;
+    }
+
+    //solution 3
+    public int pseudoPalindromicPaths3 (TreeNode root) {
+        return dfs3(root, 0);
+    }
+    private int dfs3(TreeNode root, int count) {
+        if (root == null) return 0;
+        count ^= 1 << (root.val - 1); //异或 相同为0 不同为1
+        int res = dfs3(root.left, count) + dfs3(root.right, count);
+        if (root.left == root.right && (count & (count - 1)) == 0) res++; //消除最右边的1，判断是否为0
+        return res;
+    }
+
 }

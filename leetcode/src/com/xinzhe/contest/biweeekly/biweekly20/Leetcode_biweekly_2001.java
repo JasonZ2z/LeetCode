@@ -1,6 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly20;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -41,5 +43,9 @@ public class Leetcode_biweekly_2001 {
             this.count = count;
             this.val = val;
         }
+    }
+
+    public int[] sortByBits2(int[] arr) {
+        return Arrays.stream(arr).boxed().sorted(Comparator.comparingInt(i -> Integer.bitCount(i) * 10000 + i)).mapToInt(i -> i).toArray();
     }
 }
