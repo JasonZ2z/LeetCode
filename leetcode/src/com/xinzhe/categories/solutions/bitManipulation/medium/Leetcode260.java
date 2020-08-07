@@ -15,6 +15,7 @@ import java.util.Arrays;
     // 所有数异或的结果 也是所求值的异或
     // 这两个所求值 肯定不同 -> 异或值至少有一位为1
     // 根据这个1 将原数组分为两组 分别异或 即为所求值
+    //todo need to review
 public class Leetcode260 {
     public static void main(String[] args) {
         int[] arr = {1,2,1,0,2,3};

@@ -40,6 +40,25 @@ public class Leetcode137 {
         }
         return Integer.parseUnsignedInt(sb.toString(), 2);
     }
+
+
+    public int singleNumber3(int[] nums) {
+        int[] bits = new int[32];
+        for (int i = 31; i >= 0; i--) {
+            int bit = 0;
+            for (int j = 0; j < nums.length; j++) {
+                bit += (nums[j] & 1);
+                nums[j] >>>= 1;
+            }
+            bits[i] = bit % 3;
+        }
+        int ans = 0;
+        for (int i = 0; i < 32; i++) {
+            ans = 2 * ans + bits[i];
+        }
+
+        return ans;
+    }
     //todo need to review
     public int singleNumber2(int[] nums) {
         int ones = 0, twos = 0;

@@ -80,6 +80,12 @@ public class Leetcode_weekly_18802 {
         return count;
     }
 
+    /**
+     * a == b  ==>  a ^ b == 0
+     * if(arr[i] ^ ... ^ arr[j] == 0) ==> 对于 i -> j 中所有的 k 都符合
+     * @param arr
+     * @return
+     */
     public int countTriplets3(int[] arr) {
         int count = 0;
         for(int i = 0; i < arr.length; i++){

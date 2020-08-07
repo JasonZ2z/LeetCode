@@ -18,16 +18,16 @@ public class Leetcode784 {
 
     static List<String> result = new ArrayList<>();
     public static List<String> letterCasePermutation(String S) {
-        traceback(S.toCharArray(), 0);
+        traceBack(S.toCharArray(), 0);
         return result;
     }
 
-    private static void traceback(char[] s, int start) {
+    private static void traceBack(char[] s, int start) {
         if(start == s.length){
             result.add(new String(s));
             return;
         }
-        traceback(s, start+1);
+        traceBack(s, start+1);
         char c = s[start];
         if(Character.isLetter(c)){
             if(Character.isLowerCase(c)){
@@ -35,10 +35,35 @@ public class Leetcode784 {
             } else{
                 s[start] = Character.toLowerCase(c);
             }
-            traceback(s, start+1);
-
+            traceBack(s, start+1);
         }
-
     }
 
+    //todo need to review
+    //二分掩码
+    //根据位掩码，构造正确的全排列结果。如果下一个字符是字母，则根据位掩码添加小写或大写字母。 否则添加对应的数字。
+    public static List<String> letterCasePermutation2(String s) {
+        int count = 0;
+        for (char c : s.toCharArray()) {
+            if(Character.isLetter(c)) count++;
+        }
+        List<String> ans = new ArrayList<>();
+        for (int i = 0; i < 1 << count; ++i) {
+            int b = 0;
+            StringBuilder sb = new StringBuilder();
+            for (char c : s.toCharArray()) {
+                if(Character.isLetter(c)) {
+                    if(((i >> b++) & 1) == 1) {
+                        sb.append(Character.toLowerCase(c));
+                    } else {
+                        sb.append(Character.toUpperCase(c));
+                    }
+                } else {
+                    sb.append(c);
+                }
+            }
+            ans.add(sb.toString());
+        }
+        return ans;
+    }
 }
