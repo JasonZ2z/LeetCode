@@ -26,14 +26,6 @@ public class Leetcode137 {
                 num >>= 1;
             }
         }
-
-//        int res = 0;
-//        for(int i = 1; i < 32; i++) {
-//            res <<= 1;
-//            res |= counts[31 - i] % 3;
-//        }
-//        return counts[31] % 3 == 0 ? res : -res;
-
         StringBuilder sb = new StringBuilder();
         for(int i = 31; i >= 0; --i) {
             sb.append(count[i]%3);

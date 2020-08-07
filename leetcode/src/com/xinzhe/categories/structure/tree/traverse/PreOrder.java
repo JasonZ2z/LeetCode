@@ -14,7 +14,7 @@ import java.util.Stack;
 /**
  * 前序遍历：根左右
  */
-public class Preorder {
+public class PreOrder {
     private static List<Integer> list = new ArrayList<>();
     /**
      *  递归
