@@ -3,7 +3,9 @@ package com.xinzhe.order.day01;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author Xin
@@ -41,5 +43,21 @@ public class Leetcode437 {
         int left = helper(root.left, sum, newList);
         int right = helper(root.right, sum, newList);
         return  count+ left +right;
+    }
+
+    public int pathSum2(TreeNode root, int sum){
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0,1);
+        return dfs(root, map, sum, 0);
+    }
+
+    private int dfs(TreeNode root, Map<Integer, Integer> map, int target, int curSum) {
+        if(root == null) return 0;
+        curSum += root.val;
+        int res = map.getOrDefault(curSum - target, 0);
+        map.put(curSum, map.getOrDefault(curSum, 0) + 1);
+        res += dfs(root.left, map, target, curSum) + dfs(root.right, map, target, curSum);
+        map.put(curSum, map.get(curSum) - 1);
+        return res;
     }
 }

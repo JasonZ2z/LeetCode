@@ -13,7 +13,7 @@ import java.util.Map;
  * link : https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/
  * Level : Medium
  * Comment 21双周赛02
- * tag : 前缀和， 压缩状态dp
+ * tag : 前缀和， 压缩状态
  */
 
 public class Leetcode_biweekly_2102 {
