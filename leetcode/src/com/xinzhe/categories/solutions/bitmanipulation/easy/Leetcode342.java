@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.bitManipulation.easy;
+package com.xinzhe.categories.solutions.bitmanipulation.easy;
 
 /**
  * @Author Xin

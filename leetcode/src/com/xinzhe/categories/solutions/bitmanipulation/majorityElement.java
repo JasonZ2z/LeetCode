@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.bitManipulation;
+package com.xinzhe.categories.solutions.bitmanipulation;
 
 import java.util.ArrayList;
 import java.util.List;

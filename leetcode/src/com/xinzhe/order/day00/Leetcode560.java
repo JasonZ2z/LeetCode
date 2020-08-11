@@ -16,6 +16,7 @@ public class Leetcode560 {
 
     public static void main(String[] args) {
         int[] nums = {1};
+        System.out.println(3 ^ 6);
         System.out.println(subarraySum(nums, 1));
         System.out.println(subarraySum1(nums, 1));
         System.out.println(subarraySum2(nums, 1));
