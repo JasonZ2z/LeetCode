@@ -30,4 +30,20 @@ public class Leetcode078 {
             list.remove(list.size() -1);
         }
     }
+    //bitmask
+    public List<List<Integer>> subsets2(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        int n = nums.length;
+        for(int i=0; i< 1 << n; i++) {
+            List<Integer> list = new ArrayList<>();
+            for(int j=0; j<n; j++) {
+                if( (1 & (i >> j)) == 1) {
+                    list.add(nums[j]);
+                }
+            }
+            res.add(list);
+        }
+
+        return res;
+    }
 }
