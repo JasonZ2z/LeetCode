@@ -14,10 +14,11 @@ import java.util.Map;
  * link : https://leetcode-cn.com/problems/maximum-number-of-occurrences-of-a-substring
  * Level : Medium
  * Comment 168周赛03
+ * tag : bit manipulation
  */
 
 public class Leetcode_weekly_16803 {
-    public static int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
+    public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
         Map<String, Integer> res = new HashMap<>();
         Map<Character, Integer> map = new HashMap<>();
         int left = 0, right = 0;
@@ -48,4 +49,27 @@ public class Leetcode_weekly_16803 {
         return res.entrySet().stream().sorted(Map.Entry.<String, Integer>comparingByValue().reversed()).map(Map.Entry::getValue).findFirst().orElse(0);
     }
 
+
+    public int maxFreq2(String s, int maxLetters, int minSize, int maxSize) {
+        int n = s.length();
+        Map<String, Integer> map = new HashMap<>();
+        char[] arr = s.toCharArray();
+
+        for(int i=0; i<=n-minSize; i++) {
+            int mask = 0;
+            for(int j=0; j<minSize; j++) {
+                mask |= 1 << (arr[i+j] - 'a');
+            }
+            if(Integer.bitCount(mask) > maxLetters) continue;
+            String tmp = s.substring(i, i+minSize);
+            map.put(tmp, map.getOrDefault(tmp, 0)+1);
+        }
+        return map.values().stream().max(Integer::compareTo).orElse(0);
+    }
+
+    public static void main(String[] args) {
+        Leetcode_weekly_16803 lc = new Leetcode_weekly_16803();
+        String s = "aababcaab";
+        System.out.println(lc.maxFreq2(s, 2, 3, 4));
+    }
 }

@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.binary;
+package com.xinzhe.categories.solutions.bitmanipulation.medium;
 
 import java.util.Arrays;
 

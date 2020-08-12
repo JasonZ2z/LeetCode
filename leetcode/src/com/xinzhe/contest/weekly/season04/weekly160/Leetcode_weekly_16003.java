@@ -47,4 +47,35 @@ public class Leetcode_weekly_16003 {
         }
         return mask;
     }
+
+    int[] len;
+    int[] bits;
+    public int maxLength2(List<String> arr) {
+        int n = arr.size();
+        this.len = new int[n];
+        this.bits = new int[n];
+
+        for(int i=0; i<n; i++) {
+            len[i] = arr.get(i).length();
+            for(char c : arr.get(i).toCharArray()) {
+                if((bits[i] & (1<<(c - 'a'))) > 0){
+                    bits[i] = 0;
+                    break;
+                } else {
+                    bits[i] |= 1<<(c - 'a');
+                }
+            }
+        }
+        return dfs(arr, 0, 0);
+    }
+
+    private int dfs2(List<String> arr, int index, int mask) {
+        if(index == arr.size()) return 0;
+        int ans = 0;
+        for(int i= index; i<arr.size(); i++) {
+            if(bits[i] == 0 || (mask & bits[i]) != 0) continue;
+            ans = Math.max(ans, dfs2(arr, i+1, mask|bits[i]) + len[i]);
+        }
+        return ans;
+    }
 }
