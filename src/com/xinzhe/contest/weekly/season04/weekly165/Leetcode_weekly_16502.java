@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/6/03
+ * @author Xin
+ * @date 2020/6/03
  * Title : 1276. 不浪费原料的汉堡制作方案
  * Description : 圣诞活动预热开始啦，汉堡店推出了全新的汉堡套餐。为了避免浪费原料，请你帮他们制定合适的制作计划。
  * 给你两个整数 tomatoSlices 和 cheeseSlices，分别表示番茄片和奶酪片的数目。不同汉堡的原料搭配如下：

@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly198;
 import java.util.ArrayList;
 
 /**
- * @Author Xin
- * @create 2020/7/19
+ * @author Xin
+ * @date 2020/7/19
  * Title :
  * Description :
  * link :

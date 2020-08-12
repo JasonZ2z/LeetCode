@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
- * @Author Xin
- * @create 2020/5/13
+ * @author Xin
+ * @date 2020/5/13
  * Title : 1383. 最大的团队表现值
  * Description : 给公司有编号为 1 到 n 的 n 个工程师，给你两个数组 speed 和 efficiency ，
  * 其中 speed[i] 和 efficiency[i] 分别代表第 i 位工程师的速度和效率。

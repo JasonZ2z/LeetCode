@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.linkedlist.merge;
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
 /**
- * @Author Xin
- * @create 2020/2/18 21:44
+ * @author Xin
+ * @date 2020/2/18 21:44
  */
 public class MergeTwoLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

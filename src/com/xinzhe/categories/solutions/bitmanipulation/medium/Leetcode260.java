@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author Xin
- * @create 2020/4/28
+ * @date 2020/4/28
  * Title : 260. 只出现一次的数字 III
  * Description : 给定一个整数数组 nums，其中恰好有两个元素只出现一次，其余所有元素均出现两次。 找出只出现一次的那两个元素。
  * link : https://leetcode-cn.com/problems/single-number-iii/

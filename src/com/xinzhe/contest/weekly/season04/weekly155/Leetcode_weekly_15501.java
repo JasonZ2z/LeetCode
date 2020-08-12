@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/7/27
+ * @author Xin
+ * @date 2020/7/27
  * Title : 1200. 最小绝对差
  * Description : 给你个整数数组 arr，其中每个元素都 不相同。请你找到所有具有最小绝对差的元素对，并且按升序的顺序返回。
  * link : https://leetcode-cn.com/problems/minimum-absolute-difference/

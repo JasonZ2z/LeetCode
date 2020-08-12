@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly32;
 
 /**
- * @Author Xin
- * @create 2020/8/8
+ * @author Xin
+ * @date 2020/8/8
  * Title : 1539. 第 k 个缺失的正整数
  * Description : 给你一个 严格升序排列 的正整数数组 arr 和一个整数 k 。请你找到这个数组里第 k 个缺失的正整数。
  * link : https://leetcode-cn.com/problems/kth-missing-positive-number/

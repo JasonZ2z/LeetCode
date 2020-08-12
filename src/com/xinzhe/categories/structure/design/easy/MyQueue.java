@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.design.easy;
 import java.util.Stack;
 
 /**
- * @Author Xin
- * @create 2020/5/12
+ * @author Xin
+ * @date 2020/5/12
  * Title : 232. 用栈实现队列
  * Description : 使用栈实现队列的下列操作：
  * push(x) -- 将一个元素放入队列的尾部。

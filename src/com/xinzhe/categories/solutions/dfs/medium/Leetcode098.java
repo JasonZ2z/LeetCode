@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dfs.medium;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/4/1 18:37
+ * @author Xin
+ * @date 2020/4/1 18:37
  * Title : 98. 验证二叉搜索树
  * Description : 给定一个二叉树，判断其是否是一个有效的二叉搜索树。
  *      假设一个二叉搜索树具有如下特征：

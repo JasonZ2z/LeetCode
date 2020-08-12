@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.backtrack.medium;
 import java.util.ArrayList;
 
 /**
- * @Author Xin
- * @create 2020/3/5 19:55
+ * @author Xin
+ * @date 2020/3/5 19:55
  * Title : 377. 组合总和 Ⅳ
  * Description : 给定一个由正整数组成且不存在重复数字的数组，找出和为给定目标正整数的组合的个数。
  * 示例:

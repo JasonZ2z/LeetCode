@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/6/16
+ * @author Xin
+ * @date 2020/6/16
  * Title : 1260. 二维网格迁移
  * Description : 给你一个 m 行 n 列的二维网格 grid 和一个整数 k。你需要将 grid 迁移 k 次。
  *              每次「迁移」操作将会引发下述活动：

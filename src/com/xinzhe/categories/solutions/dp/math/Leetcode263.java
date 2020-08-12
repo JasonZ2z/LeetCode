@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/17 18:41
+ * @author Xin
+ * @date 2020/3/17 18:41
  * Title : 263. 丑数
  * Description : 编写一个程序判断给定的数是否为丑数。丑数就是只包含质因数 2, 3, 5 的正整数。
  * link : https://leetcode-cn.com/problems/ugly-number/

@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.palindrome;
 
 /**
- * @Author Xin
- * @create 2020/3/10 18:35
+ * @author Xin
+ * @date 2020/3/10 18:35
  * Title : 516. 最长回文子序列
  * Description : 给定一个字符串s，找到其中最长的回文子序列。可以假设s的最大长度为1000。
  * link : https://leetcode-cn.com/problems/longest-palindromic-subsequence/

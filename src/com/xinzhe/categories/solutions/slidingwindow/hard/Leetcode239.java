@@ -6,8 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/03/02 18:01
+ * @author Xin
+ * @date 2020/03/02 18:01
  * Title : 239. 滑动窗口最大值
  * Description : 给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。
  * 你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。

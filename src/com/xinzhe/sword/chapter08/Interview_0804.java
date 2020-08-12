@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/7/14
+ * @author Xin
+ * @date 2020/7/14
  * Title : 08.04. 幂集
  * Description : 幂集。编写一种方法，返回某集合的所有子集。集合中不包含重复的元素。说明：解集不能包含重复的子集。
  * link : https://leetcode-cn.com/problems/power-set-lcci/

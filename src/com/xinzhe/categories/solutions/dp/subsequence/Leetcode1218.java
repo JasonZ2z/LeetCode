@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 /**
- * @Author Xin
- * @create 2020/3/11 18:35
+ * @author Xin
+ * @date 2020/3/11 18:35
  * Title : 1218. 最长定差子序列
  * Description : 给你一个整数数组 arr 和一个整数 difference，请你找出 arr 中所有相邻元素之间的差等于给定 difference 的等差子序列，并返回其中最长的等差子序列的长度。
  * link : https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference

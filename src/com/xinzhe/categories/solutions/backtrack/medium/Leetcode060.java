@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/5 20:10
+ * @author Xin
+ * @date 2020/3/5 20:10
  * Title : 60. 第k个排列
  * Description : 给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。
  *      按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：

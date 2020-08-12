@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dp.exist;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/3/19 18:11
+ * @author Xin
+ * @date 2020/3/19 18:11
  * Title : 416. 分割等和子集
  * Description : 给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
  * link : https://leetcode-cn.com/problems/partition-equal-subset-sum/

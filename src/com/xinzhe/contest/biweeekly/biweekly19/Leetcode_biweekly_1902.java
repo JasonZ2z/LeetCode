@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly19;
 
 /**
- * @Author Xin
- * @create 2020/5/20
+ * @author Xin
+ * @date 2020/5/20
  * Title : 1343. 大小为 K 且平均值大于等于阈值的子数组数目
  * Description : 给你一个整数数组 arr 和两个整数 k 和 threshold 。请你返回长度为 k 且平均值大于等于 threshold 的子数组数目。
  * link : https://leetcode-cn.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/

@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * @author Xin
- * @create 2020/4/10 21:37
+ * @date 2020/4/10 21:37
  * Title : 911. 在线选举
  * Description : 在选举中，第 i 张票是在时间为 times[i] 时投给 persons[i] 的。
  *          现在，我们想要实现下面的查询函数： TopVotedCandidate.q(int t) 将返回在 t 时刻主导选举的候选人的编号。

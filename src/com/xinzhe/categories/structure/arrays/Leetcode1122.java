@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.arrays;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/3/27 18:55
+ * @author Xin
+ * @date 2020/3/27 18:55
  * Title : 1122. 数组的相对排序
  * Description : 给你两个数组，arr1 和 arr2，
  *              arr2 中的元素各不相同

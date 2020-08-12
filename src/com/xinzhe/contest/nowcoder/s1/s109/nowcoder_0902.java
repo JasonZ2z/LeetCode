@@ -1,8 +1,8 @@
 package com.xinzhe.contest.nowcoder.s1.s109;
 
 /**
- * @Author Xin
- * @create 2020/8/7
+ * @author Xin
+ * @date 2020/8/7
  * Title : 牛牛的木板
  * Description : 数组由 0，1组成，修改 m个 0 到 1，判断连续1的最大长度
  * link : https://ac.nowcoder.com/acm/contest/6947/B

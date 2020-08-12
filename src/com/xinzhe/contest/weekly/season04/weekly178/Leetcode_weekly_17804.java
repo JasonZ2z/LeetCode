@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @Author Xin
- * @create 2020/5/15
+ * @author Xin
+ * @date 2020/5/15
  * Title : 1368. 使网格图至少有一条有效路径的最小代价
  * Description : 给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 grid[i][j] 中的数字可能为以下几种情况：
  * 1 ，下一步往右走，也就是你会从 grid[i][j] 走到 grid[i][j + 1]

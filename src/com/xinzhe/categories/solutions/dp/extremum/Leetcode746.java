@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.extremum;
 
 /**
- * @Author Xin
- * @create 2020/3/9 19:21
+ * @author Xin
+ * @date 2020/3/9 19:21
  * Title : 746. 使用最小花费爬楼梯
  * Description : 数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 cost[i](索引从0开始)。
  *              每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。

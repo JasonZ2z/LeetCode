@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly169;
 
 /**
- * @Author Xin
- * @create 2020/5/29
+ * @author Xin
+ * @date 2020/5/29
  * Title : 1306. 跳跃游戏 III
  * Description : 这里有一个非负整数数组 arr，你最开始位于该数组的起始下标 start 处。当你位于下标 i 处时，你可以跳到 i + arr[i] 或者 i - arr[i]。
  *              请你判断自己是否能够跳到对应元素值为 0 的 任意 下标处。注意，不管是什么情况下，你都无法跳到数组之外。

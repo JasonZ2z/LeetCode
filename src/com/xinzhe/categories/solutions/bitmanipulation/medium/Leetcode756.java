@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.bitmanipulation.medium;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/8/11
+ * @author Xin
+ * @date 2020/8/11
  * Title : 756. 金字塔转换矩阵
  * Description : 现在，我们用一些方块来堆砌一个金字塔。 每个方块用仅包含一个字母的字符串表示。
  *              使用三元组表示金字塔的堆砌规则如下：

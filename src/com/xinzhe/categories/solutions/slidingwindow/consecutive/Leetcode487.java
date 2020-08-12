@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.slidingwindow.consecutive;
 
 /**
- * @Author Xin
- * @create 2020/6/3
+ * @author Xin
+ * @date 2020/6/3
  * Title : 487. Max Consecutive Ones II
  * Description : Given a binary array, find the maximum number of consecutive 1s in this array if you can flip at most one 0.
  * link : https://leetcode-cn.com/problems/max-consecutive-ones-ii/

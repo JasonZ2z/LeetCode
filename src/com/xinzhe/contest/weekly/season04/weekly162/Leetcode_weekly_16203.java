@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly162;
 
 /**
- * @Author Xin
- * @create 2020/6/17
+ * @author Xin
+ * @date 2020/6/17
  * Title : 1254. 统计封闭岛屿的数目
  * Description : 有一个二维矩阵 grid ，每个位置要么是陆地（记号为 0 ）要么是水域（记号为 1 ）。
  *              我们从一块陆地出发，每次可以往上下左右 4 个方向相邻区域走，能走到的所有陆地区域，我们将其称为一座「岛屿」。

@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/17 18:51
+ * @author Xin
+ * @date 2020/3/17 18:51
  * Title : 343. 整数拆分
  * Description : 给定一个正整数 n，将其拆分为至少两个正整数的和，并使这些整数的乘积最大化。 返回你可以获得的最大乘积。
  * link : https://leetcode-cn.com/problems/integer-break/

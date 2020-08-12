@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * @author Xin
- * @create 2020/4/24
+ * @date 2020/4/24
  * Title : 1424. 对角线遍历 II
  * Description : 给你一个列表 nums ，里面每一个元素都是一个整数列表。请你依照下面各图的规则，按顺序返回 nums 中对角线上的整数。
  * link : https://leetcode-cn.com/problems/diagonal-traverse-ii/

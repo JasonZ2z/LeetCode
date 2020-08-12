@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.binarysearch.math;
 
 /**
- * @Author Xin
- * @create 2020/4/14 21:41
+ * @author Xin
+ * @date 2020/4/14 21:41
  * Title : 50. Pow(x, n)
  * Description : 实现 pow(x, n) ，即计算 x 的 n 次幂函数。
  * Level : Medium

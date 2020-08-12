@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/3/4 18:55
+ * @author Xin
+ * @date 2020/3/4 18:55
  * Title : 90. 子集 II
  * Description : 给定一组可能包含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
  * link : https://leetcode-cn.com/problems/subsets-ii/

@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season05.weekly201;
 import java.util.Stack;
 
 /**
- * @Author Xin
- * @create 2020/8/2
+ * @author Xin
+ * @date 2020/8/2
  * Title : 1544. 整理字符串
  * Description : 给你一个由大小写英文字母组成的字符串 s 。一个整理好的字符串中，两个相邻字符 s[i] 和 s[i + 1] 不会同时满足下述条件：
  *                  0 <= i <= s.length - 2

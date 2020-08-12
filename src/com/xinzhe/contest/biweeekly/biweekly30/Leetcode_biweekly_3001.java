@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly30;
 
 /**
- * @Author Xin
- * @create 2020/7/11
+ * @author Xin
+ * @date 2020/7/11
  * Title : 1507. 转变日期格式
  * Description : 给你一个字符串 date ，它的格式为 Day Month Year ，其中：
  *          Day 是集合 {"1st", "2nd", "3rd", "4th", ..., "30th", "31st"} 中的一个元素。

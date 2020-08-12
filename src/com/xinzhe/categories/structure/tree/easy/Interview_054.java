@@ -5,8 +5,8 @@ import com.xinzhe.categories.structure.tree.TreeNode;
 import java.util.PriorityQueue;
 
 /**
- * @Author Xin
- * @create 2020/4/24 22:39
+ * @author Xin
+ * @date 2020/4/24 22:39
  * Title : 面试题54. 二叉搜索树的第k大节点
  * Description : 给定一棵二叉搜索树，请找出其中第k大的节点。
  * link :  https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/

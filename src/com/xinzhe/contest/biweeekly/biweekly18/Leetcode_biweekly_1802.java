@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly18;
 
 /**
- * @Author Xin
- * @create 2020/5/22
+ * @author Xin
+ * @date 2020/5/22
  * Title : 1328. 破坏回文串
  * Description : 给你一个回文字符串 palindrome ，请你将其中 一个 字符用任意小写英文字母替换，使得结果字符串的字典序最小，且 不是 回文串。
  * 请你返回结果字符串。如果无法做到，则返回一个空串。

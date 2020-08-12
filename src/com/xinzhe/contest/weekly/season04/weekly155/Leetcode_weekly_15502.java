@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly155;
 
 /**
- * @Author Xin
- * @create 2020/7/27
+ * @author Xin
+ * @date 2020/7/27
  * Title : 1201. 丑数 III
  * Description : 请你帮忙设计一个程序，用来找出第 n 个丑数。丑数是可以被 a 或 b 或 c 整除的 正整数。
  * link : https://leetcode-cn.com/problems/ugly-number-iii/

@@ -5,8 +5,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/6/6
+ * @author Xin
+ * @date 2020/6/6
  * Title : 128. 最长连续序列
  * Description : 给定一个未排序的整数数组，找出最长连续序列的长度。要求算法的时间复杂度为 O(n)。
  * link : https://leetcode-cn.com/problems/longest-consecutive-sequence/

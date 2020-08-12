@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.arrays.medium;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/4/22
+ * @author Xin
+ * @date 2020/4/22
  * Title : 31. 下一个排列
  * Description : 实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。
  * 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。

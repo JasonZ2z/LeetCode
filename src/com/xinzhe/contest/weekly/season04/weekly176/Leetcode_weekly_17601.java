@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly176;
 
 /**
- * @Author Xin
- * @create 2020/5/19
+ * @author Xin
+ * @date 2020/5/19
  * Title : 1351. 统计有序矩阵中的负数
  * Description : 给你一个 m * n 的矩阵 grid，矩阵中的元素无论是按行还是按列，都以非递增顺序排列。请你统计并返回 grid 中 负数 的数目。
  * link : https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix/

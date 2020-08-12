@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/16 18:41
+ * @author Xin
+ * @date 2020/3/16 18:41
  * Title : 120. 三角形最小路径和
  * Description : 给定一个三角形，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。
  *

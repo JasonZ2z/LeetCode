@@ -4,8 +4,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @Author Xin
- * @create 2020/6/12
+ * @author Xin
+ * @date 2020/6/12
  * Title : 03.04. Implement Queue using Stacks LCCI
  * Description : Implement a MyQueue class which implements a queue using two stacks.
  * link : https://leetcode-cn.com/problems/implement-queue-using-stacks-lcci/

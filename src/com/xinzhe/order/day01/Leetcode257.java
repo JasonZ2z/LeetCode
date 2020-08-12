@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/2/27 15:33
+ * @author Xin
+ * @date 2020/2/27 15:33
  * Title : 257. 二叉树的所有路径
  * Description : 给定一个二叉树，返回所有从根节点到叶子节点的路径。
  * link : https://leetcode-cn.com/problems/binary-tree-paths/

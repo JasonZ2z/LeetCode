@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly23;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/4/4 23:22
+ * @author Xin
+ * @date 2020/4/4 23:22
  * Title : 5363. 做菜顺序
  * Description : 一个厨师收集了他 n 道菜的满意程度 satisfaction ，这个厨师做出每道菜的时间都是 1 单位时间。
  *              一道菜的 「喜爱时间」系数定义为烹饪这道菜以及之前每道菜所花费的时间乘以这道菜的满意程度，也就是 time[i]*satisfaction[i] 。

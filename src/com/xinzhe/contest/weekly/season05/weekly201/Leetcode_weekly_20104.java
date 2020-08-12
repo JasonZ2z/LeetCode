@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season05.weekly201;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/8/2
+ * @author Xin
+ * @date 2020/8/2
  * Title : 1547. 切棍子的最小成本
  * Description : 有一根长度为 n 个单位的木棍，棍上从 0 到 n 标记了若干位置。 给你一个整数数组 cuts ，其中 cuts[i] 表示你需要将棍子切开的位置。
  *              你可以按顺序完成切割，也可以根据需要更改切割的顺序。每次切割的成本都是当前要切割的棍子的长度，切棍子的总成本是历次切割成本的总和。

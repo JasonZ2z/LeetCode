@@ -9,8 +9,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/8/10
+ * @author Xin
+ * @date 2020/8/10
  * Title : 987. 二叉树的垂序遍历
  * Description : 给定二叉树，按垂序遍历返回其结点值。对位于 (X, Y) 的每个结点而言，其左右子结点分别位于 (X-1, Y-1) 和 (X+1, Y-1)。
  *              把一条垂线从 X = -infinity 移动到 X = +infinity ，每当该垂线与结点接触时，我们按从上到下的顺序报告结点的值（ Y 坐标递减）。

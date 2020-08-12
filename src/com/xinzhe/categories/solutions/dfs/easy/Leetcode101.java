@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dfs.easy;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/3/30 11:33
+ * @author Xin
+ * @date 2020/3/30 11:33
  * Title : 101. 对称二叉树
  * Description : 给定一个二叉树，检查它是否是镜像对称的。
  * link : https://leetcode-cn.com/problems/symmetric-tree/

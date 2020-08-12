@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dp.knapsack;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/3/20 19:13
+ * @author Xin
+ * @date 2020/3/20 19:13
  * Title : 1049. 最后一块石头的重量 II
  * Description : 有一堆石头，每块石头的重量都是正整数。
  *

@@ -4,8 +4,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @Author Xin
- * @create 2020/7/4
+ * @author Xin
+ * @date 2020/7/4
  * Title : 32. 最长有效括号
  * Description : 给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
  * link : https://leetcode-cn.com/problems/longest-valid-parentheses/

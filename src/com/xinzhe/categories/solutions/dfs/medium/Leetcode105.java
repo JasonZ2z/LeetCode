@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/4/1 18:37
+ * @author Xin
+ * @date 2020/4/1 18:37
  * Title : 105. 从前序与中序遍历序列构造二叉树
  * Description : 根据一棵树的前序遍历与中序遍历构造二叉树。你可以假设树中没有重复的元素。
  *      前序遍历 preorder = [3,9,20,15,7]

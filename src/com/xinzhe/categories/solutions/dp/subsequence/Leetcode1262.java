@@ -6,8 +6,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/11 18:55
+ * @author Xin
+ * @date 2020/3/11 18:55
  * Title : 1262. 可被三整除的最大和
  * Description : 给你一个整数数组 nums，请你找出并返回能被三整除的元素最大和。
  * link : https://leetcode-cn.com/problems/greatest-sum-divisible-by-three/

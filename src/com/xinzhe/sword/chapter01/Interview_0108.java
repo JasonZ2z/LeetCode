@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/6/11
+ * @author Xin
+ * @date 2020/6/11
  * Title : 01.08. Zero Matrix LCCI
  * Description : Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
  * link : https://leetcode-cn.com/problems/zero-matrix-lcci

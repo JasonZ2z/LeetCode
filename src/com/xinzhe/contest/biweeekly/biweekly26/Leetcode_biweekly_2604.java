@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly26;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/5/16
+ * @author Xin
+ * @date 2020/5/16
  * Title : 1449. 数位成本和为目标值的最大数字
  * Description : 给你一个整数数组 cost 和一个整数 target 。请你返回满足如下规则可以得到的 最大 整数：
  *              给当前结果添加一个数位（i + 1）的成本为 cost[i] （cost 数组下标从 0 开始）。

@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/8/2
+ * @author Xin
+ * @date 2020/8/2
  * Title : 1546. 和为目标值的最大数目不重叠非空子数组数目
  * Description : 给你一个数组 nums 和一个整数 target 。请你返回 非空不重叠 子数组的最大数目，且每个子数组中数字和都为 target 。
  * link : https://leetcode-cn.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/

@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly185;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/4/19 10:24
+ * @author Xin
+ * @date 2020/4/19 10:24
  * Title : 5389. 点菜展示表
  * Description : 给你一个数组 orders，表示客户在餐厅中完成的订单，确切地说， orders[i]=[customerNamei,tableNumberi,foodItemi] ，
  *              其中 customerNamei 是客户的姓名，tableNumberi 是客户所在餐桌的桌号，而 foodItemi 是客户点的餐品名称。

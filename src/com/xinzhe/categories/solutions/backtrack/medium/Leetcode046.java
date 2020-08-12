@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/4 22:26
+ * @author Xin
+ * @date 2020/3/4 22:26
  * Title : 46. 全排列
  * Description : 给定一个没有重复数字的序列，返回其所有可能的全排列。
  * link : https://leetcode-cn.com/problems/permutations/

@@ -4,8 +4,8 @@ package com.xinzhe.categories.solutions.dp.subsequence;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/3/25 19:01
+ * @author Xin
+ * @date 2020/3/25 19:01
  * Title : 673. 最长递增子序列的个数
  * Description : 给定一个未排序的整数数组，找到最长递增子序列的个数。
  * link : https://leetcode-cn.com/problems/number-of-longest-increasing-subsequence/

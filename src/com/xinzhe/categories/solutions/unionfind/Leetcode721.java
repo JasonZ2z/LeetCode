@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.unionfind;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/4/17
+ * @author Xin
+ * @date 2020/4/17
  * Title : 721. 账户合并
  * Description : 给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，其余元素是 emails 表示该帐户的邮箱地址。
  *      现在，我们想合并这些帐户。如果两个帐户都有一些共同的邮件地址，则两个帐户必定属于同一个人。

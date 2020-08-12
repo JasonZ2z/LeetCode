@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly157;
 
 /**
- * @Author Xin
- * @create 2020/7/16
+ * @author Xin
+ * @date 2020/7/16
  * Title : 1219. 黄金矿工
  * Description :  m * n 的网格 grid, 每个单元格中的整数就表示这一单元格中的黄金数量；如果该单元格是空的，那么就是 0。了使收益最大化，矿工需要按以下规则来开采黄金：
  *          每当矿工进入一个单元，就会收集该单元格中的所有黄金。

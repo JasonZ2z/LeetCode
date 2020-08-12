@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/4/16
+ * @author Xin
+ * @date 2020/4/16
  * Title : 6. Z 字形变换
  * Description : 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
  * link : https://leetcode-cn.com/problems/zigzag-conversion/

@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.linkedlist.hard;
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
 /**
- * @Author Xin
- * @create 2020/5/16
+ * @author Xin
+ * @date 2020/5/16
  * Title : 25. K 个一组翻转链表
  * Description : 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
  * k 是一个正整数，它的值小于或等于链表的长度。

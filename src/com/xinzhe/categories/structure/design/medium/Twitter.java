@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author Xin
- * @create 2020/4/13 11:37
+ * @date 2020/4/13 11:37
  * Title : 355. 设计推特
  * Description : 设计一个简化版的推特(Twitter)，可以让用户实现发送推文，关注/取消关注其他用户，能够看见关注人（包括自己）的最近十条推文。你的设计需要支持以下的几个功能：
  *              postTweet(userId, tweetId): 创建一条新的推文

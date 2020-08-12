@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/12
+ * @author Xin
+ * @date 2020/5/12
  * Title : 706. 设计哈希映射
  * Description : 不使用任何内建的哈希表库设计一个哈希映射
  * put(key, value)：向哈希映射中插入(键,值)的数值对。如果键对应的值已经存在，更新这个值。

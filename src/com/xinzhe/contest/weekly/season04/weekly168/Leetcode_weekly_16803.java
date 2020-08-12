@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/6/01
+ * @author Xin
+ * @date 2020/6/01
  * Title : 1297. 子串的最大出现次数
  * Description : 给你一个字符串 s ，请你返回满足以下条件且出现次数最大的 任意 子串的出现次数：
  * 子串中不同字母的数目必须小于等于 maxLetters 。

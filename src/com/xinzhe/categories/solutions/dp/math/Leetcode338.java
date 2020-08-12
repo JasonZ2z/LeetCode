@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/16 18:41
+ * @author Xin
+ * @date 2020/3/16 18:41
  * Title : 338. 比特位计数
  * Description : 给定一个非负整数 num。对于 0 ≤ i ≤ num 范围中的每个数字 i ，计算其二进制数中的 1 的数目并将它们作为数组返回。
  *

@@ -5,8 +5,8 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/4/21
+ * @author Xin
+ * @date 2020/4/21
  * Title : 874. 模拟行走机器人
  * Description : 机器人在一个无限大小的网格上行走，从点 (0, 0) 处开始出发，面向北方。该机器人可以接收以下三种类型的命令：
  *          -2：向左转 90 度

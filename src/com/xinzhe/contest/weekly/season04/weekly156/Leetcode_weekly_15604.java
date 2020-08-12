@@ -6,8 +6,8 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/7/17
+ * @author Xin
+ * @date 2020/7/17
  * Title : 1210. 穿过迷宫的最少移动次数
  * Description : 你还记得那条风靡全球的贪吃蛇吗？
  *          我们在一个 n*n 的网格上构建了新的迷宫地图，蛇的长度为 2，也就是说它会占去两个单元格。蛇会从左上角（(0, 0) 和 (0, 1)）开始移动。

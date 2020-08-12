@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * @Author Xin
- * @create 2020/6/23
+ * @author Xin
+ * @date 2020/6/23
  * Title : 1235. 规划兼职工作
  * Description : 你打算利用空闲时间来做兼职工作赚些零花钱。这里有 n 份兼职工作，每份工作预计从 startTime[i] 开始到 endTime[i] 结束，报酬为 profit[i]。
  *          给你一份兼职工作表，包含开始时间 startTime，结束时间 endTime 和预计报酬 profit 三个数组，请你计算并返回可以获得的最大报酬。注意，时间上出现重叠的 2 份工作不能同时进行。

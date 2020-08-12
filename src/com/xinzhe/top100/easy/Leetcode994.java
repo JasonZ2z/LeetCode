@@ -3,8 +3,8 @@ package com.xinzhe.top100.easy;
 import java.util.LinkedList;
 
 /**
- * @Author Xin
- * @create 2020/3/4 17:53
+ * @author Xin
+ * @date 2020/3/4 17:53
  * Title : 994. 腐烂的橘子
  * Description : 在给定的网格中，每个单元格可以有以下三个值之一：
  *

@@ -1,8 +1,8 @@
 package com.xinzhe.categories.structure.strings.medium;
 
 /**
- * @Author Xin
- * @create 2020/4/16
+ * @author Xin
+ * @date 2020/4/16
  * Title : 12. 整数转罗马数字
  * Description : 罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。
  *      字符          数值

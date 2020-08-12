@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/5
+ * @author Xin
+ * @date 2020/5/5
  * Title : 1395. 统计作战单位数
  * Description :  n 名士兵站成一排。每个士兵都有一个 独一无二 的评分 rating 。
  *          每 3 个士兵可以组成一个作战单位，分组规则如下：

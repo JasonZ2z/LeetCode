@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/3/19 18:01
+ * @author Xin
+ * @date 2020/3/19 18:01
  * Title : 409. 最长回文串
  * Description : 给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。
  *              在构造过程中，请注意区分大小写。比如 "Aa" 不能当做一个回文字符串。

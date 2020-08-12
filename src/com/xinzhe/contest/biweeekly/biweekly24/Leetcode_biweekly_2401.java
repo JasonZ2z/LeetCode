@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly24;
 
 /**
- * @Author Xin
- * @create 2020/4/18 22:16
+ * @author Xin
+ * @date 2020/4/18 22:16
  * Title : 5372. 逐步求和得到正数的最小值
  * Description : 给你一个整数数组 nums 。你可以选定任意的 正数 startValue 作为初始值。
  *              你需要从左到右遍历 nums 数组，并将 startValue 依次累加上 nums 数组中的值。

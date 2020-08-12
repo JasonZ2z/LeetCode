@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.subsequence;
 
 /**
- * @Author Xin
- * @create 2020/3/20 19:13
+ * @author Xin
+ * @date 2020/3/20 19:13
  * Title : 97. 交错字符串
  * Description : 给定三个字符串 s1, s2, s3, 验证 s3 是否是由 s1 和 s2 交错组成的。
  * link : https://leetcode-cn.com/problems/interleaving-string/

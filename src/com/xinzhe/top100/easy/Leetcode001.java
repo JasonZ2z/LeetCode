@@ -3,8 +3,8 @@ package com.xinzhe.top100.easy;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/2/28 10:10
+ * @author Xin
+ * @date 2020/2/28 10:10
  * Title :
  * Description :
  * link :

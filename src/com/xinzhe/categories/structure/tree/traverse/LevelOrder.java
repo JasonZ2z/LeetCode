@@ -7,8 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/2/19 9:34
+ * @author Xin
+ * @date 2020/2/19 9:34
  */
 public class LevelOrder {
     // print tree node in level order

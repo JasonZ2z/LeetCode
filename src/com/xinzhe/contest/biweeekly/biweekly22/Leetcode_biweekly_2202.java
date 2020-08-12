@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/4/18 22:16
+ * @author Xin
+ * @date 2020/4/18 22:16
  * Title : 1386. 安排电影院座位
  * Description : 电影院的观影厅中有 n 行座位，行编号从 1 到 n ，且每一行内总共有 10 个座位，列编号从 1 到 10 。
  * 给你数组 reservedSeats ，包含所有已经被预约了的座位。比如说，researvedSeats[i]=[3,8] ，它表示第 3 行第 8 个座位被预约了。

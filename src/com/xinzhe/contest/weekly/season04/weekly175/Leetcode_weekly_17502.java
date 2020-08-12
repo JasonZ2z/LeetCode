@@ -4,8 +4,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/5/19
+ * @author Xin
+ * @date 2020/5/19
  * Title : 1347. 制造字母异位词的最小步骤数
  * Description : 给你两个长度相等的字符串 s 和 t。每一个步骤中，你可以选择将 t 中的 任一字符 替换为 另一个字符。
  * 返回使 t 成为 s 的字母异位词的最小步骤数。

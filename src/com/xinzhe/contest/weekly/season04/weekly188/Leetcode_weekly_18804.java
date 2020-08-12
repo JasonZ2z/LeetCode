@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly188;
 
 /**
- * @Author Xin
- * @create 2020/5/10
+ * @author Xin
+ * @date 2020/5/10
  * Title : 1444. 切披萨的方案数
  * Description : 给你一个 rows x cols 大小的矩形披萨和一个整数 k ，矩形包含两种字符： 'A' （表示苹果）和 '.' （表示空白格子）。
  *              你需要切披萨 k-1 次，得到 k 块披萨并送给别人。

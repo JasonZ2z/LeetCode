@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.trie;
 
 /**
- * @Author Xin
- * @create 2020/3/28 20:41
+ * @author Xin
+ * @date 2020/3/28 20:41
  * Title : 211. 添加与搜索单词 - 数据结构设计
  * Description : 设计一个支持以下两种操作的数据结构：
  *

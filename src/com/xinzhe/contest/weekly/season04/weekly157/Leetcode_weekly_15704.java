@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly157;
 
 /**
- * @Author Xin
- * @create 2020/7/16
+ * @author Xin
+ * @date 2020/7/16
  * Title : 1220. 统计元音字母序列的数目
  * Description : 给你一个整数 n，请你帮忙统计一下我们可以按下述规则形成多少个长度为 n 的字符串：字符串中的每个字符都应当是小写元音字母（'a', 'e', 'i', 'o', 'u'）
  *          每个元音 'a' 后面都只能跟着 'e'

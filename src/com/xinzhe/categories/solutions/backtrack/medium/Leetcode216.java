@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/5 19:55
+ * @author Xin
+ * @date 2020/3/5 19:55
  * Title : 216. 组合总和 III
  * Description : 找出所有相加之和为 n 的 k 个数的组合。组合中只允许含有 1 - 9 的正整数，并且每种组合中不存在重复的数字。
  * 说明：

@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly196;
 
 /**
- * @Author Xin
- * @create 2020/7/5
+ * @author Xin
+ * @date 2020/7/5
  * Title : 1503. 所有蚂蚁掉下来前的最后一刻
  * Description : 有一块木板，长度为 n 个 单位 。一些蚂蚁在木板上移动，每只蚂蚁都以 每秒一个单位 的速度移动。其中，一部分蚂蚁向 左 移动，其他蚂蚁向 右 移动。
  *          当两只向 不同 方向移动的蚂蚁在某个点相遇时，它们会同时改变移动方向并继续移动。假设更改方向不会花费任何额外时间。

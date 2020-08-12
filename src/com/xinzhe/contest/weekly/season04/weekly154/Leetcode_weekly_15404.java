@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly154;
 
 /**
- * @Author Xin
- * @create 2020/7/28
+ * @author Xin
+ * @date 2020/7/28
  * Title :
  * Description :
  * link :

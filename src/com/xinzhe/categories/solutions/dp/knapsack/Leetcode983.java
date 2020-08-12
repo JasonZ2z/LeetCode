@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.knapsack;
 
 /**
- * @Author Xin
- * @create 2020/3/18 18:21
+ * @author Xin
+ * @date 2020/3/18 18:21
  * Title : 983. 最低票价
  * Description : 你要旅行的日子将以一个名为 days 的数组给出。每一项是一个从 1 到 365 的整数。
  *          火车票有三种不同的销售方式：

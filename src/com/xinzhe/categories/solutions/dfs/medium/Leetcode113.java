@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/30 21:39
+ * @author Xin
+ * @date 2020/3/30 21:39
  * Title : 112. 路径总和
  * Description : 给定一个二叉树和一个目标和，找到所有从根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
  *              说明: 叶子节点是指没有子节点的节点。

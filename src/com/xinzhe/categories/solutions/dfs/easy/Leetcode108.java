@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dfs.easy;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/3/30 21:39
+ * @author Xin
+ * @date 2020/3/30 21:39
  * Title : 108. 将有序数组转换为二叉搜索树
  * Description : 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
  *              本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。

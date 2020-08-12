@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly190;
 
 /**
- * @Author Xin
- * @create 2020/5/24
+ * @author Xin
+ * @date 2020/5/24
  * Title : 1455. 检查单词是否为句中其他单词的前缀
  * Description : 给你一个字符串 sentence 作为句子并指定检索词为 searchWord ，其中句子由若干用 单个空格 分隔的单词组成。请你检查检索词 searchWord 是否为句子 sentence 中任意单词的前缀。
  *          如果 searchWord 是某一个单词的前缀，则返回句子 sentence 中该单词所对应的下标（下标从 1 开始）。

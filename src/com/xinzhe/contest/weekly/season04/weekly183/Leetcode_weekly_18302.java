@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly183;
 
 /**
- * @Author Xin
- * @create 2020/4/5 10:27
+ * @author Xin
+ * @date 2020/4/5 10:27
  * Title : 1404. 将二进制表示减到 1 的步骤数
  * Description : 给你一个以二进制形式表示的数字 s 。请你返回按下述规则将其减少到 1 所需要的步骤数：
  *              如果当前数字为偶数，则将其除以 2 。

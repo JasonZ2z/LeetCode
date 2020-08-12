@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.extremum;
 
 /**
- * @Author Xin
- * @create 2020/3/18 19:01
+ * @author Xin
+ * @date 2020/3/18 19:01
  * Title : 931. 下降路径最小和
  * Description : 给定一个方形整数数组 A，我们想要得到通过 A 的下降路径的最小和。
  * 下降路径可以从第一行中的任何元素开始，并从每一行中选择一个元素。在下一行选择的元素和当前行所选元素最多相隔一列。

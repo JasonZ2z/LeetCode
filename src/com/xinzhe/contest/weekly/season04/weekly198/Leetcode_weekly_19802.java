@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly198;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/7/19
+ * @author Xin
+ * @date 2020/7/19
  * Title : 1519. 子树中标签相同的节点数
  * Description : 给你一棵树（即，一个连通的无环无向图），这棵树由编号从 0  到 n - 1 的 n 个节点组成，且恰好有 n - 1 条 edges .
  *              树的根节点为节点 0 ，树上的每一个节点都有一个标签，也就是字符串 labels 中的一个小写字符（编号为 i 的 节点的标签就是 labels[i] ）边数组 edges 以 edges[i] = [ai, bi] 的形式给出，

@@ -1,8 +1,8 @@
 package com.xinzhe.order.day03;
 
 /**
- * @Author Xin
- * @create 2020/2/28 10:16
+ * @author Xin
+ * @date 2020/2/28 10:16
  * Title : 96. 不同的二叉搜索树
  * Description : 给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
  * link : https://leetcode-cn.com/problems/unique-binary-search-trees/

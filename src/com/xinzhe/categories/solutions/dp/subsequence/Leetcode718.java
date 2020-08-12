@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.subsequence;
 
 /**
- * @Author Xin
- * @create 2020/3/18 18:01
+ * @author Xin
+ * @date 2020/3/18 18:01
  * Title : 718. 最长重复子数组
  * Description : 给两个整数数组 A 和 B ，返回两个数组中公共的、长度最长的子数组的长度。
  *      输入:

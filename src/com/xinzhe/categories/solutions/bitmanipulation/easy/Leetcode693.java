@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.bitmanipulation.easy;
 
 /**
- * @Author Xin
- * @create 2020/5/2
+ * @author Xin
+ * @date 2020/5/2
  * Title : 693. 交替位二进制数
  * Description : 给定一个正整数，检查他是否为交替位二进制数：换句话说，就是他的二进制数相邻的两个位数永不相等。
  * link : https://leetcode-cn.com/problems/binary-number-with-alternating-bits/

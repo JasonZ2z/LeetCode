@@ -3,8 +3,8 @@ package com.xinzhe.contest.nowcoder.s1.s108;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/7/25
+ * @author Xin
+ * @date 2020/7/25
  * Title :
  * Description :
  * link :

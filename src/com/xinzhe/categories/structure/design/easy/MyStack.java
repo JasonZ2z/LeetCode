@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @Author Xin
- * @create 2020/5/12
+ * @author Xin
+ * @date 2020/5/12
  * Title : 225. 用队列实现栈
  * Description : 使用队列实现栈的下列操作：
  * push(x) -- 元素 x 入栈

@@ -1,8 +1,8 @@
 package com.xinzhe.contest.nowcoder.s1.s109;
 
 /**
- * @Author Xin
- * @create 2020/8/7
+ * @author Xin
+ * @date 2020/8/7
  * Title : 牛牛的字符反转
  * Description :  只能实现区间反转操作，现在牛牛有一个长度为n的字符串，他想进行循环右移k位的操作，你能告诉牛牛，他最少对这个字符串进行几次区间反转操作能实现循环右移k位呢。
  *              反转操作指字符串某一区间\left[ L,R \right][L,R]内的字符反转，

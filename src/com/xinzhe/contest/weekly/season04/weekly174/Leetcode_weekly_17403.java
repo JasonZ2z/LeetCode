@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/5/20
+ * @author Xin
+ * @date 2020/5/20
  * Title : 1339. 分裂二叉树的最大乘积
  * Description : 给你一棵二叉树，它的根为 root 。请你删除 1 条边，使二叉树分裂成两棵子树，且它们子树和的乘积尽可能大。由于答案可能会很大，请你将结果对 10^9 + 7 取模后再返回。
  * link : https://leetcode-cn.com/problems/maximum-product-of-splitted-binary-tree

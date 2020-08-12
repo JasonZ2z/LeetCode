@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/20 20:54
+ * @author Xin
+ * @date 2020/3/20 20:54
  * Title : 78. 子集
  * Description : 给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
  * link : https://leetcode-cn.com/problems/subsets/

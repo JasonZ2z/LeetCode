@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/9 18:51
+ * @author Xin
+ * @date 2020/3/9 18:51
  * Title : 509. 斐波那契数
  * Description : 斐波那契数，通常用 F(n) 表示，形成的序列称为斐波那契数列。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。
  * link : https://leetcode-cn.com/problems/fibonacci-number/

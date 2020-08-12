@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly21;
 
 /**
- * @Author Xin
- * @create 2020/5/14
+ * @author Xin
+ * @date 2020/5/14
  * Title : 1370. 上升下降字符串
  * Description : 给你一个字符串 s ，请你根据下面的算法重新构造字符串：
  *              从 s 中选出 最小 的字符，将它 接在 结果字符串的后面。

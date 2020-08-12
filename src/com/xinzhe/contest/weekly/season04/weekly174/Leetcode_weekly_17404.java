@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * @Author Xin
- * @create 2020/5/20
+ * @author Xin
+ * @date 2020/5/20
  * Title : 1340. 跳跃游戏 V
  * Description : 给你一个整数数组 arr 和一个整数 d 。每一步你可以从下标 i 跳到：
  *              i + x ，其中 i + x < arr.length 且 0 < x <= d 。

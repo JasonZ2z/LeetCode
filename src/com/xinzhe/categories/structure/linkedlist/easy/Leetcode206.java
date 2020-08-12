@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.linkedlist.easy;
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
 /**
- * @Author Xin
- * @create 2020/03/02 18:01
+ * @author Xin
+ * @date 2020/03/02 18:01
  * Title : 206. 反转链表
  * Description : 反转一个单链表。
  * link : https://leetcode-cn.com/problems/reverse-linked-list/

@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly19;
 
 /**
- * @Author Xin
- * @create 2020/5/20
+ * @author Xin
+ * @date 2020/5/20
  * Title : 1344. 时钟指针的夹角
  * Description : 给你两个数 hour 和 minutes 。请你返回在时钟上，由给定时间的时针和分针组成的较小角的角度（60 单位制）。
  * link : https://leetcode-cn.com/problems/angle-between-hands-of-a-clock/

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
  * @author Xin
- * @create 2020/4/24
+ * @date 2020/4/24
  * Title : 1423. 可获得的最大点数
  * Description : 几张卡牌 排成一行，每张卡牌都有一个对应的点数。点数由整数数组 cardPoints 给出。
  *              每次行动，你可以从行的开头或者末尾拿一张卡牌，最终你必须正好拿 k 张卡牌。

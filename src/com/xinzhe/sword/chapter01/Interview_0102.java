@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/6/10
+ * @author Xin
+ * @date 2020/6/10
  * Title : 01.02. Check Permutation LCCI
  * Description : Given two strings,write a method to decide if one is a permutation of the other.
  * link : https://leetcode-cn.com/problems/check-permutation-lcci

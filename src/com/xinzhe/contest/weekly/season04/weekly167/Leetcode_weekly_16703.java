@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly167;
 
 /**
- * @Author Xin
- * @create 2020/6/03
+ * @author Xin
+ * @date 2020/6/03
  * Title : 1292. 元素和小于等于阈值的正方形的最大边长
  * Description : 给你一个大小为 m x n 的矩阵 mat 和一个整数阈值 threshold。请你返回元素总和小于或等于阈值的正方形区域的最大边长；如果没有这样的正方形区域，则返回 0 。
  * link : https://leetcode-cn.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold

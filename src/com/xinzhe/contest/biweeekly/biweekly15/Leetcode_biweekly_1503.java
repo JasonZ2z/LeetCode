@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly15;
 
 /**
- * @Author Xin
- * @create 2020/6/6
+ * @author Xin
+ * @date 2020/6/6
  * Title :
  * Description :
  * link :

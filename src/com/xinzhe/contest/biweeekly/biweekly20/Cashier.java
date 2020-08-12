@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/5/18
+ * @author Xin
+ * @date 2020/5/18
  * Title : 1357. 每隔 n 个顾客打折
  * Description : 超市里正在举行打折活动，每隔 n 个顾客会得到 discount 的折扣。
  * 超市里有一些商品，第 i 种商品为 products[i] 且每件单品的价格为 prices[i] 。

@@ -1,8 +1,8 @@
 package com.xinzhe.categories.structure.arrays;
 
 /**
- * @Author Xin
- * @create 2020/4/2 18:37
+ * @author Xin
+ * @date 2020/4/2 18:37
  * Title : 289. 生命游戏
  * Description : 根给定一个包含 m × n 个格子的面板，每一个格子都可以看成是一个细胞。每个细胞都具有一个初始状态：1 即为活细胞（live），或 0 即为死细胞（dead）。
  *              每个细胞与其八个相邻位置（水平，垂直，对角线）的细胞都遵循以下四条生存定律：

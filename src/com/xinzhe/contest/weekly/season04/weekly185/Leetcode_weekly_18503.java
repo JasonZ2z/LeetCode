@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly185;
 import java.util.HashMap;
 
 /**
- * @Author Xin
- * @create 2020/4/19 10:24
+ * @author Xin
+ * @date 2020/4/19 10:24
  * Title : 5390. 数青蛙
  * Description : 给你一个字符串 croakOfFrogs，它表示不同青蛙发出的蛙鸣声（字符串 "croak" ）的组合。由于同一时间可以有多只青蛙呱呱作响，所以 croakOfFrogs 中会混合多个 “croak” 。
  *              请你返回模拟字符串中所有蛙鸣所需不同青蛙的最少数目。

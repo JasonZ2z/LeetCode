@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.subsequence;
 
 /**
- * @Author Xin
- * @create 2020/3/9 21:44
+ * @author Xin
+ * @date 2020/3/9 21:44
  * Title : right. 乘积最大子序列
  * Description : 给定一个整数数组 nums ，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。
  * link : https://leetcode-cn.com/problems/maximum-product-subarray/

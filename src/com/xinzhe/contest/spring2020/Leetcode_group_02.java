@@ -1,8 +1,8 @@
 package com.xinzhe.contest.spring2020;
 
 /**
- * @Author Xin
- * @create 2020/4/25 14:56
+ * @author Xin
+ * @date 2020/4/25 14:56
  * Title : LCP 12. 小张刷题计划
  * Description : 为了提高自己的代码能力，小张制定了 LeetCode 刷题计划，他选中了 LeetCode 题库中的 n 道题，编号从 0 到 n-1，并计划在 m 天内按照题目编号顺序刷完所有的题目（注意，小张不能用多天完成同一题）。
  *              在小张刷题计划中，小张需要用 time[i] 的时间完成编号 i 的题目。

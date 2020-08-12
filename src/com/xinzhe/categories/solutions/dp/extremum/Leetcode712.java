@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.extremum;
 
 /**
- * @Author Xin
- * @create 2020/3/18 18:41
+ * @author Xin
+ * @date 2020/3/18 18:41
  * Title : 712. 两个字符串的最小ASCII删除和
  * Description : 给定两个字符串s1, s2，找到使两个字符串相等所需删除字符的ASCII值的最小和。
  *          输入: s1 = "sea", s2 = "eat"

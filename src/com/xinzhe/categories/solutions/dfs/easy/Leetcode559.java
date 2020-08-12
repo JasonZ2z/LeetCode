@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @Author Xin
- * @create 2020/3/30 13:23
+ * @author Xin
+ * @date 2020/3/30 13:23
  * Title : 559. N叉树的最大深度
  * Description : 给定一个 N 叉树，找到其最大深度。最大深度是指从根节点到最远叶子节点的最长路径上的节点总数。
  * link : https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/

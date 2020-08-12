@@ -5,8 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @Author Xin
- * @create 2020/5/18
+ * @author Xin
+ * @date 2020/5/18
  * Title : 1360. 日期之间隔几天
  * Description : 请你编写一个程序来计算两个日期之间隔了多少天。日期以字符串形式给出，格式为 YYYY-MM-DD，如示例所示。
  * link : https://leetcode-cn.com/problems/number-of-days-between-two-dates/

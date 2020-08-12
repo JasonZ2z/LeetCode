@@ -1,8 +1,8 @@
 package com.xinzhe.order.day00;
 
 /**
- * @Author Xin
- * @create 2020/2/26 13:53
+ * @author Xin
+ * @date 2020/2/26 13:53
  * Title : 713. 乘积小于K的子数组
  * Description : 给定一个正整数数组 nums。找出该数组内乘积小于 k 的连续的子数组的个数。
  * link : https://leetcode-cn.com/problems/subarray-product-less-than-k/

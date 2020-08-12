@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/17
+ * @author Xin
+ * @date 2020/5/17
  * Title : 1451. 重新排列句子中的单词
  * Description : 「句子」是一个用空格分隔单词的字符串。给你一个满足下述格式的句子 text :
  * 句子的首字母大写

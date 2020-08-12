@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/5/22
+ * @author Xin
+ * @date 2020/5/22
  * Title : 1331. 数组序号转换
  * Description : 给你一个整数数组 arr ，请你将数组中的每个元素替换为它们排序后的序号。
  * 序号代表了一个元素有多大。序号编号的规则如下：

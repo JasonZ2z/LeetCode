@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/2/26 13:53
+ * @author Xin
+ * @date 2020/2/26 13:53
  * Title : 437. 路径总和 III
  * Description : 给定一个二叉树，它的每个结点都存放着一个整数值。
  *              找出路径和等于给定数值的路径总数。

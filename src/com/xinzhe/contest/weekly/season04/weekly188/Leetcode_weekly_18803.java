@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly188;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/5/10
+ * @author Xin
+ * @date 2020/5/10
  * Title : 1443. 收集树上所有苹果的最少时间
  * Description : 给你一棵有 n 个节点的无向树，节点编号为 0 到 n-1 ，它们中有一些节点有苹果。通过树上的一条边，需要花费 1 秒钟。
  *              你从 节点 0 出发，请你返回最少需要多少秒，可以收集到所有苹果，并回到节点 0 。

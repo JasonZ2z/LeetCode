@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/17 18:51
+ * @author Xin
+ * @date 2020/3/17 18:51
  * Title : 313. 超级丑数
  * Description : 编写一段程序来查找第 n 个超级丑数。超级丑数是指其所有质因数都是长度为 k 的质数列表 primes 中的正整数。
  * link : https://leetcode-cn.com/problems/super-ugly-number/

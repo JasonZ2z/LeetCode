@@ -4,8 +4,8 @@ package com.xinzhe.categories.solutions.dp.palindrome;
 import java.util.ArrayList;
 
 /**
- * @Author Xin
- * @create 2020/3/5 18:55
+ * @author Xin
+ * @date 2020/3/5 18:55
  * Title : 132. 分割回文串 II
  * Description : 给定一个字符串 s，将 s 分割成一些子串，使每个子串都是回文串。返回符合要求的最少分割次数。
  * link : https://leetcode-cn.com/problems/palindrome-partitioning-ii/

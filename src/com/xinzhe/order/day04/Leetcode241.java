@@ -3,8 +3,8 @@ package com.xinzhe.order.day04;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/2/28 14:41
+ * @author Xin
+ * @date 2020/2/28 14:41
  * Title : 241. 为运算表达式设计优先级
  * Description : 给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。
  *              你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。

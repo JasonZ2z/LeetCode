@@ -3,8 +3,8 @@ package com.xinzhe.top100.medium;
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
 /**
- * @Author Xin
- * @create 2020/3/5 21:17
+ * @author Xin
+ * @date 2020/3/5 21:17
  * Title : 19. 删除链表的倒数第N个节点
  * Description : 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
  * 示例：

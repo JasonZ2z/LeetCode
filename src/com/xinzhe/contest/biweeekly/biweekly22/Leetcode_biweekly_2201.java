@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly22;
 
 /**
- * @Author Xin
- * @create 2020/4/18 22:16
+ * @author Xin
+ * @date 2020/4/18 22:16
  * Title : 1385. 两个数组间的距离值
  * Description : 给你两个整数数组 arr1 ， arr2 和一个整数 d ，请你返回两个数组之间的 距离值 。
  *              「距离值」 定义为符合此描述的元素数目：对于元素 arr1[i] ，不存在任何元素 arr2[j] 满足 |arr1[i]-arr2[j]| <= d 。

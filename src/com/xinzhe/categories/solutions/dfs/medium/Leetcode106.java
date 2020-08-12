@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/4/2 19:37
+ * @author Xin
+ * @date 2020/4/2 19:37
  * Title : 106. 从中序与后序遍历序列构造二叉树
  * Description : 根据一棵树的中序遍历与后序遍历构造二叉树。你可以假设树中没有重复的元素。
  *      中序遍历 inorder = [9,3,15,20,7]

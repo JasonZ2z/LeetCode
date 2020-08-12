@@ -6,8 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/6/16
+ * @author Xin
+ * @date 2020/6/16
  * Title : 1261. 在受污染的二叉树中查找元素
  * Description : 给出一个满足下述规则的二叉树：
  *                  root.val == 0

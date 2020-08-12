@@ -2,7 +2,7 @@ package com.xinzhe.categories.solutions.binarysearch.interval;
 
 /**
  * @author Xin
- * @create 2020/4/13 18:37
+ * @date 2020/4/13 18:37
  * Title : 374. 猜数字大小
  * Description : 我们正在玩一个猜数字游戏。 游戏规则如下：
  *      我从 1 到 n 选择一个数字。 你需要猜我选择了哪个数字。

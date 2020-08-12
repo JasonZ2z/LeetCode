@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.test;
 import java.math.BigInteger;
 
 /**
- * @Author Xin
- * @create 2020/2/18 19:38
+ * @author Xin
+ * @date 2020/2/18 19:38
  */
 public class TestAdd {
     public static void main(String[] args) {

@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.tree.easy;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/2/19 9:25
+ * @author Xin
+ * @date 2020/2/19 9:25
  */
 public class Balanced {
     public boolean isBalanced(TreeNode root) {

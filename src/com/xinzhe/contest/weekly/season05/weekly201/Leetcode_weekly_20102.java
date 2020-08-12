@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season05.weekly201;
 
 /**
- * @Author Xin
- * @create 2020/8/2
+ * @author Xin
+ * @date 2020/8/2
  * Title : 1545. 找出第 N 个二进制字符串中的第 K 位
  * Description : 给你两个正整数 n 和 k，二进制字符串  Sn 的形成规则如下：
  *          S1 = "0"当 i > 1 时，Si = Si-1 + "1" + reverse(invert(Si-1))

@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly179;
 
 /**
- * @Author Xin
- * @create 2020/5/13
+ * @author Xin
+ * @date 2020/5/13
  * Title : 1375. 灯泡开关 III
  * Description : 房间中有 n 枚灯泡，编号从 1 到 n，自左向右排成一排。最初，所有的灯都是关着的。
  *              在 k  时刻（ k 的取值范围是 0 到 n - 1），我们打开 light[k] 这个灯。

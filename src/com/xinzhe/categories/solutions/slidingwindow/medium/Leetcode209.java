@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.slidingwindow.medium;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/3/1 15:20
+ * @author Xin
+ * @date 2020/3/1 15:20
  * Title : 209. 长度最小的子数组
  * Description : 给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组。
  * 如果不存在符合条件的连续子数组，返回 0。

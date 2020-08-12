@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly196;
 
 /**
- * @Author Xin
- * @create 2020/7/5
+ * @author Xin
+ * @date 2020/7/5
  * Title : 1504. 统计全 1 子矩形
  * Description : 给你一个只包含 0 和 1 的 rows * columns 矩阵 mat ，请你返回有多少个 子矩形 的元素全部都是 1 。
  * link : https://leetcode-cn.com/problems/count-submatrices-with-all-ones/

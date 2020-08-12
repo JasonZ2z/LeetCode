@@ -4,8 +4,8 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * @Author Xin
- * @create 2020/5/19
+ * @author Xin
+ * @date 2020/5/19
  * Title : 1354. 多次求和构造目标数组
  * Description :  给你一个整数数组 target 。一开始，你有一个数组 A ，它的所有元素均为 1 ，你可以执行以下操作：
  * 令 x 为你数组里所有元素的和

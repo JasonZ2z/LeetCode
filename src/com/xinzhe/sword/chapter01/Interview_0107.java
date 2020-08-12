@@ -2,8 +2,8 @@ package com.xinzhe.sword.chapter01;
 
 
 /**
- * @Author Xin
- * @create 2020/6/10
+ * @author Xin
+ * @date 2020/6/10
  * Title : 01.07. Rotate Matrix LCCI
  * Description : Given an image represented by an N x N matrix, where each pixel in the image is 4 bytes,
  *              write a method to rotate the image by 90 degrees. Can you do this in place?

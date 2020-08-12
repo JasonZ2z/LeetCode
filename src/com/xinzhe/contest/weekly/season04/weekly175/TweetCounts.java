@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/19
+ * @author Xin
+ * @date 2020/5/19
  * Title : 1348. 推文计数
  * Description : 请你实现一个能够支持以下两种方法的推文计数类 TweetCounts：
  *          1. recordTweet(string tweetName, int time)  记录推文发布情况：用户 tweetName 在 time（以 秒 为单位）时刻发布了一条推文。

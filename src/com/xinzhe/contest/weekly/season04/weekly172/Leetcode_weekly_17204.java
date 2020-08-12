@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * @Author Xin
- * @create 2020/5/23
+ * @author Xin
+ * @date 2020/5/23
  * Title : 1326. 灌溉花园的最少水龙头数目
  * Description : 在 x 轴上有一个一维的花园。花园长度为 n，从点 0 开始，到点 n 结束。
  *          花园里总共有 n + 1 个水龙头，分别位于 [0, 1, ..., n] 。

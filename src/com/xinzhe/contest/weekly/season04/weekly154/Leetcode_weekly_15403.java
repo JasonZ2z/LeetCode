@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly154;
 
 /**
- * @Author Xin
- * @create 2020/7/28
+ * @author Xin
+ * @date 2020/7/28
  * Title : 1191. K 次串联后最大子数组之和
  * Description : 给你一个整数数组 arr 和一个整数 k。首先，我们要对该数组进行修改，即把原数组 arr 重复 k 次。
  *              举个例子，如果 arr = [1, 2] 且 k = 3，那么修改后的数组就是 [1, 2, 1, 2, 1, 2]。然后，请你返回修改后的数组中的最大的子数组之和。

@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/6/14
+ * @author Xin
+ * @date 2020/6/14
  * Title : 1481. 不同整数的最少数目
  * Description : 给你一个整数数组 arr 和一个整数 k 。现需要从数组中恰好移除 k 个元素，请找出移除后数组中不同整数的最少数目。
  * link : https://leetcode-cn.com/problems/least-number-of-unique-integers-after-k-removals/

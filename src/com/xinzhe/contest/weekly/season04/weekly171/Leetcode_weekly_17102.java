@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly171;
 
 /**
- * @Author Xin
- * @create 2020/5/25
+ * @author Xin
+ * @date 2020/5/25
  * Title : 1318. 或运算的最小翻转次数
  * Description : 给你三个正整数 a、b 和 c。
  *              你可以对 a 和 b 的二进制表示进行位翻转操作，返回能够使按位或运算   a OR b == c  成立的最小翻转次数。

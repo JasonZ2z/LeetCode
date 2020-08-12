@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.knapsack;
 
 /**
- * @Author Xin
- * @create 2020/3/20 18:31
+ * @author Xin
+ * @date 2020/3/20 18:31
  * Title : 474. 一和零
  * Description : 在计算机界中，我们总是追求用有限的资源获取最大的收益。
  *              现在，假设你分别支配着 m 个 0 和 n 个 1。另外，还有一个仅包含 0 和 1 字符串的数组。

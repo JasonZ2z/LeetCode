@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/4/25 14:56
+ * @author Xin
+ * @date 2020/4/25 14:56
  * Title : LCP 11. 期望个数统计
  * Description : ...
  * link : https://leetcode-cn.com/problems/qi-wang-ge-shu-tong-ji/

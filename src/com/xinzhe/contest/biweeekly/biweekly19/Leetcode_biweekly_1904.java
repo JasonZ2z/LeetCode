@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly19;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/5/20
+ * @author Xin
+ * @date 2020/5/20
  * Title : 1345. 跳跃游戏 IV
  * Description : 给你一个整数数组 arr ，你一开始在数组的第一个元素处（下标为 0）。每一步，你可以从下标 i 跳到下标：
  * i + 1 满足：i + 1 < arr.length

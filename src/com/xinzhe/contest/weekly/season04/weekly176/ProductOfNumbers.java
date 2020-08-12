@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/19
+ * @author Xin
+ * @date 2020/5/19
  * Title : 1352. 最后 K 个数的乘积
  * Description :  请你实现一个「数字乘积类」ProductOfNumbers，要求支持下述两种方法：
  * 1. add(int num)  将数字 num 添加到当前数字列表的最后面。

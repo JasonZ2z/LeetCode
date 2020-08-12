@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly169;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/5/29
+ * @author Xin
+ * @date 2020/5/29
  * Title : 1307. 口算难题
  * Description : 给你一个方程，左边用 words 表示，右边用 result 表示。你需要根据以下规则检查方程是否可解：
  *              每个字符都会被解码成一位数字（0 - 9）。

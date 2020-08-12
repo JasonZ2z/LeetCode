@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly162;
 
 /**
- * @Author Xin
- * @create 2020/6/17
+ * @author Xin
+ * @date 2020/6/17
  * Title : 1252. 奇数值单元格的数目
  * Description : 给你一个 n 行 m 列的矩阵，最开始的时候，每个单元格中的值都是 0。
  *              另有一个索引数组 indices，indices[i] = [ri, ci] 中的 ri 和 ci 分别表示指定的行和列（从 0 开始编号）。

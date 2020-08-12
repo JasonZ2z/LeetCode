@@ -4,8 +4,8 @@ import com.xinzhe.categories.structure.tree.TreeNode;
 import com.xinzhe.categories.structure.tree.traverse.PreOrder;
 
 /**
- * @Author Xin
- * @create 2020/8/7
+ * @author Xin
+ * @date 2020/8/7
  * Title : 889. 根据前序和后序遍历构造二叉树
  * Description : 返回与给定的前序和后序遍历匹配的任何二叉树。pre 和 post 遍历中的值是不同的正整数。
  * link : https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/

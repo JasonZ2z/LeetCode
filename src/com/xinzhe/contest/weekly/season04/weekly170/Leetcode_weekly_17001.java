@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly170;
 
 /**
- * @Author Xin
- * @create 2020/5/27
+ * @author Xin
+ * @date 2020/5/27
  * Title : 1309. 解码字母到整数映射
  * Description : 给你一个字符串 s，它由数字（'0' - '9'）和 '#' 组成。我们希望按下述规则将 s 映射为一些小写英文字符：
  *          字符（'a' - 'i'）分别用（'1' - '9'）表示。

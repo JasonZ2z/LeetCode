@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/5/5
+ * @author Xin
+ * @date 2020/5/5
  * Title : 1396. 设计地铁系统
  * Description : 请你实现一个类 UndergroundSystem ，它支持以下 3 种方法：
  * 你可以假设所有对 checkIn 和 checkOut 的调用都是符合逻辑的。也就是说，如果一个顾客在 t1 时刻到达某个地铁站，那么他离开的时间 t2 一定满足 t2 > t1 。所有的事件都按时间顺序给出。

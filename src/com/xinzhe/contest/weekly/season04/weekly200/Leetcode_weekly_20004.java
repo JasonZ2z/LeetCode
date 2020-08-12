@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly200;
 
 /**
- * @Author Xin
- * @create 2020/8/2
+ * @author Xin
+ * @date 2020/8/2
  * Title : 1537. 最大得分
  * Description : 你有两个 有序 且数组内元素互不相同的数组 nums1 和 nums2 。一条 合法路径 定义如下：
  *              选择数组 nums1 或者 nums2 开始遍历（从下标 0 处开始）。从左到右遍历当前数组。

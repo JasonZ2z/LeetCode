@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 /**
  * @author Xin
- * @create 2020/4/24
+ * @date 2020/4/24
  * Title : 1425. 带限制的子序列和
  * Description : 给你一个整数数组 nums 和一个整数 k ，请你返回 非空 子序列元素和的最大值，子序列需要满足：
  *              子序列中每两个 相邻 的整数 nums[i] 和 nums[j] ，它们在原数组中的下标 i 和 j 满足 i < j 且 j - i <= k 。

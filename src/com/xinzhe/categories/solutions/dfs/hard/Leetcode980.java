@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dfs.hard;
 
 /**
- * @Author Xin
- * @create 2020/7/6
+ * @author Xin
+ * @date 2020/7/6
  * Title : 980. 不同路径 III
  * Description : 在二维网格 grid 上，有 4 种类型的方格：
  *          1 表示起始方格。且只有一个起始方格。

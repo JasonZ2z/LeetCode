@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 /**
- * @Author Xin
- * @create 2020/3/28 10:46
+ * @author Xin
+ * @date 2020/3/28 10:46
  * Title : 820. 单词的压缩编码
  * Description : 给定一个单词列表，我们将这个列表编码成一个索引字符串 S 与一个索引列表 A。
  *              例如，如果这个列表是 ["time", "me", "bell"]，我们就可以将其表示为 S = "time#bell#" 和 indexes = [0, 2, 5]。

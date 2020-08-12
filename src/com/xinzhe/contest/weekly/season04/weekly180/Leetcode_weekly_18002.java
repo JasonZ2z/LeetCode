@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly180;
 import java.util.LinkedList;
 
 /**
- * @Author Xin
- * @create 2020/3/16 19:41
+ * @author Xin
+ * @date 2020/3/16 19:41
  * Title : 5357. 设计一个支持增量操作的栈
  * Description : 实现自定义栈类 CustomStack ：
  *          CustomStack(int maxSize)：用 maxSize 初始化对象，maxSize 是栈中最多能容纳的元素数量，栈在增长到 maxSize 之后则不支持 push 操作。

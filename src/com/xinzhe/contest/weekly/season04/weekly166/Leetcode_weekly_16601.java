@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly166;
 
 /**
- * @Author Xin
- * @create 2020/6/03
+ * @author Xin
+ * @date 2020/6/03
  * Title : 1281. 整数的各位积和之差
  * Description : 给你一个整数 n，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。
  * link : https://leetcode-cn.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/

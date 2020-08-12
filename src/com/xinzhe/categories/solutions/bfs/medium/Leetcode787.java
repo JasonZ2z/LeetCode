@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.bfs.medium;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/6/29
+ * @author Xin
+ * @date 2020/6/29
  * Title : 787. K 站中转内最便宜的航班
  * Description : 有 n 个城市通过 m 个航班连接。每个航班都从城市 u 开始，以价格 w 抵达 v。
  *              现在给定所有的城市和航班，以及出发城市 src 和目的地 dst，你的任务是找到从 src 到 dst 最多经过 k 站中转的最便宜的价格。 如果没有这样的路线，则输出 -1。

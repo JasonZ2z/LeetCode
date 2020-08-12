@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.tree.easy;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/3/10 18:32
+ * @author Xin
+ * @date 2020/3/10 18:32
  * Title : 面试题 04.02. 最小高度树
  * Description : 给定一个有序整数数组，元素各不相同且按升序排列，编写一个算法，创建一棵高度最小的二叉搜索树。
  * link : https://leetcode-cn.com/problems/minimum-height-tree-lcci/

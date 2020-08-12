@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.stack;
 import java.util.Stack;
 
 /**
- * @Author Xin
- * @create 2020/4/4 16:29
+ * @author Xin
+ * @date 2020/4/4 16:29
  * Title : 84. 柱状图中最大的矩形
  * Description : 给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。求在该柱状图中，能够勾勒出来的矩形的最大面积。
  * link : https://leetcode-cn.com/problems/largest-rectangle-in-histogram/

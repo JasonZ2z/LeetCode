@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.greedy.hard;
 
 /**
- * @Author Xin
- * @create 2020/5/4
+ * @author Xin
+ * @date 2020/5/4
  * Title : 45. 跳跃游戏 II
  * Description : 给定一个非负整数数组，你最初位于数组的第一个位置。
  *              数组中的每个元素代表你在该位置可以跳跃的最大长度。

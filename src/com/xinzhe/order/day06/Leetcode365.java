@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/3/21 15:13
+ * @author Xin
+ * @date 2020/3/21 15:13
  * Title : 365. 水壶问题
  * Description : 有两个容量分别为 x升 和 y升 的水壶以及无限多的水。请判断能否通过使用这两个水壶，从而可以得到恰好 z升 的水？
  *              如果可以，最后请用以上水壶中的一或两个来盛放取得的 z升 水。

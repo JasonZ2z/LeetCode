@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.bitmanipulation.easy;
 
 /**
- * @Author Xin
- * @create 2020/8/5
+ * @author Xin
+ * @date 2020/8/5
  * Title : 342. 4的幂
  * Description :  给定一个整数 (32 位有符号整数)，请编写一个函数来判断它是否是 4 的幂次方。
  * link : https://leetcode-cn.com/problems/power-of-four/

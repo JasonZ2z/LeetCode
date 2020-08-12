@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.bitmanipulation.easy;
 
 /**
- * @Author Xin
- * @create 2020/4/29
+ * @author Xin
+ * @date 2020/4/29
  * Title : 476. 数字的补数
  * Description : 给定一个正整数，输出它的补数。补数是对该数的二进制表示取反。
  * link : https://leetcode-cn.com/problems/number-complement/

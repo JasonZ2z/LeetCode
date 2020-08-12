@@ -3,8 +3,8 @@ package com.xinzhe.order.day08;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/4/1 18:37
+ * @author Xin
+ * @date 2020/4/1 18:37
  * Title : 1111. 有效括号的嵌套深度
  * Description : 有效括号字符串 仅由 "(" 和 ")" 构成，并符合下述几个条件之一：
  *          1. 空字符串

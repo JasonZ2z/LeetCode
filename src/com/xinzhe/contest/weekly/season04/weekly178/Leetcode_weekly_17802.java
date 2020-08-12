@@ -6,8 +6,8 @@ import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/5/15
+ * @author Xin
+ * @date 2020/5/15
  * Title : 1366. 通过投票对团队排名
  * Description : 现在有一个特殊的排名系统，依据参赛团队在投票人心中的次序进行排名，每个投票者都需要按从高到低的顺序对参与排名的所有团队进行排位。
  * 排名规则如下：

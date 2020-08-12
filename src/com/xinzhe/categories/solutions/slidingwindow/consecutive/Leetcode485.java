@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.slidingwindow.consecutive;
 
 /**
- * @Author Xin
- * @create 2020/6/3
+ * @author Xin
+ * @date 2020/6/3
  * Title : 485. 最大连续1的个数
  * Description : 给定一个二进制数组， 计算其中最大连续1的个数。
  * link :  https://leetcode-cn.com/problems/max-consecutive-ones/

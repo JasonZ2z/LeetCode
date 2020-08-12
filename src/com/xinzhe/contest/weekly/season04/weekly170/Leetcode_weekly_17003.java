@@ -4,8 +4,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/5/27
+ * @author Xin
+ * @date 2020/5/27
  * Title : 1311. 获取你好友已观看的视频
  * Description : 有 n 个人，每个人都有一个  0 到 n-1 的唯一 id 。
  *          给你数组 watchedVideos  和 friends ，其中 watchedVideos[i]  和 friends[i] 分别表示 id = i 的人观看过的视频列表和他的好友列表。

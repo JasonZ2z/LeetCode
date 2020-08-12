@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly25;
 
 /**
- * @Author Xin
- * @create 2020/5/2
+ * @author Xin
+ * @date 2020/5/2
  * Title : 1432. 改变一个整数能得到的最大差值
  * Description : 给你一个整数 num 。你可以对它进行如下步骤恰好 两次 ：
  *              选择一个数字 x (0 <= x <= 9).

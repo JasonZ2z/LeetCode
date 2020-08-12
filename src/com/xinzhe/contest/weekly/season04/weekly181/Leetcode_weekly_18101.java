@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/5
+ * @author Xin
+ * @date 2020/5/5
  * Title : 1389. 按既定顺序创建目标数组
  * Description : 给你两个整数数组 nums 和 index。你需要按照以下规则创建目标数组：
  *          目标数组 target 最初为空。

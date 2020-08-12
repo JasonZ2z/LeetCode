@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Deque;
 
 /**
- * @Author Xin
- * @create 2020/8/7
+ * @author Xin
+ * @date 2020/8/7
  * Title : Portal
  * Description :游戏是在一个N*N的网格图中进行的，图中的网格分为四种类型，0表示空地可以通过，1表示墙壁无法通过，
  * 2表示不仅可以通过，还可以在该格放置一个传送门， 3表示有且仅有的唯一的固定传送门。

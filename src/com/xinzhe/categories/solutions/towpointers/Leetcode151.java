@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/4/10 21:37
+ * @author Xin
+ * @date 2020/4/10 21:37
  * Title : 151. 翻转字符串里的单词
  * Description : 给定一个字符串，逐个翻转字符串中的每个单词。
  *              无空格字符构成一个单词。

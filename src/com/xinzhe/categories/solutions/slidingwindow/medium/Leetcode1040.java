@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.slidingwindow.medium;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/6/5
+ * @author Xin
+ * @date 2020/6/5
  * Title : 1040. 移动石子直到连续 II
  * Description : 在一个长度无限的数轴上，第 i 颗石子的位置为 stones[i]。如果一颗石子的位置最小/最大，那么该石子被称作端点石子。
  * 每个回合，你可以将一颗端点石子拿起并移动到一个未占用的位置，使得该石子不再是一颗端点石子。

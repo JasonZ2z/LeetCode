@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly17;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/5/26
+ * @author Xin
+ * @date 2020/5/26
  * Title : 1315. 祖父节点值为偶数的节点和
  * Description : 给你一棵二叉树，请你返回满足以下条件的所有节点的值之和：
  * 该节点的祖父节点的值为偶数。（一个节点的祖父节点是指该节点的父节点的父节点。）

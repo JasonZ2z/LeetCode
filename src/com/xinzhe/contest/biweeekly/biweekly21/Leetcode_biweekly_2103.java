@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly21;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/5/14
+ * @author Xin
+ * @date 2020/5/14
  * Title : 1372. 二叉树中的最长交错路径
  * Description : 给你一棵以 root 为根的二叉树，二叉树中的交错路径定义如下：
  *          选择二叉树中 任意 节点和一个方向（左或者右）。

@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/3/11 18:15
+ * @author Xin
+ * @date 2020/3/11 18:15
  * Title : 491. 递增子序列
  * Description : 给你一个整数数组 A，只有可以将其划分为三个和相等的非空部分时才返回 true，否则返回 false。
  * link : https://leetcode-cn.com/problems/partition-array-into-three-parts-with-equal-sum/

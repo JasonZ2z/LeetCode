@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/4/19 10:24
+ * @author Xin
+ * @date 2020/4/19 10:24
  * Title : 1417. 重新格式化字符串
  * Description : 给你一个混合了数字和字母的字符串 s，其中的字母均为小写英文字母。
  *              请你将该字符串重新格式化，使得任意两个相邻字符的类型都不同。也就是说，字母后面应该跟着数字，而数字后面应该跟着字母。

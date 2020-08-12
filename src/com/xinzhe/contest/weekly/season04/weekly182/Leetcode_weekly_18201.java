@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/5/5
+ * @author Xin
+ * @date 2020/5/5
  * Title : 1394. 找出数组中的幸运数
  * Description : 在整数数组中，如果一个整数的出现频次和它的数值大小相等，我们就称这个整数为「幸运数」。
  *              给你一个整数数组 arr，请你从中找出并返回一个幸运数。

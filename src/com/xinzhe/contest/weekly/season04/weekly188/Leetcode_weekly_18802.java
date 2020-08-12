@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/10
+ * @author Xin
+ * @date 2020/5/10
  * Title : 1442. 形成两个异或相等数组的三元组数目
  * Description : 给你一个整数数组 arr 。现需要从数组中取三个下标 i、j 和 k ，其中 (0 <= i < j <= k < arr.length) 。
  *      a 和 b 定义如下：

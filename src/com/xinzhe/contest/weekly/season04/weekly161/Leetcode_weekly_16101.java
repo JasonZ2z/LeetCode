@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly161;
 
 /**
- * @Author Xin
- * @create 2020/6/19
+ * @author Xin
+ * @date 2020/6/19
  * Title : 1247. 交换字符使得字符串相同
  * Description : 有两个长度相同的字符串 s1 和 s2，且它们其中 只含有 字符 "x" 和 "y"，你需要通过「交换字符」的方式使这两个字符串相同。
  *          每次「交换字符」的时候，你都可以在两个字符串中各选一个字符进行交换。

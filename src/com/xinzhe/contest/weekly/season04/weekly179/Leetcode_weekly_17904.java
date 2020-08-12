@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/5/13
+ * @author Xin
+ * @date 2020/5/13
  * Title : 1377. T 秒后青蛙的位置
  * Description : 给你一棵由 n 个顶点组成的无向树，顶点编号从 1 到 n。青蛙从 顶点 1 开始起跳。规则如下：
  *          在一秒内，青蛙从它所在的当前顶点跳到另一个 未访问 过的顶点（如果它们直接相连）。

@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/17 18:51
+ * @author Xin
+ * @date 2020/3/17 18:51
  * Title : 357. 计算各个位数不同的数字个数
  * Description : 给定一个非负整数 n，计算各位数字都不同的数字 x 的个数，其中 0 ≤ x < 10n 。
  * link : https://leetcode-cn.com/problems/count-numbers-with-unique-digits/

@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/17 18:51
+ * @author Xin
+ * @date 2020/3/17 18:51
  * Title :264. 丑数 II
  * Description : 编写一个程序，找出第 n 个丑数。丑数就是只包含质因数 2, 3, 5 的正整数。
  * link : https://leetcode-cn.com/problems/ugly-number-ii/

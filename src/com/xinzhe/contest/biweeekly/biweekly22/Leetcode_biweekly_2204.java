@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly22;
 
 /**
- * @Author Xin
- * @create 2020/4/18 22:16
+ * @author Xin
+ * @date 2020/4/18 22:16
  * Title : 1388. 3n 块披萨
  * Description : 给你一个披萨，它由 3n 块不同大小的部分组成，现在你和你的朋友们需要按照如下规则来分披萨：
  *              你挑选 任意 一块披萨。Alice 将会挑选你所选择的披萨逆时针方向的下一块披萨。Bob 将会挑选你所选择的披萨顺时针方向的下一块披萨。

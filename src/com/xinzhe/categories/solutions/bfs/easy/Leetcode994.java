@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @Author Xin
- * @create 2020/3/30 16:34
+ * @author Xin
+ * @date 2020/3/30 16:34
  * Title : 994. 腐烂的橘子
  * Description : 在给定的网格中，每个单元格可以有以下三个值之一：
  *              值 0 代表空单元格；

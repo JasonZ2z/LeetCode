@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/12 16:54
+ * @author Xin
+ * @date 2020/3/12 16:54
  * Title : 969. 煎饼排序
  * Description : 给定数组 A，我们可以对其进行煎饼翻转：我们选择一些正整数 k <= A.length，然后反转 A 的前 k 个元素的顺序。我们要执行零次或多次煎饼翻转（按顺序一次接一次地进行）以完成对数组 A 的排序。
  *

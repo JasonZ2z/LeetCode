@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly24;
 
 /**
- * @Author Xin
- * @create 2020/4/18 22:16
+ * @author Xin
+ * @date 2020/4/18 22:16
  * Title : 5375. 恢复数组
  * Description : 某个程序本来应该输出一个整数数组。但是这个程序忘记输出空格了以致输出了一个数字字符串，我们所知道的信息只有：数组中所有整数都在 [1, k] 之间，且数组中的数字都没有前导 0 。
  *              给你字符串 s 和整数 k 。可能会有多种不同的数组恢复结果。

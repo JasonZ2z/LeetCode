@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/8/6
+ * @author Xin
+ * @date 2020/8/6
  * Title : 336. 回文对
  * Description : 给定一组唯一的单词， 找出所有不同 的索引对(i, j)，使得列表中的两个单词， words[i] + words[j] ，可拼接成回文串。
  * link : https://leetcode-cn.com/problems/palindrome-pairs/

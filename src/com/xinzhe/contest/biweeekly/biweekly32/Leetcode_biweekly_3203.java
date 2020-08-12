@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly32;
 import java.util.Stack;
 
 /**
- * @Author Xin
- * @create 2020/8/8
+ * @author Xin
+ * @date 2020/8/8
  * Title : 1541. 平衡括号字符串的最少插入次数
  * Description : 给你一个括号字符串 s ，它只包含字符 '(' 和 ')' 。一个括号字符串被称为平衡的当它满足：
  *          任何左括号 '(' 必须对应两个连续的右括号 '))' 。

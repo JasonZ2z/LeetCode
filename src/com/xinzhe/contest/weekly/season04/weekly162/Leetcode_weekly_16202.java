@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @Author Xin
- * @create 2020/6/17
+ * @author Xin
+ * @date 2020/6/17
  * Title : 1253. 重构 2 行二进制矩阵
  * Description : 给你一个 2 行 n 列的二进制数组：
  *          矩阵是一个二进制矩阵，这意味着矩阵中的每个元素不是 0 就是 1。

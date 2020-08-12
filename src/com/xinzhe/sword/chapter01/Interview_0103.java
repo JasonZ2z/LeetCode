@@ -1,8 +1,8 @@
 package com.xinzhe.sword.chapter01;
 
 /**
- * @Author Xin
- * @create 2020/6/10
+ * @author Xin
+ * @date 2020/6/10
  * Title : 01.03. String to URL LCCI
  * Description : Write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold the additional characters,and that you are given the "true" length of the string.
  * (Note: If implementing in Java,please use a character array so that you can perform this operation in place.)

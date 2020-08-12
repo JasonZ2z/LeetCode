@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly159;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/6/23
+ * @author Xin
+ * @date 2020/6/23
  * Title : 1233. 删除子文件夹
  * Description : 你是一位系统管理员，手里有一份文件夹列表 folder，你的任务是要删除该列表中的所有 子文件夹，并以 任意顺序 返回剩下的文件夹.
  *      我们这样定义「子文件夹」：如果文件夹 folder[i] 位于另一个文件夹 folder[j] 下，那么 folder[i] 就是 folder[j] 的子文件夹。

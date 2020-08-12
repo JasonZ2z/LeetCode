@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.towpointers;
 
 /**
- * @Author Xin
- * @create 2020/3/6 18:01
+ * @author Xin
+ * @date 2020/3/6 18:01
  * Title : 11. 盛最多水的容器
  * Description : 给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。
  *              在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。

@@ -3,8 +3,8 @@ package com.xinzhe.order.day04;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/2/28 14:41
+ * @author Xin
+ * @date 2020/2/28 14:41
  * Title : 241. 为运算表达式设计优先级
  * Description : 我们买了一些糖果 candies，打算把它们分给排好队的 n = num_people 个小朋友。
  *              给第一个小朋友 1 颗糖果，第二个小朋友 2 颗，依此类推，直到给最后一个小朋友 n 颗糖果。

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/6/19
+ * @author Xin
+ * @date 2020/6/19
  * Title : 1238. 循环码排列
  * Description : 给你两个整数 n 和 start。你的任务是返回任意 (0,1,2,,...,2^n-1) 的排列 p，并且满足：
  *          p[0] = start

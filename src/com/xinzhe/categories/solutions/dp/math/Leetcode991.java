@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 /**
- * @Author Xin
- * @create 2020/3/27 20:35
+ * @author Xin
+ * @date 2020/3/27 20:35
  * Title : 650. 只有两个键的键盘
  * Description : 最在显示着数字的坏计算器上，我们可以执行以下两种操作：
  *              双倍（Double）：将显示屏上的数字乘 2；

@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dfs.medium;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/4/2 20:37
+ * @author Xin
+ * @date 2020/4/2 20:37
  * Title : 114. 二叉树展开为链表
  * Description : 给定一个二叉树，原地将它展开为链表。
  * link : https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/

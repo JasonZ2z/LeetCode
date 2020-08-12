@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/16 19:41
+ * @author Xin
+ * @date 2020/3/16 19:41
  * Title : 5356. 矩阵中的幸运数
  * Description : 给你一个 m * n 的矩阵，矩阵中的数字 各不相同 。请你按 任意 顺序返回矩阵中的所有幸运数。
  *

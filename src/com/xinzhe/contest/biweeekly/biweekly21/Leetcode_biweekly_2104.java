@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly21;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/5/14
+ * @author Xin
+ * @date 2020/5/14
  * Title : 1373. 二叉搜索子树的最大键值和
  * Description : 给你一棵以 root 为根的 二叉树 ，请你返回 任意 二叉搜索子树的最大键值和。
  *              二叉搜索树的定义如下：

@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly177;
 
 /**
- * @Author Xin
- * @create 2020/5/18
+ * @author Xin
+ * @date 2020/5/18
  * Title : 1362. 最接近的因数
  * Description : 给你一个整数 num，请你找出同时满足下面全部要求的两个整数：
  * 两数乘积等于  num + 1 或 num + 2

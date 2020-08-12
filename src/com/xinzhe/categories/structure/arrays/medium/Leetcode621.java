@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * @Author Xin
- * @create 2020/7/29
+ * @author Xin
+ * @date 2020/7/29
  * Title : 621. Task Scheduler
  * Description : 实
  * link : https://leetcode-cn.com/problems/next-permutation

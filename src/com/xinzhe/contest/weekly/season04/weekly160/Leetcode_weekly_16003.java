@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/6/19
+ * @author Xin
+ * @date 2020/6/19
  * Title : 1239. 串联字符串的最大长度
  * Description : 给定一个字符串数组 arr，字符串 s 是将 arr 某一子序列字符串连接所得的字符串，如果 s 中的每一个字符都只出现过一次，那么它就是一个可行解。请返回所有可行解 s 中最长长度。
  * link : https://leetcode-cn.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters

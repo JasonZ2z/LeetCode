@@ -1,8 +1,8 @@
 package com.xinzhe.categories.structure.arrays;
 
 /**
- * @Author Xin
- * @create 2020/4/2 18:39
+ * @author Xin
+ * @date 2020/4/2 18:39
  * Title : 73. 矩阵置零
  * Description : 给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。
  * link : https://leetcode-cn.com/problems/set-matrix-zeroes/

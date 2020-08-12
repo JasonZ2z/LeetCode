@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dp.matrix;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/3/26 19:55
+ * @author Xin
+ * @date 2020/3/26 19:55
  * Title : 638. 大礼包
  * Description : 现给定每个物品的价格，每个大礼包包含物品的清单，以及待购物品清单。请输出确切完成待购清单的最低花费。
  * 每个大礼包的由一个数组中的一组数据描述，最后一个数字代表大礼包的价格，其他数字分别表示内含的其他种类物品的数量。

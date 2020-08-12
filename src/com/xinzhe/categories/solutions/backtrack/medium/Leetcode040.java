@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.backtrack.medium;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/3/5 18:55
+ * @author Xin
+ * @date 2020/3/5 18:55
  * Title : 40. 组合总和 II
  * Description : 给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
  *              candidates 中的每个数字在每个组合中只能使用一次。

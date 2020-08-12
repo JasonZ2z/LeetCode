@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.unionfind;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/4/16
+ * @author Xin
+ * @date 2020/4/16
  * Title : 399. 除法求值
  * Description : 给出方程式 A / B = k, 其中 A 和 B 均为代表字符串的变量， k 是一个浮点型数字。根据已知方程式求解问题，并返回计算结果。如果结果不存在，则返回 -1.0。
  * 示例 :

@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/6/01
+ * @author Xin
+ * @date 2020/6/01
  * Title : 1298. 你能从盒子里获得的最大糖果数
  * Description : 给你 n 个盒子，每个盒子的格式为 [status, candies, keys, containedBoxes] ，其中：
  * 状态字 status[i]：整数，如果 box[i] 是开的，那么是 1 ，否则是 0 。

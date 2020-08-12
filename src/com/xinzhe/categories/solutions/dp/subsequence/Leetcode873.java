@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dp.subsequence;
 import java.util.HashMap;
 
 /**
- * @Author Xin
- * @create 2020/3/11 18:45
+ * @author Xin
+ * @date 2020/3/11 18:45
  * Title : 873. 最长的斐波那契子序列的长度
  * Description : 如果序列 X_1, X_2, ..., X_n 满足下列条件，就说它是 斐波那契式 的：
  *              n >= 3

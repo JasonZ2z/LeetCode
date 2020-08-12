@@ -5,8 +5,8 @@ import com.xinzhe.categories.structure.linkedlist.ListNode;
 import java.util.LinkedList;
 
 /**
- * @Author Xin
- * @create 2020/4/14 21:53
+ * @author Xin
+ * @date 2020/4/14 21:53
  * Title : 445. 两数相加 II
  * Description : 给定两个非空链表来代表两个非负整数。数字最高位位于链表开始位置。它
  *              们的每个节点只存储单个数字。将这两数相加会返回一个新的链表。

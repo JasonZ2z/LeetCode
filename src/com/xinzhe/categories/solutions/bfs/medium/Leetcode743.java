@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.bfs.medium;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/7/1
+ * @author Xin
+ * @date 2020/7/1
  * Title : 743. 网络延迟时间
  * Description : 有 N 个网络节点，标记为 1 到 N。
  *          给定一个列表 times，表示信号经过有向边的传递时间。 times[i] = (u, v, w)，其中 u 是源节点，v 是目标节点， w 是一个信号从源节点传递到目标节点的时间。

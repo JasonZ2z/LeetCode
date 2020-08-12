@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/5/26
+ * @author Xin
+ * @date 2020/5/26
  * Title : 1316. 不同的循环子字符串
  * Description : 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目：
  *              可以写成某个字符串与其自身相连接的形式（即，可以写为 a + a，其中 a 是某个字符串）。

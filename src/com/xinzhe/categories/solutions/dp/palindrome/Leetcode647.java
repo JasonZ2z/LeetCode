@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.palindrome;
 
 /**
- * @Author Xin
- * @create 2020/3/10 18:35
+ * @author Xin
+ * @date 2020/3/10 18:35
  * Title : 647. 回文子串
  * Description : 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。
  * link : https://leetcode-cn.com/problems/palindromic-substrings/

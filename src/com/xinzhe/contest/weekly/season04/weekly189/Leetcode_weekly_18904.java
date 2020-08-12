@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly189;
 
 /**
- * @Author Xin
- * @create 2020/5/17
+ * @author Xin
+ * @date 2020/5/17
  * Title : 1453. 圆形靶内的最大飞镖数量
  * Description : 墙壁上挂着一个圆形的飞镖靶。现在请你蒙着眼睛向靶上投掷飞镖。
  * 投掷到墙上的飞镖用二维平面上的点坐标数组表示。飞镖靶的半径为 r 。

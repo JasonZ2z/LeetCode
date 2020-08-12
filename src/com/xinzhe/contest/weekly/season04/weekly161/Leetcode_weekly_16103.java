@@ -4,8 +4,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @Author Xin
- * @create 2020/6/20
+ * @author Xin
+ * @date 2020/6/20
  * Title : 1249. 移除无效的括号
  * Description : 给你一个由 '('、')' 和小写字母组成的字符串 s。
  *              你需要从字符串中删除最少数目的 '(' 或者 ')' （可以删除任意位置的括号)，使得剩下的「括号字符串」有效。请返回任意一个合法字符串。

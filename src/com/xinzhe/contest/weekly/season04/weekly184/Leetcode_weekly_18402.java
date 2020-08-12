@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly184;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/4/12 10:10
+ * @author Xin
+ * @date 2020/4/12 10:10
  * Title : 5381. 查询带键的排列
  * Description : 给你一个待查数组 queries ，数组中的元素为 1 到 m 之间的正整数。 请你根据以下规则处理所有待查项 queries[i]（从 i=0 到 i=queries.length-1）：
  * 一开始，排列 P=[1,2,3,...,m]。

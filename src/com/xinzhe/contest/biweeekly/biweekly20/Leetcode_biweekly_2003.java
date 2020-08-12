@@ -1,8 +1,8 @@
 package com.xinzhe.contest.biweeekly.biweekly20;
 
 /**
- * @Author Xin
- * @create 2020/5/18
+ * @author Xin
+ * @date 2020/5/18
  * Title : 1358. 包含所有三种字符的子字符串数目
  * Description : 给你一个字符串 s ，它只包含三种字符 a, b 和 c 。请你返回 a，b 和 c 都 至少 出现过一次的子字符串数目。
  * link : https://leetcode-cn.com/problems/number-of-substrings-containing-all-three-characters/

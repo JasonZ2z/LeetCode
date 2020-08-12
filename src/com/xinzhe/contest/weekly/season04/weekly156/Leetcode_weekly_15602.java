@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly156;
 
 /**
- * @Author Xin
- * @create 2020/7/17
+ * @author Xin
+ * @date 2020/7/17
  * Title : 1208. 尽可能使字符串相等
  * Description : 给你两个长度相同的字符串，s 和 t。将 s 中的第 i 个字符变到 t 中的第 i 个字符需要 |s[i] - t[i]| 的开销（开销可能为 0），
  *              也就是两个字符的 ASCII 码值的差的绝对值。用于变更字符串的最大预算是 maxCost。

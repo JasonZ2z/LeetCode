@@ -5,8 +5,8 @@ import java.util.HashSet;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/7/17
+ * @author Xin
+ * @date 2020/7/17
  * Title : 1207. 独一无二的出现次数
  * Description : 给你一个整数数组 arr，请你帮忙统计数组中每个数的出现次数。 如果每个数的出现次数都是独一无二的，就返回 true；否则返回 false。
  * link : https://leetcode-cn.com/problems/unique-number-of-occurrences/

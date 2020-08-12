@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly185;
 
 /**
- * @Author Xin
- * @create 2020/4/19 10:24
+ * @author Xin
+ * @date 2020/4/19 10:24
  * Title : 5391. 生成数组
  * Description : 给你三个整数 n、m 和 k 。下图描述的算法用于找出正整数数组中最大的元素。
  *      请你生成一个具有下述属性的数组 arr ：

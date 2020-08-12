@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dp.compress;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/5/15
+ * @author Xin
+ * @date 2020/5/15
  * Title : 691. 贴纸拼词
  * Description : 我们给出了 N 种不同类型的贴纸。每个贴纸上都有一个小写的英文单词。
  *              你希望从自己的贴纸集合中裁剪单个字母并重新排列它们，从而拼写出给定的目标字符串 target。

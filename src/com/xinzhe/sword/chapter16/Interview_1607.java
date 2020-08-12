@@ -1,8 +1,8 @@
 package com.xinzhe.sword.chapter16;
 
 /**
- * @Author Xin
- * @create 2020/4/30
+ * @author Xin
+ * @date 2020/4/30
  * Title : 面试题 16.07. 最大数值
  * Description : 编写一个方法，找出两个数字a和b中最大的那一个。不得使用if-else或其他比较运算符。
  * link : https://leetcode-cn.com/problems/maximum-lcci/

@@ -3,8 +3,8 @@ package com.xinzhe.order.day09;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/4/12 10:11
+ * @author Xin
+ * @date 2020/4/12 10:11
  * Title : 面试题 16.03. 交点
  * Description : 给定两条线段（表示为起点start = {X1, Y1}和终点end = {X2, Y2}），如果它们有交点，请计算其交点，没有交点则返回空值。
  *              要求浮点型误差不超过10^-6。若有多个交点（线段重叠）则返回 X 值最小的点，X 坐标相同则返回 Y 值最小的点。

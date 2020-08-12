@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * @Author Xin
- * @create 2020/6/18
+ * @author Xin
+ * @date 2020/6/18
  * Title : 1028. 从先序遍历还原二叉树
  * Description : 我们从二叉树的根节点 root 开始进行深度优先搜索。
  *              在遍历中的每个节点处，我们输出 D 条短划线（其中 D 是该节点的深度），然后输出该节点的值。（如果节点的深度为 D，则其直接子节点的深度为 D + 1。根节点的深度为 0）。

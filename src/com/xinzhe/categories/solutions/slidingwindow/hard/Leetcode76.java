@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/3/1 22:11
+ * @author Xin
+ * @date 2020/3/1 22:11
  * Title : 76. 最小覆盖子串
  * Description : 给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字母的最小子串。
  * <p>

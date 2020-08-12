@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.bitmanipulation.easy;
 
 /**
- * @Author Xin
- * @create 2020/8/12
+ * @author Xin
+ * @date 2020/8/12
  * Title : 371. 两整数之和
  * Description : 不使用运算符 + 和 - ​​​​​​​，计算两整数 ​​​​​​​a 、b ​​​​​​​之和。
  * link : https://leetcode-cn.com/problems/sum-of-two-integers/

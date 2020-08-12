@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @Author Xin
- * @create 2020/5/5
+ * @author Xin
+ * @date 2020/5/5
  * Title : 1390. 四因数
  * Description : 给你一个整数数组 nums，请你返回该数组中恰有四个因数的这些整数的各因数之和。
  *              如果数组中不存在满足题意的整数，则返回 0 。

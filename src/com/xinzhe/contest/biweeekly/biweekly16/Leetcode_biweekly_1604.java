@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly16;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/29
+ * @author Xin
+ * @date 2020/5/29
  * Title : 1301. 最大得分的路径数目
  * Description : 给你一个正方形字符数组 board ，你从数组最右下方的字符 'S' 出发。
  * 你的目标是到达数组最左上角的字符 'E' ，数组剩余的部分为数字字符 1, 2, ..., 9 或者障碍 'X'。在每一步移动中，你可以向上、向左或者左上方移动，可以移动的前提是到达的格子没有障碍。

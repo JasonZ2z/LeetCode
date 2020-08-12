@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/5/24
+ * @author Xin
+ * @date 2020/5/24
  * Title : 1457. 二叉树中的伪回文路径
  * Description : 给你一棵二叉树，每个节点的值为 1 到 9 。我们称二叉树中的一条路径是 「伪回文」的，当它满足：路径经过的所有节点值的排列中，存在一个回文序列。
  *              请你返回从根到叶子节点的所有路径中 伪回文 路径的数目。

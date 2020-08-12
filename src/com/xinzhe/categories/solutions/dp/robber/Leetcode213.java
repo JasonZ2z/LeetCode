@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.robber;
 
 /**
- * @Author Xin
- * @create 2020/3/13 18:33
+ * @author Xin
+ * @date 2020/3/13 18:33
  * Title : 213. 打家劫舍 II
  * Description : 给定一个代表每个房屋存放金额的非负整数数组，计算你在不触动警报装置的情况下，能够偷窃到的最高金额。
  *              如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。

@@ -1,8 +1,8 @@
 package com.xinzhe.categories.structure.strings.medium;
 
 /**
- * @Author Xin
- * @create 2020/6/16
+ * @author Xin
+ * @date 2020/6/16
  * Title : 8. 字符串转换整数 (atoi)
  * Description : 请你来实现一个 atoi 函数，使其能将字符串转换成整数。
  * link : https://leetcode-cn.com/problems/string-to-integer-atoi/

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author Xin
- * @create 2020/4/10 21:37
+ * @date 2020/4/10 21:37
  * Title : 442. 数组中重复的数据
  * Description : 给定一个整数数组 a，其中1 ≤ a[i] ≤ n （n为数组长度）, 其中有些元素出现两次而其他元素出现一次。
  *              找到所有出现两次的元素。

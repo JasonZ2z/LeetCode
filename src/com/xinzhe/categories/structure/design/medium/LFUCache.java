@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/4/5 21:18
+ * @author Xin
+ * @date 2020/4/5 21:18
  * Title : 460. LFU缓存
  * Description : 设计并实现最不经常使用（LFU）缓存的数据结构。它应该支持以下操作：get 和 put。
  *              get(key) - 如果键存在于缓存中，则获取键的值（总是正数），否则返回 -1。

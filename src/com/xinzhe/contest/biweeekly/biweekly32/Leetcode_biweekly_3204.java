@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly32;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/8/8
+ * @author Xin
+ * @date 2020/8/8
  * Title : 1542. 找出最长的超赞子字符串
  * Description : 给你一个字符串 s 。请返回 s 中最长的 超赞子字符串 的长度。「超赞子字符串」需满足满足下述两个条件：
  *              该字符串是 s 的一个非空子字符串进行任意次数的字符交换后，该字符串可以变成一个回文字符串

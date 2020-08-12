@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @Author Xin
- * @create 2020/5/5
+ * @author Xin
+ * @date 2020/5/5
  * Title : 1391. 检查网格中是否存在有效路径
  * Description : 给你一个 m x n 的网格 grid。网格里的每个单元都代表一条街道。grid[i][j] 的街道可以是：
  *          1 表示连接左单元格和右单元格的街道。

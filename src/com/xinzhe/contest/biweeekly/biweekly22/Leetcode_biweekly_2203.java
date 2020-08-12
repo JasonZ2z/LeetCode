@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly22;
 import java.util.*;
 
 /**
- * @Author Xin
- * @create 2020/4/18 22:16
+ * @author Xin
+ * @date 2020/4/18 22:16
  * Title : 1387. 将整数按权重排序
  * Description : 我们将整数 x 的 权重 定义为按照下述规则将 x 变成 1 所需要的步数：
  *      如果 x 是偶数，那么 x = x / 2

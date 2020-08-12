@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/2/24 14:37
+ * @author Xin
+ * @date 2020/2/24 14:37
  * Title : 560. 和为K的子数组
  * Description : 给定一个整数数组和一个整数 k，你需要找到该数组中和为 k 的连续的子数组的个数。
  *              输入:nums = [1,1,1], k = 2

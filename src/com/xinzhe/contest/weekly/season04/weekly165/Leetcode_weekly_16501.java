@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly165;
 
 /**
- * @Author Xin
- * @create 2020/6/03
+ * @author Xin
+ * @date 2020/6/03
  * Title : 1275. 找出井字棋的获胜者
  * Description : A 和 B 在一个 3 x 3 的网格上玩井字棋。井字棋游戏的规则如下：
  * 玩家轮流将棋子放在空方格 (" ") 上。

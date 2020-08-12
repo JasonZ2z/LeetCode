@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @Author Xin
- * @create 2020/3/31 16:45
+ * @author Xin
+ * @date 2020/3/31 16:45
  * Title : 103. 二叉树的锯齿形层次遍历
  * Description : 给定一个二叉树，返回其节点值的锯齿形层次遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
  * link : https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/

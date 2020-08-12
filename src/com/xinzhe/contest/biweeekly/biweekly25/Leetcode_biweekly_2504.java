@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/5/2
+ * @author Xin
+ * @date 2020/5/2
  * Title : 1434. 每个人戴不同帽子的方案数
  * Description : 总共有 n 个人和 40 种不同的帽子，帽子编号从 1 到 40 。
  *              给你一个整数列表的列表 hats ，其中 hats[i] 是第 i 个人所有喜欢帽子的列表。

@@ -3,8 +3,8 @@ package com.xinzhe.categories.structure.linkedlist.medium;
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
 /**
- * @Author Xin
- * @create 2020/5/16
+ * @author Xin
+ * @date 2020/5/16
  * Title : 24. 两两交换链表中的节点
  * Description : 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
  * link : https://leetcode-cn.com/problems/swap-nodes-in-pairs/

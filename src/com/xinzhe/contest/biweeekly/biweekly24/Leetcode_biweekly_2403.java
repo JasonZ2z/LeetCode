@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * @Author Xin
- * @create 2020/4/18 22:16
+ * @author Xin
+ * @date 2020/4/18 22:16
  * Title : 5374. 长度为 n 的开心字符串中字典序第 k 小的字符串
  * Description : 一个 「开心字符串」定义为：
  *      仅包含小写字母 ['a', 'b', 'c'].

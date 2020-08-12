@@ -7,8 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @Author Xin
- * @create 2020/6/29
+ * @author Xin
+ * @date 2020/6/29
  * Title : 515. 在每个树行中找最大值
  * Description : 您需要在二叉树的每一行中找到最大的值。
  * link : https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/

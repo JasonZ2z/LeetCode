@@ -3,8 +3,8 @@ package com.xinzhe.sword.chapter01;
 import java.util.BitSet;
 
 /**
- * @Author Xin
- * @create 2020/6/10
+ * @author Xin
+ * @date 2020/6/10
  * Title : 01.01. Is Unique LCCI
  * Description : Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
  * link : https://leetcode-cn.com/problems/is-unique-lcci/

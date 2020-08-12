@@ -3,8 +3,8 @@ package com.xinzhe.contest.biweeekly.biweekly28;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/6/13
+ * @author Xin
+ * @date 2020/6/13
  * Title :
  * Description :
  * link :

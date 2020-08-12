@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 /**
  * @author Xin
- * @create 2020/4/3 14:53
+ * @date 2020/4/3 14:53
  * Title : 8. 字符串转换整数 (atoi)
  * Description : 请你来实现一个 atoi 函数，使其能将字符串转换成整数。
  *

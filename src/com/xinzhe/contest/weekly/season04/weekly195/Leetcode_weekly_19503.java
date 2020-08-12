@@ -3,8 +3,8 @@ package com.xinzhe.contest.weekly.season04.weekly195;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/6/28
+ * @author Xin
+ * @date 2020/6/28
  * Title : 1498. 满足条件的子序列数目
  * Description : 给你一个整数数组 nums 和一个整数 target 。请你统计并返回 nums 中能满足其最小元素与最大元素的 和 小于或等于 target 的 非空 子序列的数目。 由于答案可能很大，请将结果对 10^9 + 7 取余后返回。
  * link : https://leetcode-cn.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition

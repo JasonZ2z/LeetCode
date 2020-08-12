@@ -1,8 +1,8 @@
 package com.xinzhe.categories.solutions.dp.subsequence;
 
 /**
- * @Author Xin
- * @create 2020/3/9 21:23
+ * @author Xin
+ * @date 2020/3/9 21:23
  * Title : 53. 最大子序和
  * Description : 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
  * 输入: [-2,1,-3,4,-1,2,1,-5,4],

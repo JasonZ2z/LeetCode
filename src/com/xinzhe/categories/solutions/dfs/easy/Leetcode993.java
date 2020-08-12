@@ -4,8 +4,8 @@ package com.xinzhe.categories.solutions.dfs.easy;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 /**
- * @Author Xin
- * @create 2020/3/30 15:34
+ * @author Xin
+ * @date 2020/3/30 15:34
  * Title : 993. 二叉树的堂兄弟节点
  * Description : 在二叉树中，根节点位于深度 0 处，每个深度为 k 的节点的子节点位于深度 k+1 处。
  *              如果二叉树的两个节点深度相同，但父节点不同，则它们是一对堂兄弟节点。

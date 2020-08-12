@@ -3,8 +3,8 @@ package com.xinzhe.categories.solutions.dp.subsequence;
 import java.util.Arrays;
 
 /**
- * @Author Xin
- * @create 2020/3/11 18:25
+ * @author Xin
+ * @date 2020/3/11 18:25
  * Title : 300. 最长上升子序列
  * Description : 给定一个无序的整数数组，找到其中最长上升子序列的长度。
  * link : https://leetcode-cn.com/problems/partition-array-into-three-parts-with-equal-sum/

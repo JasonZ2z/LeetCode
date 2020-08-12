@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author Xin
- * @create 2020/8/8
+ * @author Xin
+ * @date 2020/8/8
  * Title : 1540. K 次操作转变字符串
  * Description : 给你两个字符串 s 和 t ，你的目标是在 k 次操作以内把字符串 s 转变成 t 。在第 i 次操作时（1 <= i <= k），你可以选择进行如下操作：
  *              选择字符串 s 中满足 1 <= j <= s.length 且之前未被选过的任意下标 j （下标从 1 开始），并将此位置的字符切换 i 次。不进行任何操作。

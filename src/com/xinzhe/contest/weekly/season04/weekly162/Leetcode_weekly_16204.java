@@ -1,8 +1,8 @@
 package com.xinzhe.contest.weekly.season04.weekly162;
 
 /**
- * @Author Xin
- * @create 2020/6/17
+ * @author Xin
+ * @date 2020/6/17
  * Title : 1255. 得分最高的单词集合
  * Description : 你将会得到一份单词表 words，一个字母表 letters （可能会有重复字母），以及每个字母对应的得分情况表 score。
  *              请你帮忙计算玩家在单词拼写游戏中所能获得的「最高得分」：能够由 letters 里的字母拼写出的 任意 属于 words 单词子集中，分数最高的单词集合的得分。
