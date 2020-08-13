@@ -1,7 +1,8 @@
 package com.xinzhe.contest.weekly.season.weekly145;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Xin
@@ -11,6 +12,8 @@ import java.util.List;
  *              所谓「表现良好的时间段」，意味在这段时间内，「劳累的天数」是严格 大于「不劳累的天数」。请你返回「表现良好时间段」的最大长度。
  * link : https://leetcode-cn.com/problems/longest-well-performing-interval
  * Level : Medium
+ * tag : 前缀和 + hash， 单调栈
+ * comment : same as 560, 1248, 1371
  */
 
 public class Leetcode_weekly_14503 {
@@ -23,29 +26,27 @@ public class Leetcode_weekly_14503 {
     //todo undo
     public int longestWPI(int[] hours) {
         int n = hours.length;
-        for (int i = 0; i < hours.length; i++) {
-            hours[i] = hours[i] > 8 ? 1 :0;
+        for (int i = 0; i < n; i++) {
+            hours[i] = hours[i] > 8 ? 1 : -1;
         }
-        List<Integer> list = new ArrayList<>();
-        int pre = hours[0];
-        int count = 1;
-        for (int i = 1; i < n; ++i) {
-            if(hours[i] == pre) {
-                count++;
-            } else {
-                list.add(count);
-                count = 1;
-                pre = hours[i];
+        int sum = Arrays.stream(hours).sum();
+        if(sum > 0) return n;
+        Map<Integer, Integer> map = new HashMap<>();
+        int cur = 0;
+        int res = 0;
+        for (int i = 0; i < n; ++i) {
+            cur += hours[i];
+            if(cur > 0) {
+                res = i+1;
+            }else {
+                if(!map.containsKey(cur)) {
+                    map.put(cur, i);
+                }
+                if(map.containsKey(cur -1)) {
+                    res = Math.max(res, i - map.get(cur - 1));
+                }
             }
         }
-        list.add(count);
-        if(hours[0] == 1) list.add(0,0);
-        list.add(0);
-        int max = 0;
-        for (int i = 1; i < list.size()-1; i+=2) {
-            max = Math.max(max, list.get(i) + Math.min(list.get(i)-1, Math.max(list.get(i+1) , list.get(i-1))));
-        }
-        return max;
-
+        return res;
     }
 }
