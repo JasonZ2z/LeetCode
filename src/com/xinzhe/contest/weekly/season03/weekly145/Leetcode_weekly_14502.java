@@ -1,4 +1,4 @@
-package com.xinzhe.contest.weekly.season.weekly145;
+package com.xinzhe.contest.weekly.season03.weekly145;
 
 import com.xinzhe.categories.structure.tree.TreeNode;
 
