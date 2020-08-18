@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * @author Xin
- * @date 2020/2/28 14:41
- * Title : 241. 为运算表达式设计优先级
+ * @date 2020/8/18
+ * Title : 1103. 分糖果 II
  * Description : 我们买了一些糖果 candies，打算把它们分给排好队的 n = num_people 个小朋友。
  *              给第一个小朋友 1 颗糖果，第二个小朋友 2 颗，依此类推，直到给最后一个小朋友 n 颗糖果。
  *              然后，我们再回到队伍的起点，给第一个小朋友 n + 1 颗糖果，第二个小朋友 n + 2 颗，依此类推，直到给最后一个小朋友 2 * n 颗糖果。
@@ -24,8 +24,6 @@ public class Leetcode1103 {
         int[] result = new int[n];
         int tmp = 0;
         int k = 0;
-
-
         while(tmp < candies){
             for (int j = 0; j < n; j++) {
                 int val = k*n + j+1;
@@ -39,6 +37,5 @@ public class Leetcode1103 {
             k++;
         }
        return result;
-
     }
 }
