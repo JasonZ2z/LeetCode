@@ -69,6 +69,27 @@ public class Leetcode300 {
         }
         return ++end;
     }
+
+    public int lengthOfLIS3(int[] nums) {
+        if(nums==null||nums.length==0) return 0;
+
+        int len = 0;
+        int[] dp = new int[nums.length];
+
+        for(int num: nums){
+            int ind = Arrays.binarySearch(dp,0,len,num);
+
+            if(ind<0) ind = -(ind+1);
+
+            if(ind==len) {
+                len++;
+            }
+
+            dp[ind] = num;
+        }
+
+        return len;
+    }
     private static void printArray(int num, int[] tail) {
         System.out.print("当前数字：" + num);
         System.out.print("\t当前 tail 数组：");
