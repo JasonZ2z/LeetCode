@@ -1,10 +1,7 @@
 package com.xinzhe.categories.solutions.greedy.hard;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author Xin
@@ -24,15 +21,13 @@ public class Leetcode321 {
         System.out.println(Arrays.toString(lc.maxNumber(a1, a2, 2)));
     }
     public int[] maxNumber(int[] nums1, int[] nums2, int k) {
-        int m = nums1.length;
-        int n = nums2.length;
+        int m = nums1.length, n = nums2.length;
         int[] res = new int[k];
         if(m + n < k) return res;
-
         // i 的范围与 m n k 相关
         for (int i = Math.max(0, k-n); i <= Math.min(m, k); ++i) {
-            List<Integer> l1 = getTopK(nums1, i);
-            List<Integer> l2 = getTopK(nums2, k-i);
+            int[] l1 = getTopK(nums1, i);
+            int[] l2 = getTopK(nums2, k-i);
             int[] merge = merge(l1, l2);
             if(compare(merge, res)) res = merge;
         }
@@ -49,37 +44,37 @@ public class Leetcode321 {
     }
 
     // 相同的时候 需要继续比较后继元素的大小，选择大的那个
-    private int[] merge(List<Integer> l1, List<Integer> l2) {
-        int m = l1.size(), n = l2.size();
+    private int[] merge(int[] l1, int[] l2) {
+        int m = l1.length, n = l2.length;
         int[] res = new int[m+n];
         int p = 0, q = 0, k = 0;
         while (p < m && q < n) {
-            if(l1.get(p) > l2.get(q)) {
-                res[k++] = l1.get(p++);
-            }else if(l1.get(p) < l2.get(q)){
-                res[k++] = l2.get(q++);
+            if(l1[p] > l2[q]) {
+                res[k++] = l1[p++];
+            }else if(l1[p] < l2[q]){
+                res[k++] = l2[q++];
             } else {
                 int i=p, j= q;
-                while (i < m && j < n && l1.get(i).equals(l2.get(j))){
+                while (i < m && j < n && l1[i]==(l2[j])){
                     i++; j++;
                 }
-                if(i == m) res[k++] = l2.get(q++);
-                else if(j == n) res[k++] = l1.get(p++);
-                else if(l1.get(i) > l2.get(j)) res[k++] = l1.get(p++);
-                else res[k++] = l2.get(q++);
+                if(i == m) res[k++] = l2[q++];
+                else if(j == n) res[k++] = l1[p++];
+                else if(l1[i] > l2[j]) res[k++] = l1[p++];
+                else res[k++] = l2[q++];
             }
         }
-        while (p < m) { res[k++] = l1.get(p++); }
-        while (q < n) { res[k++] = l2.get(q++); }
+        while (p < m) { res[k++] = l1[p++]; }
+        while (q < n) { res[k++] = l2[q++]; }
         return res;
     }
 
     //count ： 待删除的数目
-    private List<Integer> getTopK(int[] nums, int k) {
-        List<Integer> res = new ArrayList<>();
+    private int[] getTopK(int[] nums, int k) {
+        int[] res = new int[k];
         if(k == 0) return res;
         int n = nums.length;
-        if(k == n) return Arrays.stream(nums).boxed().collect(Collectors.toList());
+        if(k == n) return nums;
         int count = n - k;
         ArrayDeque<Integer> stack = new ArrayDeque<>();
         for (int num : nums) {
@@ -94,7 +89,7 @@ public class Leetcode321 {
             }
         }
         while (!stack.isEmpty()) {
-            res.add(0, stack.pop());
+            res[--k] = stack.pop();
         }
         return res;
     }
