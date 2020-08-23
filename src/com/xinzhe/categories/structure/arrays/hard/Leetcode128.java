@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
  * link : https://leetcode-cn.com/problems/longest-consecutive-sequence/
  * Level : Hard
  */
+//todo need to review
 public class Leetcode128 {
     public int longestConsecutive(int[] nums) {
         int max = 0;
