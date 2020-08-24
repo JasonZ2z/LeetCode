@@ -3,9 +3,9 @@ package com.xinzhe.contest.biweeekly.biweekly33;
 /**
  * @author Xin
  * @date 2020/8/22
- * Title :
- * Description :
- * link :
+ * Title : 1556. 千位分隔数
+ * Description :  给你一个整数 n，请你每隔三位添加点（即 "." 符号）作为千位分隔符，并将结果以字符串格式返回。
+ * link : https://leetcode-cn.com/problems/thousand-separator/
  * Level : Easy
  */
 public class Leetcode_biweekly_3301 {
