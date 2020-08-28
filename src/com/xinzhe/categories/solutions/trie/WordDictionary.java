@@ -23,23 +23,21 @@ class WordDictionary {
         System.out.println(wd.search("b.."));
     }
 
+    Trie root;
     /** Initialize your data structure here. */
-    TrieNode root;
     public WordDictionary() {
-        root = new TrieNode();
+        root = new Trie();
     }
 
     /** Adds a word into the data structure. */
     public void addWord(String word) {
-        TrieNode cur = root;
-        for(int i=0; i< word.length(); i++) {
-            int j = word.charAt(i) - 'a';
-            if(cur.node[j] == null) {
-                cur.node[j] = new TrieNode();
-            }
-            cur = cur.node[j];
+        Trie cur = root;
+        for(char c : word.toCharArray()) {
+            int i = c - 'a';
+            if(cur.node[i] ==null) cur.node[i] = new Trie();
+            cur = cur.node[i];
         }
-        cur.isEnd = true;
+        cur.end = true;
     }
 
     /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
@@ -47,28 +45,28 @@ class WordDictionary {
         return dfs(root, word, 0);
     }
 
-    public boolean dfs(TrieNode root, String word, int index) {
-        if(index == word.length()) {
-            return root.isEnd;
-        }
+    public boolean dfs(Trie cur, String word, int index) {
+        if(index == word.length()) return cur.end;
+        if(cur == null) return false;
         if(word.charAt(index) == '.') {
-            for(int i=0; i< 26; i++) {
-                if(dfs(root.node[i], word, index + 1)){
+            for(int i=0; i<26; i++) {
+                if(dfs(cur.node[i], word, index + 1)){
                     return true;
                 }
             }
-            return false;
         } else {
-            int j = word.charAt(index) - 'a';
-            return dfs(root.node[j], word, index+1);
+            int i = word.charAt(index) - 'a';
+            return dfs(cur.node[i], word, index + 1);
         }
+        return false;
     }
 
-    static class TrieNode {
-        boolean isEnd;
-        TrieNode[] node;
-        public TrieNode(){
-            node = new TrieNode[26];
+    class Trie{
+        Trie[] node;
+        boolean end;
+
+        public Trie(){
+            node = new Trie[26];
         }
     }
 }

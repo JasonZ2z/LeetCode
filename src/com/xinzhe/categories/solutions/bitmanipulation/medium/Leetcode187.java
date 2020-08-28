@@ -1,8 +1,11 @@
 package com.xinzhe.categories.solutions.bitmanipulation.medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -17,12 +20,12 @@ import java.util.Set;
 // 输入：s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
 //输出：["AAAAACCCCC", "CCCCCAAAAA"]
 
-
 class Leetcode187 {
     public static void main(String[] args) {
-        Solution so = new Leetcode187().new Solution();
+        Leetcode187 lc = new Leetcode187();
+        System.out.println(lc.findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"));
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
+
     class Solution {
         public List<String> findRepeatedDnaSequences(String s) {
             Set<String> set = new HashSet<>();
@@ -40,8 +43,44 @@ class Leetcode187 {
             return new ArrayList<>(res);
         }
     }
-    //leetcode submit region end(Prohibit modification and deletion)
 
 
+    List<Character> dict = Arrays.asList('A', 'C', 'G', 'T');
+    public List<String> findRepeatedDnaSequences(String s) {
+        List<String> res = new ArrayList<>();
+        int n = s.length(); if(n <= 10) return res;
+        char[] arr = s.toCharArray();
+        Map<Integer, Integer> map = new HashMap<>();
+        int mask = 0;
+        for(int i=0; i<n; i++) {
+            int j = dict.indexOf(arr[i]);
+            if(i < 9) {
+                mask += j;
+            } else {
+                mask &= 0xfcfffff;
+                mask += j;
+                map.put(mask, map.getOrDefault(mask, 0) + 1);
+            }
+            System.out.println(Integer.toBinaryString(mask));
+            mask <<=2;
+        }
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if(entry.getValue() > 1) {
+                res.add(convert(entry.getKey()));
+            }
+        }
+        return res;
+    }
 
+    private String convert(int x) {
+        StringBuilder sb = new StringBuilder();
+        while(x > 0) {
+            sb.append(dict.get(x & 3));
+            x >>= 2;
+        }
+        while (sb.length() < 10) {
+            sb.append('A');
+        }
+        return sb.reverse().toString();
+    }
 }

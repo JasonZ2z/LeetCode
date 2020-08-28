@@ -25,4 +25,24 @@ public class Leetcode397 {
         map.put(n , res);
         return res;
     }
+
+    //todo need to review
+    public int integerReplacement2(int n) {
+        int count = 0;
+        while(n != 1) {
+            if((n & 1) == 0) {
+                n>>>=1;
+            } else {
+                if((n&2) == 0) n--;
+                else if(n == 3) {
+                    count+=2;
+                    break;
+                } else {
+                    n++;
+                }
+            }
+            count++;
+        }
+        return count;
+    }
 }
