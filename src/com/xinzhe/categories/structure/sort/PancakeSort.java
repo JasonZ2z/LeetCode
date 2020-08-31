@@ -30,8 +30,8 @@ public class PancakeSort {
         int[] arr = Arrays.stream(A).boxed().sorted().mapToInt(Integer::intValue).toArray();
         int n = A.length;
         while (n > 0){
+            int value = arr[n-1];
             for (int i = 0; i < n; i++) {
-                int value = arr[n-1];
                 if(A[i] == value){
                     if(i != 0){
                         flip(A, i+1);
