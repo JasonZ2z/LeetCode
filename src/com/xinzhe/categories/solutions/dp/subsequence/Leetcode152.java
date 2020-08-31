@@ -29,4 +29,26 @@ public class Leetcode152 {
         }
         return max;
     }
+
+    public int maxProduct2(int[] nums) {
+        int n = nums.length;
+        long[][] dp = new long[n][2];
+
+        dp[0][0] = nums[0];
+        dp[0][1] = nums[0];
+
+        long res = dp[0][0];
+        for(int i=1; i<n; i++) {
+            if(nums[i] > 0) {
+                dp[i][0] = Math.max(dp[i-1][0] * nums[i], nums[i]);
+                dp[i][1] = Math.min(dp[i-1][1] * nums[i], nums[i]);
+            } else if(nums[i] < 0){
+                dp[i][0] = dp[i-1][1] * nums[i];
+                dp[i][1] = Math.min(dp[i-1][0] * nums[i], nums[i]);
+            }
+            res = Math.max(res, dp[i][0]);
+        }
+        return (int)res;
+
+    }
 }
