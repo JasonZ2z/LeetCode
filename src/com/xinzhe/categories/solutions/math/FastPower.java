@@ -32,6 +32,20 @@ public class FastPower {
         return (int)ans;
     }
 
+    private long pow(long base, int num, int mod){
+        long res = 1;
+        while(num > 0){
+            if((num & 1) == 1){
+                res *= base;
+                res %= mod;
+            }
+            base *= base;
+            base %= mod;
+            num >>= 1;
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         System.out.println(fastPower(2, 12));
     }

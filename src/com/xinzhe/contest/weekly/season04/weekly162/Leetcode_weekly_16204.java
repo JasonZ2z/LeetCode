@@ -18,42 +18,6 @@ package com.xinzhe.contest.weekly.season04.weekly162;
  */
 //todo need to review
 public class Leetcode_weekly_16204 {
-    int res = 0;
-    String[] words;
-    int[] score;
-    public int maxScoreWords(String[] words, char[] letters, int[] score) {
-        this.words = words;
-        this.score = score;
-        int[] arr = new int[26];
-        for (char c : letters) {
-            arr[c - 'a']++;
-        }
-        dfs(0,0,arr);
-        return res;
-    }
-
-    private void dfs(int index, int sum, int[] arr) {
-        if(index >= words.length) return;
-        int[] tmp = arr.clone();
-        int tmpSum = 0;
-        String str = words[index];
-        for (char c : str.toCharArray()) {
-            if(arr[c - 'a'] > 0) {
-                tmpSum += score[c - 'a'];
-                arr[c - 'a']--;
-            } else {
-                dfs(index+1, sum, tmp);
-                return;
-            }
-        }
-        res = Math.max(res, sum + tmpSum);
-        dfs(index+1, sum + tmpSum, arr);
-        dfs(index + 1, sum, tmp);
-    }
-
-    int getBit(int x, int y) {
-        return (x >> y) & 1;
-    }
 
     boolean ok(String word, int[] cnt) {
         for (int i = 0; i < word.length(); i++) {
@@ -64,7 +28,7 @@ public class Leetcode_weekly_16204 {
         return true;
     }
 
-    public int maxScoreWords2(String[] words, char[] letters, int[] score) {
+    public int maxScoreWords(String[] words, char[] letters, int[] score) {
         int[] cnt = new int[26];
         for (char c : letters) cnt[c - 'a']++;
         int n = words.length;
@@ -80,7 +44,7 @@ public class Leetcode_weekly_16204 {
             clone = cnt.clone();
             int total = 0;
             for (int j = 0; j < n; ++j) {
-                if(getBit(i,j) == 1) {
+                if(((i>>j)&1) == 1) {
                     if(ok(words[j], clone)) {
                         total += scores[j];
                     } else {
