@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dp.exist;
+package com.xinzhe.categories.solutions.dp.knapsack.knapsack01;
 
 import java.util.Arrays;
 
@@ -16,6 +16,31 @@ public class Leetcode416 {
         int[] nums =  {23,13,11,7,6,5,5};
         System.out.println(canPartition(nums));
     }
+    //入门版本
+    public static boolean canPartition1(int[] nums) {
+        int n = nums.length;
+        if (n < 2) return false;
+        int sum = Arrays.stream(nums).sum();
+        if (sum % 2 == 1) return false;
+        int sub = sum >> 1;
+        boolean[][] dp = new boolean[n][sub+1];
+        for(int i=0; i<n; i++) dp[i][0]= true;
+
+        if(nums[0] <= sub) {
+            dp[0][nums[0]] = true;
+        } else {
+            return false;
+        }
+        for (int i = 1; i < n; ++i) {
+            for (int j = 1; j <= sub; ++j) {
+                dp[i][j] = dp[i - 1][j];
+                if(j <= nums[i])  dp[i][j] = dp[i - 1][j] || (dp[i - 1][j - nums[i]]);
+            }
+        }
+        return dp[n-1][sub];
+    }
+
+    //降维压缩空间
     public static boolean canPartition(int[] nums) {
         if(nums.length < 2) return false;
         int sum = Arrays.stream(nums).sum();

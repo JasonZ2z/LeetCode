@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dp.exist;
+package com.xinzhe.categories.solutions.dp.knapsack.knapsack01;
 
 import java.util.Arrays;
 
@@ -13,7 +13,7 @@ import java.util.Arrays;
  * Comment : related problem leetcode416
  */
 
-//todo need to review, also can be resolved by dfs;
+//todo need to review;
 public class Leetcode494 {
     public int findTargetSumWays(int[] nums, int sum) {
         int m = nums.length;
@@ -38,5 +38,26 @@ public class Leetcode494 {
             }
         }
         return dp[m][curSum + sum];
+    }
+
+
+    // 转化为01背包问题
+    //sum(P) - sum(N) = target
+    //sum(P) + sum(N) + sum(P) - sum(N) = target + sum(P) + sum(N)
+    //2 * sum(P) = target + sum(nums)
+    public int findTargetSumWays2(int[] nums, int s) {
+        int sum = Arrays.stream(nums).sum();
+        if(sum < Math.abs(s)) return 0;
+        if((sum + s) % 2 != 0) return 0;
+        int m = (sum + s) / 2;
+
+        int[] dp = new int[m + 1];
+        dp[0] = 1;
+        for (int num : nums) {
+            for (int j = m; j >= num; j--) {
+                dp[j] = dp[j] + dp[j - num];
+            }
+        }
+        return dp[m];
     }
 }

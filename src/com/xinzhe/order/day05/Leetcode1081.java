@@ -1,6 +1,6 @@
 package com.xinzhe.order.day05;
 
-import java.util.HashMap;
+import java.util.ArrayDeque;
 
 /**
  * @author Xin
@@ -12,13 +12,35 @@ import java.util.HashMap;
  */
 //todo
 public class Leetcode1081 {
+    public static void main(String[] args) {
+        Leetcode1081 lc = new Leetcode1081();
+        System.out.println(lc.smallestSubsequence("ecbacba"));
+    }
     public String smallestSubsequence(String text) {
-        // null
-        //hashmap count
-        HashMap<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < text.length(); i++) {
-            map.put(text.charAt(i), map.getOrDefault(text.charAt(i), 0) + 1);
+        int n = text.length();
+        if(n == 1) return text;
+        int[] cnt = new int[26];
+        char[] arr = text.toCharArray();
+
+        for(char c : arr) {
+            cnt[c-'a']++;
         }
-        return "";
+
+        ArrayDeque<Character> stack = new ArrayDeque<>();
+        for(char c : arr) {
+            if(stack.contains(c)){
+                cnt[c-'a']--;
+                continue;
+            }
+            while(!stack.isEmpty() && stack.peek() > c && cnt[stack.peek()-'a'] > 1){
+                cnt[stack.pop()-'a']--;
+            }
+            stack.push(c);
+        }
+        StringBuilder sb = new StringBuilder();
+        while(!stack.isEmpty()){
+            sb.append(stack.pop());
+        }
+        return sb.reverse().toString();
     }
 }
