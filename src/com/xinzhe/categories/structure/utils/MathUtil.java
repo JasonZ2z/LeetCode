@@ -42,4 +42,15 @@ public class MathUtil {
         }
         return (int)ans;
     }
+
+    //组合求方案数 C(n,k)
+    private static long combination(int n, int k) {
+        long a=1, b=1;
+        if(k>n/2) k=n-k;
+        for(int i=1; i<=k; i++) {
+            a*=(n+1-i);
+            b*=i;
+        }
+        return a/b;
+    }
 }
