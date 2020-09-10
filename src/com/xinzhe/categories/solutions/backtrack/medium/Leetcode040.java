@@ -13,6 +13,11 @@ import java.util.List;
  * Level : Medium
  */
 public class Leetcode040 {
+    public static void main(String[] args) {
+        Leetcode040 lc = new Leetcode040();
+        int[] arr = {10,1,2,7,6,1,5};
+        System.out.println(lc.combinationSum2(arr, 8));
+    }
     List<List<Integer>> res = new ArrayList<>();
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
