@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dp.knapsack;
+package com.xinzhe.categories.solutions.dp.knapsack.knapsackfull;
 
 /**
  * @author Xin
@@ -20,7 +20,7 @@ public class Leetcode518 {
         dp[0] = 1;
         for (int coin : coins){
             for (int i = coin; i <= amount; ++i) {
-                dp[i] += dp[i - coin];
+                if (i >= coin) dp[i] += dp[i - coin];
             }
         }
         return dp[amount];

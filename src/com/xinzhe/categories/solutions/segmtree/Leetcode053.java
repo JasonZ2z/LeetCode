@@ -11,6 +11,7 @@ package com.xinzhe.categories.solutions.segmtree;
  * link : https://leetcode-cn.com/problems/maximum-subarray
  * Level : Easy
  */
+//todo need to review
 public class Leetcode053 {
     public class array{
         public int lSum;

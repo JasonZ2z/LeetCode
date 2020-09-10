@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dp.knapsack;
+package com.xinzhe.categories.solutions.dp.knapsack.knapsackfull;
 
 import java.util.Arrays;
 

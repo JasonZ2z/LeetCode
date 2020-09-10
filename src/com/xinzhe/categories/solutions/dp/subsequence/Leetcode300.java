@@ -23,7 +23,6 @@ public class Leetcode300 {
         if(nums.length == 0) return 0;
         if(nums.length == 1) return 1;
         int n = nums.length;
-
         int[] dp = new int[n];
         Arrays.fill(dp, 1);
         int res = 0;
@@ -35,7 +34,6 @@ public class Leetcode300 {
             }
             res = Math.max(dp[i], res);
         }
-        System.out.println(Arrays.toString(dp));
         return res;
     }
 
@@ -72,19 +70,12 @@ public class Leetcode300 {
 
     public int lengthOfLIS3(int[] nums) {
         if(nums==null||nums.length==0) return 0;
-
         int len = 0;
         int[] dp = new int[nums.length];
-
         for(int num: nums){
             int ind = Arrays.binarySearch(dp,0,len,num);
-
             if(ind<0) ind = -(ind+1);
-
-            if(ind==len) {
-                len++;
-            }
-
+            if(ind==len) len++;
             dp[ind] = num;
         }
 
