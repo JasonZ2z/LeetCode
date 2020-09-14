@@ -1,4 +1,4 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.solo;
 
 import java.util.Arrays;
 
@@ -14,7 +14,7 @@ import java.util.Arrays;
  * Level : Medium
  * Comment : 2020春季个人赛03
  */
-public class Leetcode_single_041803 {
+public class LCP_08 {
     public static void main(String[] args) {
         int[][] a = {{0,4,5}, {4,8,8}, {8,6,1}, {10,10,0}};
         int[][] b = {{12,11,16},{20,2,6}, {9,2,6}, {10,18,3}, {8,14,15}};

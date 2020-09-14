@@ -1,9 +1,9 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.solo;
 
 /**
  * @author Xin
  * @date 2020/4/18 14:55
- * Title : LCP 10
+ * Title : LCP 10 二叉树的任务调度
  * Description : 任务调度优化是计算机性能优化的关键任务之一。在任务众多时，不同的调度策略可能会得到不同的总体执行时间，因此寻求一个最优的调度方案是非常有必要的。
  *              通常任务之间是存在依赖关系的，即对于某个任务，你需要先完成他的前导任务（如果非空），才能开始执行该任务。
  *              我们保证任务的依赖关系是一棵二叉树，其中 root 为根任务，root.left 和 root.right 为他的两个前导任务（可能为空），root.val 为其自身的执行时间。
@@ -13,6 +13,6 @@ package com.xinzhe.contest.spring2020;
  * Level : Hard
  * Comment : 2020春季个人赛05
  */
-public class Leetcode_single_041805 {
+public class LCP_10 {
     //todo undo
 }

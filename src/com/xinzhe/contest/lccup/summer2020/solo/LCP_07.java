@@ -1,4 +1,4 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.solo;
 
 /**
  * @author Xin
@@ -13,7 +13,7 @@ package com.xinzhe.contest.spring2020;
  * Level : Easy
  * Comment : 2020春季个人赛02
  */
-public class Leetcode_single_041802 {
+public class LCP_07 {
     static int count = 0;
     public static int numWays(int n, int[][] relation, int k) {
         bfs(relation, k, 0, n-1);

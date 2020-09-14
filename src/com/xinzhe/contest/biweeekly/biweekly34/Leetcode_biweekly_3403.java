@@ -19,26 +19,50 @@ public class Leetcode_biweekly_3403 {
 
     public int findLengthOfShortestSubarray(int[] arr) {
         int n = arr.length;
-        int i = 0, j = n-1;
-        while(i < n-1 && arr[i] <= arr[i+1]){
-            i++;
+        int s = 0, e = n-1;
+        while(s < n-1 && arr[s] <= arr[s+1]){
+            s++;
         }
-        if(i == n-1) return 0;
-        while(j > 0 && arr[j] >= arr[j-1]){
-            j--;
+        if(s == n-1) return 0;
+        while(e > 0 && arr[e] >= arr[e-1]){
+            e--;
         }
-        int res = Math.min(n-i - 1, j);
+        int res = Math.max(s + 1, n - e);
+        for (int i = 0; i <= s; ++i) {
+            for (int j = e; j < n; ++j) {
+                if(arr[j] >= arr[i]) {
+                    res = Math.max(i + 1 + n - j, res);
+                }
+            }
+        }
+        return n-res;
+    }
 
-        int l = 0, r = j;
-
-        while (l <= i && r <= n-1) {
-            if(arr[l] <= arr[r]) {
-                res = Math.min(res, r - l - 1);
+    public int findLengthOfShortestSubarray2(int[] arr) {
+        int n = arr.length;
+        int left = 0;
+        while (left + 1 < n && arr[left] <= arr[left+1]) {
+            left++;
+        }
+        // [0...left]有序
+        if (left == n - 1)  return 0;
+        // [right...n-1]有序
+        int right = n - 1;
+        while (right > 0 && arr[right - 1] <= arr[right]) {
+            right--;
+        }
+        int result = Math.min(n - left - 1, right); // 完全删除一边[left+1, n-1], 或者[0...right - 1]
+        int i = 0, j = right; // 左边和右边各保留一部分
+        while (i <= left && j <= n - 1) {
+            if (arr[i] <= arr[j]) {
+                // [0...i] 和 [j...n-1] 有序, 删除 [i+1...j-1]
+                result = Math.min(result, j - i - 1);
                 i++;
             } else {
+                // 小的+1
                 j++;
             }
         }
-        return res;
+        return result;
     }
 }

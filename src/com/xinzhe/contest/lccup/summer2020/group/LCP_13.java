@@ -1,6 +1,10 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.group;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * @author Xin
@@ -13,11 +17,11 @@ import java.util.*;
  * 我们每步可以选择向上/向下/向左/向右移动一格，并且不能移出迷宫。搬起石头和放下石头不算步数。那么，从起点开始，我们最少需要多少步才能最后拿到宝藏呢？如果无法拿到宝藏，返回 -1 。
  * link : https://leetcode-cn.com/problems/xun-bao
  * Level : Hard
- * Comment : 2020春季个人赛08
+ * Comment 2020-spring-group-03
  */
 
 //todo too hard to solve
-public class Leetcode_single_041808 {
+public class LCP_13 {
 
         int m,n;
         int[] dx = {-1, 1, 0, 0};

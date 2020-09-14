@@ -1,4 +1,4 @@
-package com.xinzhe.contest.summer2020;
+package com.xinzhe.contest.lccup.fall2020.solo;
 
 /**
  * @author Xin
@@ -8,5 +8,5 @@ package com.xinzhe.contest.summer2020;
  * link :
  * Level :
  */
-public class Leetcode_singel_004 {
+public class LCP_20 {
 }

@@ -1,4 +1,4 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.group;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Map;
  * Level : Easy
  * Comment 2020-spring-group-01
  */
-public class Leetcode_group_01 {
+public class LCP_11 {
     public int expectNumber(int[] scores) {
         int n = scores.length;
         Map<Integer, Integer> map = new HashMap<>();

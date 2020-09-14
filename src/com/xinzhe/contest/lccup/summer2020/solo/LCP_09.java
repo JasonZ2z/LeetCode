@@ -1,4 +1,4 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.solo;
 
 /**
  * @author Xin
@@ -13,7 +13,7 @@ package com.xinzhe.contest.spring2020;
  * Comment : 2020春季个人赛04
  */
 //todo need to review
-public class Leetcode_single_041804 {
+public class LCP_09 {
     public static void main(String[] args) {
         int[] jump = {2, 5, 1, 1, 1, 1};
         System.out.println(minJump(jump));

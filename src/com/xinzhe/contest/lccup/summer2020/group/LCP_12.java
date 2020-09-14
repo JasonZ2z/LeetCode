@@ -1,4 +1,4 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.group;
 
 /**
  * @author Xin
@@ -13,9 +13,9 @@ package com.xinzhe.contest.spring2020;
  * Level : Medium
  * Comment 2020-spring-group-02
  */
-public class Leetcode_group_02 {
+public class LCP_12 {
     public static void main(String[] args) {
-        Leetcode_group_02 lt = new Leetcode_group_02();
+        LCP_12 lt = new LCP_12();
         int[] time = {1,2,3,3};
         System.out.println(lt.minTime(time, 2));
     }

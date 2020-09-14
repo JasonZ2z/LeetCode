@@ -1,4 +1,4 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.group;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,13 @@ import java.util.List;
  *              了减少他的工作量，请求出最少可以切成多少个子数组。
  * link : https://leetcode-cn.com/problems/qie-fen-shu-zu
  * Level : Hard
- * Comment 2020-spring-group-03
+ * Comment 2020-spring-group-04
  */
 
 //todo undo
-public class Leetcode_group_04 {
+public class LCP_14 {
     public static void main(String[] args) {
-        Leetcode_group_04 lt = new Leetcode_group_04();
+        LCP_14 lt = new LCP_14();
         int[] arr = {2,3,3,2,3,3};
         System.out.println(lt.splitArray(arr));
     }

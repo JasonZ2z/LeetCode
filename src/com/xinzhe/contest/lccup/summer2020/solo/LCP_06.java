@@ -1,4 +1,4 @@
-package com.xinzhe.contest.spring2020;
+package com.xinzhe.contest.lccup.summer2020.solo;
 
 /**
  * @author Xin
@@ -9,7 +9,7 @@ package com.xinzhe.contest.spring2020;
  * Level : Easy
  * Comment : 2020春季个人赛01
  */
-public class Leetcode_single_041801 {
+public class LCP_06 {
     public int minCount(int[] coins) {
         int n = coins.length;
         if(n == 0) return 0;
