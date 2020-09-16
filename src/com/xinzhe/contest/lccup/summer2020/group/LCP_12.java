@@ -22,12 +22,7 @@ public class LCP_12 {
     public int minTime(int[] time, int m) {
         int n = time.length;
         if( m >= n) return 0;
-
-        int sum = 0;
-        for (int value : time) {
-            sum += value;
-        }
-        int left = 0, right = sum;
+        int left = 0, right = (int)1e9;
         while(left < right) {
             int mid = left + ((right - left) >> 1) ;
             if(helper(time, m, mid)) {
@@ -38,7 +33,6 @@ public class LCP_12 {
         }
         return left;
     }
-
     public boolean helper(int[] time, int m, int mid){
         int sum = 0;
         int max = 0;

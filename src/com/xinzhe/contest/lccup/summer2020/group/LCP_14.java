@@ -1,7 +1,6 @@
 package com.xinzhe.contest.lccup.summer2020.group;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * @author Xin
@@ -18,44 +17,39 @@ import java.util.List;
 public class LCP_14 {
     public static void main(String[] args) {
         LCP_14 lt = new LCP_14();
-        int[] arr = {2,3,3,2,3,3};
-        System.out.println(lt.splitArray(arr));
+        lt.init();
+        System.out.println();
     }
     public int splitArray(int[] nums) {
         int n = nums.length;
-        if(n == 1) return 1;
-        if(n == 2) {
-            if(gcd(nums[0], nums[1]) > 1) {
-                return 1;
-            }else return 2;
+        if (n == 1) return 1;
+        if (n == 2) return gcd(nums[0], nums[1]) > 1 ? 1 : 2;
+        int[] dp = new int[n+1];
+        for (int i = 0; i <= n; ++i) {
+            dp[i] = i;
         }
-        List<Integer> left = new ArrayList<>();
-        List<Integer> right = new ArrayList<>();
-        for(int i = n-1; i > 0; --i) {
-            if(gcd(nums[0], nums[i]) > 1) {
-                right.add(i);
+        for (int i = 2; i <= n; ++i) {
+            for(int j = i-1; j > 0; --j) {
+                if(gcd(nums[i-1], nums[j-1]) > 1) {
+                    dp[i] = Math.min(dp[i], dp[j-1] + 1);
+                }
             }
+            dp[i] = Math.min(dp[i], dp[i-1] + 1);
         }
+        return dp[n];
 
-        for (int i = 0; i < n-1; ++i) {
-            if(gcd(nums[n-1], nums[i]) > 1) {
-               left.add(i);
-            }
-        }
-        int lsize = left.size();
-        int rsize = right.size();
-        if(lsize == 0 && rsize == 0) return n;
-        if(lsize == 0) return n-right.get(0);
-        if(rsize == 0) return left.get(0)+1;
-        if(left.get(lsize-1) < right.get(rsize-1)) {
-            int[] tmp = new int[right.get(rsize-1) - left.get(lsize-1) + 1];
-            System.arraycopy(nums, left.get(lsize-1), tmp, 0, right.get(rsize-1) - left.get(lsize-1) + 1);
-            return 2 + splitArray(tmp);
-        }
-
-        return Math.min(n-right.get(0), left.get(0)+1);
     }
-
+    private int[] minPrime = new int[100 + 1];
+    private void init() {
+        for (int i = 2; i < minPrime.length; i++) {
+            if (minPrime[i] < 2) {
+                for (int j = i; j < minPrime.length; j += i) {
+                    minPrime[j] = i;
+                }
+                System.out.println(Arrays.toString(minPrime));
+            }
+        }
+    }
     public int gcd(int m, int n) {
         int result;
         while (n != 0) {

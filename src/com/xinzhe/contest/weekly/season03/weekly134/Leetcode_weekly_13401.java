@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author Xin
- * @date 20209/10
+ * @date 2020/9/10
  * Title : 1033. 移动石子直到连续
  * Description : 三枚石子放置在数轴上，位置分别为 a，b，c。
  *              每一回合，我们假设这三枚石子当前分别位于位置 x, y, z 且 x < y < z。从位置 x 或者是位置 z 拿起一枚石子，并将该石子移动到某一整数位置 k 处，其中 x < k < z 且 k != y。
