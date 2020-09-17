@@ -15,7 +15,7 @@ import java.util.List;
  * link : https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree
  * Level : Hard
  */
-
+//todo need to review
 public class Codec {
     List<Integer> list = new ArrayList<>();
     public static void main(String[] args) {
