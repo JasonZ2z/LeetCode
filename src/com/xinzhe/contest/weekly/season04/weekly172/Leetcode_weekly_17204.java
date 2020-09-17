@@ -14,8 +14,9 @@ import java.util.Comparator;
  * link : https://leetcode-cn.com/problems/minimum-number-of-taps-to-open-to-water-a-garden
  * Level : Hard
  * Comment 172周赛04
+ * tag : 贪心
  */
-
+//todo need to review
 public class Leetcode_weekly_17204 {
     public int minTaps(int n, int[] ranges) {
         int m = ranges.length;
