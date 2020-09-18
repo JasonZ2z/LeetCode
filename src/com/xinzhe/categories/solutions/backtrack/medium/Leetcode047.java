@@ -1,9 +1,8 @@
 package com.xinzhe.categories.solutions.backtrack.medium;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author Xin
@@ -14,28 +13,35 @@ import java.util.Set;
  * Level : Medium
  */
 
-//todo undone
+//todo need to review
 public class Leetcode047 {
     public static void main(String[] args) {
         int[] nums = {1,2,1};
-        System.out.println(permuteUnique(nums).toString());
+        Leetcode047 lc = new Leetcode047();
+        System.out.println(lc.permuteUnique(nums).toString());
     }
-    private static Set<List<Integer>> result = new HashSet<>();
-    public static List<List<Integer>> permuteUnique(int[] nums) {
-        traceback(nums, new ArrayList<>());
-        return new ArrayList<>(result);
+    List<List<Integer>> result = new ArrayList<>();
+    public List<List<Integer>> permuteUnique(int[] nums) {
+        Arrays.sort(nums);
+        boolean[] used = new boolean[nums.length];
+        backtrack(nums,  used, new ArrayList<>());
+        return result;
 
     }
 
-    private static void traceback(int[] nums, ArrayList<Integer> track) {
+    private void backtrack(int[] nums, boolean[] used, List<Integer> track) {
         if(track.size() == nums.length){
             result.add(new ArrayList<>(track));
             return;
         }
-        for (int num : nums) {
-            track.add(num);
-            traceback(nums, track);
+        for (int i = 0; i < nums.length; ++i) {
+            if(used[i]) continue;
+            if(i > 0 && nums[i] == nums[i-1] && !used[i-1])  continue;
+            track.add(nums[i]);
+            used[i] = true;
+            backtrack(nums, used, track);
             track.remove(track.size() - 1);
+            used[i] = false;
         }
     }
 }
