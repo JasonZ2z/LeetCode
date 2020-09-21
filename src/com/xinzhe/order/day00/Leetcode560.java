@@ -15,11 +15,8 @@ import java.util.Map;
 public class Leetcode560 {
 
     public static void main(String[] args) {
-        int[] nums = {1};
-        System.out.println(3 ^ 6);
-        System.out.println(subarraySum(nums, 1));
-        System.out.println(subarraySum1(nums, 1));
-        System.out.println(subarraySum2(nums, 1));
+        int[] nums = {1,1,1,0,-1,2};
+        System.out.println(subarraySum2(nums, 2));
     }
     // 暴力破解
     public static int subarraySum(int[] nums, int k) {
@@ -68,20 +65,21 @@ public class Leetcode560 {
      * Hash表思路：
      * 存储所有可能的索引的累积总和以及相同累加和发生的次数
      */
+    //todo need to review
     public static int subarraySum2(int[] nums, int k) {
-        if(nums == null || nums.length == 0) return 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        map.put(0,1);
-        int sum = 0;
-        int count = 0;
-        for (int num : nums) {
-            sum += num;
-            int tmp = sum - k;
-            if(map.containsKey(tmp)){
-                count += map.get(tmp);
-            }
-            map.put(sum, map.getOrDefault(sum,0) + 1);
+        int n = nums.length;
+        int[] pre = new int[n + 1];
+        for(int i=1; i<=n; i++) {
+            pre[i] = pre[i-1] + nums[i-1];
         }
-        return count;
+        Map<Integer, Integer> map = new HashMap<>();
+        int ans = 0;
+        for(int i : pre) {
+            if(map.containsKey(i - k)) {
+                ans += map.get(i - k);
+            }
+            map.put(i, map.getOrDefault(i, 0) + 1);
+        }
+        return ans;
     }
 }

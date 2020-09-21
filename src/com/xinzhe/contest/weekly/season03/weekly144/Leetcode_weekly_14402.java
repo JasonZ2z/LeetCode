@@ -24,4 +24,18 @@ public class Leetcode_weekly_14402 {
         }
         return res;
     }
+    //todo need to review
+    //差分思想
+    public int[] corpFlightBookings2(int[][] bookings, int n) {
+        int[] freq = new int[n];
+        for(int[] b : bookings) {
+            int from = b[0], to = b[1], k = b[2];
+            freq[from - 1] += k;
+            if(to < n) freq[to] -= k;
+        }
+        for(int i=1; i<n; i++) {
+            freq[i] += freq[i-1];
+        }
+        return freq;
+    }
 }

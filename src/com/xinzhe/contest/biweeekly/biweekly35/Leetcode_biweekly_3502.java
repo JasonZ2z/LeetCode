@@ -1,15 +1,23 @@
 package com.xinzhe.contest.biweeekly.biweekly35;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Arrays;
 
 /**
  * @author Xin
  * @date 2020/9/19
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1589. 所有排列中的最大和
+ * Description : 有一个整数数组 nums ，和一个查询数组 requests ，其中 requests[i] = [starti, endi] 。
+ *              第 i 个查询求 nums[starti] + nums[starti + 1] + ... + nums[endi - 1] + nums[endi] 的结果 ，starti 和 endi 数组索引都是 从 0 开始 的。
+ *              你可以任意排列 nums 中的数字，请你返回所有查询结果之和的最大值。 由于答案可能会很大，请你将它对 109 + 7 取余 后返回。
+ * link : https://leetcode-cn.com/problems/maximum-sum-obtained-of-any-permutation
+ * Level : Medium
+ */
+
+//todo need to review
+
+/** 差分数组
+ * 用一个 freq 数组，对于每一个 request[start, end]，都进行 freq[start] ++ 和 freq[end + 1] -- 操作。
+ * 之后，freq[0...i] 的数字和，就是 i 这个索引的查询次数。
  */
 public class Leetcode_biweekly_3502 {
     public static void main(String[] args) {
@@ -20,45 +28,22 @@ public class Leetcode_biweekly_3502 {
     }
     public int maxSumRangeQuery(int[] nums, int[][] requests) {
         int n = nums.length;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int[] request : requests) {
-            for (int i = request[0]; i <= request[1]; i++) {
-                map.put(i, map.getOrDefault(i, 0) + 1);
-            }
+        int[] freq = new int[n+1];
+        for(int[] re : requests) {
+            int from = re[0], to = re[1];
+            freq[from]++;
+            freq[to + 1]--;
         }
+        for(int i=1; i<=n; i++) {
+            freq[i] += freq[i-1];
+        }
+        Arrays.sort(freq);
         Arrays.sort(nums);
-        long res = 0;
-        int mod = (int)1e9 + 7;
-        int j = n-1;
-        //List<Integer> list = map.values().stream().sorted().collect(Collectors.toList());
-        List<Integer> list = new ArrayList<>(map.values());
-        list.sort(Integer::compareTo);
-        for (int i = list.size() - 1; i >= 0; i--) {
-            res += list.get(i) * nums[j--];
+        long ans = 0;
+        int mod = (int)1e9 +7;
+        for(int i = n; i > 0 && freq[i] > 0; i--) {
+            ans += freq[i] * nums[i-1];
         }
-        return (int)(res % mod);
-    }
-
-    public int maxSumRangeQuery2(int[] nums, int[][] requests) {
-        int n = nums.length;
-        int max = 0;
-        for (int[] request : requests) {
-            max = Math.max(max, request[1]);
-        }
-        int[] dist = new int[max + 1];
-        for (int[] request : requests) {
-            for (int i = request[0]; i <= request[1]; i++) {
-                dist[i]++;
-            }
-        }
-        Arrays.sort(dist);
-        Arrays.sort(nums);
-        long res = 0;
-        int mod = (int)1e9 + 7;
-        int j = n-1;
-        for (int i = max; i >= 0; i--) {
-            res += dist[i] * nums[j--];
-        }
-        return (int)(res % mod);
+        return (int)(ans % mod);
     }
 }
