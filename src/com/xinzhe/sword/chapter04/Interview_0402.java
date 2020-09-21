@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.tree.easy;
+package com.xinzhe.sword.chapter04;
 
 import com.xinzhe.categories.structure.tree.TreeNode;
 
@@ -10,7 +10,7 @@ import com.xinzhe.categories.structure.tree.TreeNode;
  * link : https://leetcode-cn.com/problems/minimum-height-tree-lcci/
  * Level : Easy
  */
-public class Leetcode_interview_0402 {
+public class Interview_0402 {
     public TreeNode sortedArrayToBST(int[] nums) {
         return helper(nums, 0, nums.length-1);
     }
