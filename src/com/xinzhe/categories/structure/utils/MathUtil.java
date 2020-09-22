@@ -46,11 +46,27 @@ public class MathUtil {
     //组合求方案数 C(n,k)
     private static long combination(int n, int k) {
         long a=1, b=1;
-        if(k>n/2) k=n-k;
-        for(int i=1; i<=k; i++) {
-            a*=(n+1-i);
-            b*=i;
+        if(k > n/2) k = n-k;
+        for(int i = 1; i <= k; i++) {
+            a *= (n+1-i);
+            b *= i;
         }
         return a/b;
+    }
+
+    //计算A运算
+    private static int calcu_A(int n, int m) {
+        int res = n, temp = n-1;
+        for(int i = 1; i < m; i++) {
+            res *= temp;
+            temp -= 1;
+        }
+        return res;
+    }
+
+    //计算C运算
+    private static int calcu_C(int n, int m) {
+        if(m == 0) return 1;
+        return calcu_A(n, m) / calcu_A(m, m);
     }
 }

@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.tree.hard;
+package com.xinzhe.categories.structure.tree.easy;
 
 import com.xinzhe.categories.structure.tree.TreeNode;
 
