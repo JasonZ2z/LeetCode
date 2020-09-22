@@ -2,7 +2,14 @@ package com.xinzhe.order.day05;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author Xin
+ * @date 2020/9/22
+ * Title : 229. 求众数 II
+ * Description : 给定一个大小为 n 的数组，找出其中所有出现超过 ⌊ n/3 ⌋ 次的元素。说明: 要求算法的时间复杂度为 O(n)，空间复杂度为 O(1)。
+ * link : https://leetcode-cn.com/problems/majority-element-ii/
+ * Level : Medium
+ */
 public class Leetcode229 {
     public static void main(String[] args) {
         int[] a = {1,1,1,3,3,2,2,2};
@@ -16,16 +23,6 @@ public class Leetcode229 {
             list.add(nums[0]);
             return list;
         }
-        if(n == 2){
-            if(nums[0] == nums[1]) {
-                list.add(nums[0]) ;
-            } else {
-                list.add(nums[0]);
-                list.add(nums[1]);
-            }
-            return list;
-        }
-
         int ca=0, cb =0;
         int a = 0, b = 0;
         for (int value : nums) {
