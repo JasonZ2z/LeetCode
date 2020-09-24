@@ -3,7 +3,6 @@ package com.xinzhe.categories.structure.tree.easy;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,25 +15,6 @@ import java.util.List;
  * Level : Easy
  */
 public class Leetcode501 {
-
-    public static void main(String[] args) {
-        Leetcode501 lc = new Leetcode501();
-        TreeNode n1 = new TreeNode(1);
-        TreeNode n2 = new TreeNode(2);
-        TreeNode n3 = new TreeNode(2);
-        TreeNode n4 = new TreeNode(2);
-        TreeNode n5 = new TreeNode(3);
-        TreeNode n6 = new TreeNode(3);
-        TreeNode n7 = new TreeNode(3);
-        n1.right = n5;
-        n5.left = n2;
-        n2.left = n3;
-        n2.right = n4;
-        n5.right = n6;
-        n6.left = n7;
-        System.out.println(Arrays.toString(lc.findMode(n1)));
-
-    }
     int maxVal = 0, maxCount = 0, curVal = 0, curCount = 0;
     List<Integer> list = new ArrayList<>();
     public int[] findMode(TreeNode root) {
