@@ -12,7 +12,7 @@ import java.util.Stack;
  */
 
 /**
- * 中序遍历：跟左右
+ * 中序遍历：左跟右
  */
 public class InOrder {
     private static List<Integer> list = new ArrayList<>();
