@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * @author Xin
  * @date 2020/7/28
  * Title : 1190. 反转每对括号间的子串
- * Description : 给出一个字符串 s（仅含有小写英文字母和括号）。请你按照从括号内到外的顺序，逐层反转每对匹配括号中的字符串，并返回最终的结果。
+ * Description : 给出一个字符串 s（仅含有小写英文字母和括号）。请你按照从括号内到外的顺序，逐层反转每对匹配括号中的字符串，并返回最终的结果。
  *              注意，您的结果中 不应 包含任何括号。
  * link : https://leetcode-cn.com/problems/reverse-substrings-between-each-pair-of-parentheses
  * Level : Medium

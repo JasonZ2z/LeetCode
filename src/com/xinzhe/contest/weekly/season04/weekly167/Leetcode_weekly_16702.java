@@ -1,12 +1,16 @@
 package com.xinzhe.contest.weekly.season04.weekly167;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Xin
  * @date 2020/6/03
  * Title : 1291. 顺次数
- * Description : 我们定义「顺次数」为：每一位上的数字都比前一位上的数字大 1 的整数。请你返回由 [low, high] 范围内所有顺次数组成的 有序 列表（从小到大排序）。
+ * Description : 我们定义「顺次数」为：每一位上的数字都比前一位上的数字大 1 的整数。请你返回由 [low, high] 范围内所有顺次数组成的 有序 列表（从小到大排序）。
  * link :  https://leetcode-cn.com/problems/sequential-digits
  * Level : Medium
  * Comment 167周赛02

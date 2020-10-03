@@ -1,6 +1,12 @@
 package com.xinzhe.categories.solutions.bitmanipulation.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Xin
@@ -9,7 +15,7 @@ import java.util.*;
  * Description : 现在，我们用一些方块来堆砌一个金字塔。 每个方块用仅包含一个字母的字符串表示。
  *              使用三元组表示金字塔的堆砌规则如下：
  *              对于三元组(A, B, C) ，“C”为顶层方块，方块“A”、“B”分别作为方块“C”下一层的的左、右子块。当且仅当(A, B, C)是被允许的三元组，我们才可以将其堆砌上。
- *              初始时，给定金字塔的基层 bottom，用一个字符串表示。一个允许的三元组列表 allowed，每个三元组用一个长度为 3 的字符串表示。
+ *              初始时，给定金字塔的基层 bottom，用一个字符串表示。一个允许的三元组列表 allowed，每个三元组用一个长度为 3 的字符串表示。
  *              如果可以由基层一直堆到塔尖就返回 true ，否则返回 false 。
  * link : https://leetcode-cn.com/problems/pyramid-transition-matrix
  * Level : Medium

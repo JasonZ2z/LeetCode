@@ -5,7 +5,7 @@ package com.xinzhe.contest.weekly.season03.weekly146;
  * @date 2020/9/28
  * Title :  1131. 绝对值表达式的最大值
  * Description : 给你两个长度相等的整数数组，返回下面表达式的最大值：
- *              |arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j| 其中下标 i，j 满足 0 <= i, j < arr1.length。
+ *              |arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j| 其中下标 i，j 满足 0 <= i, j < arr1.length。
  * link : https://leetcode-cn.com/problems/maximum-of-absolute-value-expression
  * Level : Medium
  */

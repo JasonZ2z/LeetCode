@@ -9,8 +9,8 @@ import java.util.List;
  * @author Xin
  * @date 2020/8/18
  * Title : 1110. 删点成林
- * Description : 给出二叉树的根节点 root，树上每个节点都有一个不同的值。
- *              如果节点值在 to_delete 中出现，我们就把该节点从树上删去，最后得到一个森林（一些不相交的树构成的集合）。
+ * Description : 给出二叉树的根节点 root，树上每个节点都有一个不同的值。
+ *              如果节点值在 to_delete 中出现，我们就把该节点从树上删去，最后得到一个森林（一些不相交的树构成的集合）。
  *              返回森林中的每棵树。你可以按任意顺序组织答案。
  * link : https://leetcode-cn.com/problems/delete-nodes-and-return-forest
  * Level : Medium

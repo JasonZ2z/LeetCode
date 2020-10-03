@@ -1,15 +1,21 @@
 package com.xinzhe.contest.weekly.season04.weekly159;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @author Xin
  * @date 2020/6/23
  * Title : 1233. 删除子文件夹
  * Description : 你是一位系统管理员，手里有一份文件夹列表 folder，你的任务是要删除该列表中的所有 子文件夹，并以 任意顺序 返回剩下的文件夹.
- *      我们这样定义「子文件夹」：如果文件夹 folder[i] 位于另一个文件夹 folder[j] 下，那么 folder[i] 就是 folder[j] 的子文件夹。
- *      文件夹的「路径」是由一个或多个按以下格式串联形成的字符串：/ 后跟一个或者多个小写英文字母。
- *      例如，/leetcode 和 /leetcode/problems 都是有效的路径，而空字符串和 / 不是。
+ *      我们这样定义「子文件夹」：如果文件夹 folder[i] 位于另一个文件夹 folder[j] 下，那么 folder[i] 就是 folder[j] 的子文件夹。
+ *      文件夹的「路径」是由一个或多个按以下格式串联形成的字符串：/ 后跟一个或者多个小写英文字母。
+ *      例如，/leetcode 和 /leetcode/problems 都是有效的路径，而空字符串和 / 不是。
  * link : https://leetcode-cn.com/problems/remove-sub-folders-from-the-filesystem
  * Level : Medium
  * Comment 159周赛02

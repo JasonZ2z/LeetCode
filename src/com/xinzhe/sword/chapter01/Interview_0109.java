@@ -4,8 +4,8 @@ package com.xinzhe.sword.chapter01;
  * @author Xin
  * @date 2020/6/10
  * Title : 01.09. String Rotation LCCI
- * Description : Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 (e.g.,"waterbottle" is a rotation of"erbottlewat"). 
- *              Can you use only one call to the method that checks if one word is a substring of another?
+ * Description : Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 (e.g.,"waterbottle" is a rotation of"erbottlewat").
+ *              Can you use only one call to the method that checks if one word is a substring of another?
  * link : https://leetcode-cn.com/problems/string-rotation-lcci
  * Level : Easy
  */
@@ -31,6 +31,6 @@ public class Interview_0109 {
 
     public static void main(String[] args) {
         String s = "12";
-        System.out.println(s.substring(0, 1) + s.substring(1, 2));
+        System.out.println(s.charAt(0) + s.charAt(1));
     }
 }

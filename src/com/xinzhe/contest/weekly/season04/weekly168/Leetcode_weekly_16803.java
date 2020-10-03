@@ -8,9 +8,9 @@ import java.util.Map;
  * @author Xin
  * @date 2020/6/01
  * Title : 1297. 子串的最大出现次数
- * Description : 给你一个字符串 s ，请你返回满足以下条件且出现次数最大的 任意 子串的出现次数：
+ * Description : 给你一个字符串 s ，请你返回满足以下条件且出现次数最大的 任意 子串的出现次数：
  * 子串中不同字母的数目必须小于等于 maxLetters 。
- * 子串的长度必须大于等于 minSize 且小于等于 maxSize 。
+ * 子串的长度必须大于等于 minSize 且小于等于 maxSize 。
  * link : https://leetcode-cn.com/problems/maximum-number-of-occurrences-of-a-substring
  * Level : Medium
  * Comment 168周赛03

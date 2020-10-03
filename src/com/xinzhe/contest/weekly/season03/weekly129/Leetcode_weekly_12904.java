@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
  * @author Xin
  * @date 2020/9/18
  * Title : 1016. 子串能表示从 1 到 N 数字的二进制串
- * Description :  给定一个二进制字符串 S（一个仅由若干 '0' 和 '1' 构成的字符串）和一个正整数 N，如果对于从 1 到 N 的每个整数 X，其二进制表示都是 S 的子串，就返回 true，否则返回 false。
+ * Description :  给定一个二进制字符串 S（一个仅由若干 '0' 和 '1' 构成的字符串）和一个正整数 N，如果对于从 1 到 N 的每个整数 X，其二进制表示都是 S 的子串，就返回 true，否则返回 false。
  * link : https://leetcode-cn.com/problems/binary-string-with-substrings-representing-1-to-n
  * Level : Medium
  */

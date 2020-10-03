@@ -6,10 +6,10 @@ import java.util.Arrays;
  * @author Xin
  * @date 2020/9/10
  * Title : 1034. 边框着色
- * Description : 给出一个二维整数网格 grid，网格中的每个值表示该位置处的网格块的颜色。
+ * Description : 给出一个二维整数网格 grid，网格中的每个值表示该位置处的网格块的颜色。
  *              只有当两个网格块的颜色相同，而且在四个方向中任意一个方向上相邻时，它们属于同一连通分量。
  *              连通分量的边界是指连通分量中的所有与不在分量中的正方形相邻（四个方向上）的所有正方形，或者在网格的边界上（第一行/列或最后一行/列）的所有正方形。
- *              给出位于 (r0, c0) 的网格块和颜色 color，使用指定颜色 color 为所给网格块的连通分量的边界进行着色，并返回最终的网格 grid 。
+ *              给出位于 (r0, c0) 的网格块和颜色 color，使用指定颜色 color 为所给网格块的连通分量的边界进行着色，并返回最终的网格 grid 。
  * link : https://leetcode-cn.com/problems/coloring-a-border
  * Level : Medium
  */

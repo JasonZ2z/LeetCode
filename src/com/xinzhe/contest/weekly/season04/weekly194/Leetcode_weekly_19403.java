@@ -1,12 +1,16 @@
 package com.xinzhe.contest.weekly.season04.weekly194;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 /**
  * @author Xin
  * @date 2020/6/21
  * Title : 1488. 避免洪水泛滥
- * Description : 你的国家有无数个湖泊，所有湖泊一开始都是空的。当第 n 个湖泊下雨的时候，如果第 n 个湖泊是空的，那么它就会装满水，否则这个湖泊会发生洪水。你的目标是避免任意一个湖泊发生洪水。
+ * Description : 你的国家有无数个湖泊，所有湖泊一开始都是空的。当第 n 个湖泊下雨的时候，如果第 n 个湖泊是空的，那么它就会装满水，否则这个湖泊会发生洪水。你的目标是避免任意一个湖泊发生洪水。
  * link : https://leetcode-cn.com/problems/avoid-flood-in-the-city
  * Level : Medium
  * Comment 194周赛03

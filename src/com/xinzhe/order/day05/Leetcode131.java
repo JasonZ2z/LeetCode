@@ -9,7 +9,7 @@ import java.util.List;
  * Title : 131. 分割回文串
  * Description : 给定一个字符串 s，将 s 分割成一些子串，使每个子串都是回文串。返回 s 所有可能的分割方案。
  *      示例:
- *      输入: "aab"
+ *      输入: "aab"
  *  输出:
  * [
  *   ["aa","b"],
@@ -19,7 +19,7 @@ import java.util.List;
  * Level : Medium
  */
 public class Leetcode131 {
-    private List<List<String>> result = new ArrayList<>();
+    private final List<List<String>> result = new ArrayList<>();
     public List<List<String>> partition(String s){
         char[] arr = s.toCharArray();
         bfs(arr, new ArrayList<>(), 0);

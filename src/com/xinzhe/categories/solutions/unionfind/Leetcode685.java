@@ -10,8 +10,8 @@ import java.util.List;
  * Title : 685. 冗余连接 II
  * Description : 在本问题中, 树指的是一个连通且无环的有向图。该树只有一个根节点，所有其他节点都是该根节点的后继。每一个节点只有一个父节点，除了根节点没有父节点。
  *          输入一个有向图，该图由一个有着N个节点 (节点值不重复1, 2, ..., N) 的树及一条附加的边构成。附加的边的两个顶点包含在1到N中间，这条附加的边不属于树中已存在的边。
- *          结果图是一个以边组成的二维数组。每一个边的元素是一对[u, v] ，满足 u < v，表示连接顶点u 和v的无向图的边。
- *          返回一条可以删去的边，使得结果图是一个有着N个节点的树。如果有多个答案，则返回二维数组中最后出现的边。答案边 [u, v] 应满足相同的格式 u < v。
+ *          结果图是一个以边组成的二维数组。每一个边的元素是一对[u, v] ，满足 u < v，表示连接顶点u 和v的无向图的边。
+ *          返回一条可以删去的边，使得结果图是一个有着N个节点的树。如果有多个答案，则返回二维数组中最后出现的边。答案边 [u, v] 应满足相同的格式 u < v。
  * link : https://leetcode-cn.com/problems/redundant-connection-ii/
  * Level : Hard
  */
@@ -63,9 +63,9 @@ public class Leetcode685 {
         // 连通分量个数
         private int count;
         // 存储一棵树
-        private int[] parent;
+        private final int[] parent;
         // 记录树的“重量”
-        private int[] size;
+        private final int[] size;
 
         public UF(int n) {
             this.count = n;

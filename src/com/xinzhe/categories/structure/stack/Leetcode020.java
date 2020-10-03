@@ -9,7 +9,7 @@ import java.util.List;
  * @author Xin
  * @date 2020/8/14
  * Title : 20. 有效的括号
- * Description : 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，有效字符串需满足：左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。注意空字符串可被认为是有效字符串。
+ * Description : 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，有效字符串需满足：左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。注意空字符串可被认为是有效字符串。
  * link : https://leetcode-cn.com/problems/valid-parentheses
  * Level : Hard
  */

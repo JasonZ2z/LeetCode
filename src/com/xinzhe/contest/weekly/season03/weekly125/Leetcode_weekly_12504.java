@@ -10,11 +10,11 @@ import java.util.Set;
  * @author Xin
  * @date 2020/9/23
  * Title : 1001. 网格照明
- * Description : 在 N x N 的网格上，每个单元格 (x, y) 上都有一盏灯，其中 0 <= x < N 且 0 <= y < N 。
- *              最初，一定数量的灯是亮着的。lamps[i] 告诉我们亮着的第 i 盏灯的位置。每盏灯都照亮其所在 x 轴、y 轴和两条对角线上的每个正方形（类似于国际象棋中的皇后）。
- *              对于第 i 次查询 queries[i] = (x, y)，如果单元格 (x, y) 是被照亮的，则查询结果为 1，否则为 0 。
+ * Description : 在 N x N 的网格上，每个单元格 (x, y) 上都有一盏灯，其中 0 <= x < N 且 0 <= y < N 。
+ *              最初，一定数量的灯是亮着的。lamps[i] 告诉我们亮着的第 i 盏灯的位置。每盏灯都照亮其所在 x 轴、y 轴和两条对角线上的每个正方形（类似于国际象棋中的皇后）。
+ *              对于第 i 次查询 queries[i] = (x, y)，如果单元格 (x, y) 是被照亮的，则查询结果为 1，否则为 0 。
  *              在每个查询 (x, y) 之后 [按照查询的顺序]，我们关闭位于单元格 (x, y) 上或其相邻 8 个方向上（与单元格 (x, y) 共享一个角或边）的任何灯。
- *              返回答案数组 answer。每个值 answer[i] 应等于第 i 次查询 queries[i] 的结果。
+ *              返回答案数组 answer。每个值 answer[i] 应等于第 i 次查询 queries[i] 的结果。
  * link : https://leetcode-cn.com/problems/grid-illumination
  * Level : Hard
  */

@@ -6,7 +6,7 @@ package com.xinzhe.contest.weekly.season05.weekly207;
  * Title : 1594. 矩阵的最大非负积
  * Description : 给你一个大小为 rows x cols 的矩阵 grid 。最初，你位于左上角 (0, 0) ，每一步，你可以在矩阵中 向右 或 向下 移动。
  *              在从左上角 (0, 0) 开始到右下角 (rows - 1, cols - 1) 结束的所有路径中，找出具有 最大非负积 的路径。路径的积是沿路径访问的单元格中所有整数的乘积。
- *              返回 最大非负积 对 109 + 7 取余 的结果。如果最大积为负数，则返回 -1 。注意，取余是在得到最大积之后执行的。
+ *              返回 最大非负积 对 109 + 7 取余 的结果。如果最大积为负数，则返回 -1 。注意，取余是在得到最大积之后执行的。
  * link : https://leetcode-cn.com/problems/maximum-non-negative-product-in-a-matrix
  * Level : Medium
  */

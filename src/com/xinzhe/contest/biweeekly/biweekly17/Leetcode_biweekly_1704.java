@@ -7,9 +7,9 @@ import java.util.Set;
  * @author Xin
  * @date 2020/5/26
  * Title : 1316. 不同的循环子字符串
- * Description : 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目：
- *              可以写成某个字符串与其自身相连接的形式（即，可以写为 a + a，其中 a 是某个字符串）。
- *              例如，abcabc 就是 abc 和它自身连接形成的。
+ * Description : 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目：
+ *              可以写成某个字符串与其自身相连接的形式（即，可以写为 a + a，其中 a 是某个字符串）。
+ *              例如，abcabc 就是 abc 和它自身连接形成的。
  * link : https://leetcode-cn.com/problems/distinct-echo-substrings
  * Level : Hard
  * Comment 17双周赛04

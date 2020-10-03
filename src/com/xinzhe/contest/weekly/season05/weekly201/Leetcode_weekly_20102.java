@@ -4,10 +4,10 @@ package com.xinzhe.contest.weekly.season05.weekly201;
  * @author Xin
  * @date 2020/8/2
  * Title : 1545. 找出第 N 个二进制字符串中的第 K 位
- * Description : 给你两个正整数 n 和 k，二进制字符串  Sn 的形成规则如下：
- *          S1 = "0"当 i > 1 时，Si = Si-1 + "1" + reverse(invert(Si-1))
+ * Description : 给你两个正整数 n 和 k，二进制字符串  Sn 的形成规则如下：
+ *          S1 = "0"当 i > 1 时，Si = Si-1 + "1" + reverse(invert(Si-1))
  *          其中 + 表示串联操作，reverse(x) 返回反转 x 后得到的字符串，而 invert(x) 则会翻转 x 中的每一位（0 变为 1，而 1 变为 0）
- *          请你返回  Sn 的 第 k 位字符 ，题目数据保证 k 一定在 Sn 长度范围以内。
+ *          请你返回  Sn 的 第 k 位字符 ，题目数据保证 k 一定在 Sn 长度范围以内。
  * link : https://leetcode-cn.com/problems/find-kth-bit-in-nth-binary-string
  * Level : Medium
  */

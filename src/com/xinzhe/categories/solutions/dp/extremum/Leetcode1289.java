@@ -4,7 +4,7 @@ package com.xinzhe.categories.solutions.dp.extremum;
  * @author Xin
  * @date 2020/3/24 19:01
  * Title : 1289. 下降路径最小和  II
- * Description : 给你一个整数方阵 arr ，定义「非零偏移下降路径」为：从 arr 数组中的每一行选择一个数字，且按顺序选出来的数字中，相邻数字不在原数组的同一列。
+ * Description : 给你一个整数方阵 arr ，定义「非零偏移下降路径」为：从 arr 数组中的每一行选择一个数字，且按顺序选出来的数字中，相邻数字不在原数组的同一列。
  *               请你返回非零偏移下降路径数字和的最小值。
  * link : https://leetcode-cn.com/problems/minimum-falling-path-sum-ii
  * Level : Hard

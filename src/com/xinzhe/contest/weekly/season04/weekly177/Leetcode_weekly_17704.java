@@ -4,7 +4,7 @@ package com.xinzhe.contest.weekly.season04.weekly177;
  * @author Xin
  * @date 2020/5/18
  * Title : 1363. 形成三的最大倍数
- * Description : 给你一个整数数组 digits，你可以通过按任意顺序连接其中某些数字来形成 3 的倍数，请你返回所能得到的最大的 3 的倍数。
+ * Description : 给你一个整数数组 digits，你可以通过按任意顺序连接其中某些数字来形成 3 的倍数，请你返回所能得到的最大的 3 的倍数。
  * 由于答案可能不在整数数据类型范围内，请以字符串形式返回答案。
  * 如果无法得到答案，请返回一个空字符串。
  * link : https://leetcode-cn.com/problems/largest-multiple-of-three

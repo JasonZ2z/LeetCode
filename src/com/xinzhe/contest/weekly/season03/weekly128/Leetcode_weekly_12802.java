@@ -8,7 +8,7 @@ import java.util.Map;
  * @date 2020/9/22
  * Title : 1010. 总持续时间可被 60 整除的歌曲
  * Description : 在歌曲列表中，第 i 首歌曲的持续时间为 time[i] 秒。返回其总持续时间（以秒为单位）可被 60 整除的歌曲对的数量。
- *              形式上，我们希望索引的数字 i 和 j 满足  i < j 且有 (time[i] + time[j]) % 60 == 0。
+ *              形式上，我们希望索引的数字 i 和 j 满足  i < j 且有 (time[i] + time[j]) % 60 == 0。
  * link : https://leetcode-cn.com/problems/pairs-of-songs-with-total-durations-divisible-by-60
  * Level : Easy
  */

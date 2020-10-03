@@ -7,7 +7,7 @@ import com.xinzhe.categories.structure.tree.traverse.LevelOrder;
  * @author Xin
  * @date 2020/9/22
  * Title : 1008. 先序遍历构造二叉树
- * Description : 返回与给定先序遍历 preorder 相匹配的二叉搜索树（binary search tree）的根结点。
+ * Description : 返回与给定先序遍历 preorder 相匹配的二叉搜索树（binary search tree）的根结点。
  * link : https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal
  * Level : Hard
  */

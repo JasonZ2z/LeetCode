@@ -6,8 +6,8 @@ import java.util.Arrays;
  * @author Xin
  * @date 2020/8/31
  * Title : 952. 按公因数计算最大组件大小
- * Description : 给定一个由不同正整数的组成的非空数组 A，考虑下面的图：有 A.length 个节点，按从 A[0] 到 A[A.length - 1] 标记；
- *              只有当 A[i] 和 A[j] 共用一个大于 1 的公因数时，A[i] 和 A[j] 之间才有一条边。 返回图中最大连通组件的大小。
+ * Description : 给定一个由不同正整数的组成的非空数组 A，考虑下面的图：有 A.length 个节点，按从 A[0] 到 A[A.length - 1] 标记；
+ *              只有当 A[i] 和 A[j] 共用一个大于 1 的公因数时，A[i] 和 A[j] 之间才有一条边。 返回图中最大连通组件的大小。
  * link : https://leetcode-cn.com/problems/largest-component-size-by-common-factor
  * Level : Hard
  */

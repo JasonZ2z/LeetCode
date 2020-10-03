@@ -4,8 +4,8 @@ package com.xinzhe.contest.weekly.season04.weekly200;
  * @author Xin
  * @date 2020/8/2
  * Title : 1536. 排布二进制网格的最少交换次数
- * Description : 给你一个 n x n 的二进制网格 grid，每一次操作中，你可以选择网格的 相邻两行 进行交换。一个符合要求的网格需要满足主对角线以上的格子全部都是 0 。
- *              请你返回使网格满足要求的最少操作次数，如果无法使网格符合要求，请你返回 -1 。 主对角线指的是从 (1, 1) 到 (n, n) 的这些格子。
+ * Description : 给你一个 n x n 的二进制网格 grid，每一次操作中，你可以选择网格的 相邻两行 进行交换。一个符合要求的网格需要满足主对角线以上的格子全部都是 0 。
+ *              请你返回使网格满足要求的最少操作次数，如果无法使网格符合要求，请你返回 -1 。 主对角线指的是从 (1, 1) 到 (n, n) 的这些格子。
  * link : https://leetcode-cn.com/problems/minimum-swaps-to-arrange-a-binary-grid
  * Level : Medium
  */

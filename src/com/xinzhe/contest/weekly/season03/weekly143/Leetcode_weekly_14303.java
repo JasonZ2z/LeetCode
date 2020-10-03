@@ -6,8 +6,8 @@ import java.util.Arrays;
  * @author Xin
  * @date 2020/8/18
  * Title : 1105. 填充书架
- * Description : 你把要摆放的书 books 都整理好，叠成一摞：从上往下，第 i 本书的厚度为 books[i][0]，高度为 books[i][1]。
- *               按顺序 将这些书摆放到总宽度为 shelf_width 的书架上。
+ * Description : 你把要摆放的书 books 都整理好，叠成一摞：从上往下，第 i 本书的厚度为 books[i][0]，高度为 books[i][1]。
+ *               按顺序 将这些书摆放到总宽度为 shelf_width 的书架上。
  * link : https://leetcode-cn.com/problems/filling-bookcase-shelves
  * Level : Medium
  * tag : dp

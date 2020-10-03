@@ -6,8 +6,8 @@ import java.util.Arrays;
  * @author Xin
  * @date 2020/8/19
  * Title : 1093. 大样本统计
- * Description : 我们对 0 到 255 之间的整数进行采样，并将结果存储在数组 count 中：count[k] 就是整数 k 的采样个数。
- *              我们以 浮点数 数组的形式，分别返回样本的最小值、最大值、平均值、中位数和众数。其中，众数是保证唯一的。
+ * Description : 我们对 0 到 255 之间的整数进行采样，并将结果存储在数组 count 中：count[k] 就是整数 k 的采样个数。
+ *              我们以 浮点数 数组的形式，分别返回样本的最小值、最大值、平均值、中位数和众数。其中，众数是保证唯一的。
  * link : https://leetcode-cn.com/problems/statistics-from-a-large-sample
  * Level : Medium
  */

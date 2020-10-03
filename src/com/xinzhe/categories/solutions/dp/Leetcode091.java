@@ -4,7 +4,7 @@ package com.xinzhe.categories.solutions.dp;
  * @author Xin
  * @date 2020/3/16 18:11
  * Title : 91. 解码方法
- * Description : 一条包含字母 A-Z 的消息通过以下方式进行了编码：
+ * Description : 一条包含字母 A-Z 的消息通过以下方式进行了编码：
  *
  * 'A' -> 1
  * 'B' -> 2

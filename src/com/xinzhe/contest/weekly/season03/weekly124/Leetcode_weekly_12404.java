@@ -8,7 +8,7 @@ import java.util.Set;
  * @author Xin
  * @date 2020/9/23
  * Title : 996. 正方形数组的数目
- * Description : 给定一个非负整数数组 A，如果该数组每对相邻元素之和是一个完全平方数，则称这一数组为正方形数组。
+ * Description : 给定一个非负整数数组 A，如果该数组每对相邻元素之和是一个完全平方数，则称这一数组为正方形数组。
  *              返回 A 的正方形排列的数目。两个排列 A1 和 A2 不同的充要条件是存在某个索引 i，使得 A1[i] != A2[i]。
  * link : https://leetcode-cn.com/problems/number-of-squareful-arrays
  * Level : Hard

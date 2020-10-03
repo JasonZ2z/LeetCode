@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author Xin
  * @date 2020/3/15 11:33
  * Title : 695. 岛屿的最大面积
- * Description : 给定一个包含了一些 0 和 1的非空二维数组 grid , 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。
+ * Description : 给定一个包含了一些 0 和 1的非空二维数组 grid , 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。
  *              找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。)
  * link : https://leetcode-cn.com/problems/max-area-of-island/
  * Level : Medium

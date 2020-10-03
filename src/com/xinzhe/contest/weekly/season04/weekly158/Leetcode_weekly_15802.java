@@ -9,7 +9,7 @@ import java.util.Objects;
  * @author Xin
  * @date 2020/7/15
  * Title : 1222. 可以攻击国王的皇后
- * Description : 在一个 8x8 的棋盘上，放置着若干「黑皇后」和一个「白国王」。「黑皇后」在棋盘上的位置分布用整数坐标数组 queens 表示，「白国王」的坐标用数组 king 表示。
+ * Description : 在一个 8x8 的棋盘上，放置着若干「黑皇后」和一个「白国王」。「黑皇后」在棋盘上的位置分布用整数坐标数组 queens 表示，「白国王」的坐标用数组 king 表示。
  *              「黑皇后」的行棋规定是：横、直、斜都可以走，步数不受限制，但是，不能越子行棋。请你返回可以直接攻击到「白国王」的所有「黑皇后」的坐标（任意顺序）。
  * link : https://leetcode-cn.com/problems/queens-that-can-attack-the-king
  * Level : Medium

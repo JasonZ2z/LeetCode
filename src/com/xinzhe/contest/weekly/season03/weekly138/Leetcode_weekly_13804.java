@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
  * @author Xin
  * @date 2020/8/25
  * Title : 1054. 距离相等的条形码
- * Description : 在一个仓库里，有一排条形码，其中第 i 个条形码为 barcodes[i]。请你重新排列这些条形码，使其中两个相邻的条形码 不能 相等。 你可以返回任何满足该要求的答案，此题保证存在答案。
+ * Description : 在一个仓库里，有一排条形码，其中第 i 个条形码为 barcodes[i]。请你重新排列这些条形码，使其中两个相邻的条形码 不能 相等。 你可以返回任何满足该要求的答案，此题保证存在答案。
  * link : https://leetcode-cn.com/problems/distant-barcodes
  * Level : Medium
  */

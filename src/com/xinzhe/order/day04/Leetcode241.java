@@ -1,13 +1,17 @@
 package com.xinzhe.order.day04;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Xin
  * @date 2020/2/28 14:41
  * Title : 241. 为运算表达式设计优先级
  * Description : 给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。
- *              你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。
+ *              你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。
  *  输入: "2-1-1"
  *  输出: [0, 2]
  *  解释:
@@ -26,7 +30,7 @@ public class Leetcode241 {
         //System.out.println(diffWaysToCompute(s1).toString());
     }
     //记录已经计算出来的字符串对应的值，避免重复计算。
-    private Map<String, List<Integer>> map = new HashMap<>();
+    private final Map<String, List<Integer>> map = new HashMap<>();
 
     // 递归求解前一半的值和后一半的值，然后根据运算符号，计算两者构成的值。
     public List<Integer> diffWaysToCompute(String input) {

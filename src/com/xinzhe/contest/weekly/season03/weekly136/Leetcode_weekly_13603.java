@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author Xin
  * @date 2020/8/26
  * Title : 1043. 分隔数组以得到最大和
- * Description : 给出整数数组 A，将该数组分隔为长度最多为 K 的几个（连续）子数组。分隔完成后，每个子数组的中的值都会变为该子数组中的最大值。返回给定数组完成分隔后的最大和。
+ * Description : 给出整数数组 A，将该数组分隔为长度最多为 K 的几个（连续）子数组。分隔完成后，每个子数组的中的值都会变为该子数组中的最大值。返回给定数组完成分隔后的最大和。
  * link : https://leetcode-cn.com/problems/partition-array-for-maximum-sum
  * Level : Medium
  */

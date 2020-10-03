@@ -4,7 +4,7 @@ package com.xinzhe.contest.weekly.season03.weekly142;
  * @author Xin
  * @date 2020/8/19
  * Title : 1095. 山脉数组中查找目标值
- * Description : 给你一个 山脉数组 mountainArr，请你返回能够使得 mountainArr.get(index) 等于 target 最小 的下标 index 值。如果不存在这样的下标 index，就请返回 -1。
+ * Description : 给你一个 山脉数组 mountainArr，请你返回能够使得 mountainArr.get(index) 等于 target 最小 的下标 index 值。如果不存在这样的下标 index，就请返回 -1。
  * link : https://leetcode-cn.com/problems/find-in-mountain-array
  * Level : Hard
  */

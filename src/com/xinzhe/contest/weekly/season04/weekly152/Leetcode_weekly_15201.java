@@ -4,8 +4,8 @@ package com.xinzhe.contest.weekly.season04.weekly152;
  * @author Xin
  * @date 2020/9/28
  * Title : 1175. 质数排列
- * Description : 你帮忙给从 1 到 n 的数设计排列方案，使得所有的「质数」都应该被放在「质数索引」（索引从 1 开始）上；你需要返回可能的方案总数。
- *              由于答案可能会很大，所以请你返回答案 模 mod 10^9 + 7 之后的结果即可。
+ * Description : 你帮忙给从 1 到 n 的数设计排列方案，使得所有的「质数」都应该被放在「质数索引」（索引从 1 开始）上；你需要返回可能的方案总数。
+ *              由于答案可能会很大，所以请你返回答案 模 mod 10^9 + 7 之后的结果即可。
  * link : https://leetcode-cn.com/problems/prime-arrangements
  * Level : Easy
  */
