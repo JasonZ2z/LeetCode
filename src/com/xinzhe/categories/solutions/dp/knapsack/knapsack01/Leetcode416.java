@@ -34,7 +34,7 @@ public class Leetcode416 {
         for (int i = 1; i < n; ++i) {
             for (int j = 1; j <= sub; ++j) {
                 dp[i][j] = dp[i - 1][j];
-                if(j <= nums[i])  dp[i][j] = dp[i - 1][j] || (dp[i - 1][j - nums[i]]);
+                if(j >= nums[i])  dp[i][j] = dp[i - 1][j] | (dp[i - 1][j - nums[i]]);
             }
         }
         return dp[n-1][sub];
