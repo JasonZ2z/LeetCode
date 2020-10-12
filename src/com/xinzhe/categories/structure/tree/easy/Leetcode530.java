@@ -10,6 +10,7 @@ import com.xinzhe.categories.structure.tree.TreeNode;
  * link : https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst/
  * Level : Easy
  */
+//todo need to review
 public class Leetcode530 {
     TreeNode pre = null;
     int min = Integer.MAX_VALUE;
