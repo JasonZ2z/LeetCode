@@ -5,9 +5,10 @@ import java.util.Stack;
 /**
  * @author Xin
  * @date 2020/10/11
- * Title :
- * Description :
- * link :
+ * Title : 1614. 括号的最大嵌套深度
+ * Description : 如果字符串满足一下条件之一，则可以称之为 有效括号字符串（valid parentheses string，可以简写为 VPS）：
+ *              给你一个 有效括号字符串 s，返回该字符串的 s 嵌套深度 。
+ * link : https://leetcode-cn.com/problems/maximum-nesting-depth-of-the-parentheses
  * Level : Easy
  */
 public class Leetcode_weekly_21001 {
@@ -38,6 +39,4 @@ public class Leetcode_weekly_21001 {
         return max;
 
     }
-
-
 }
