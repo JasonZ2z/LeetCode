@@ -29,4 +29,24 @@ public class Leetcode064 {
         }
         return dp[m-1][n-1];
     }
+
+    public int minPathSum2(int[][] grid) {
+        int m = grid.length;
+        if(m == 0) return 0;
+        int n = grid[0].length;
+        if(n == 0) return 0;
+
+        int[] dp = new int[n];
+        dp[0] = grid[0][0];
+        for(int i=1; i<n; i++) {
+            dp[i] = dp[i-1] + grid[0][i];
+        }
+
+        for(int i=1; i<m; i++) {
+            for(int j=0; j<n; j++) {
+                dp[j] = (j == 0 ? dp[j] : Math.min(dp[j-1], dp[j])) + grid[i][j];
+            }
+        }
+        return dp[n-1];
+    }
 }

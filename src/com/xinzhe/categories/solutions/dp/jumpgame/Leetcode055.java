@@ -11,6 +11,7 @@ package com.xinzhe.categories.solutions.dp.jumpgame;
  * Level : Medium
  */
 public class Leetcode055 {
+    //dp
     public boolean canJump(int[] nums) {
         if(nums.length < 1) return false;
 
@@ -27,5 +28,24 @@ public class Leetcode055 {
 
         }
         return dp[n-1];
+    }
+
+    //greedy
+    public boolean canJump2(int[] nums) {
+        int n = nums.length;
+        if(n <= 1) return true;
+        for(int i=0; i<n-1; i++) {
+            if(nums[i] == 0) {
+                boolean flag = false;
+                for(int j =i-1; j>= 0; j--) {
+                    if(j + nums[j] > i) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if(!flag) return false;
+            }
+        }
+        return true;
     }
 }

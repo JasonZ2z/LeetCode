@@ -1,6 +1,7 @@
 package com.xinzhe.order.day05;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Xin
@@ -18,6 +19,7 @@ public class Leetcode076 {
         String s = "aaaaaaaaaaaabbbbbcdd";
         String t = "abcdd";
         System.out.println(minWindow(s,t));
+        System.out.println(minWindow2(s,t));
     }
     public static String minWindow(String s, String t) {
         int t_len = t.length();
@@ -29,7 +31,7 @@ public class Leetcode076 {
             tMap.put(t.charAt(i), tMap.getOrDefault(t.charAt(i), 0) + 1);
         }
 
-        int left =0, right =0, match=0, res = 0, minLen = s.length();
+        int left =0, right =0, match=0, res = 0, minLen = s_len + 1;
         while(right < s_len){
             char rightChar = s.charAt(right++);
             if(tMap.containsKey(rightChar)){
@@ -52,6 +54,42 @@ public class Leetcode076 {
                 }
             }
         }
-        return minLen == Integer.MAX_VALUE ? "" : s.substring(res, res+minLen);
+        return minLen > s_len ? "" : s.substring(res, res+minLen);
+    }
+
+    public static String minWindow2(String s, String t) {
+        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> tmp = new HashMap<>();
+        for(char c : t.toCharArray()){
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        int p = 0, q = 0, min = s.length() + 1, start = 0;
+        while(q < s.length()) {
+            char rc = s.charAt(q);
+            tmp.put(rc, tmp.getOrDefault(rc, 0) + 1);
+            while(helper(map, tmp)) {
+                if(q - p + 1 < min) {
+                    min = q - p + 1 ;
+                    start = p;
+                }
+                char lc = s.charAt(p);
+                tmp.put(lc, tmp.get(lc) - 1);
+                p++;
+            }
+            q++;
+        }
+        return min > s.length() ?  "" : s.substring(start, start+min);
+    }
+
+    private static boolean helper(Map<Character, Integer> map, Map<Character, Integer> tmp) {
+        boolean flag = true;
+        for(Map.Entry<Character, Integer> entry : map.entrySet()) {
+            char c = entry.getKey();
+            if(!tmp.containsKey(c) || entry.getValue() > tmp.get(c)) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
     }
 }
