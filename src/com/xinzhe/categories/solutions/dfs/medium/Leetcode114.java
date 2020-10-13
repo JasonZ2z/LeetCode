@@ -10,6 +10,7 @@ import com.xinzhe.categories.structure.tree.TreeNode;
  * link : https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/
  * Level : Medium
  */
+//todo need to review
 public class Leetcode114 {
 
     //思路：
@@ -26,8 +27,9 @@ public class Leetcode114 {
                 while (pre.right != null){
                     pre = pre.right;
                 }
-                root.right = root.left;
+
                 pre.right = root.right;
+                root.right = root.left;
                 root.left = null;
                 root = root.right;
             }
