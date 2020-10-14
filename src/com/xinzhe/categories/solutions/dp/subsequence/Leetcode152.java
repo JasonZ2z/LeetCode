@@ -51,4 +51,20 @@ public class Leetcode152 {
         return (int)res;
 
     }
+
+    public int maxProduct3(int[] nums) {
+        int n = nums.length;
+        long ans = nums[0], max = nums[0], min = nums[0];
+        for(int i=1; i<n; i++) {
+            if(nums[i] < 0) {
+                long tmp = max;
+                max = min;
+                min = tmp;
+            }
+            max = Math.max(nums[i], max * nums[i]);
+            min = Math.min(nums[i], min * nums[i]);
+            ans = Math.max(ans, max);
+        }
+        return (int)ans;
+    }
 }
