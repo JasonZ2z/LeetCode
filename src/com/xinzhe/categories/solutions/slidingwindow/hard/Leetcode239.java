@@ -1,42 +1,28 @@
 package com.xinzhe.categories.solutions.slidingwindow.hard;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * @author Xin
- * @date 2020/03/02 18:01
+ * @date 2020/03/02
  * Title : 239. 滑动窗口最大值
  * Description : 给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。
- * 你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
- * 返回滑动窗口中的最大值。
- * <p>
- * 输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3
- * 输出: [3,3,5,5,6,7]
- * 解释:
- * 滑动窗口的位置                最大值
- * ---------------               -----
- * [1  3  -1] -3  5  3  6  7       3
- * 1 [3  -1  -3] 5  3  6  7       3
- * 1  3 [-1  -3  5] 3  6  7       5
- * 1  3  -1 [-3  5  3] 6  7       5
- * 1  3  -1  -3 [5  3  6] 7       6
- * 1  3  -1  -3  5 [3  6  7]      7
- * <p>
+ *              你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。返回滑动窗口中的最大值。
  * link : https://leetcode-cn.com/problems/sliding-window-maximum
  * level ： hard
  */
+//todo need to review
 public class Leetcode239 {
     public static void main(String[] args) {
-        int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
-        System.out.println(Arrays.toString(maxSlidingWindow(nums, 3)));
-        System.out.println(Arrays.toString(maxSlidingWindow1(nums, 3)));
+        int[] nums = {1211,-3110,8735,-7507,1784,7400,-5799,3169,-7696,-8991,-2222,-9434,-4490};
+        Leetcode239 lc = new Leetcode239();
+        System.out.println(Arrays.toString(lc.maxSlidingWindow1(nums, 5)));
+        System.out.println(Arrays.toString(lc.maxSlidingWindow2(nums, 5)));
     }
-
     //滑动窗口
-    public static int[] maxSlidingWindow1(int[] nums, int k) {
+    public int[] maxSlidingWindow1(int[] nums, int k) {
         if (nums == null || nums.length == 0) return new int[]{};
         int[] result = new int[nums.length - k + 1];
         //双向队列 保存当前窗口最大值的数组位置 保证队列中数组位置的数按从大到小排序
@@ -61,18 +47,73 @@ public class Leetcode239 {
         return result;
     }
 
-    //暴力
-    public static int[] maxSlidingWindow(int[] nums, int k) {
-        if (nums == null || nums.length == 0) return new int[]{};
-        List<Integer> list = new ArrayList<>(nums.length);
-        for (int i = 0; i <= nums.length - k; i++) {
-            List<Integer> tmp = new ArrayList<>(k);
-            for (int j = 0; j < k; j++) {
-                tmp.add(nums[j + i]);
+    public int[] maxSlidingWindow2(int[] nums, int k) {
+        int n = nums.length;
+        if (n == 0 || k < 1) return new int[]{};
+        int[] result = new int[n - k + 1];
+        PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> b[1] - a[1]);
+        int s = 0;
+        for (int i = 0; i < n; ++i) {
+            if(i - s == k) {
+                result[s] = queue.peek()[1];
+                if(queue.peek()[0] == s)  queue.poll();
+                s++;
             }
-            list.add(tmp.stream().max(Integer::compareTo).orElse(0));
+            while(!queue.isEmpty() && (queue.peek()[1] < nums[i]) || queue.peek()[0] <= i - k) {
+                queue.poll();
+            }
+            queue.offer(new int[]{i, nums[i]});
+        }
+        result[s] = queue.peek()[1];
+        return result;
+    }
+
+    public int[] maxSlidingWindow3(int[] nums, int k) {
+        int n = nums.length;
+        if (n == 0 || k < 1) return new int[]{};
+        int[] result = new int[n - k + 1];
+        LinkedList<Integer> queue = new LinkedList<>();
+        int s = 0;
+        for (int i = 0; i < n; ++i) {
+            if(i - s == k) {
+                result[s] = nums[queue.peekFirst()];
+                if(queue.peekFirst() == s)  queue.pollFirst();
+                s++;
+            }
+            while(!queue.isEmpty() && (nums[queue.peekLast()] < nums[i])) {
+                queue.pollLast();
+            }
+            if(!queue.isEmpty() && queue.peekFirst() <= i - k) queue.pollFirst();
+            queue.addLast(i);
+        }
+        result[s] = nums[queue.peekFirst()];
+        return result;
+    }
+
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        if(k == 1)
+            return nums;
+
+        int maxIdx = 0;
+        for(int i = 0; i < k; i++) {
+            if(nums[i] > nums[maxIdx])
+                maxIdx = i;
         }
 
-        return list.stream().mapToInt(Integer::valueOf).toArray();
+        int[] maxes = new int[nums.length - k + 1];
+        for(int li = 0; li < maxes.length; li++) {
+            int ri = li + k - 1;
+            if(maxIdx < li) {
+                maxIdx = li;
+                for(int i = li + 1; i <= ri; i++) {
+                    if(nums[i] > nums[maxIdx])
+                        maxIdx = i;
+                }
+            }else if(nums[ri] > nums[maxIdx]) {
+                maxIdx = ri;
+            }
+            maxes[li] = nums[maxIdx];
+        }
+        return maxes;
     }
 }
