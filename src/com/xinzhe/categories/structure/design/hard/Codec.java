@@ -3,8 +3,10 @@ package com.xinzhe.categories.structure.design.hard;
 import com.xinzhe.categories.structure.tree.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author Xin
@@ -41,55 +43,42 @@ public class Codec {
         traversal(root.right);
     }
 
-
-    //dfs
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         if(root == null) return "";
-        List<String> list = new ArrayList<>();
-        level(list, root);
         StringBuilder sb = new StringBuilder();
-        String s = list.toString();
-        sb.append(s, 1, s.length()-1);
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            if(cur == null) {
+                sb.append("n").append(",");
+            }else {
+                sb.append(cur.val).append(",");
+                stack.push(cur.right);
+                stack.push(cur.left);
+            }
+        }
+        sb.deleteCharAt(sb.length() - 1);
         return sb.toString();
     }
 
-    private void level(List<String> list, TreeNode root) {
-        if(root == null) {
-            list.add("n");
-
-        } else {
-            list.add(String.valueOf(root.val));
-            level(list, root.left);
-            level(list, root.right);
-        }
-    }
-
-     //Decodes your encoded data to tree.
+    // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
         if(data == null || data.length() == 0) return null;
         String[] arr = data.split(",");
-        LinkedList<String> res = new LinkedList<>();
-        for (String s : arr) {
-            res.add(s.trim());
-        }
-        return helper(res);
+        LinkedList<String> list = new LinkedList<>();
+        Collections.addAll(list, arr);
+        return buildTree(list);
     }
 
-    private TreeNode helper(LinkedList<String> res) {
-        if(res.size() == 0) return null;
-        if("n".equals(res.getFirst())) {
-            res.removeFirst();
-            return null;
-        }
-        TreeNode node = new TreeNode(Integer.parseInt(res.getFirst()));
-        res.removeFirst();
-        node.left = helper(res);
-        node.right = helper(res);
-        return node;
+    private TreeNode buildTree(LinkedList<String> list) {
+        if(list.size() == 0) return null;
+        String first = list.removeFirst();
+        if("n".equals(first)) return null;
+        TreeNode root = new TreeNode(Integer.parseInt(first));
+        root.left = buildTree(list);
+        root.right = buildTree(list);
+        return root;
     }
-
-    //bfs
-
-
 }

@@ -23,11 +23,11 @@ public class Leetcode287 {
             int mid = left + ((right - left) >> 1);
             int count = 0;
             for (int num : nums) {
-                if (num <= mid) { //小于等mid
+                if (num <= mid) {
                     count++;
                 }
             }
-            if(count > mid){ //严格大于mid
+            if(count > mid){
                 right = mid; //[left, mid]
             } else {
                 left = mid +1;//[mid + 1, right]
@@ -55,21 +55,12 @@ public class Leetcode287 {
     public int findDuplicate3(int[] nums) {
         int n = nums.length;
         int l = 1, r = n-1;
-
         while(l < r) {
-            int s1 = 0;
-            int s2 = 0;
+            int s1 = 0, s2 = 0;
             int mid = l + r >> 1;
-
             for(int x : nums) {
-                if(x >= l &&x <= mid) {
-                    s1++;
-                }
-            }
-            for(int x : nums) {
-                if(x > mid &&x <= r) {
-                    s2++;
-                }
+                if(x >= l && x <= mid)  s1++;
+                if(x > mid && x <= r)  s2++;
             }
             if(s1 > s2) {
                 r = mid;

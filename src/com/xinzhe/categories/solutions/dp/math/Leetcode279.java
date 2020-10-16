@@ -1,6 +1,9 @@
 package com.xinzhe.categories.solutions.dp.math;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @author Xin
  * @date 2020/3/17 18:11
@@ -11,13 +14,10 @@ package com.xinzhe.categories.solutions.dp.math;
  */
 
 public class Leetcode279 {
-    public static void main(String[] args) {
-        System.out.println(numSquares(13));
-    }
 
+    //dp
     //i-j*j
     public int numSquares2(int n) {
-
         int[] dp = new int[n+1];
         dp[0] = 0;
         for(int i = 1; i<=n; ++i){
@@ -29,25 +29,50 @@ public class Leetcode279 {
         return dp[n];
     }
 
-    public static int numSquares(int n) {
-        if(helper(n)) return 1;
-        int[] dp = new int[n+1];
-        dp[1] = 1;
-        for (int i = 2; i < n+1; i++) {
-            if(helper(i)) {
-                dp[i] = 1;
-                continue;
-            }
-            dp[i] = dp[i-1] +1;
-            for (int j = 1; j <= i/2; j++) {
-                dp[i] = Math.min(dp[j]+dp[i-j], dp[i]);
+    //bfs
+    public int numSquares(int n) {
+        int ans = 0;
+        boolean[] used = new boolean[n];
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(n);
+        while (!queue.isEmpty()){
+            ans++;
+            int size =  queue.size();
+            for (int i = 0; i < size; ++i) {
+                int cur = queue.poll();
+                for (int j = 1; j*j<= cur; ++j) {
+                    if(cur - j * j == 0) return ans;
+                    if(!used[cur - j * j]) {
+                        used[cur - j* j] = true;
+                        queue.add(cur - j* j);
+                    }
+                }
             }
         }
-        return dp[n];
+        return ans;
+    }
+    //四平方和定理
+    private boolean isSquare(int n) {
+        int sq = (int) Math.sqrt(n);
+        return n == sq * sq;
     }
 
-    private static boolean helper(int n){
-        int res = (int)Math.sqrt(n);
-        return res * res == n;
+    public int numSquares1(int n) {
+        // four-square and three-square theorems.
+        while (n % 4 == 0)
+            n /= 4;
+        if (n % 8 == 7)
+            return 4;
+
+        if (this.isSquare(n))
+            return 1;
+        // enumeration to check if the number can be decomposed into sum of two squares.
+        for (int i = 1; i * i <= n; ++i) {
+            if (this.isSquare(n - i * i))
+                return 2;
+        }
+        // bottom case of three-square theorem.
+        return 3;
     }
+
 }
