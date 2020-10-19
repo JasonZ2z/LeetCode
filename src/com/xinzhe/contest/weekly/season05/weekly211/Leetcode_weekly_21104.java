@@ -6,11 +6,16 @@ import java.util.List;
 /**
  * @author Xin
  * @date 2020/10/18
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1627. 带阈值的图连通性
+ * Description : 有 n 座城市，编号从 1 到 n 。编号为 x 和 y 的两座城市直接连通的前提是： x 和 y 的公因数中，至少有一个 严格大于 某个阈值 threshold 。更正式地说，如果存在整数 z ，且满足以下所有条件，则编号 x 和 y 的城市之间有一条道路：
+ *               x % z == 0 && y % z == 0 && z > threshold
+ *              给你两个整数 n 和 threshold ，以及一个待查询数组，请你判断每个查询 queries[i] = [ai, bi] 指向的城市 ai 和 bi 是否连通（即，它们之间是否存在一条路径）。
+ *              返回数组 answer ，其中answer.length == queries.length 。如果第 i 个查询中指向的城市 ai 和 bi 连通，则 answer[i] 为 true ；如果不连通，则 answer[i] 为 false 。
+ * link : https://leetcode-cn.com/problems/graph-connectivity-with-threshold
+ * Level : Hard
  */
+//todo need to review
+//线性筛法预处理+并查集
 public class Leetcode_weekly_21104 {
     public static void main(String[] args) {
         Leetcode_weekly_21104 lc = new Leetcode_weekly_21104();
@@ -19,7 +24,6 @@ public class Leetcode_weekly_21104 {
 
     public List<Boolean> areConnected(int n, int threshold, int[][] queries) {
         List<Boolean> res = new ArrayList<>();
-        //Map<Integer, Set<Integer>> map = new HashMap<>();
         UF uf = new UF(n + 1);
         if(threshold < 1) {
             for (int i = 0; i < queries.length; ++i) {
@@ -27,36 +31,19 @@ public class Leetcode_weekly_21104 {
             }
             return res;
         }
+        for (int i = threshold + 1; i <= n; ++i) {
+            for (int j = 2; j * threshold <= n ; ++j) {
+                uf.union(i, j * i);
+            }
+        }
         for (int[] query : queries) {
-            int a = query[0];
-            int b = query[1];
-            if(a == b) {
+            if(uf.connected(query[0], query[1])) {
                 res.add(true);
-            }
-            if(uf.connected(a-1, b-1)) {
-                res.add(true);
-                continue;
-            }
-            int x = gcd(a, b);
-            if(x > threshold) {
-                res.add(true);
-                uf.union(a-1, b-1);
-            }else {
+            } else {
                 res.add(false);
             }
         }
-
-        for (int i = 0; i < res.size(); i++) {
-            if(!res.get(i)) {
-                if(uf.connected(queries[i][0]-1, queries[i][1]-1)) {
-                    res.set(i, true);
-                }
-            }
-        }
         return res;
-    }
-    private int gcd(int a, int b){
-        return a==0? b : gcd(b%a , a);
     }
 
     class UF {
