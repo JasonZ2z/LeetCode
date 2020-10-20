@@ -13,6 +13,7 @@ public class Leetcode647 {
         String s = "aaabbaaa";
         System.out.println(countSubstrings(s));
         System.out.println(countSubstrings2(s));
+        System.out.println(countSubstrings3(s));
     }
     //暴力
     public static int countSubstrings(String s) {
@@ -65,5 +66,29 @@ public class Leetcode647 {
             }
         }
         return true;
+    }
+
+    public static int countSubstrings3(String s) {
+        int n = s.length();
+        int ans = n;
+        for(int i=0; i<n; i++) {
+            int l = i-1, r = i+1;
+            while(l >= 0 && r < n) {
+                if(s.charAt(l--) == s.charAt(r++)) {
+                    ans++;
+                } else {
+                    break;
+                }
+            }
+            l = i; r = i+1;
+            while(l >= 0 && r < n) {
+                if(s.charAt(l--) == s.charAt(r++)) {
+                    ans++;
+                }else {
+                    break;
+                }
+            }
+        }
+        return ans;
     }
 }

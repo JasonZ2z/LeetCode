@@ -21,10 +21,34 @@ public class Leetcode438 {
     public static void main(String[] args) {
         String s = "cbaebabacd";
         String p = "abc";
-        System.out.println(findAnagrams(s, p).toString());
+        System.out.println(findAnagrams2(s, p).toString());
 
     }
+    public static List<Integer> findAnagrams2(String s, String p) {
+        List<Integer> res = new ArrayList<>();
+        int n = s.length(), m = p.length();
+        int[] arr = new int[26];
+        for(char c : p.toCharArray()) arr[c - 'a']++;
+        int[] crr = new int[26];
+        int l = 0;
+        for(int i =0; i<n; i++) {
+            arr[s.charAt(i) - 'a']++;
+            if(i - l + 1 == m) {
+                if(same(arr, crr)) {
+                    res.add(l);
+                }
+                arr[s.charAt(l++) - 'a']--;
+            }
+        }
+        return res;
+    }
 
+    private static boolean same(int[] arr, int[] crr) {
+        for (int i = 0; i < 26; ++i) {
+            if(arr[i] != crr[i]) return false;
+        }
+        return true;
+    }
     public static List<Integer> findAnagrams(String s, String p) {
         if (s == null || s.length() == 0 || s.length() < p.length()) return new ArrayList<>();
         List<Integer> list = new ArrayList<>();
