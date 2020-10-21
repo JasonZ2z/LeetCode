@@ -16,8 +16,9 @@ import java.util.PriorityQueue;
 public class Leetcode621 {
     public static void main(String[] args) {
         Leetcode621 lc = new Leetcode621();
-        char[] arr = {'A','A','A','A','A','A','B','C','D','E','F','G'};
-        System.out.println(lc.leastInterval(arr, 2));
+        //char[] arr = {'A','A','A','A','A','A','B','C','D','E','F','G'};
+        char[] arr = {'A','A','A','B','B','B'};
+        System.out.println(lc.leastInterval2(arr, 2));
     }
     public int leastInterval(char[] tasks, int n) {
         int[] map = new int[26];
@@ -51,5 +52,21 @@ public class Leetcode621 {
             queue.addAll(list);
         }
         return res;
+    }
+
+    public int leastInterval2(char[] tasks, int n) {
+        int[] array = new int[26];
+        for (char task : tasks) {
+            array[task - 'A']++;
+        }
+        int max = 0;
+        for (int i : array) {
+            max = Math.max(max, i);
+        }
+        int maxCount = 0;
+        for (int i : array) {
+            if (i == max) maxCount++;
+        }
+        return Math.max(tasks.length, (n + 1) * (max - 1) + maxCount);
     }
 }
