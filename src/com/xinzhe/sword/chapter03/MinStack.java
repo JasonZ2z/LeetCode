@@ -6,17 +6,16 @@ import java.util.LinkedList;
 /**
  * @author Xin
  * @date 2020/6/12
- * Title : 03.02. Min Stack LCCI
- * Description : How would you design a stack which, in addition to push and pop, has a function min which returns the minimum element?
- * Push, pop and min should all operate in 0(1) time.
+ * Title : 03.02. 栈的最小值
+ * Description : 请设计一个栈，除了常规栈支持的pop与push函数以外，还支持min函数，该函数返回栈元素中的最小值。执行push、pop和min操作的时间复杂度必须为O(1)。
  * link : https://leetcode-cn.com/problems/min-stack-lcci
  * Level : Easy
  */
-public class Interview_0302 {
+public class MinStack {
     Deque<Integer> orig;
     Deque<Integer> minStack;
 
-    public Interview_0302() {
+    public MinStack() {
         orig = new LinkedList<>();
         minStack = new LinkedList<>();
     }

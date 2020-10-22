@@ -2,6 +2,9 @@ package com.xinzhe.sword.chapter02;
 
 import com.xinzhe.categories.structure.linkedlist.ListNode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author Xin
  * @date 2020/6/12
@@ -12,7 +15,21 @@ import com.xinzhe.categories.structure.linkedlist.ListNode;
  */
 public class Interview_0201 {
     public ListNode removeDuplicateNodes(ListNode head) {
-        //todo
-        return null;
+        if(head == null || head.next == null) return head;
+        ListNode cur = head.next;
+        ListNode pre = head;
+        Set<Integer> set = new HashSet<>();
+        set.add(head.val);
+        while(cur != null) {
+            if(set.contains(cur.val)) {
+                pre.next = cur.next;
+                cur = cur.next;
+            } else {
+                set.add(cur.val);
+                cur = cur.next;
+                pre = pre.next;
+            }
+        }
+        return head;
     }
 }
