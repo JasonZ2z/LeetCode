@@ -14,6 +14,7 @@ public class Interview_0101 {
     /**
      * ASCII码字符个数一共128个，用两个64位的long变量来存储是否出现某个字符
      */
+    //todo need to review
     public boolean isUnique(String astr) {
         long a = 0L, b = 0L;
         for (char c : astr.toCharArray()) {
