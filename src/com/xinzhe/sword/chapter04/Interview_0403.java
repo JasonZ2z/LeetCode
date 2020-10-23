@@ -15,19 +15,12 @@ import java.util.List;
  * Level : Medium
  */
 public class Interview_0403 {
-    List<List<Integer>> list = new ArrayList<>();
+    List<ListNode> list = new ArrayList<>();
     public ListNode[] listOfDepth(TreeNode tree) {
         bfs(tree, 0);
         ListNode[] res = new ListNode[list.size()];
-        ListNode head = new ListNode(-1);
         for (int i = 0; i < list.size(); i++) {
-            ListNode cur = head;
-            for (int j : list.get(i)) {
-                cur.next = new ListNode(j);
-                cur = cur.next;
-            }
-            res[i] = head.next;
-            head.next = null;
+            res[i] = list.get(i);
         }
         return res;
     }
@@ -35,9 +28,15 @@ public class Interview_0403 {
     private void bfs(TreeNode tree, int level) {
         if(tree == null) return;
         if(level >= list.size()) {
-            list.add(new ArrayList<>());
+            list.add(new ListNode(tree.val));
+        } else {
+            ListNode node = new ListNode(tree.val);
+            ListNode point = list.get(level);
+            while(point.next != null){
+                point = point.next;
+            }
+            point.next = node;
         }
-        list.get(level).add(tree.val);
         bfs(tree.left, level+1);
         bfs(tree.right, level+1);
     }
