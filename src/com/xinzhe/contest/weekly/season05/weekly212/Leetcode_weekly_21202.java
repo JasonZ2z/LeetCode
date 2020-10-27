@@ -7,10 +7,11 @@ import java.util.List;
 /**
  * @author Xin
  * @date 2020/10/25
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1630. 等差子数组
+ * Description : 如果一个数列由至少两个元素组成，且每两个连续元素之间的差值都相同，那么这个序列就是 等差数列 。
+ *              更正式地，数列 s 是等差数列，只需要满足：对于每个有效的 i ， s[i+1] - s[i] == s[1] - s[0] 都成立。
+ * link : https://leetcode-cn.com/problems/arithmetic-subarrays
+ * Level : Medium
  */
 public class Leetcode_weekly_21202 {
     public static void main(String[] args) {
