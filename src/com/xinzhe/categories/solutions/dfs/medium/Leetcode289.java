@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.arrays;
+package com.xinzhe.categories.solutions.dfs.medium;
 
 /**
  * @author Xin
@@ -21,7 +21,7 @@ public class Leetcode289 {
     //01 | count(1) < 2 | count(1) > 3
     //11 | count(1) == 2|3
     //10 | count(1) == 3
-    private int[][] directions = {{1,1,0,-1,-1,-1, 0, 1},
+    private final int[][] directions = {{1,1,0,-1,-1,-1, 0, 1},
                                 {0,1,1, 1, 0,-1,-1,-1}};
     public void gameOfLife(int[][] board) {
         int m = board.length;

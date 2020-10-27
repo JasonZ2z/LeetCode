@@ -1,4 +1,4 @@
-package com.xinzhe.order.day00;
+package com.xinzhe.categories.structure.arrays.medium;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +12,7 @@ import java.util.Map;
  * link : https://leetcode-cn.com/problems/continuous-subarray-sum
  * Level : Medium
  */
+//todo need to review
 public class Leetcode523 {
     public static void main(String[] args) {
         int[] nums = {0,1,0};

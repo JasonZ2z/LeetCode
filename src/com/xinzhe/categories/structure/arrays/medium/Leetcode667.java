@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.arrays;
+package com.xinzhe.categories.structure.arrays.medium;
 
 import java.util.Arrays;
 

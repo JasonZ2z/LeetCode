@@ -1,4 +1,4 @@
-package com.xinzhe.order.day00;
+package com.xinzhe.categories.structure.arrays.easy;
 
 /**
  * @author Xin

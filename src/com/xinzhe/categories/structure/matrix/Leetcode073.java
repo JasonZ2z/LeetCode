@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.arrays;
+package com.xinzhe.categories.structure.matrix;
 
 /**
  * @author Xin
