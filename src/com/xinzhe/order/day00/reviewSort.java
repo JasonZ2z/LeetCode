@@ -10,28 +10,27 @@ import java.util.Random;
 
 public class reviewSort {
     public static void main(String[] args) {
-       int[] arr = generateArrays(10);
-       System.out.println(Arrays.toString(arr));
-       int n = arr.length;
-       int[] arr4 = new int[n], arr3 = new int[n], arr2 = new int[n], arr1 = new int[n];
-       System.arraycopy(arr, 0, arr1, 0, n);
-       System.arraycopy(arr, 0, arr2, 0, n);
-       System.arraycopy(arr, 0, arr3, 0, n);
-       System.arraycopy(arr, 0, arr4, 0, n);
+        int[] arr = generateArrays(10);
+        System.out.println(Arrays.toString(arr));
+        int n = arr.length;
+        int[] arr5 = new int[n], arr4 = new int[n], arr3 = new int[n], arr2 = new int[n], arr1 = new int[n];
+        System.arraycopy(arr, 0, arr1, 0, n);
+        System.arraycopy(arr, 0, arr2, 0, n);
+        System.arraycopy(arr, 0, arr3, 0, n);
+        System.arraycopy(arr, 0, arr4, 0, n);
+        System.arraycopy(arr, 0, arr5, 0, n);
         reviewSort rs = new reviewSort();
         rs.bubbleSort(arr);
         rs.selectSort(arr1);
         rs.insertSort(arr2);
         rs.fastSort(arr3, 0, n-1);
         rs.quickSort(arr4, 0, n-1);
+        rs.mergeSort(arr5, 0, n-1);
         System.out.println(rs.compare(arr, arr1));
         System.out.println(rs.compare(arr1, arr2));
         System.out.println(rs.compare(arr2, arr3));
         System.out.println(rs.compare(arr3, arr4));
-        System.out.println(Arrays.toString(arr2));
-        System.out.println(Arrays.toString(arr3));
-        System.out.println(Arrays.toString(arr4));
-
+        System.out.println(rs.compare(arr4, arr5));
     }
 
     private static int[] generateArrays(int n) {
@@ -120,8 +119,19 @@ public class reviewSort {
         quickSort(arr, r+1, right);
     }
 
-    public void mergeSort(int[] arr) {
-
+    public void mergeSort(int[] arr, int left, int right) {
+        if(left >= right) return;
+        int mid = left + right >> 1;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        int[] tmp = new int[right - left + 1];
+        int i = left, j = mid+1, index = 0;
+        while(i <= mid && j <= right) {
+            tmp[index++] = arr[i] < arr[j] ? arr[i++] : arr[j++];
+        }
+        while(i <= mid)   tmp[index++] = arr[i++];
+        while(j <= right) tmp[index++] = arr[j++];
+        if(index > 0) System.arraycopy(tmp, 0, arr, left, index);
     }
 
     public boolean compare(int[] arr1, int[] arr2) {
