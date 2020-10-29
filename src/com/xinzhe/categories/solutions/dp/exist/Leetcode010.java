@@ -9,6 +9,8 @@ package com.xinzhe.categories.solutions.dp.exist;
  * link : https://leetcode-cn.com/problems/regular-expression-matching
  * Level : Hard
  */
+
+//todo need to review
 public class Leetcode010 {
     public static void main(String[] args) {
     }
@@ -31,7 +33,10 @@ public class Leetcode010 {
                 if(p.charAt(j-1) == s.charAt(i-1) || p.charAt(j-1) == '.') dp[i][j] = dp[i-1][j-1];
                 if(j > 1 && p.charAt(j-1) == '*') {
                     dp[i][j] = dp[i][j-2];
-                    if(p.charAt(j-2) == s.charAt(i-1) || p.charAt(j-2) == '.') dp[i][j] |= dp[i][j-1] || dp[i-1][j];
+                    if(dp[i][j]) continue;
+                    if(p.charAt(j-2) == s.charAt(i-1) || p.charAt(j-2) == '.') {
+                        if(dp[i-1][j]) dp[i][j] = true;
+                    }
                 }
             }
         }
