@@ -9,7 +9,7 @@ package com.xinzhe.categories.solutions.binarysearch.element;
  * link : https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/
  * Level : Hard
  */
-
+//todo need to review
 public class Leetcode154 {
     public static void main(String[] args) {
         int[] arr = {12,13,14,15,1};
@@ -38,5 +38,23 @@ public class Leetcode154 {
             }
         }
         return nums[left];
+    }
+
+
+    public int findMin2(int[] nums) {
+        int n = nums.length;
+        if(n == 0) return 0;
+        int l = 0, r = n-1;
+        while(l < r) {
+            int mid = l + r >>1;
+            if(nums[mid] > nums[r]) {
+                l = mid + 1;
+            } else if(nums[mid] < nums[r]) {
+                r = mid;
+            } else {
+                r--;
+            }
+        }
+        return nums[l];
     }
 }
