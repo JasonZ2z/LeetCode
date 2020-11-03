@@ -24,8 +24,8 @@ public class Interview_0504 {
             }
         }
         if(before == 0) before = -1;
-        while(++after <= Integer.MAX_VALUE){
-            if(Integer.bitCount((int)after) == n) {
+        while(++after < Long.MAX_VALUE){
+            if(Long.bitCount(after) == n) {
                 break;
             }
         }
