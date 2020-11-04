@@ -2,15 +2,13 @@ package com.xinzhe.contest.biweeekly.biweekly38;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 /**
  * @author Xin
  * @date 2020/10/31
- * Title :
- * Description :
- * link :
+ * Title : 1636. 按照频率将数组升序排序
+ * Description : 给你一个整数数组 nums ，请你将数组按照每个值的频率 升序 排序。如果有多个值的频率相同，请你按照数值本身将它们 降序 排序。请你返回排序后的数组。
+ * link : https://leetcode-cn.com/problems/sort-array-by-increasing-frequency/
  * Level : Easy
  */
 public class Leetcode_biweekly_3801 {
@@ -20,20 +18,13 @@ public class Leetcode_biweekly_3801 {
         System.out.println(Arrays.toString(lc.frequencySort(arr)));
     }
     public int[] frequencySort(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for(int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
+        HashMap<Integer, Integer> map = new HashMap<>();
+        Integer[] result = new Integer[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            result[i] = nums[i];
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
-        Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().stream().sorted((a, b) -> a.getValue().equals(b.getValue()) ? b.getKey() - a.getKey() : a.getValue() - b.getValue()).iterator();
-        int i = 0;
-        while (iterator.hasNext()) {
-            Map.Entry<Integer, Integer> next = iterator.next();
-            int c = next.getValue();
-            while (c-- > 0) {
-                nums[i++] = next.getKey();
-            }
-
-        }
-        return nums;
+        Arrays.sort(result, (a, b) -> map.get(a).equals(map.get(b)) ? b - a : map.get(a) - map.get(b));
+        return Arrays.stream(result).mapToInt(Integer::intValue).toArray();
     }
 }
