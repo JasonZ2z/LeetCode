@@ -19,26 +19,27 @@ public class Leetcode057 {
         int[][] nums = {{1,3},{6,9}};
         System.out.println(Arrays.deepToString(lc.insert(nums, new int[]{2, 5})));
     }
+
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        int s = newInterval[0], e = newInterval[1];
-        int n = intervals.length;
+        if(newInterval == null) return intervals;
         List<int[]> res = new ArrayList<>();
-        int i = 0;
-        while (i < n && s > intervals[i][1]) {
-            res.add(intervals[i]);
-            i++;
+        int l = newInterval[0], r = newInterval[1];
+        boolean flag = false;
+        for(int[] cur : intervals) {
+            if(l > cur[1]) res.add(cur);
+            else if(cur[0] > r) {
+                if(flag) res.add(cur);
+                else {
+                    res.add(new int[]{l, r});
+                    res.add(cur);
+                    flag = true;
+                }
+            }else {
+                l = Math.min(l, cur[0]);
+                r = Math.max(r, cur[1]);
+            }
         }
-        int[] tmp = new int[]{s, e};
-        while (i < n && newInterval[1] >= intervals[i][0]) {
-            tmp[0] = Math.min(tmp[0], intervals[i][0]);
-            tmp[1] = Math.max(tmp[1], intervals[i][1]);
-            i++;
-        }
-        res.add(tmp);
-        while (i < n) {
-            res.add(intervals[i]);
-            i++;
-        }
+        if(!flag) res.add(new int[]{l, r});
         return res.toArray(new int[0][]);
     }
 }
