@@ -1,10 +1,10 @@
 package com.xinzhe.categories.solutions.bfs.medium;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
 
 /**
  * @author Xin
@@ -21,136 +21,84 @@ import java.util.Set;
  * link : https://leetcode-cn.com/problems/word-ladder
  * Level : Medium
  */
-
+//todo need to review
+//构造虚拟节点避免访问全部链表
 public class Leetcode127 {
-    //BFS
+    public static void main(String[] args) {
+        Leetcode127 lc = new Leetcode127();
+        List<String> list = Arrays.asList("hot", "dot", "dog", "lot", "log", "cog");
+        System.out.println(lc.ladderLength("hit", "cog", list));
+    }
+
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        if(!wordList.contains(endWord)) return 0;
-        boolean[] visited = new boolean[wordList.size()];
-        int index = wordList.indexOf(beginWord);
-        if(index >= 0) visited[index] = true;
+        int n = wordList.size();
+        HashSet<String> set = new HashSet<>(wordList);
+        if(n == 0 || !set.contains(endWord)) return 0;
+        set.remove(beginWord);
+        HashSet<String> used = new HashSet<>();
         Queue<String> queue = new LinkedList<>();
         queue.offer(beginWord);
-        int count = 0;
-        while (!queue.isEmpty()){
+        int steps = 0;
+        while (!queue.isEmpty()) {
             int size = queue.size();
-            ++count;
-            for (int i = 0; i < size; ++i) {
-                String start = queue.poll();
-                for (int j = 0; j < wordList.size(); j++) {
-                    String s = wordList.get(j);
-                    if(visited[j])continue;
-                    if(!canConvert(start, s)) continue;
-                    if(s.equals(endWord)) return ++count;
-                    visited[j] = true;
-                    queue.offer(s);
+            steps++;
+            for (int i = 0; i < size; i++) {
+                char[] arr = queue.poll().toCharArray();
+                for (int j = 0; j < arr.length; j++) {
+                    char orig = arr[j];
+                    for (char k = 'a'; k <= 'z'; k++) {
+                        if (k == orig) continue;
+                        arr[j] = k;
+                        String tmp = new String(arr);
+                        if (!set.contains(tmp) || used.contains(tmp)) continue;
+                        if (tmp.equals(endWord)) return steps + 1;
+                        queue.offer(tmp);
+                        used.add(tmp);
+                    }
+                    arr[j] = orig;
                 }
             }
         }
         return 0;
-    }
-
-    public boolean canConvert(String start, String s) {
-        int count = 0;
-        for (int i = 0; i < s.length(); ++i) {
-            if(start.charAt(i) != s.charAt(i)){
-                ++count;
-                if(count > 1) return false;
-            }
-        }
-        return count == 1;
     }
 
     //双向BFS
+    HashSet<String> set;
+    HashSet<String> used = new HashSet<>();
     public int ladderLength2(String beginWord, String endWord, List<String> wordList) {
-        int end = wordList.indexOf(endWord);
-        if(end == -1) return 0;
-        wordList.add(beginWord);
-        int start = wordList.size() - 1;
-        Queue<Integer> queue1 = new LinkedList<>();
-        Queue<Integer> queue2 = new LinkedList<>();
-
-        Set<Integer> visited1 = new HashSet<>();
-        Set<Integer> visited2 = new HashSet<>();
-
-        queue1.offer(start);
-        queue2.offer(end);
-        visited1.add(start);
-        visited2.add(end);
-        int count1 =0, count2 = 0;
-        while (!queue1.isEmpty() && !queue2.isEmpty()){
-            ++count1;
-            int size1 = queue1.size();
-            for (int i = 0; i < size1; ++i) {
-                String s = wordList.get(queue1.poll());
-                for (int j = 0; j < wordList.size(); ++j) {
-                    if (visited1.contains(j)) continue;
-                    if(!canConvert(s, wordList.get(j))) continue;
-                    if (visited2.contains(j)) return count1+count2+1;
-                    visited1.add(j);
-                    queue1.offer(j);
-                }
-            }
-            ++count2;
-            int size2 = queue2.size();
-            for (int i = 0; i < size2; ++i) {
-                String s = wordList.get(queue2.poll());
-                for (int j = 0; j < wordList.size(); ++j) {
-                    if(visited2.contains(j)) continue;
-                    if(!canConvert(s, wordList.get(j))) continue;
-                    if(visited1.contains(j)) return count1+count2+1;
-                    visited2.add(j);
-                    queue2.offer(j);
-                }
-            }
-        }
-        return 0;
+        int n = wordList.size();
+        this.set = new HashSet<>(wordList);
+        if(n == 0 || !set.contains(endWord)) return 0;
+        HashSet<String> beginUsed = new HashSet<>();
+        HashSet<String> endUsed = new HashSet<>();
+        beginUsed.add(beginWord);
+        endUsed.add(endWord);
+        return bfs(beginUsed, endUsed, 2);
     }
 
-    //双向BFS优化写法
-    public int ladderLength3(String beginWord, String endWord, List<String> wordList) {
-        int index2 = wordList.indexOf(endWord);
-        if(index2 == -1) return 0;
-
-        int n = wordList.size();
-        Queue<String> queue1 = new LinkedList<>();
-        Queue<String> queue2 = new LinkedList<>();
-
-        boolean[] visited1 = new boolean[n];
-        boolean[] visited2 = new boolean[n];
-
-        queue1.offer(beginWord);
-        queue2.offer(endWord);
-
-        int index1 = wordList.indexOf(beginWord);
-        if(index1 != -1) visited1[index1] = true;
-        visited2[index2] = true;
-        int count = 0;
-
-        while (!queue1.isEmpty() && !queue2.isEmpty()){
-            //交换队列，每次都处理长度小的队列
-            if(queue1.size() > queue2.size()){
-                Queue<String> tmp_que = new LinkedList<>(queue1);
-                queue1 = queue2;
-                queue2 = tmp_que;
-
-                boolean[] tmp_visited = visited1;
-                visited1 = visited2;
-                visited2 = tmp_visited;
-            }
-            int size = queue1.size();
-            ++count;
-            for (int i = 0; i < size; i++) {
-                String s = queue1.poll();
-                for (int j = 0; j < wordList.size(); ++j) {
-                    if(visited1[j]) continue;
-                    if(!canConvert(s, wordList.get(j))) continue;
-                    if(visited2[j]) return ++count;
-                    visited1[j] = true;
-                    queue1.offer(wordList.get(j));
+    private int bfs(HashSet<String> begin, HashSet<String> end, int steps) {
+        if(begin.size() == 0) return 0;
+        if(begin.size() > end.size()) return bfs(end, begin, steps);
+        HashSet<String> next = new HashSet<>();
+        for (String s : begin) {
+            char[] arr = s.toCharArray();
+            for (int j = 0; j < arr.length; j++) {
+                char orig = arr[j];
+                for (char k = 'a'; k <= 'z'; k++) {
+                    if (k == orig) continue;
+                    arr[j] = k;
+                    String tmp = new String(arr);
+                    if(set.contains(tmp)) {
+                        if(end.contains(tmp)) return steps;
+                        if(!used.contains(tmp)) {
+                            next.add(tmp);
+                            used.add(tmp);
+                        }
+                    }
                 }
+                arr[j] = orig;
             }
         }
-        return 0;
+        return bfs(next, end, steps + 1);
     }
 }

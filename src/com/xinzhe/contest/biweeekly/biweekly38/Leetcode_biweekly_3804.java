@@ -29,20 +29,21 @@ public class Leetcode_biweekly_3804 {
         this.m = words[0].length();
         this.n = target.length();
         this.map = new int[m][26];
-        this.dp = new Long[m][n];
+        this.dp = new Long[m+1][n+1];
         for (String word : words) {
             for (int i = 0; i < m; i++) {
                 map[i][word.charAt(i) - 'a']++;
             }
         }
-        return (int) solve(0, 0, target);
+        return (int) solve(m, n, target);
     }
 
     private long solve(int i, int j, String target) {
-        if (j == n) return 1;
-        if (m - i < n - j) return 0;
+        if (j == 0) return 1;
+        if (i < j) return 0;
         if (dp[i][j] != null) return dp[i][j];
-        long ans = map[i][target.charAt(j) - 'a'] * solve(i+1, j+1, target) + solve(i+1, j, target);
+        long ans = solve(i-1, j, target);
+        ans += map[i-1][target.charAt(j-1) - 'a'] * solve(i-1, j-1, target);
         return dp[i][j] = ans % MOD;
     }
 }
