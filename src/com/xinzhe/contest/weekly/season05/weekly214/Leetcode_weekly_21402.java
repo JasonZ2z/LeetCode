@@ -1,17 +1,17 @@
 package com.xinzhe.contest.weekly.season05.weekly214;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Xin
  * @date 2020/11/08
- * Title :
- * Description :
- * link :
- * Level :
+ * Title : 1647. 字符频次唯一的最小删除次数
+ * Description : 如果字符串 s 中 不存在 两个不同字符 频次 相同的情况，就称 s 是 优质字符串 。
+ *              给你一个字符串 s，返回使 s 成为 优质字符串 需要删除的 最小 字符数。
+ *              字符串中字符的 频次 是该字符在字符串中的出现次数。例如，在字符串 "aab" 中，'a' 的频次是 2，而 'b' 的频次是 1 。
+ * link : https://leetcode-cn.com/problems/minimum-deletions-to-make-character-frequencies-unique
+ * Level : Medium
  */
 public class Leetcode_weekly_21402 {
     public static void main(String[] args) {
@@ -24,38 +24,15 @@ public class Leetcode_weekly_21402 {
         for (char c : s.toCharArray()) {
             cnt[c - 'a']++;
         }
-        Arrays.sort(cnt);
-        TreeSet<Integer> gap = new TreeSet<>();
-        List<Integer> over = new ArrayList<>();
-
-        int start = 1;
-        for (int j : cnt) {
-            if (j != 0) {
-                while (j > start) {
-                    gap.add(start);
-                    start++;
-                }
-                if (j == start) start++;
+        Set<Integer> set = new HashSet<>();
+        int ans = 0;
+        for(int i : cnt) {
+            while(set.contains(i)) {
+                i--;
+                ans++;
             }
+            if(i != 0) set.add(i);
         }
-        for (int i = 1; i < cnt.length; i++) {
-            if(cnt[i] != 0 && cnt[i] == cnt[i-1]) {
-                over.add(cnt[i]);
-            }
-        }
-        if(over.isEmpty()) return 0;
-        int sum = 0;
-        for (int i = over.size() - 1; i >= 0; i--) {
-            if(gap.size() == 0) sum += over.get(i);
-            else {
-                Integer lower = gap.lower(over.get(i));
-                if(lower == null) sum += over.get(i);
-                else {
-                    sum += over.get(i) - lower;
-                    gap.remove(lower);
-                }
-            }
-        }
-        return sum;
+        return ans;
     }
 }
