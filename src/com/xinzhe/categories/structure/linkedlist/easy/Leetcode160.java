@@ -36,4 +36,13 @@ public class Leetcode160 {
         cur.next = null;
         return null;
     }
+
+    public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
+        ListNode p = headA, q = headB;
+        while(p != q) {
+            p = p == null ? headB : p.next;
+            q = q == null ? headA : q.next;
+        }
+        return p;
+    }
 }
