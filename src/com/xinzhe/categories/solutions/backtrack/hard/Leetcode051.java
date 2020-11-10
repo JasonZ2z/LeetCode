@@ -11,7 +11,7 @@ import java.util.List;
  * link : https://leetcode-cn.com/problems/n-queens/
  * Level : Hard
  */
-
+//todo need to review
 public class Leetcode051 {
     public static void main(String[] args) {
     }
@@ -27,18 +27,19 @@ public class Leetcode051 {
         return res;
     }
 
-    private void dfs(char[][] grid, int n, int i) {
+    private boolean dfs(char[][] grid, int n, int i) {
         if(i == n) {
             res.add(convert(grid));
-            return;
+            return true;
         }
         for (int j = 0; j < n; ++j) {
             if(judge(grid, n, i,j)) {
                 grid[i][j] = 'Q';
-                dfs(grid, n, i+1);
+                if(dfs(grid, n, i+1)) return true;
                 grid[i][j] = '.';
             }
         }
+        return false;
     }
 
     private boolean judge(char[][] grid, int n, int i, int j) {

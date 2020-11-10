@@ -4,11 +4,11 @@ package com.xinzhe.categories.solutions.backtrack.hard;
  * @author Xin
  * @date 2020/10/17
  * Title : 52. N皇后 II
- * Description : n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
+ * Description : n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。给定一个整数 n，返回 n 皇后不同的解决方案的数量。
  * link : https://leetcode-cn.com/problems/n-queens-ii/
  * Level : Hard
  */
-
+//todo need to review
 public class Leetcode052 {
     private int count = 0;
     public int totalNQueens(int n) {
