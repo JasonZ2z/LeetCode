@@ -12,9 +12,9 @@ import java.util.List;
  * link : https://leetcode-cn.com/problems/permutation-i-lcci/
  * Level : Medium
  */
-public class Interview_0806 {
+public class Interview_0807 {
     public static void main(String[] args) {
-        Interview_0806 lc = new Interview_0806();
+        Interview_0807 lc = new Interview_0807();
         System.out.println(Arrays.toString(lc.permutation("abc")));
     }
     List<String> list = new ArrayList<>();
