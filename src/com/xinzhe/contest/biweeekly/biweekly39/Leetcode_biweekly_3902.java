@@ -3,10 +3,11 @@ package com.xinzhe.contest.biweeekly.biweekly39;
 /**
  * @author Xin
  * @date 2020/11/14
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1653. 使字符串平衡的最少删除次数
+ * Description : 给你一个字符串s，它仅包含字符'a' 和'b' 。你可以删除s中任意数目的字符，使得s 平衡。
+ *              我们称s平衡的当不存在下标对(i,j)满足i < j 且s[i] = 'b'同时s[j]= 'a'。请你返回使 s平衡的 最少删除次数。
+ * link : https://leetcode-cn.com/problems/minimum-deletions-to-make-string-balanced
+ * Level : Medium
  */
 public class Leetcode_biweekly_3902 {
     public static void main(String[] args) {

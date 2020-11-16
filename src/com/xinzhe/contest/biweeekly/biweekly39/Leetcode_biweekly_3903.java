@@ -1,9 +1,7 @@
 package com.xinzhe.contest.biweeekly.biweekly39;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -11,58 +9,23 @@ import java.util.stream.Collectors;
 /**
  * @author Xin
  * @date 2020/11/14
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1654. 到家的最少跳跃次数
+ * Description : 有一只跳蚤的家在数轴上的位置x处。请你帮助它从位置0出发，到达它的家。跳蚤跳跃的规则如下：
+ *              它可以 往前 跳恰好 a个位置（即往右跳）。
+ *              它可以 往后跳恰好 b个位置（即往左跳）。
+ *              它不能 连续 往后跳 2 次。
+ *              它不能跳到任何forbidden数组中的位置。
+ *              跳蚤可以往前跳 超过它的家的位置，但是它 不能跳到负整数的位置。
+ *              给你一个整数数组forbidden，其中forbidden[i]是跳蚤不能跳到的位置，同时给你整数a，b和x，请你返回跳蚤到家的最少跳跃次数。如果没有恰好到达 x的可行方案，请你返回 -1 。
+ * link : https://leetcode-cn.com/problems/minimum-jumps-to-reach-home
+ * Level : Medium
  */
+
+//todo need to review
 public class Leetcode_biweekly_3903 {
     public static void main(String[] args) {
         Leetcode_biweekly_3903 lc = new Leetcode_biweekly_3903();
-        int[] arr = {162,118,178,152,167,100,40,74,199,186,26,73,200,127,30,124,193,84,184,36,103,149,153,9,54,154,133,95,45,198,79,157,64,122,59,71,48,177,82,35,14,176,16,108,111,6,168,31,134,164,136,72,98};
-
-        //System.out.println(lc.minimumJumps(arr, 29,98,80));
-        System.out.println(lc.minimumJumps2(arr, 29,98,80));
     }
-    //61 122 183
-    Map<Integer, Integer> map = new HashMap<>();
-    Set<Integer> set;
-    int a, b, x;
-    public int minimumJumps(int[] forbidden, int a, int b, int x) {
-        if(a - b > x) return -1;
-        this.set = Arrays.stream(forbidden).boxed().collect(Collectors.toSet());
-        this.a = a;
-        this.b = b;
-        this.x = x;
-        if(set.contains(a)) return -1;
-        if(a - b == x) return 2;
-
-        return solve(0, false);
-    }
-
-    private int solve(int cur, boolean flag) {
-        if(cur < 0) return -1;
-        if(set.contains(cur)) return -1;
-        if(cur == x) return 0;
-        if(map.containsKey(cur)) return map.get(cur);
-        if(cur > x) {
-            if(a > b && cur - x > b) return -1;
-            int ans = flag ? solve(cur - b, false) : -1;
-            if(ans > 0) return ans + 1;
-        }
-        int ans = solve(cur + a, true);
-        if (ans < 0 && flag) {
-            ans = solve(cur - b, false);
-        }
-        if(ans == -1) {
-            map.put(cur, -1);
-            return -1;
-        }else{
-            map.put(cur, ans + 1);
-            return ans + 1;
-        }
-    }
-
 
     public int minimumJumps2(int[] forbidden, int a, int b, int x) {
         int[] dp = new int[4001];
