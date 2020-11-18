@@ -13,9 +13,9 @@ import java.util.Set;
  * link : https://leetcode-cn.com/problems/rabbits-in-forest
  * Level : Medium
  */
-public class Leetcode_781 {
+public class Leetcode781 {
     public static void main(String[] args) {
-        Leetcode_781 lc = new Leetcode_781();
+        Leetcode781 lc = new Leetcode781();
         int[] arr = {1,1,2};
         System.out.println(lc.numRabbits(arr));
     }
