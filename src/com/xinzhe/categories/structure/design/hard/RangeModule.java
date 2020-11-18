@@ -1,6 +1,5 @@
 package com.xinzhe.categories.structure.design.hard;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -45,7 +44,7 @@ public class RangeModule {
         if(leftFloorEntry != null && leftFloorEntry.getValue() >= left) {
             left = leftFloorEntry.getKey();
         }
-        deleteEntry(left, right);
+        map.subMap(left, right).clear();   //todo need to review
         map.put(left, right);
     }
 
@@ -59,7 +58,7 @@ public class RangeModule {
         if(rightFloorEntry != null && rightFloorEntry.getKey() < right && rightFloorEntry.getValue() > right) {
             right = rightFloorEntry.getValue();
         }
-        deleteEntry(left, right);
+        map.subMap(left, right).clear();
         if(ol > left) map.put(left, ol);
         if(or < right) map.put(or, right);
     }
@@ -69,12 +68,4 @@ public class RangeModule {
         return leftFloorEntry != null && leftFloorEntry.getValue() >= right;
     }
 
-    private void deleteEntry(int left, int right) {
-        Map<Integer, Integer> subMap = new HashMap<>(map.subMap(left, right));
-        if(subMap != null) {
-            for (Integer key : subMap.keySet()) {
-                map.remove(key);
-            }
-        }
-    }
 }
