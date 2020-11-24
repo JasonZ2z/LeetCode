@@ -3,10 +3,13 @@ package com.xinzhe.contest.weekly.season05.weekly216;
 /**
  * @author Xin
  * @date 2020/11/22
- * Title :
- * Description :
- * link :
- * Level :
+ * Title : 1664. 生成平衡数组的方案数
+ * Description : 给你一个整数数组nums。你需要选择 恰好一个下标（下标从 0开始）并删除对应的元素。请注意剩下元素的下标可能会因为删除操作而发生改变。
+ *              比方说，如果nums = [6,1,7,4,1]，那么：选择删除下标 1 ，剩下的数组为nums = [6,7,4,1]。
+ *              选择删除下标2，剩下的数组为nums = [6,1,4,1]。 选择删除下标4，剩下的数组为nums = [6,1,7,4]。
+ *              如果一个数组满足奇数下标元素的和与偶数下标元素的和相等，该数组就是一个 平衡数组 。请你返回删除操作后，剩下的数组nums是平衡数组 的方案数。
+ * link : https://leetcode-cn.com/problems/ways-to-make-a-fair-array
+ * Level : Medium
  */
 public class Leetcode_weekly_21603 {
     public static void main(String[] args) {
@@ -51,5 +54,25 @@ public class Leetcode_weekly_21603 {
         }
         return cnt;
 
+    }
+
+
+    public int waysToMakeFair2(int[] nums) {
+        int n = nums.length;
+        int[] a = new int[n+1];
+        int[] b = new int[n+1];
+
+        for(int i = 0; i < n; ++i){
+            a[i+1] = nums[i] - a[i];
+            b[i+1] = nums[n - 1 - i] - b[i];
+        }
+
+        int res = 0;
+        for(int i = 0; i < n; ++i){
+            if(a[i] == b[n-i - 1]){
+                ++res;
+            }
+        }
+        return res;
     }
 }
