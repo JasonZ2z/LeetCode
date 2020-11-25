@@ -26,7 +26,7 @@ public class Leetcode440 {
         return prefix;
     }
 
-    private int getNext(int n, int prefix) {
+    private int getNext(int n, long prefix) {
         long next = prefix + 1;
         int cnt = 0;
         while (prefix <= n) {
