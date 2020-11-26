@@ -19,15 +19,15 @@ public class Leetcode454 {
         int res = 0;
         Map<Integer, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < n; i++) {
+        for (int k : A) {
             for (int j = 0; j < n; j++) {
-                map.put(A[i] + B[j], map.getOrDefault(A[i] + B[j], 0) + 1);
+                map.put(k + B[j], map.getOrDefault(k + B[j], 0) + 1);
             }
         }
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                int tmp = 0 - C[i] - D[j];
+                int tmp = -C[i] - D[j];
                 if (map.containsKey(tmp)) {
                     res += map.get(tmp);
                 }
