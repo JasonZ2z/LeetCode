@@ -1,4 +1,4 @@
-package com.xinzhe.categories.solutions.dp.knapsack;
+package com.xinzhe.categories.solutions.dp.knapsack.knapsack01;
 
 import java.util.Arrays;
 
@@ -30,5 +30,26 @@ public class Leetcode1049 {
             }
         }
         return all - 2 * dp[sum];
+    }
+
+    public int lastStoneWeightII(int[] stones) {
+        int n = stones.length;
+        int sum = 0;
+        for(int i: stones) sum += i;
+        int target = sum / 2;
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true;
+        int min = sum;
+        for(int s : stones) {
+            for(int i = target; i >= s; i--) {
+                if(dp[i-s]) {
+                    dp[i] = true;
+                }
+            }
+        }
+        for(int i=target; i >= 0; i--) {
+            if(dp[i]) min = Math.min(min, sum - i * 2);
+        }
+        return min;
     }
 }
