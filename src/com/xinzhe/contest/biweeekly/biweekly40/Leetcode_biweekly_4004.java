@@ -5,10 +5,14 @@ import java.util.Arrays;
 /**
  * @author Xin
  * @date 2020/11/28
- * Title :
- * Description :
- * link :
- * Level :
+ * Title : 1671. 得到山形数组的最少删除次数
+ * Description : 我们定义arr是 山形数组当且仅当它满足：arr.length >= 3
+ *              存在某个下标i（从 0 开始）满足0 < i < arr.length - 1且：
+ *              arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
+ *              arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
+ *              给你整数数组nums ，请你返回将 nums变成 山形状数组的 最少删除次数。
+ * link : https://leetcode-cn.com/problems/minimum-number-of-removals-to-make-mountain-array
+ * Level : Hard
  */
 public class Leetcode_biweekly_4004 {
     public static void main(String[] args) {
