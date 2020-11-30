@@ -33,4 +33,25 @@ public class Leetcode879 {
         }
         return (int) res;
     }
+
+    public int profitableSchemes2(int G, int P, int[] group, int[] profit) {
+        int n = group.length;
+        int[][] dp = new int[G+1][P+1];
+        for(int i=0; i<=G; i++) dp[i][0] = 1;
+        int mod = (int)1e9 + 7;
+        for(int i=0; i<n; i++) {
+            int g = group[i], p = profit[i];
+            for(int j = G; j >= g; j--) {
+                for(int k = P; k >= 0; k--) {
+                    if(k - p > 0) {
+                        dp[j][k] += dp[j-g][k - p];
+                    } else {
+                        dp[j][k] += dp[j- g][0];
+                    }
+                    dp[j][k] %= mod;
+                }
+            }
+        }
+        return dp[G][P];
+    }
 }
