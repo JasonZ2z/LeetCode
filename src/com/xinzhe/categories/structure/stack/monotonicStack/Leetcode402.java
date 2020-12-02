@@ -1,4 +1,4 @@
-package com.xinzhe.categories.structure.stack;
+package com.xinzhe.categories.structure.stack.monotonicStack;
 
 import java.util.Stack;
 
