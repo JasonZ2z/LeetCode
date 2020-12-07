@@ -8,10 +8,11 @@ import java.util.Set;
 /**
  * @author Xin
  * @date 2020/12/06
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1679. K 和数对的最大数目
+ * Description : 给你一个整数数组 nums 和一个整数 k 。每一步操作中，你需要从数组中选出和为 k 的两个整数，并将它们移出数组。
+ *              返回你可以对数组执行的最大操作数。
+ * link : https://leetcode-cn.com/problems/max-number-of-k-sum-pairs
+ * Level : Medium
  */
 public class Leetcode_weekly_21802 {
     public static void main(String[] args) {

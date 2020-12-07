@@ -3,10 +3,10 @@ package com.xinzhe.contest.weekly.season05.weekly218;
 /**
  * @author Xin
  * @date 2020/12/06
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1680. 连接连续二进制数字
+ * Description : 给你一个整数 n ，请你将 1 到 n 的二进制表示连接起来，并返回连接结果对应的 十进制 数字对 109 + 7 取余的结果。
+ * link : https://leetcode-cn.com/problems/concatenation-of-consecutive-binary-numbers/
+ * Level : Medium
  */
 public class Leetcode_weekly_21803 {
     public static void main(String[] args) {
