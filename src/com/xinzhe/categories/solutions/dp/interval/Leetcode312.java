@@ -9,7 +9,7 @@ package com.xinzhe.categories.solutions.dp.interval;
  *              这里的 left 和 right 代表和 i 相邻的两个气球的序号。注意当你戳破了气球 i 后，气球 left 和气球 right 就变成了相邻的气球。求所能获得硬币的最大数量。
  * link : https://leetcode-cn.com/problems/burst-balloons
  * Level : Hard
- * comment : related problems : 312, 488
+ * comment : related problems : 488
  */
 //todo need to review
 public class Leetcode312 {
