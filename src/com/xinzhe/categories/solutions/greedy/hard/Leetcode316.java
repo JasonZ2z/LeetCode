@@ -10,9 +10,9 @@ import java.util.Map;
  * Title : 316. 去除重复字母
  * Description : 给你一个仅包含小写字母的字符串，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
  * link : https://leetcode-cn.com/problems/remove-duplicate-letters/
- * Level : Hard
+ * Level : Medium
  */
-//todo need to review
+
 public class Leetcode316 {
     public static void main(String[] args) {
         Leetcode316 lc = new Leetcode316();
