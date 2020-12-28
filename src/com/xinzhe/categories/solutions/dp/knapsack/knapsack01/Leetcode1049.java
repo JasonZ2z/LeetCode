@@ -16,9 +16,8 @@ import java.util.Arrays;
  * link : https://leetcode-cn.com/problems/last-stone-weight-ii/
  * Level : Medium
  */
+//todo need to review
 public class Leetcode1049 {
-
-
     public int lastStoneWeight(int[] stones) {
         if (stones.length == 0) return 0;
         int all = Arrays.stream(stones).sum();
@@ -33,7 +32,6 @@ public class Leetcode1049 {
     }
 
     public int lastStoneWeightII(int[] stones) {
-        int n = stones.length;
         int sum = 0;
         for(int i: stones) sum += i;
         int target = sum / 2;
