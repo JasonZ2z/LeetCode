@@ -5,63 +5,19 @@ import java.util.Stack;
 /**
  * @author Xin
  * @date 2021/01/09
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1717. 删除子字符串的最大得分
+ * Description : 给你一个字符串s和两个整数x 和y。你可以执行下面两种操作任意次。
+ *              删除子字符串"ab"并得到x分。比方说，从"cabxbae"删除 ab，得到"cxbae"。
+ *              删除子字符串"ba"并得到y分。比方说，从"cabxbae"删除 ba，得到"cabxe"。
+ *              请返回对 s字符串执行上面操作若干次能得到的最大得分。
+ * link : https://leetcode-cn.com/problems/maximum-score-from-removing-substrings
+ * Level : Medium
  */
 public class Leetcode_biweekly_4302 {
     public static void main(String[] args) {
         Leetcode_biweekly_4302 lc = new Leetcode_biweekly_4302();
-        int[] arr = {2, 4, 9, 3};
-        //"aabbabkbbbfvybssbtaobaaaabataaadabbbmakgabbaoapbbbbobaabvqhbbzbbkapabaavbbeghacabamdpaaqbqabbjbababmbakbaabajabasaabbwabrbbaabbafubayaazbbbaababbaaha"
-        //1926
-        //4320
-//        String s = "aabbaaxybbaabb";
-//        System.out.println(lc.maximumGain2(s, 5, 4));
-
         String s = "aabbabkbbbfvybssbtaobaaaabataaadabbbmakgabbaoapbbbbobaabvqhbbzbbkapabaavbbeghacabamdpaaqbqabbjbababmbakbaabajabasaabbwabrbbaabbafubayaazbbbaababbaaha";
         System.out.println(lc.maximumGain2(s, 1926, 4320));
-    }
-    public int maximumGain(String s, int x, int y) {
-        if(s.length() == 1) return 0;
-        if(s.startsWith("a") || s.startsWith("b")) {
-
-
-            return 0;
-        } else {
-            int l = 0, r = s.length() - 1;
-            for (int i = 0; i < s.length() - 1; ++i) {
-                if(s.charAt(i) == 'a') {
-                    if(s.charAt(i+1) == 'a' || s.charAt(i+1) == 'b') {
-                        l = i;
-                        break;
-                    }
-                }
-                if(s.charAt(i) == 'b') {
-                    if(s.charAt(i+1) == 'a' || s.charAt(i+1) == 'b') {
-                        l = i;
-                        break;
-                    }
-                }
-            }
-            for (int i = s.length() - 1; i > 0; --i) {
-                if(s.charAt(i) == 'a') {
-                    if(s.charAt(i-1) == 'a' || s.charAt(i-1) == 'b') {
-                        r = i;
-                        break;
-                    }
-                }
-                if(s.charAt(i) == 'b') {
-                    if(s.charAt(i-1) == 'a' || s.charAt(i-1) == 'b') {
-                        r = i;
-                        break;
-                    }
-                }
-            }
-            if(r > l) return maximumGain(s.substring(l, r+1), x, y);
-            return 0;
-        }
     }
 
     public int maximumGain2(String s, int x, int y) {

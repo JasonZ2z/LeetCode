@@ -5,20 +5,22 @@ import java.util.Arrays;
 /**
  * @author Xin
  * @date 2021/01/09
- * Title :
- * Description :
- * link :
- * Level : Easy
+ * Title : 1718. 构建字典序最大的可行序列
+ * Description : 给你一个整数n，请你找到满足下面条件的一个序列：
+ *              整数1在序列中只出现一次。
+ *              2到n之间每个整数都恰好出现两次。
+ *              对于每个2到n之间的整数i，两个i之间出现的距离恰好为i。
+ *              序列里面两个数 a[i]和 a[j]之间的 距离，我们定义为它们下标绝对值之差|j - i|。请你返回满足上述条件中字典序最大的序列。题目保证在给定限制条件下，一定存在解。
+ *              一个序列a被认为比序列b（两者长度相同）字典序更大的条件是：a 和b中第一个不一样的数字处，a序列的数字比b序列的数字大。比方说，[0,1,9,0]比[0,1,5,6]字典序更大，因为第一个不同的位置是第三个数字，且9比5大。
+ * link :  https://leetcode-cn.com/problems/construct-the-lexicographically-largest-valid-sequence
+ * Level : Medium
  */
+
+//todo undo
 public class Leetcode_biweekly_4303 {
     public static void main(String[] args) {
         Leetcode_biweekly_4303 lc = new Leetcode_biweekly_4303();
-        int[] arr = {2, 4, 9, 3};
-//        System.out.println(Arrays.toString(lc.constructDistancedSequence(1)));
-//        System.out.println(Arrays.toString(lc.constructDistancedSequence(2)));
-//        System.out.println(Arrays.toString(lc.constructDistancedSequence(3)));
         System.out.println(Arrays.toString(lc.constructDistancedSequence(5)));
-        //System.out.println(Arrays.toString(lc.constructDistancedSequence(11)));
     }
     int[] res;
     public int[] constructDistancedSequence(int n) {

@@ -14,15 +14,7 @@ public class Leetcode_weekly_22404 {
         int[] arr = {3,5};
     }
 
-    int[][] paths = {{1, 0}, {0,1}, {-1,0}, {0,-1}};
     public boolean canMouseWin(String[] grid, int catJump, int mouseJump) {
-        int m = grid.length;
-        int n =  grid[0].length();
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[i].length(); j++) {
-
-            }
-        }
         return false;
     }
 }

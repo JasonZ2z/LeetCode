@@ -11,6 +11,7 @@ package com.xinzhe.contest.weekly.season05.weekly223;
  * link : https://leetcode-cn.com/problems/find-minimum-time-to-finish-all-jobs
  * Level : Hard
  */
+//todo undo
 public class Leetcode_weekly_22304 {
     public static void main(String[] args) {
         Leetcode_weekly_22304 lc = new Leetcode_weekly_22304();
