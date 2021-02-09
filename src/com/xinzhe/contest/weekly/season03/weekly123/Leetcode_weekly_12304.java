@@ -13,13 +13,15 @@ import java.util.Map;
  * Level : Hard
  */
 
-//todo undo
+//todo need to review
 public class Leetcode_weekly_12304 {
     public static void main(String[] args) {
         Leetcode_weekly_12304 lc = new Leetcode_weekly_12304();
         int[] arr = {1,2,1,2,3};
         System.out.println(lc.subarraysWithKDistinct(arr, 2));
     }
+
+    //超时
     public int subarraysWithKDistinct(int[] arr, int k) {
         int n = arr.length;
         int ans = 0;
@@ -40,5 +42,29 @@ public class Leetcode_weekly_12304 {
             }
         }
         return ans;
+    }
+
+    public int subarraysWithKDistinct2(int[] arr, int k) {
+        int n = arr.length;
+        //if(k == 1) return n;
+        return max(arr, k) - max(arr, k -1);
+    }
+    private int max(int[] arr, int k) {
+        int n = arr.length;
+        int l = 0, r = 0, cnt = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        while(r < n) {
+            map.put(arr[r], map.getOrDefault(arr[r++], 0) + 1);
+            while(l < r && map.size() > k) {
+                int cur = arr[l++];
+                if(map.get(cur) == 1) {
+                    map.remove(cur);
+                } else {
+                    map.put(cur, map.get(cur) - 1);
+                }
+            }
+            cnt += r - l;
+        }
+        return cnt;
     }
 }
