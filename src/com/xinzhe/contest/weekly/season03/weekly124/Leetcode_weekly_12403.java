@@ -9,12 +9,26 @@ package com.xinzhe.contest.weekly.season03.weekly124;
  * link : https://leetcode-cn.com/problems/minimum-number-of-k-consecutive-bit-flips
  * Level : Hard
  */
-//todo undo
+//todo need to review
 public class Leetcode_weekly_12403 {
     public static void main(String[] args) {
         Leetcode_weekly_12403 lc = new Leetcode_weekly_12403();
-        int[] arr = {2,-3,-1,5,-4};
+        int[] arr = {0,0,0,1,0,1,1,0};
+        System.out.println(lc.minKBitFlips(arr, 3));
     }
 
-
+    public int minKBitFlips(int[] arr, int k) {
+        int n = arr.length;
+        int min = 0;
+        for (int i = 0; i < n; i++) {
+            if(arr[i] == 0) {
+                if(i + k > n) return -1;
+                for (int j = i; j < i + k; ++j) {
+                    arr[j] ^= 1;
+                }
+                min++;
+            }
+        }
+        return min;
+    }
 }
