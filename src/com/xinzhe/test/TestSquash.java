@@ -9,5 +9,6 @@ import java.util.HashMap;
 public class TestSquash {
     public static void main(String[] args) {
         HashMap<Object, Object> map = new HashMap<>();
+        HashMap<Object, Object> map2 = new HashMap<>();
     }
 }
