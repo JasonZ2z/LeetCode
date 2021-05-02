@@ -28,7 +28,6 @@ public class Leetcode082 {
             System.out.print(node1.val);
             node1 = node1.next;
         }
-
     }
     public ListNode deleteDuplicates(ListNode head) {
         if(head == null || head.next == null) return head;

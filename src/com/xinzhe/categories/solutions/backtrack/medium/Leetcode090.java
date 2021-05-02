@@ -1,6 +1,7 @@
 package com.xinzhe.categories.solutions.backtrack.medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -35,5 +36,24 @@ public class Leetcode090 {
             traceback(nums, i+1, track);
             track.remove(track.size()-1);
         }
+    }
+
+    List<List<Integer>> res = new ArrayList<>();
+    public List<List<Integer>> subsetsWithDup2(int[] nums) {
+        Arrays.sort(nums);
+        dfs(nums, 0, new ArrayList<>(), false);
+        return res;
+    }
+
+    private void dfs(int[] nums, int index, List<Integer> list, boolean flag){
+        if(index == nums.length) {
+            res.add(new ArrayList<>(list));
+            return;
+        }
+        dfs(nums, index+1, list, false);
+        if(!flag && index > 0 && nums[index] == nums[index - 1]) return;
+        list.add(nums[index]);
+        dfs(nums, index + 1, list, true);
+        list.remove(list.size()-1);
     }
 }
