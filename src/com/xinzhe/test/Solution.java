@@ -33,4 +33,22 @@ public class Solution {
         dp[i][j][x] = ans;
         return ans;
     }
+
+    public int compareVersion(String version1, String version2) {
+        String[] a1 = version1.split("\\.");
+        String[] a2 = version2.split("\\.");
+        int l1 = a1.length, l2 = a2.length, i = 0, j = 0;
+        while(i < l1 && j < l2) {
+            int x = Integer.parseInt(a1[i++]);
+            int y = Integer.parseInt(a2[j++]);
+            if(x > y) {
+                return 1;
+            } else if(x < y) {
+                return -1;
+            }
+        }
+        if(i == l1 && j == l2) return 0;
+        if(i < l1) return 1;
+        return -1;
+    }
 }
