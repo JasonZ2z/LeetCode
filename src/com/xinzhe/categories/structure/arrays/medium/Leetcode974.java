@@ -18,11 +18,10 @@ public class Leetcode974 {
     public static void main(String[] args) {
         int[] nums = {2,-2,2,-4};
         System.out.println(subarraysDivByK(nums, 6));
-        System.out.println(subarraysDivByK2(nums, 6));
     }
     // 解题思路与560类似
     // 难点： 负数计算模 ((sum % K) + K) % K
-    public static int subarraysDivByK2(int[] nums, int k) {
+    public static int subarraysDivByK(int[] nums, int k) {
         if(nums == null || nums.length == 0) return 0;
         int[] sums = new int[nums.length];
         int count = 0;
@@ -43,29 +42,5 @@ public class Leetcode974 {
             map.put(tmp, map.getOrDefault(tmp, 0) + 1);
         }
         return  count;
-    }
-
-    // 超出时间限制
-    public static int subarraysDivByK(int[] nums, int k) {
-        if(nums == null || nums.length == 0) return 0;
-        int[] sums = new int[nums.length];
-        int count = 0;
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            sums[i] = sum;
-            if(sum % k == 0){
-                count++;
-            }
-        }
-
-        for (int i = 1; i < nums.length; i++) {
-            for(int j = i-1; j >= 0; j--) {
-              if((sums[i] - sums[j]) % k == 0 ){
-                  count++;
-              }
-            }
-        }
-        return count;
     }
 }
