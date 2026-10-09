@@ -56,4 +56,30 @@ public class Leetcode_biweekly_3203 {
         }
         return res;
     }
+
+    public int minInsertions2(String s) {
+        int res = 0;
+        char[] arr = s.toCharArray();
+        int i = 0, left = 0;
+        while (i < s.length()) {
+            if (arr[i] == '(') {
+                left++;
+                i++;
+            } else {
+                if (left > 0) {
+                    left--;
+                } else {
+                    res++;
+                }
+                if (i + 1 < s.length() && arr[i + 1] == ')') {
+                    i += 2;
+                } else {
+                    res++;
+                    i++;
+                }
+            }
+        }
+        res += left * 2;
+        return res;
+    }
 }
