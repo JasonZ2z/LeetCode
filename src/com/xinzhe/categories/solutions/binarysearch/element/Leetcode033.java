@@ -18,10 +18,38 @@ public class Leetcode033 {
     // 10 11 12 1 2 3 4 5 6 7
     // x - y  > x - y -1
     public static void main(String[] args) {
-        int[] arr = {4,5,6,7,8,1,2,3};
-        System.out.println(search(arr, 100));
+        int[] arr = {1,3};
+        System.out.println(search(arr, 3));
     }
+
     public static int search(int[] nums, int target) {
+        int n = nums.length;
+        int l = 0, r = n - 1;
+        while(l<r) {
+            int mid = l + (r - l)/2;
+            if(nums[mid] > nums[r]) {
+                l = mid +1;
+            } else {
+                r = mid;
+            }
+        }
+        System.out.println("aaaaaaaaaaaaa:" + l);
+        if(target < nums[l]) return -1;
+        if(target > nums[n-1]) return low(nums, 0, l-1, target);
+        return low(nums, l, n-1, target);
+    }
+    private static int low(int[] nums, int l, int r, int target) {
+        while(l < r) {
+            int mid = l + (r - l)/2;
+            if(nums[mid] < target) {
+                l = mid + 1;
+            } else {
+                r = mid;
+            }
+        }
+        return nums[l] == target ? l : -1;
+    }
+    public static int search3(int[] nums, int target) {
         int n = nums.length;
         if(n == 0) return -1;
         int left = 0, right = n - 1;

@@ -15,81 +15,29 @@ import java.util.Map;
  * Level : Hard
  */
 public class Leetcode076 {
-    public static void main(String[] args) {
-        String s = "aaaaaaaaaaaabbbbbcdd";
-        String t = "abcdd";
-        System.out.println(minWindow(s,t));
-        System.out.println(minWindow2(s,t));
-    }
-    public static String minWindow(String s, String t) {
-        int t_len = t.length();
-        int s_len = s.length();
-        if(t_len == 0 || s_len == 0 || s_len < t_len) return "";
-        HashMap<Character, Integer> tMap = new HashMap<>(t_len);
-        HashMap<Character, Integer> sMap = new HashMap<>(t_len);
-        for (int i = 0; i < t_len; i++) {
-            tMap.put(t.charAt(i), tMap.getOrDefault(t.charAt(i), 0) + 1);
+    public String minWindow(String s, String t) {
+        int m = s.length(), n = t.length();
+        if (n == 0 || n > m) return "";
+        // 仅支持 ASCII（本题为大小写英文字母）
+        int[] target = new int[128];
+        for (int i = 0; i < n; i++) target[t.charAt(i)]++;
+        int miss = 0;
+        for (int c : target) {
+            if (c > 0) miss++;
         }
-
-        int left =0, right =0, match=0, res = 0, minLen = s_len + 1;
-        while(right < s_len){
-            char rightChar = s.charAt(right++);
-            if(tMap.containsKey(rightChar)){
-                sMap.put(rightChar, sMap.getOrDefault(rightChar, 0) + 1);
-                if(tMap.get(rightChar).equals(sMap.get(rightChar))){
-                    match++;
+        int left = 0, minLen = Integer.MAX_VALUE, bestStart = 0;
+        for (int right = 0; right < m; right++) {
+            if (--target[s.charAt(right)] == 0) miss--;
+            while (miss == 0) {
+                int curLen = right - left + 1;
+                if (curLen < minLen) {
+                    minLen = curLen;
+                    bestStart = left;
                 }
-            }
-            while (match == tMap.size()){
-                if(right - left < minLen){
-                    minLen = right -left;
-                    res = left;
-                }
-                char leftValue = s.charAt(left++);
-                if(tMap.containsKey(leftValue)){
-                    sMap.put(leftValue, sMap.get(leftValue)-1);
-                    if(tMap.get(leftValue) > sMap.get(leftValue)){
-                        match--;
-                    }
-                }
+                if (++target[s.charAt(left)] > 0) miss++;
+                left++;
             }
         }
-        return minLen > s_len ? "" : s.substring(res, res+minLen);
-    }
-
-    public static String minWindow2(String s, String t) {
-        Map<Character, Integer> map = new HashMap<>();
-        Map<Character, Integer> tmp = new HashMap<>();
-        for(char c : t.toCharArray()){
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
-        int p = 0, q = 0, min = s.length() + 1, start = 0;
-        while(q < s.length()) {
-            char rc = s.charAt(q);
-            tmp.put(rc, tmp.getOrDefault(rc, 0) + 1);
-            while(helper(map, tmp)) {
-                if(q - p + 1 < min) {
-                    min = q - p + 1 ;
-                    start = p;
-                }
-                char lc = s.charAt(p);
-                tmp.put(lc, tmp.get(lc) - 1);
-                p++;
-            }
-            q++;
-        }
-        return min > s.length() ?  "" : s.substring(start, start+min);
-    }
-
-    private static boolean helper(Map<Character, Integer> map, Map<Character, Integer> tmp) {
-        boolean flag = true;
-        for(Map.Entry<Character, Integer> entry : map.entrySet()) {
-            char c = entry.getKey();
-            if(!tmp.containsKey(c) || entry.getValue() > tmp.get(c)) {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
+        return minLen == Integer.MAX_VALUE ? "" : s.substring(bestStart, bestStart + minLen);
     }
 }

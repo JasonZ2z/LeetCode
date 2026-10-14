@@ -1,7 +1,5 @@
 package com.xinzhe.categories.solutions.binarysearch.function;
 
-import java.util.Arrays;
-
 /**
  * @author Xin
  * @date 2020/4/13 18:39
@@ -14,39 +12,25 @@ import java.util.Arrays;
  * Level : Medium
  */
 public class Leetcode875 {
-    public static void main(String[] args) {
-        int[] arr = {312884470};
-        System.out.println(minEatingSpeed(arr, 968709470));
-    }
-    public static int minEatingSpeed(int[] piles, int h) {
-        int n = piles.length;
-        Arrays.sort(piles);
-        if(n == 1) return piles[0]/h+1;
-        if(n == h) return piles[n-1];
-        int left = 0, right = piles[n-1];
-        while(left < right){
-            int mid = left + ((right - left) >> 1);
-            int count = 0;
-            for (int pile : piles) {
-
-                //向上取整 ： count += pile + mid - 1 / mid;
-                if (pile <= mid) count++;
-                else {
-                    int tmp = pile / mid;
-                    if (pile % mid == 0) {
-                        count += tmp;
-                    } else {
-                        count += tmp + 1;
-                    }
-                }
-            }
-            if(count > h) {
-                left = mid + 1;
+    public int minEatingSpeed(int[] piles, int h) {
+        int min = 1, max = 0;
+        for (int p : piles) max = Math.max(max, p);
+        while(min < max) {
+            int mid = min + (max - min) / 2;
+            if(cal(piles, mid, h)) {
+                max = mid;
             } else {
-                right = mid;
+                min = mid + 1;
             }
-
         }
-        return left;
+        return max;
+    }
+    public boolean cal(int[] piles, int k, int h) {
+        long res = 0;
+        for(int i : piles) {
+            res += (i - 1) / k + 1;
+            if(res > h) return false;
+        }
+        return true;
     }
 }

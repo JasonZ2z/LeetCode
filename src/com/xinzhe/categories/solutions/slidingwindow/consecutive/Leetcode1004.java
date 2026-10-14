@@ -9,23 +9,16 @@ package com.xinzhe.categories.solutions.slidingwindow.consecutive;
  * Level : Medium
  */
 public class Leetcode1004 {
-    public int longestOnes(int[] arr, int k) {
-        if (arr == null || arr.length == 0) return 0;
-        int n = arr.length;
-        if (k >= n) return n;
-
-        int count0 = 0;
+    public int longestOnes(int[] nums, int k) {
+        int n = nums.length;
         int max = 0;
-        int start = 0;
-        for (int i = 0; i < n; ++i) {
-            if (arr[i] == 0) count0++;
-            while (count0 > k) {
-                if (arr[start] == 0) {
-                    count0--;
-                }
-                start++;
+        int count = 0;
+        for (int i = 0, j = 0; j < n; j++) {
+            if (nums[j] == 0) count++;
+            while (count > k) {
+                if (nums[i++] == 0) count--;
             }
-            max = Math.max(max, i - start + 1);
+            max = Math.max(max, j - i + 1);
         }
         return max;
     }
